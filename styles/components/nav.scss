@@ -1,0 +1,24 @@
+.nav {
+  align-self: flex-end;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  font-family: nittigrotesk-black;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: white;
+}
+
+.nav__item::after {
+  content: "|";
+  padding: 0 1rem;
+}
+
+li.nav__item:last-child:after
+{
+  content: '';
+}

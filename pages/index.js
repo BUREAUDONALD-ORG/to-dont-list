@@ -7,8 +7,8 @@ export default class Index extends React.Component {
   render () {
     return (
       <DocumentTitle title={config.siteTitle}>
-        <div>
-        
+        <div className="">
+
         </div>
       </DocumentTitle>
     )

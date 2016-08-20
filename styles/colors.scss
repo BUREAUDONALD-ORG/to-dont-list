@@ -1,16 +1,9 @@
 // List of possible colors:
-
+$purple: rgb(228, 22, 149);
+$black: rgb(0, 0, 0);
+$white: rgb(255, 255, 255);
 
 // Definitions used troughout the stylesheets:
-$primary: $darkblue;
-$secundary: $mediumblue;
-$tertiary: $lightblue;
-
-$complementary: $red;
-
+$complementary: $purple;
 $day: $white;
-$light: $lightgray;
-$medium: $gray;
-$heavy: $heavygray;
-$dark: $darkgray;
 $night: $black;

@@ -2,6 +2,8 @@ import React from 'react'
 import { Link } from 'react-router'
 import { config } from 'config'
 
+import "styles/app.scss";
+
 module.exports = React.createClass({
   propTypes () {
     return {
@@ -10,11 +12,23 @@ module.exports = React.createClass({
   },
   render () {
     return (
-      <div>
-        <aside>
-          <h1> {config.siteTitle} </h1>
+      <div className="layout__app">
+        <aside className="layout__sidebar">
+          <header>
+            <h1 className="header__title"> {config.siteTitle} </h1>
+            <img src=""/>
+            <h3 className="header__subtitle"> Time management for creative people </h3>
+            <h4 className="header__author"> by Donald Roos </h4>
+          </header>
+          <nav>
+            <ul className="nav__list">
+              <li className="nav__item">Menu</li>
+              <li className="nav__item">About</li>
+              <li className="nav__item">Contact</li>
+            </ul>
+          </nav>
         </aside>
-        <main>
+        <main className="layout__main">
           {this.props.children}
         </main>
       </div>

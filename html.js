@@ -1,6 +1,5 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
-
 import { prefixLink } from 'gatsby-helpers'
 
 const BUILD_TIME = new Date().getTime()

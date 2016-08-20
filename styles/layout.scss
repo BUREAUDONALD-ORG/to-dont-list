@@ -1,0 +1,23 @@
+.layout__app {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.layout__sidebar {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 20rem;
+  height: 100%;
+  padding: 2rem;
+  background: $night;
+}
+
+.layout__main {
+  flex-grow: 1;
+  padding: 2rem;
+  background: $complementary;
+}
