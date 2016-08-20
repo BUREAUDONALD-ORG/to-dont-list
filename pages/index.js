@@ -1,40 +1,39 @@
 import React from 'react'
 import { Link } from 'react-router'
-import Form from '../partials/form.js'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
+
+import Form from '../partials/form.js'
+
+import firstBlock from '../content/first-block.md';
+import secondBlock from '../content/second-block.md';
+import thirdBlock from '../content/third-block.md';
 
 export default class Index extends React.Component {
   render () {
     return (
       <DocumentTitle title={config.siteTitle}>
         <main className="layout__main">
-          <div className="small-block"> 
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-          <div className="small-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-          <div className="large-block">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-          <Form> </Form>
+          <div className="block__container">
+            <div className="block block--small">
+              <h3 className="block__header"> { firstBlock.header }</h3>
+              <h2 className="block__front-title"> { firstBlock.title }</h2>
+              <h2 className="block__back-title"> { firstBlock.hoverTitle }</h2>
+              <div className="block__back-text" dangerouslySetInnerHTML={{ __html: firstBlock.body }}></div>
+            </div>
+            <div className="block block--small">
+              <h3 className="block__header"> { secondBlock.header }</h3>
+              <h2 className="block__front-title"> { secondBlock.title }</h2>
+              <h2 className="block__back-title"> { secondBlock.hoverTitle }</h2>
+              <div className="block__back-text" dangerouslySetInnerHTML={{ __html: secondBlock.body }}></div>
+            </div>
+          </div>
+          <div className="block block--large">
+              <h3 className="block__header"> { thirdBlock.header }</h3>
+              <h2 className="block__title"> { thirdBlock.title }</h2>
+              <div className="block__text" dangerouslySetInnerHTML={{ __html: thirdBlock.body }}></div>
+            </div>
+          <Form />
         </main>
       </DocumentTitle>
     )

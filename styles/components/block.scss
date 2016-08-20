@@ -1,19 +1,90 @@
-.small-block {
-  width: calc(50% - 0.5rem);
+.block__container {
+  display: flex;
+}
+
+.block {
   padding: 1rem;
+}
+
+.block--small {
+  width: 50%;
   margin: 0 0 1rem 0;
   background: $day;
 }
 
-div.small-block:first-of-type {
+div.block--small:first-of-type {
   margin: 0 1rem 1rem 0;
 }
 
-.large-block {
+.block--large {
   width: 100%;
-  padding: 1rem;
   background: $day;
 }
+
+.block--small:hover {
+  background: $night;
+}
+
+.block:hover .block__back-title, .block:hover .block__back-text  {
+  display: block;
+}
+
+.block:hover .block__front-title{
+  display: none;
+}
+
+
+.block__header {
+  font-family: nittigrotesk-black;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: $complementary;
+}
+
+.block__title {
+  font-family: nittigrotesk-black;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  color: $night;
+}
+
+.block__front-title {
+  font-family: nittigrotesk-black;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  color: $night;
+}
+
+.block__back-title {
+  display: none;
+  font-family: nittigrotesk-black;
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  color: $day;
+}
+
+.block__text {
+  font-family: nittigrotesk-normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.block__back-text {
+  display: none;
+  font-family: nittigrotesk-normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: $day;
+}
+
+.block__hover-text {
+  display: none;
+  font-family: nittigrotesk-normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+
 
 .form {
 
