@@ -28,9 +28,7 @@ module.exports = React.createClass({
             </ul>
           </nav>
         </aside>
-        <main className="layout__main">
-          {this.props.children}
-        </main>
+        {this.props.children}
       </div>
     )
   },
