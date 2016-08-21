@@ -36,29 +36,32 @@ div.block--small:first-of-type {
 .block__header {
   font-family: nittigrotesk-black;
   font-size: 2rem;
-  line-height: 3rem;
+  line-height: 2rem;
   color: $complementary;
 }
 
 .block__title {
+  padding: 0 0 1rem 0;
   font-family: nittigrotesk-black;
-  font-size: 2.5rem;
-  line-height: 3.5rem;
+  font-size: 5rem;
+  line-height: 4.25rem;
   color: $night;
 }
 
 .block__front-title {
+  padding: 0 0 1rem 0;
   font-family: nittigrotesk-black;
-  font-size: 2.5rem;
-  line-height: 3.5rem;
+  font-size: 5rem;
+  line-height: 4.25rem;
   color: $night;
 }
 
 .block__back-title {
   display: none;
+  padding: 0 0 1rem 0;
   font-family: nittigrotesk-black;
-  font-size: 2.5rem;
-  line-height: 3.5rem;
+  font-size: 5rem;
+  line-height: 4.25rem;
   color: $day;
 }
 

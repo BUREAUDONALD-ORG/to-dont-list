@@ -22,3 +22,31 @@
   line-height: 1.5rem;
   color: $day;
 }
+
+.form__fields-container {
+  padding: 2rem 0;
+}
+
+.form__fieldset {
+  display: flex;
+  flex-direction: column;
+  border: none;
+}
+
+.form__label {
+  font-family: nittigrotesk-normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.form__field {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  font-family: nittigrotesk-black;
+  font-size: 2rem;
+  line-height: 3rem;
+  color: $night;
+}
+
+// input::-moz-placeholder

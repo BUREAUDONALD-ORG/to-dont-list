@@ -3,6 +3,7 @@ import { Link } from 'react-router'
 import { config } from 'config'
 
 import "styles/app.scss";
+import line from '../assets/images/line.png'
 
 module.exports = React.createClass({
   propTypes () {
@@ -16,7 +17,7 @@ module.exports = React.createClass({
         <aside className="layout__sidebar">
           <header>
             <h1 className="header__title"> {config.siteTitle} </h1>
-            <img src=""/>
+            <img className="header__line" src={line} />
             <h3 className="header__subtitle"> Time management for creative people </h3>
             <h4 className="header__author"> by Donald Roos </h4>
           </header>

@@ -9,13 +9,13 @@
 .nav__item {
   font-family: nittigrotesk-black;
   font-size: 1rem;
-  line-height: 1.5rem;
+  line-height: 1rem;
   color: white;
 }
 
 .nav__item::after {
   content: "|";
-  padding: 0 1rem;
+  padding: 0 0.4rem;
 }
 
 li.nav__item:last-child:after
