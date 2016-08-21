@@ -34,7 +34,9 @@ export default class Form extends React.Component {
             <input className="form__field" type="text" placeholder="Enter your email for a cc and reply."/>
             <label className="form__label">Enter your email for a cc and reply.</label>
           </div>
+          
           <input type="submit" placeholder="send" />
+
         </div>
       </form>
     )
