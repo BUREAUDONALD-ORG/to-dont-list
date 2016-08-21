@@ -27,26 +27,37 @@
   padding: 2rem 0;
 }
 
-.form__fieldset {
+.form__div {
   display: flex;
   flex-direction: column;
   border: none;
 }
 
 .form__label {
+  order: 1;
+  padding: 0rem 1rem;
   font-family: nittigrotesk-normal;
   font-size: 1rem;
   line-height: 1.5rem;
 }
 
 .form__field {
+  order: 2;
   width: 100%;
   padding: 1rem;
+  margin: 1rem 0 ;
   border: none;
   font-family: nittigrotesk-black;
   font-size: 2rem;
-  line-height: 3rem;
+  line-height: 2rem;
+  // color: $complementary;
   color: $night;
 }
 
-// input::-moz-placeholder
+.form__field::-webkit-input-placeholder {
+  color: $complementary;
+}
+
+.form__fields-container .form__field:placeholder-shown + .form__label {
+  display: none;
+}

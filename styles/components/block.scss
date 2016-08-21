@@ -25,11 +25,12 @@ div.block--small:first-of-type {
   background: $night;
 }
 
-.block:hover .block__back-title, .block:hover .block__back-text  {
+.block:hover .block__title--back, .block:hover .block__text--back  {
   display: block;
+  color: $day;
 }
 
-.block:hover .block__front-title{
+.block:hover .block__title--front{
   display: none;
 }
 
@@ -48,21 +49,8 @@ div.block--small:first-of-type {
   color: $night;
 }
 
-.block__front-title {
-  padding: 0 0 1rem 0;
-  font-family: nittigrotesk-black;
-  font-size: 5rem;
-  line-height: 4.25rem;
-  color: $night;
-}
-
-.block__back-title {
+.block__title--back {
   display: none;
-  padding: 0 0 1rem 0;
-  font-family: nittigrotesk-black;
-  font-size: 5rem;
-  line-height: 4.25rem;
-  color: $day;
 }
 
 .block__text {
@@ -71,17 +59,6 @@ div.block--small:first-of-type {
   line-height: 1.5rem;
 }
 
-.block__back-text {
+.block__text--back {
   display: none;
-  font-family: nittigrotesk-normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  color: $day;
-}
-
-.block__hover-text {
-  display: none;
-  font-family: nittigrotesk-normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
 }

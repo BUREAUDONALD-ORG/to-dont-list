@@ -16,15 +16,15 @@ export default class Index extends React.Component {
           <div className="block__container">
             <div className="block block--small">
               <h3 className="block__header"> { firstBlock.header }</h3>
-              <h2 className="block__front-title"> { firstBlock.title }</h2>
-              <h2 className="block__back-title"> { firstBlock.hoverTitle }</h2>
-              <div className="block__back-text" dangerouslySetInnerHTML={{ __html: firstBlock.body }}></div>
+              <h2 className="block__title block__title--front"> { firstBlock.title }</h2>
+              <h2 className="block__title block__title--back"> { firstBlock.hoverTitle }</h2>
+              <div className="block__text block__text--back" dangerouslySetInnerHTML={{ __html: firstBlock.body }}></div>
             </div>
             <div className="block block--small">
               <h3 className="block__header"> { secondBlock.header }</h3>
-              <h2 className="block__front-title"> { secondBlock.title }</h2>
-              <h2 className="block__back-title"> { secondBlock.hoverTitle }</h2>
-              <div className="block__back-text" dangerouslySetInnerHTML={{ __html: secondBlock.body }}></div>
+              <h2 className="block__title block__title--front"> { secondBlock.title }</h2>
+              <h2 className="block__title block__title--back"> { secondBlock.hoverTitle }</h2>
+              <div className="block__text block__text--back" dangerouslySetInnerHTML={{ __html: secondBlock.body }}></div>
             </div>
           </div>
           <div className="block block--large">
