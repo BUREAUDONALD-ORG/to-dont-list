@@ -1,0 +1,24 @@
+.form {
+
+}
+
+.form__header {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form__arrow {
+  width: 2rem;
+  padding-bottom: 0.2rem;
+}
+
+.form__title {
+  display: inline-block;
+  padding: 0.5rem;
+  border: 2px solid $day;
+  font-family: nittigrotesk-normal;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  color: $day;
+}
