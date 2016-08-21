@@ -78,7 +78,9 @@
 }
 
 .form__submit {
+  align-self: flex-end;
   display: block;
+  height: 3.5rem;  
   width: 33.33%;
   border: none;
   background: $night;

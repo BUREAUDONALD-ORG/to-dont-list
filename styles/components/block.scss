@@ -8,8 +8,18 @@
 
 .block--small {
   width: 50%;
+  min-height: 15rem;
   margin: 0 0 1rem 0;
   background: $day;
+}
+
+@media (min-width: 0px) and (max-width: 767px) {
+  .block__container {
+    flex-direction: column;
+  }
+  .block--small {
+    width: 100%;
+  }
 }
 
 div.block--small:first-of-type {

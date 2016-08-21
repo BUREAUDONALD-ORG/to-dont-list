@@ -23,3 +23,25 @@
   background: $complementary;
   overflow-y: scroll;
 }
+
+@media (min-width: 0px) and (max-width: 767px) {
+  html, body, #react-mount {
+    height: auto;
+    overflow: unset;
+  }
+
+  .layout__app {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .layout__sidebar {
+    width: 100%;
+    height: auto;
+    padding: 6rem 3rem;
+  }
+  
+  .layout__main {
+    overflow: unset;
+  }
+}

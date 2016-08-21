@@ -24,7 +24,7 @@ export default class Form extends React.Component {
               <input className="form__field form__field--cc" type="text" placeholder={form.ccField} />
               <label className="form__label">{form.ccField}</label>
             </div>
-            <input className="form__submit" type="submit" placeholder="send" />
+            <input className="form__submit" type="submit" value="send" />
           </div>
         </div>
       </form>

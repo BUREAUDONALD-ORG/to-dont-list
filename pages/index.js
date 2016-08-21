@@ -17,8 +17,10 @@ export default class Index extends React.Component {
             {[app, book].map((project, key)=>{
               return <div key={key} className="block block--small">
                 <h3 className="block__header"> { project.header }</h3>
-                <h2 className="block__title block__title--front"> { project.frontTitle }</h2>
-                <h2 className="block__title block__title--back"> { project.backTitle }</h2>
+                <div className="block__title-container">
+                  <h2 className="block__title block__title--front"> { project.frontTitle }</h2>
+                  <h2 className="block__title block__title--back"> { project.backTitle }</h2>
+                </div>
                 <div className="block__text block__text--back" dangerouslySetInnerHTML={{ __html: project.body }}></div>
               </div>
             })}
