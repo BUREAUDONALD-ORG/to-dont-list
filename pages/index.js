@@ -14,18 +14,14 @@ export default class Index extends React.Component {
       <DocumentTitle title={config.siteTitle}>
         <main className="layout__main">
           <div className="block__container">
-            <div className="block block--small">
-              <h3 className="block__header"> { app.header }</h3>
-              <h2 className="block__title block__title--front"> { app.frontTitle }</h2>
-              <h2 className="block__title block__title--back"> { app.backTitle }</h2>
-              <div className="block__text block__text--back" dangerouslySetInnerHTML={{ __html: app.body }}></div>
-            </div>
-            <div className="block block--small">
-              <h3 className="block__header"> { book.header }</h3>
-              <h2 className="block__title block__title--front"> { book.frontTitle }</h2>
-              <h2 className="block__title block__title--back"> { book.backTitle }</h2>
-              <div className="block__text block__text--back" dangerouslySetInnerHTML={{ __html: book.body }}></div>
-            </div>
+            {[app, book].map((project, key)=>{
+              return <div key={key} className="block block--small">
+                <h3 className="block__header"> { project.header }</h3>
+                <h2 className="block__title block__title--front"> { project.frontTitle }</h2>
+                <h2 className="block__title block__title--back"> { project.backTitle }</h2>
+                <div className="block__text block__text--back" dangerouslySetInnerHTML={{ __html: project.body }}></div>
+              </div>
+            })}
           </div>
           <div className="block block--large">
               <h3 className="block__header"> { workshop.header }</h3>

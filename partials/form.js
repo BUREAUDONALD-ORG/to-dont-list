@@ -15,18 +15,17 @@ export default class Form extends React.Component {
         <div className="form__fields-container">
           {form.fields.map((field, key)=>{
             return <div key={key} className="form__field-container">
-              <input className="form__field" type="text" placeholder={field} />
+              <input className="form__field" type="text" placeholder={field} autoComplete="off"/>
               <label className="form__label">{field}</label>
             </div>
           })}
-
-          <div className="form__div">
-            <input className="form__field" type="text" placeholder={form.ccField} />
-            <label className="form__label">{form.ccField}</label>
+          <div className="form__submit-container">
+            <div className="form__field-container form__field-container--cc">
+              <input className="form__field form__field--cc" type="text" placeholder={form.ccField} />
+              <label className="form__label">{form.ccField}</label>
+            </div>
+            <input className="form__submit" type="submit" placeholder="send" />
           </div>
-
-          <input type="submit" placeholder="send" />
-
         </div>
       </form>
     )

@@ -1,6 +1,6 @@
 ---
 header: "Book:"
-frontTitle: "Don't Read This Book"
+frontTitle: "Don\u2019t Read This Book"
 backTitle: "Order A Copy"
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
