@@ -16,7 +16,7 @@ export default class Index extends React.Component {
           <div className="layout__delimiter">
             <div className="block__container">
               {[app, book].map((project, key)=>{
-                return <div key={key} className="block block--small">
+                return <div key={key} className="block block--small" onClick={()=>{console.log("hi")}}>
                   <h3 className="block__header"> { project.header }</h3>
                   <div className="block__title-container">
                     <h2 className="block__title block__title--front"> { project.frontTitle }</h2>

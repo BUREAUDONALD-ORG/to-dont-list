@@ -36,6 +36,7 @@ div.block--small:first-of-type {
   background: $night;
 }
 
+.block:active .block__title--back, .block:active .block__text--back,
 .block:hover .block__title--back, .block:hover .block__text--back  {
   display: block;
   color: $day;
