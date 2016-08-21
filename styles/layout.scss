@@ -24,6 +24,10 @@
   overflow-y: scroll;
 }
 
+.layout__delimiter {
+  max-width: 50rem;
+}
+
 @media (min-width: 0px) and (max-width: 767px) {
   html, body, #react-mount {
     height: auto;
