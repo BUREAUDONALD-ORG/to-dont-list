@@ -8,7 +8,7 @@
 
 .block--small {
   width: 50%;
-  min-height: 15rem;
+  min-height: 22.5rem;
   margin: 0 0 1rem 0;
   background: $day;
 }
@@ -28,6 +28,7 @@ div.block--small:first-of-type {
 
 .block--large {
   width: 100%;
+  min-height: 45rem;
   background: $day;
 }
 
@@ -71,4 +72,8 @@ div.block--small:first-of-type {
 
 .block__text--back {
   display: none;
+}
+
+.block p {
+  padding: 0 0 1rem 0;
 }
