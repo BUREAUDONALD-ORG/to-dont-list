@@ -1,0 +1,9 @@
+header: "Send Donald a 5 Sentence Email"
+fields:
+- "1. Say Hi!"
+- "2. Why are you sending this email?"
+- "3. Need to know detail."
+- "4. What would you like me to do?"
+- "5. Say Bye"
+ccField: "Enter your email for a cc and reply."
+submit: "Send"

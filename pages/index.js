@@ -4,9 +4,9 @@ import { config } from 'config'
 
 import Form from '../partials/form.js'
 
-import firstBlock from '../content/first-block.md';
-import secondBlock from '../content/second-block.md';
-import thirdBlock from '../content/third-block.md';
+import app from '../content/app.md';
+import book from '../content/book.md';
+import workshop from '../content/workshop.md';
 
 export default class Index extends React.Component {
   render () {
@@ -15,22 +15,22 @@ export default class Index extends React.Component {
         <main className="layout__main">
           <div className="block__container">
             <div className="block block--small">
-              <h3 className="block__header"> { firstBlock.header }</h3>
-              <h2 className="block__title block__title--front"> { firstBlock.title }</h2>
-              <h2 className="block__title block__title--back"> { firstBlock.hoverTitle }</h2>
-              <div className="block__text block__text--back" dangerouslySetInnerHTML={{ __html: firstBlock.body }}></div>
+              <h3 className="block__header"> { app.header }</h3>
+              <h2 className="block__title block__title--front"> { app.frontTitle }</h2>
+              <h2 className="block__title block__title--back"> { app.backTitle }</h2>
+              <div className="block__text block__text--back" dangerouslySetInnerHTML={{ __html: app.body }}></div>
             </div>
             <div className="block block--small">
-              <h3 className="block__header"> { secondBlock.header }</h3>
-              <h2 className="block__title block__title--front"> { secondBlock.title }</h2>
-              <h2 className="block__title block__title--back"> { secondBlock.hoverTitle }</h2>
-              <div className="block__text block__text--back" dangerouslySetInnerHTML={{ __html: secondBlock.body }}></div>
+              <h3 className="block__header"> { book.header }</h3>
+              <h2 className="block__title block__title--front"> { book.frontTitle }</h2>
+              <h2 className="block__title block__title--back"> { book.backTitle }</h2>
+              <div className="block__text block__text--back" dangerouslySetInnerHTML={{ __html: book.body }}></div>
             </div>
           </div>
           <div className="block block--large">
-              <h3 className="block__header"> { thirdBlock.header }</h3>
-              <h2 className="block__title"> { thirdBlock.title }</h2>
-              <div className="block__text" dangerouslySetInnerHTML={{ __html: thirdBlock.body }}></div>
+              <h3 className="block__header"> { workshop.header }</h3>
+              <h2 className="block__title"> { workshop.title }</h2>
+              <div className="block__text" dangerouslySetInnerHTML={{ __html: workshop.body }}></div>
             </div>
           <Form />
         </main>
