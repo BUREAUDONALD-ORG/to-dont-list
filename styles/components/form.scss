@@ -53,6 +53,7 @@
   line-height: 2rem;
   // color: $complementary;
   color: $night;
+  border-radius: 0;
 }
 
 .form__field-container--cc {
@@ -65,7 +66,7 @@
   line-height: 1.5rem;
 }
 
-.form__field::-webkit-input-placeholder {
+.form__field::placeholder {
   color: $complementary;
 }
 
