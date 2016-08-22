@@ -1,6 +1,6 @@
 ---
 header: "App:"
-frontTitle: "To Don't List"
+frontTitle: "To Don\u2019t List"
 backTitle: "Download"
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
