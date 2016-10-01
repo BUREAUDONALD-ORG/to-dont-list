@@ -1,6 +1,5 @@
 ---
-header: "Workshop:"
-title: "Sketch, Don\u2019t Talk"
+title: "Workshop"
 ---
 Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,

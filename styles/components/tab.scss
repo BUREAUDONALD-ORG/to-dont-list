@@ -1,0 +1,35 @@
+.tab__container {
+  display: flex;
+}
+
+.tab {
+  padding: 1rem;
+  width: 50%;
+  min-height: 22.5rem;
+  margin: 0 0 1rem 0;
+  background: $day;
+}
+
+div.tab + div.tab {
+  margin: 0 0 0 1rem;
+}
+
+.tab:hover {
+  background: $night;
+}
+
+.tab:hover .tab__subtitle {
+  color: white;
+}
+
+.tab__title {
+  font-family: nittigrotesk-black;
+  @include t--large;
+  color: $complementary;
+}
+
+.tab__subtitle {
+  padding: 0 0 1rem 0;
+  @include t--large;
+  color: $night;
+}

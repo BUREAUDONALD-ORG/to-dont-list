@@ -15,21 +15,23 @@ module.exports = React.createClass({
   render () {
     return (
       <div className="layout__app">
-        <aside className="layout__sidebar">
-          <header>
+        <header className="layout__header">
+          <div className="header__section">
             <h1 className="header__title"> {sidebar.siteTitle} </h1>
-            <img className="header__line" src={line} />
+            <nav>
+              <ul className="nav__list">
+                {sidebar.nav.map((navItem, key)=>{
+                  return <li key={key} className="nav__item">{navItem.title}</li>
+                })}
+              </ul>
+            </nav>
+          </div>
+          <img className="header__line" src={line} />
+          <div className="header__section">
             <h3 className="header__subtitle">{sidebar.subTitle}</h3>
             <h4 className="header__author">{sidebar.authorPrefix} {sidebar.author}</h4>
-          </header>
-          <nav>
-            <ul className="nav__list">
-              {sidebar.nav.map((navItem, key)=>{
-                return <li key={key} className="nav__item">{navItem.title}</li>
-              })}
-            </ul>
-          </nav>
-        </aside>
+          </div>
+        </header>
         {this.props.children}
       </div>
     )

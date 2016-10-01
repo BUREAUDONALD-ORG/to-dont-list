@@ -14,23 +14,14 @@ export default class Index extends React.Component {
       <DocumentTitle title={config.siteTitle}>
         <main className="layout__main">
           <div className="layout__delimiter">
-            <div className="block__container">
-              {[app, book].map((project, key)=>{
-                return <div key={key} className="block block--small" onClick={()=>{console.log("hi")}}>
-                  <h3 className="block__header"> { project.header }</h3>
-                  <div className="block__title-container">
-                    <h2 className="block__title block__title--front"> { project.frontTitle }</h2>
-                    <h2 className="block__title block__title--back"> { project.backTitle }</h2>
-                  </div>
-                  <div className="block__text block__text--back" dangerouslySetInnerHTML={{ __html: project.body }}></div>
+            <div className="tab__container">
+              {[app, book, workshop].map((project, key)=>{
+                return <div key={key} className="tab" onClick={()=>{}}>
+                  <h3 className="tab__title"> { project.title }</h3>
+                  <h2 className="tab__subtitle"> { project.subtitle }</h2>
                 </div>
               })}
             </div>
-            <div className="block block--large">
-                <h3 className="block__header"> { workshop.header }</h3>
-                <h2 className="block__title"> { workshop.title }</h2>
-                <div className="block__text" dangerouslySetInnerHTML={{ __html: workshop.body }}></div>
-              </div>
             <Form />
           </div>
         </main>

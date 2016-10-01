@@ -1,15 +1,9 @@
-.nav {
-  align-self: flex-end;
-}
-
 .nav__list {
   display: flex;
 }
 
 .nav__item {
-  font-family: nittigrotesk-black;
-  font-size: 1rem;
-  line-height: 1rem;
+  @include t--small;
   color: white;
 }
 

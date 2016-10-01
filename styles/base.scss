@@ -2,12 +2,9 @@ html {
   box-sizing: border-box;
   font-size: 10px;
   background: $night;
-  overflow: hidden;
 }
 
 html, body, #react-mount {
-  width: 100%;
-  height: 100%;
 }
 
 *, *:before, *:after {
