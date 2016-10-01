@@ -1,30 +1,14 @@
 ---
 title: "Work\nshops"
+textTitle: "Don\u2019t Talk,\nSketch!"
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Workshop
+In the workshop Donald will focus on how to manage your time better by making your design process more effective. Visualize your ideas, then we can talk about it. Make choices and focus on what is essential following the ToDon’tList—method. You will work alone, in pairs and small teams. Duration of the workshop can be 30 min, 3 hours, 3 days or even 3 weeks.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Content
+The workshop fits well for art students to organize their way of working better, as well for corporate organisations to get an creative impulse and see their way of working through new glasses. Bring your pencils, and a bunch of sketch paper (don’t worry, you can steal paper from the copy machine).
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+## Costs
+Please save yourselve some time: If your budget is less then €1500,- (excluding travel expensives) don’t send an invitation. By a stay longer than 4 days, Donald will probably ask for a ticket for his wife and 1 year old son.
 
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+Donald is based in Amsterdam, The Netherlands. He is happy to visit you all around the globe. If you’re interested, send a [5 sentence email](/) to Donald. 

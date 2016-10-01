@@ -1,0 +1,19 @@
+.viewer__title {
+  padding-bottom: 7rem;
+  @include t--x-large;
+}
+
+.viewer__content {
+  max-width: 128.5rem;
+  h2 {
+    padding: 1rem 0 0.8rem;
+    @include t--x-small;
+  }
+  p {
+    padding-bottom: 4rem;
+    @include t--body;
+  }
+  a {
+    color: $complementary;
+  }
+}

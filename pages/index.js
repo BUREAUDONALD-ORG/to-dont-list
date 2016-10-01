@@ -8,24 +8,17 @@ import app from '../content/app.md';
 import book from '../content/book.md';
 import workshop from '../content/workshop.md';
 
+import marker from '../assets/images/marker.png';
+
 export default class Index extends React.Component {
   render () {
     return (
       <DocumentTitle title={config.siteTitle}>
-        <main className="layout__main">
-          <div className="tab__container">
-            {[app, book].map((project, key)=>{
-              return <div key={key} className="tab" onClick={()=>{}}>
-                <h3 className="tab__title"> { project.title }</h3>
-                <h2 className="tab__subtitle"> { project.subtitle }</h2>
-              </div>
-            })}
-            <div key={3} className="tab" onClick={()=>{}}>
-              <pre><h3 className="tab__workshop-title">{ workshop.title }</h3></pre>
-            </div>
-          </div>
-          <Form />
-        </main>
+        <div>
+          <pre><h1 className="viewer__title">{ workshop.textTitle }</h1></pre>
+          <div className="viewer__content" dangerouslySetInnerHTML={{ __html: workshop.body }}></div>
+          <img className="viewer__img" src={marker}></img>
+        </div>
       </DocumentTitle>
     )
   }

@@ -2,6 +2,8 @@
 title: "App"
 subtitle: "To Don\u2019tList"
 ---
-Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+# To Don\u2019tList
+
+Do you need a simple, but effective to-do list app? The ToDon’tList helps you make choices about what you will do, but more importantly, also about what you won’t do. That way, you get to focus on what truly matters. 
+
+[Download for iOS]()
