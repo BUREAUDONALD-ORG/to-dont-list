@@ -1,0 +1,26 @@
+siteTitle: "To\nDon\u2019t\nList"
+subTitle: "Time\nManagement\nfor Creative\nPeople"
+authorPrefix: "by "
+author: "Donald Roos"
+nav:
+- title: Tools
+  link: ""
+- title: Mail
+  link: ""
+- title: Social
+  link: ""
+- title: Credits
+  link: ""
+hashtag: "#ToDon\u2019tList"
+socialText:
+- Donald posts sketches and pictures of type regularly. 
+- Check @Bureaudonald on Twitter and Instagram.
+socialbtn:
+- text: Twitter
+  image: ""
+  link: ""
+- text: "Instagram"
+  image: ""
+  link: ""
+creditsTitle: "Credits"
+credits: "The ToDon’tList is a project by Bureaudonald, inspired and supported by Anne de Bruijn, Peter Heykamp, Frank van der Peet, Benz Roos, Robert-Jan Korteschiel, Jan Harm Lieftinck, Guus de Graaf, Petr van Blokland, Barbara Bigosińska, Pieter van Rosmalen, Dennis Kleyn, and Gerrit Heijkoop."

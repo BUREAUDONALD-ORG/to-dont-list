@@ -1,0 +1,50 @@
+.social {
+  
+}
+
+.social__hashtag {
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 10rem 6rem;
+  @include t--hashtag;
+  color: $day;
+  background: $night;
+}
+
+.social__hashtag:before, .social__hashtag:after {
+  position: absolute;
+  right: 0;
+  content: "";
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-color: transparent $complementary transparent transparent;
+}
+
+.social__hashtag:before {
+  top: 0;
+  border-width: 0 16rem 16rem 0;
+}
+
+.social__hashtag:after {
+  bottom: 0;
+  border-width: 16rem 16rem 0 0;
+}
+
+.social__hashtag-dot {
+  display: block;
+  margin: 0 0 0 10rem;
+  height: 12rem;
+  width: 12rem;
+  border-radius: 50%;
+  background: $complementary;
+}
+
+.social__text-container {
+  padding: 6rem 0;
+}
+
+.social__text {
+  @include t--x-small;
+}

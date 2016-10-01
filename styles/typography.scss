@@ -20,6 +20,12 @@
   line-height: 28rem;
 }
 
+@mixin t--hashtag {
+  font-family: nittigrotesk-black;
+  font-size: 31.2rem;
+  line-height: 28rem;  
+}
+
 @mixin t--subtitle {
   font-family: nittigrotesk-black;
   font-size: 17rem;
