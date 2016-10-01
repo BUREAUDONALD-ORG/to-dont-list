@@ -3,14 +3,14 @@
 }
 
 .tab {
-  padding: 1rem;
+  padding: 3rem 6rem;
   width: 33%;
-  min-height: 15rem;
+  min-height: 35rem;
   background: $day;
 }
 
 div.tab + div.tab {
-  margin: 0 0 0 1rem;
+  margin: 0 0 0 4rem;
 }
 
 .tab:hover {
@@ -22,13 +22,18 @@ div.tab + div.tab {
 }
 
 .tab__title {
-  font-family: nittigrotesk-black;
-  @include t--large;
+  @include t--medium;
   color: $complementary;
 }
 
 .tab__subtitle {
   padding: 0 0 1rem 0;
-  @include t--large;
+  @include t--medium;
   color: $night;
+}
+
+.tab__workshop-title {
+  @include t--large;
+  padding-bottom: 4rem;
+  color: $complementary;
 }

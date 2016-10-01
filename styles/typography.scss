@@ -34,8 +34,8 @@
 
 @mixin t--large {
   font-family: nittigrotesk-black;
-  font-size: 16rem;
-  line-height: 11rem;
+  font-size: 16.5rem;
+  line-height: 11.8rem;
 }
 
 @mixin t--medium {
@@ -51,7 +51,7 @@
 }
 
 @mixin t--x-small {
-  font-family: nittigrotesk-normal;
+  font-family: nittigrotesk-black;
   font-size: 4.5rem;
   line-height: 5rem;
 }

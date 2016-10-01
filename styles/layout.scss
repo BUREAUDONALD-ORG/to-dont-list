@@ -3,20 +3,21 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
+  max-width: 300rem;
 }
 
 .layout__header {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20rem;
+  padding: 15rem 30rem;
   background: $night;
 }
 
 .layout__main {
   flex-grow: 1;
   flex-direction: column;
-  padding: 2rem 20rem;
+  padding: 6rem 30rem;
   background: $complementary;
   overflow-y: scroll;
 }

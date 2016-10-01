@@ -1,11 +1,13 @@
 siteTitle: "To\nDon\u2019t\nList"
-subTitle: "Time\nmanagement\nfor creative\npeople"
+subTitle: "Time\nManagement\nfor Creative\nPeople"
 authorPrefix: "by "
 author: "Donald Roos"
 nav:
-- title: Menu
+- title: Tools
   link: ""
-- title: About
+- title: Mail
   link: ""
-- title: Contact
+- title: Social
+  link: ""
+- title: Credits
   link: ""

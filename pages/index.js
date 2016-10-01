@@ -14,12 +14,15 @@ export default class Index extends React.Component {
       <DocumentTitle title={config.siteTitle}>
         <main className="layout__main">
           <div className="tab__container">
-            {[app, book, workshop].map((project, key)=>{
+            {[app, book].map((project, key)=>{
               return <div key={key} className="tab" onClick={()=>{}}>
                 <h3 className="tab__title"> { project.title }</h3>
                 <h2 className="tab__subtitle"> { project.subtitle }</h2>
               </div>
             })}
+            <div key={3} className="tab" onClick={()=>{}}>
+              <pre><h3 className="tab__workshop-title">{ workshop.title }</h3></pre>
+            </div>
           </div>
           <Form />
         </main>
