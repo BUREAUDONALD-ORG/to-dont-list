@@ -9,7 +9,8 @@ export default class Form extends React.Component {
       <form className="form">
         <div className="form__header">
           <img className="form__arrow" src={arrow} />
-          <div className="form__title">{form.header}</div>
+          <div className="form__title">{form.title}</div>
+          <img className="form__arrow" src={arrow} />
         </div>
         <div className="form__fields-container">
           {form.fields.map((field, key)=>{

@@ -55,9 +55,13 @@ module.exports = React.createClass({
         <article className="layout__viewer">
           {this.props.children}
         </article>
-        <main className="layout__form">
+        <div className="layout__form">
           <Form />
-        </main>
+        </div>
+        <div className="layout__social">
+        </div>
+        <div className="layout__credits">
+        </div>
       </div>
     )
   },

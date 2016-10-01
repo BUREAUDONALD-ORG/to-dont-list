@@ -26,7 +26,18 @@
 }
 
 .layout__form {
+  padding: 0rem 30rem;
+  background: $complementary;
+}
+
+.layout__social {
   padding: 6rem 30rem;
+  background: $complementary;
+}
+
+.layout__credits {
+  padding: 6rem 30rem;
+  background: $night;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {
