@@ -1,15 +1,16 @@
 .nav__list {
   display: flex;
+  padding: 8rem 0 0 2rem;
 }
 
 .nav__item {
-  @include t--small;
+  @include t--x-small;
   color: white;
 }
 
 .nav__item::after {
   content: "|";
-  padding: 0 0.4rem;
+  padding: 0 1rem;
 }
 
 li.nav__item:last-child:after

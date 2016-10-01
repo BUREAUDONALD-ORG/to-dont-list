@@ -9,21 +9,16 @@
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 18rem;
-  padding: 4rem;
+  padding: 20rem;
   background: $night;
 }
 
 .layout__main {
   flex-grow: 1;
   flex-direction: column;
-  padding: 2rem;
+  padding: 2rem 20rem;
   background: $complementary;
   overflow-y: scroll;
-}
-
-.layout__delimiter {
-  max-width: 50rem;
 }
 
 @media (min-width: 0px) and (max-width: 767px) {

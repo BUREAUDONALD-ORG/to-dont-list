@@ -16,36 +16,48 @@
 
 @mixin t--title {
   font-family: nittigrotesk-black;
-  font-size: 6rem;
-  line-height: 4.25rem;
+  font-size: 43.5rem;
+  line-height: 28rem;
 }
 
 @mixin t--subtitle {
   font-family: nittigrotesk-black;
-  font-size: 2rem;
-  line-height: 2rem;
+  font-size: 17rem;
+  line-height: 14rem;
+}
+
+@mixin t--x-large {
+  font-family: nittigrotesk-black;
+  font-size: 22rem;
+  line-height: 15.5rem;
 }
 
 @mixin t--large {
   font-family: nittigrotesk-black;
-  font-size: 5rem;
-  line-height: 4.25rem;
+  font-size: 16rem;
+  line-height: 11rem;
 }
 
 @mixin t--medium {
   font-family: nittigrotesk-black;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-}
-
-@mixin t--body {
-  font-family: nittigrotesk-normal;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 9rem;
+  line-height: 9rem;
 }
 
 @mixin t--small {
   font-family: nittigrotesk-black;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+@mixin t--x-small {
+  font-family: nittigrotesk-normal;
+  font-size: 4.5rem;
+  line-height: 5rem;
+}
+
+@mixin t--body {
+  font-family: nittigrotesk-black;
+  font-size: 4rem;
+  line-height: 5rem;
 }
