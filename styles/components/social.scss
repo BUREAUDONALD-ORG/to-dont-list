@@ -6,7 +6,8 @@
   position: relative;
   display: flex;
   align-items: center;
-  padding: 10rem 6rem;
+  justify-content: space-between;
+  padding: 10rem 14rem 10rem 6rem;
   @include t--hashtag;
   color: $day;
   background: $night;
@@ -46,5 +47,32 @@
 }
 
 .social__text {
+  @include t--x-small;
+}
+
+.social__button-container {
+  display: flex;
+}
+
+.social__button {
+  display: flex;
+  align-items: center;
+  padding: 4rem 20rem;
+  background: $night;
+  color: $day;
+
+}
+
+.social__button + .social__button {
+  margin-left: 4rem;
+}
+
+.social__button-img {
+  height: 8rem;
+  width: 8rem;
+  margin-right: 3rem;
+}
+
+.social__button-text {
   @include t--x-small;
 }

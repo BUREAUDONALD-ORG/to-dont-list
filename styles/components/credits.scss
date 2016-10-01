@@ -1,0 +1,19 @@
+.credits__title {
+  padding-bottom: 2rem;
+  @include t--medium;
+  color: $day;
+}
+
+.credits__text {
+  @include t--x-small;
+  color: $complementary;
+}
+
+.credits__text a {
+  border-bottom: 0.5rem solid $complementary;
+}
+
+.credits__text a:first-of-type {
+  color: white;
+  border-bottom: 0.5rem solid $day;
+}

@@ -5,8 +5,10 @@ import { config } from 'config'
 import "styles/app.scss";
 
 import line from '../assets/images/line.png'
+import twitter from '../assets/images/twitter.svg'
+import instagram from '../assets/images/instagram.svg'
 
-import site from '../content/site.yaml';
+import site from '../content/site.md';
 import app from '../content/app.md';
 import book from '../content/book.md';
 import workshop from '../content/workshop.md';
@@ -70,13 +72,15 @@ module.exports = React.createClass({
           <div className="social__button-container">
             {site.socialbtn.map((btn, key)=>{
               return <div key={key} className="social__button">
-                <img className="social__button-img" src={btn.image} />
+                <img className="social__button-img" src={ key ? instagram : twitter } />
                 <h1 className="social__button-text">{btn.text}</h1>
               </div>
             })}
           </div>
         </div>
         <div className="layout__credits">
+          <h1 className="credits__title">{site.creditsTitle}</h1>
+          <p className="credits__text" dangerouslySetInnerHTML={{ __html: site.body }}></p>
         </div>
       </div>
     )
