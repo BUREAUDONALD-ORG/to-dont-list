@@ -73,7 +73,7 @@ export default class Mobile extends React.Component {
               <div className="button__container">
                 {site.socialbtn.map((btn, key)=>{
                   return <a href={btn.link} key={key} className="button">
-                    <img className="button__img" src={ key ? prefixLink("/" + instagram) : prefixLink("/" + twitter) } />
+                    <img className="button__img" src={ key ? instagram : twitter } />
                     <h1 className="button__text">{btn.text}</h1>
                   </a>
                 })}
