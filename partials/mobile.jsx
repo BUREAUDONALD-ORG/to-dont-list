@@ -15,9 +15,21 @@ import instagram from '../assets/images/instagram.svg'
 
 import site from '../content/site.md';
 
-import Form from '../partials/form.js'
+import arrowLeft from '../assets/images/arrow-left.png'
+import arrowRight from '../assets/images/arrow-right.png'
 
 export default class Mobile extends React.Component {
+  constructor (props) {
+    super(props);
+    this.state = {
+      view: "header"
+    }
+  }
+
+  changeView (view) {
+    this.setState({view: view});
+  }
+
   componentDidMount () {
     if (typeof document != "undefined"){ 
       smoothScroll.init();
@@ -25,16 +37,23 @@ export default class Mobile extends React.Component {
   }
 
   render () {
+    let view = this.state.view;
+    console.log("view: ", view)
     return (
       <div className="layout__app">
-        <header className="layout__header">
-          <div className="header__section">
-            <pre><h1 className="header__title">{site.siteTitle}</h1></pre>
+        <header className="layout__header" style={(()=>{return ((view == "header") ? {display: "flex"} : {display: "none"})})()}>
+          <div className="header__main">
+            <div className="header__section">
+              <pre><h1 className="header__title">{site.siteTitle}</h1></pre>
+            </div>
+            <img className="header__line" src={lineHz} />
+            <div className="header__section">
+              <pre><h3 className="header__subtitle">{site.subTitle}</h3></pre>
+              <h4 className="header__author"><a href={site.authorLink} > {site.authorPrefix} {site.author}</a></h4>
+            </div>
           </div>
-          <img className="header__line" src={lineHz} />
-          <div className="header__section">
-            <pre><h3 className="header__subtitle">{site.subTitle}</h3></pre>
-            <h4 className="header__author"><a href={site.authorLink} > {site.authorPrefix} {site.author}</a></h4>
+          <div className="header__nav">
+            <img className="nav__arrow" src={arrowRight} onClick={this.changeView.bind(this, "overview")}/>
           </div>
         </header>
         {this.props.children}

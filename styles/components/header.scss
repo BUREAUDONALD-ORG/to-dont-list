@@ -30,9 +30,20 @@
 // Mobile
 
 @media (min-width: 0px) and (max-width: 800px) {
-  .header__section {
+  .header__main {
     display: flex;
     flex-direction: column;
+    padding: 5rem 15rem;
+  }
+
+  .header__nav {
+    background: $complementary;
+    height: 100%;
+    min-width: 20rem;
+    padding: 30rem 0 0 0;
+  }
+
+  .header__section {
     width: 100%;
     padding: 10rem 5rem;
   }
