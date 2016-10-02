@@ -7,3 +7,4 @@ fields:
 - "5. Say \u201CBye\u201D"
 ccField: "Enter your email for a cc and reply."
 submit: "Send"
+mailTo: "bureau@donald.eu"
