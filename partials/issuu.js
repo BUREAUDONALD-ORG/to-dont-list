@@ -23,11 +23,9 @@ export default class Index extends React.Component {
     document.getElementsByTagName("head")[0].appendChild(script);
   }
   componentDidMount (){
-    console.log("hi 2")
-    this.loadScript("//e.issuu.com/embed.js", ()=>{console.log("loaded")})
+    this.loadScript("//e.issuu.com/embed.js", ()=>{})
   }
   render () {
-      console.log("hi");
       return <div data-configid="1201948/38154588" className="viewer__issuuembed issuuembed"></div>
       ;
   }

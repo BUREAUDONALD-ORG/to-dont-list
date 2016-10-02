@@ -6,11 +6,11 @@ link: "book"
 buybtnHeader: "Order a Copy"
 buybtn:
 - text: Amazon
-  link: "http://www.amazon.com"
+  link: "https://www.amazon.com/Dont-Read-This-Book-Management/dp/9063694237/ref=sr_1_1?ie=UTF8&qid=1475415664&sr=8-1&keywords=donald+roos"
 - text: "BIS Publishers"
   link: "http://www.bispublishers.com/donald-roos-dont-read-this-book.html"
 - text: Bol.com
-  link: "http://www.bol.com"
+  link: "https://www.bol.com/nl/p/don-t-read-this-book/9200000050365106/?suggestionType=typedsearch"
 ---
 As creative people, we have ideas. Bad, good, weird, clever, and even brilliant ideas. But most of them (even the great ideas) never see the light of day. Why? If you ask a creative person, the answer will always revolve around time. We simply need time to execute an idea, and do it well — more time than we have.
 

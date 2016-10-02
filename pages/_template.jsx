@@ -10,9 +10,6 @@ import twitter from '../assets/images/twitter.svg'
 import instagram from '../assets/images/instagram.svg'
 
 import site from '../content/site.md';
-import app from '../content/app.md';
-import book from '../content/book.md';
-import workshop from '../content/workshop.md';
 
 import Form from '../partials/form.js'
 
@@ -42,30 +39,11 @@ module.exports = React.createClass({
             <h4 className="header__author"><a href={site.authorLink} > {site.authorPrefix} {site.author}</a></h4>
           </div>
         </header>
-        <main className="layout__main">
-          <div className="tab__container">
-            {[app, book].map((project, key)=>{
-              return <div key={key} className="tab" onClick={()=>{}}>
-                <Link to={"/" + project.link + "/"}>
-                  <h3 className="tab__title"> { project.title }</h3>
-                  <h2 className="tab__subtitle"> { project.subtitle }</h2>
-                </Link>              
-              </div>
-            })}
-            <div key={3} className="tab" onClick={()=>{}}>
-              <Link to={workshop.link}>
-                <pre><h3 className="tab__workshop-title">{ workshop.title }</h3></pre>
-              </Link>
-            </div>
-          </div>
-        </main>
-        <article id="viewer" className="layout__viewer">
-          {this.props.children}
-        </article>
-        <div className="layout__form">
+        {this.props.children}
+        <div id="mail" className="layout__form">
           <Form />
         </div>
-        <div className="layout__social">
+        <div id="social" className="layout__social">
           <a href={site.hashtagLink} className="social__hashtag">
             {site.hashtag}
             <span className="social__hashtag-dot"></span>
@@ -83,7 +61,7 @@ module.exports = React.createClass({
             })}
           </div>
         </div>
-        <div className="layout__credits">
+        <div id="credits" className="layout__credits">
           <h1 className="credits__title">{site.creditsTitle}</h1>
           <p className="credits__text" dangerouslySetInnerHTML={{ __html: site.body }}></p>
         </div>
