@@ -13,7 +13,6 @@
 
 .header__line {
   display: block;
-  padding: 1rem 0 1rem 0;
   height: 120rem;
   padding: 0 8rem;
 }
@@ -26,4 +25,26 @@
 .header__author {
   @include t--small;
   color: $day;
+}
+
+// Mobile
+
+@media (min-width: 0px) and (max-width: 800px) {
+  .header__section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 10rem 5rem;
+  }
+
+  div.header__section:last-of-type {
+    flex: 1;
+  }
+
+  .header__line {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding: 0;
+  }
 }
