@@ -36,10 +36,14 @@ export default class Form extends React.Component {
   submitEmail (event) {
     event.preventDefault();
     let fields = Object.assign([], this.state.fields);
-    let body = fields.shift() + ", \n\n" + fields.shift() + ". " + fields.shift() + ". " + fields.shift() + ".\n\n" + fields.shift() + ". ";
+    let body = fields.shift() + ", \n\n" + fields.shift() + ". " + fields.shift() + ". " + fields.shift() + ".\n\n" + fields.shift();
     let bodyURI = encodeURIComponent(body);
     let mail = "mailto:" + form.mailTo + "?subject=" + "ToDontForm%20-%20" + this.state.fields[1] + "&body=" + bodyURI;
     window.location.href = mail;
+    this.setState((prevState)=>{
+      prevState.isSubmitted = true;
+      return 
+    })
   }
 
   render () {
@@ -62,7 +66,7 @@ export default class Form extends React.Component {
               <input className="form__field form__field--cc" type="text" onChange={this.updateField.bind(this, "email")} placeholder={form.ccField} />
               <label className="form__label">{form.ccField}</label>
             </div>
-            <input className="form__submit" type="submit" value="send"/>
+            <input className="form__submit" type="submit" value={this.state.isSubmitted ? "Thank You!" : "send"}/>
           </div>
         </div>
       </form>
