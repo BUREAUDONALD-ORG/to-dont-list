@@ -26,7 +26,7 @@ export default class Index extends React.Component {
                 </div>
               </div>
               <div className="viewer__iphone-container">
-                <img className="viewer__iphone" src={prefixLink(iphone)}></img>
+                <img className="viewer__iphone" src={prefixLink("/" + iphone)}></img>
               </div>
             </div>
           </article>
