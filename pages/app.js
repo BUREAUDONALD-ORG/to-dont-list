@@ -1,4 +1,5 @@
 import React from 'react'
+import { prefixLink } from 'gatsby-helpers'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 
@@ -25,7 +26,7 @@ export default class Index extends React.Component {
                 </div>
               </div>
               <div className="viewer__iphone-container">
-                <img className="viewer__iphone" src={iphone}></img>
+                <img className="viewer__iphone" src={prefixLink(iphone)}></img>
               </div>
             </div>
           </article>
