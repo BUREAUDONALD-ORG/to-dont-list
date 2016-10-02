@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
+import smoothScroll from 'smooth-scroll'
 
 import "styles/app.scss";
 
@@ -19,6 +20,11 @@ module.exports = React.createClass({
       children: React.PropTypes.any,
     }
   },
+  
+  componentDidMount () {
+    smoothScroll.init();
+  },
+
   render () {
     return (
       <div className="layout__app">
@@ -28,7 +34,7 @@ module.exports = React.createClass({
             <nav>
               <ul className="nav__list">
                 {site.nav.map((navItem, key)=>{
-                  return <li key={key} className="nav__item">{navItem.title}</li>
+                  return <li key={key} className="nav__item"><a data-scroll href={navItem.link}>{navItem.title}</a></li>
                 })}
               </ul>
             </nav>

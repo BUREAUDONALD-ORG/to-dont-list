@@ -6,13 +6,13 @@ author: "Donald Roos"
 authorLink: "http://www.bureaudonald.com"
 nav:
 - title: Tools
-  link: ""
+  link: "#tools"
 - title: Mail
-  link: ""
+  link: "#mail"
 - title: Social
-  link: ""
+  link: "#social"
 - title: Credits
-  link: ""
+  link: "#credits"
 hashtag: "#ToDon\u2019tList"
 hashtagLink: "https://twitter.com/hashtag/todontlist"
 socialText:
