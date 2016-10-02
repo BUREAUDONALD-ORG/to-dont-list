@@ -35,7 +35,6 @@ export default class Form extends React.Component {
 
   submitEmail (event) {
     event.preventDefault();
-
     if (typeof window != "undefined"){ 
       let fields = Object.assign([], this.state.fields);
       let body = fields.shift() + ", \n\n" + fields.shift() + ". " + fields.shift() + ". " + fields.shift() + ".\n\n" + fields.shift();

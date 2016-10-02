@@ -2,7 +2,10 @@ import React from 'react'
 import { Link } from 'react-router'
 import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
-import smoothScroll from 'smooth-scroll'
+
+if (typeof document != "undefined"){ 
+  var smoothScroll = require('smooth-scroll');
+}
 
 import "styles/app.scss";
 
