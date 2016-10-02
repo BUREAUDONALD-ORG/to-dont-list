@@ -1,3 +1,4 @@
+// Desktop
 @media (min-width: 801px) and (max-width: 9999px) {
   .tab__container {
     display: flex;
@@ -61,6 +62,7 @@
   }
 }
 
+// Mobile
 @media (min-width: 0px) and (max-width: 800px) {
   .tab__header {
     @include t--medium;
