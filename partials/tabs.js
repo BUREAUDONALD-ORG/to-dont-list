@@ -23,7 +23,7 @@ export default class Tabs extends React.Component {
             {(route === "/" + project.link + "/") && <img className="tab__arrow tab__arrow-black" src={arrowBlack} />}
           </Link>              
         })}
-        <Link to={prefixLink("")} key={3} className="tab" onClick={()=>{}}>
+        <Link to={prefixLink("/")} key={3} className="tab" onClick={()=>{}}>
           <pre><h3 className="tab__workshop-title">{ workshop.title }</h3></pre>
           {(!route) && <img className="tab__arrow" src={arrow} />}
           {(!route) && <img className="tab__arrow tab__arrow-black" src={arrowBlack} />}
