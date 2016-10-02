@@ -1,0 +1,34 @@
+import React from 'react';
+
+export default class Index extends React.Component {
+  loadScript(url, callback){
+    var script = document.createElement("script")
+    script.type = "text/javascript";
+
+    if (script.readyState){  //IE
+        script.onreadystatechange = function(){
+            if (script.readyState == "loaded" ||
+                    script.readyState == "complete"){
+                script.onreadystatechange = null;
+                callback();
+            }
+        };
+    } else {  //Others
+        script.onload = function(){
+            callback();
+        };
+    }
+
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+  componentDidMount (){
+    console.log("hi 2")
+    this.loadScript("//e.issuu.com/embed.js", ()=>{console.log("loaded")})
+  }
+  render () {
+      console.log("hi");
+      return <div data-configid="1201948/38154588" className="viewer__issuuembed issuuembed"></div>
+      ;
+  }
+};

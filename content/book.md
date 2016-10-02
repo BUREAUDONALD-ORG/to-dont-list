@@ -14,5 +14,5 @@ Paperback | 160 pages | 21.5 x 14 cm | ISBN 978 90 6369 423 4 
 
 Order a Copy
 [Amazon](http://www.amazon.com)
-[BIS Publishers](http://www.bispublishers.com)
+[BIS Publishers](http://www.bispublishers.com/donald-roos-dont-read-this-book.html)
 [Bol.com](http://www.bol.com)
