@@ -9,10 +9,18 @@ export default class Index extends React.Component {
   render () {
     return (
       <DocumentTitle title={config.siteTitle}>
-        <div>
+        <div className="viewer">
           <pre><h1 className="viewer__title">{ book.textTitle }</h1></pre>
           <Issuu />
           <div className="viewer__content" dangerouslySetInnerHTML={{ __html: book.body }}></div>
+          <h1 className="viewer__button-header">{book.buybtnHeader}</h1>
+          <div className="viewer__button-container">
+            {book.buybtn.map((btn, key)=>{
+              return <div key={key} className="viewer__button">
+                <a href={btn.link} ><h1 className="viewer__button-text">{btn.text}</h1></a>
+              </div>
+            })}
+          </div>
         </div>
       </DocumentTitle>
     )

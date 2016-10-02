@@ -3,6 +3,14 @@ title: "Book"
 subtitle: "Don\u2019t Read \nThis Book"
 textTitle: "Don\u2019t Read \nThis Book"
 link: "book"
+buybtnHeader: "Order a Copy"
+buybtn:
+- text: Amazon
+  link: "http://www.amazon.com"
+- text: "BIS Publishers"
+  link: "http://www.bispublishers.com/donald-roos-dont-read-this-book.html"
+- text: Bol.com
+  link: "http://www.bol.com"
 ---
 As creative people, we have ideas. Bad, good, weird, clever, and even brilliant ideas. But most of them (even the great ideas) never see the light of day. Why? If you ask a creative person, the answer will always revolve around time. We simply need time to execute an idea, and do it well — more time than we have.
 
@@ -11,8 +19,3 @@ Don’t Read This Book focuses on how to make choices about everything you do in
 The book is divided into 3 parts: Life, Work, and Projects. It covers everything from defining your life goals, to writing a 5 sentence email, to leaving out as much as possible in a project. Whether you are a student or a professional, this book will save you time. Or, don’t read this book. That will save you time too.
 
 Paperback | 160 pages | 21.5 x 14 cm | ISBN 978 90 6369 423 4 
-
-Order a Copy
-[Amazon](http://www.amazon.com)
-[BIS Publishers](http://www.bispublishers.com/donald-roos-dont-read-this-book.html)
-[Bol.com](http://www.bol.com)

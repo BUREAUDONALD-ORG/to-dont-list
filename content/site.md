@@ -3,6 +3,7 @@ siteTitle: "To\nDon\u2019t\nList"
 subTitle: "Time\nManagement\nfor Creative\nPeople"
 authorPrefix: "by "
 author: "Donald Roos"
+authorLink: "http://www.bureaudonald.com"
 nav:
 - title: Tools
   link: ""

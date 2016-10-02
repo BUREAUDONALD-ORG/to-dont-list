@@ -39,7 +39,7 @@ module.exports = React.createClass({
           <img className="header__line" src={line} />
           <div className="header__section">
             <pre><h3 className="header__subtitle">{site.subTitle}</h3></pre>
-            <h4 className="header__author">{site.authorPrefix} {site.author}</h4>
+            <h4 className="header__author"><a href={site.authorLink} > {site.authorPrefix} {site.author}</a></h4>
           </div>
         </header>
         <main className="layout__main">
