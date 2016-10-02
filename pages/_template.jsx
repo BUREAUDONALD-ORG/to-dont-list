@@ -22,7 +22,9 @@ module.exports = React.createClass({
   },
   
   componentDidMount () {
-    smoothScroll.init();
+    if (typeof document != "undefined"){ 
+      smoothScroll.init();
+    }
   },
 
   render () {

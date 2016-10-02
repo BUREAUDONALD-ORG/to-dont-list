@@ -35,15 +35,18 @@ export default class Form extends React.Component {
 
   submitEmail (event) {
     event.preventDefault();
-    let fields = Object.assign([], this.state.fields);
-    let body = fields.shift() + ", \n\n" + fields.shift() + ". " + fields.shift() + ". " + fields.shift() + ".\n\n" + fields.shift();
-    let bodyURI = encodeURIComponent(body);
-    let mail = "mailto:" + form.mailTo + "?subject=" + "ToDontForm%20-%20" + this.state.fields[1] + "&body=" + bodyURI;
-    window.location.href = mail;
-    this.setState((prevState)=>{
-      prevState.isSubmitted = true;
-      return 
-    })
+
+    if (typeof window != "undefined"){ 
+      let fields = Object.assign([], this.state.fields);
+      let body = fields.shift() + ", \n\n" + fields.shift() + ". " + fields.shift() + ". " + fields.shift() + ".\n\n" + fields.shift();
+      let bodyURI = encodeURIComponent(body);
+      let mail = "mailto:" + form.mailTo + "?subject=" + "ToDontForm%20-%20" + this.state.fields[1] + "&body=" + bodyURI;
+      window.location.href = mail;
+      this.setState((prevState)=>{
+        prevState.isSubmitted = true;
+        return prevState;
+      })
+    }
   }
 
   render () {
