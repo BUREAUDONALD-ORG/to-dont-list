@@ -1,5 +1,6 @@
 ---
 title: "Work\nshops"
+subtitle: "Don\u2019t Talk,\nSketch!"
 textTitle: "Don\u2019t Talk,\nSketch!"
 link: ""
 ---

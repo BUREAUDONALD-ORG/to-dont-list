@@ -1,19 +1,45 @@
-.credits__title {
-  padding-bottom: 2rem;
-  @include t--medium;
-  color: $day;
+@media (min-width: 801px) and (max-width: 9999px) {
+
+  .credits__title {
+    padding-bottom: 2rem;
+    @include t--medium;
+    color: $day;
+  }
+
+  .credits__text p {
+    @include t--x-small;
+    color: $complementary;
+  }
+
+  .credits__text a {
+    border-bottom: 0.5rem solid $complementary;
+  }
+
+  .credits__text a:first-of-type {
+    color: white;
+    border-bottom: 0.5rem solid $day;
+  }
+
 }
 
-.credits__text p {
-  @include t--x-small;
-  color: $complementary;
-}
+@media (min-width: 0px) and (max-width: 800px) {
+  .credits__title {
+    padding-bottom: 2rem;
+    @include t--medium;
+    color: $day;
+  }
 
-.credits__text a {
-  border-bottom: 0.5rem solid $complementary;
-}
+  .credits__text {
+    @include t--x-small;
+    color: $night;
+  }
 
-.credits__text a:first-of-type {
-  color: white;
-  border-bottom: 0.5rem solid $day;
+  .credits__text a {
+    border-bottom: 0.5rem solid $complementary;
+  }
+
+  .credits__text a:first-of-type {
+    color: white;
+    border-bottom: 0.5rem solid $day;
+  }
 }

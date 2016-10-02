@@ -18,6 +18,8 @@ import site from '../content/site.md';
 import arrowLeft from '../assets/images/arrow-left.png'
 import arrowRight from '../assets/images/arrow-right.png'
 
+import TabsMobile from '../partials/tabs-mobile.js'
+
 export default class Mobile extends React.Component {
   constructor (props) {
     super(props);
@@ -41,8 +43,8 @@ export default class Mobile extends React.Component {
     console.log("view: ", view)
     return (
       <div className="layout__app">
-        <header className="layout__header" style={(()=>{return ((view == "header") ? {display: "flex"} : {display: "none"})})()}>
-          <div className="header__main">
+        <header className="layout__main" style={(()=>{return ((view == "header") ? {display: "flex"} : {display: "none"})})()}>
+          <div className="header">
             <div className="header__section">
               <pre><h1 className="header__title">{site.siteTitle}</h1></pre>
             </div>
@@ -56,28 +58,35 @@ export default class Mobile extends React.Component {
             <img className="nav__arrow" src={arrowRight} onClick={this.changeView.bind(this, "overview")}/>
           </div>
         </header>
-        {this.props.children}
-        <div id="social" className="layout__social">
-          <a href={site.hashtagLink} className="social__hashtag">
-            {site.hashtag}
-            <span className="social__hashtag-dot"></span>
-          </a>
-          <div className="social__text-container">
-            <p className="social__text">{site.socialText[0]}</p> 
-            <p className="social__text">{site.socialText[1]}</p> 
-          </div>
-          <div className="button__container">
-            {site.socialbtn.map((btn, key)=>{
-              return <a href={btn.link} key={key} className="button">
-                <img className="button__img" src={ key ? instagram : twitter } />
-                <h1 className="button__text">{btn.text}</h1>
+        <div className="layout__main" style={(()=>{return ((view == "overview") ? {display: "flex"} : {display: "none"})})()}>
+          <div className="layout__overview"> 
+            <TabsMobile />
+            <div id="social" className="layout__social">
+              <a href={site.hashtagLink} className="social__hashtag">
+                {site.hashtag}
+                <span className="social__hashtag-dot"></span>
               </a>
-            })}
+              <div className="social__text-container">
+                <p className="social__text">{site.socialText[0]}</p> 
+                <p className="social__text">{site.socialText[1]}</p> 
+              </div>
+              <div className="button__container">
+                {site.socialbtn.map((btn, key)=>{
+                  return <a href={btn.link} key={key} className="button">
+                    <img className="button__img" src={ key ? instagram : twitter } />
+                    <h1 className="button__text">{btn.text}</h1>
+                  </a>
+                })}
+              </div>
+            </div>
+            <div id="credits" className="layout__credits">
+              <h1 className="credits__title">{site.creditsTitle}</h1>
+              <div className="credits__text">{site.creditsMobile}</div>
+            </div>
           </div>
         </div>
-        <div id="credits" className="layout__credits">
-          <h1 className="credits__title">{site.creditsTitle}</h1>
-          <div className="credits__text" dangerouslySetInnerHTML={{ __html: site.body }}></div>
+        <div className="layout__main" style={(()=>{return ((view == "page") ? {display: "flex"} : {display: "none"})})()}>
+          {this.props.children}
         </div>
       </div>
     )

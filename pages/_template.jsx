@@ -5,12 +5,12 @@ import "styles/app.scss";
 import Desktop from '../partials/desktop.jsx'
 import Mobile from '../partials/mobile.jsx'
 
-module.exports = React.createClass({
-  propTypes () {
+export default class Template extends React.Component {
+  static () {
     return {
       children: React.PropTypes.any,
     }
-  },
+  }
 
   render () {
     return (
@@ -27,4 +27,4 @@ module.exports = React.createClass({
       </div>
     )
   }
-})
+}
