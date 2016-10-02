@@ -1,6 +1,7 @@
 ---
 title: "Work\nshops"
 textTitle: "Don\u2019t Talk,\nSketch!"
+link: ""
 ---
 ## Workshop
 In the workshop Donald will focus on how to manage your time better by making your design process more effective. Visualize your ideas, then we can talk about it. Make choices and focus on what is essential following the ToDon’tList—method. You will work alone, in pairs and small teams. Duration of the workshop can be 30 min, 3 hours, 3 days or even 3 weeks.

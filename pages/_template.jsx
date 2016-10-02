@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { prefixLink } from 'gatsby-helpers'
 import { config } from 'config'
 
 import "styles/app.scss";
@@ -45,16 +46,20 @@ module.exports = React.createClass({
           <div className="tab__container">
             {[app, book].map((project, key)=>{
               return <div key={key} className="tab" onClick={()=>{}}>
-                <h3 className="tab__title"> { project.title }</h3>
-                <h2 className="tab__subtitle"> { project.subtitle }</h2>
+                <Link to={"/" + project.link + "/"}>
+                  <h3 className="tab__title"> { project.title }</h3>
+                  <h2 className="tab__subtitle"> { project.subtitle }</h2>
+                </Link>              
               </div>
             })}
             <div key={3} className="tab" onClick={()=>{}}>
-              <pre><h3 className="tab__workshop-title">{ workshop.title }</h3></pre>
+              <Link to={workshop.link}>
+                <pre><h3 className="tab__workshop-title">{ workshop.title }</h3></pre>
+              </Link>
             </div>
           </div>
         </main>
-        <article className="layout__viewer">
+        <article id="viewer" className="layout__viewer">
           {this.props.children}
         </article>
         <div className="layout__form">

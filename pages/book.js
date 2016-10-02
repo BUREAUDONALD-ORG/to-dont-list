@@ -13,8 +13,8 @@ export default class Index extends React.Component {
     return (
       <DocumentTitle title={config.siteTitle}>
         <div>
-          <pre><h1 className="viewer__title">{ workshop.textTitle }</h1></pre>
-          <div className="viewer__content" dangerouslySetInnerHTML={{ __html: workshop.body }}></div>
+          <pre><h1 className="viewer__title">{ book.textTitle }</h1></pre>
+          <div className="viewer__content" dangerouslySetInnerHTML={{ __html: book.body }}></div>
           <img className="viewer__img" src={marker}></img>
         </div>
       </DocumentTitle>
