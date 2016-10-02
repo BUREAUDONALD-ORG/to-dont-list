@@ -38,7 +38,7 @@ export default class Desktop extends React.Component {
               </ul>
             </nav>
           </div>
-          <img className="header__line" src={line} />
+          <img className="header__line" src={prefixLink("/" + line)} />
           <div className="header__section">
             <pre><h3 className="header__subtitle">{site.subTitle}</h3></pre>
             <h4 className="header__author"><a href={site.authorLink} > {site.authorPrefix} {site.author}</a></h4>
@@ -60,7 +60,7 @@ export default class Desktop extends React.Component {
           <div className="button__container">
             {site.socialbtn.map((btn, key)=>{
               return <a href={btn.link} key={key} className="button">
-                <img className="button__img" src={ key ? instagram : twitter } />
+                <img className="button__img" src={ key ? prefixLink("/" + instagram) : prefixLink("/" + twitter) } />
                 <h1 className="button__text">{btn.text}</h1>
               </a>
             })}
