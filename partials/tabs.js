@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router'
+import { prefixLink } from 'gatsby-helpers'
 
 import app from '../content/app.md';
 import book from '../content/book.md';
@@ -15,14 +16,14 @@ export default class Tabs extends React.Component {
     <div id="tools" className="layout__tabs">
       <div className="tab__container">
         {[app, book].map((project, key)=>{
-          return <Link to={"/" + project.link + "/"} key={key} className="tab" onClick={()=>{}}>
+          return <Link to={prefixLink("/" + project.link + "/")} key={key} className="tab" onClick={()=>{}}>
             <h3 className="tab__title"> { project.title }</h3>
             <h2 className="tab__subtitle"> { project.subtitle }</h2>
             {(route === "/" + project.link + "/") && <img className="tab__arrow" src={arrow} />}
             {(route === "/" + project.link + "/") && <img className="tab__arrow tab__arrow-black" src={arrowBlack} />}
           </Link>              
         })}
-        <Link to={""} key={3} className="tab" onClick={()=>{}}>
+        <Link to={prefixLink("")} key={3} className="tab" onClick={()=>{}}>
           <pre><h3 className="tab__workshop-title">{ workshop.title }</h3></pre>
           {(!route) && <img className="tab__arrow" src={arrow} />}
           {(!route) && <img className="tab__arrow tab__arrow-black" src={arrowBlack} />}

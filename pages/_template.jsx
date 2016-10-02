@@ -74,7 +74,7 @@ module.exports = React.createClass({
         </div>
         <div id="credits" className="layout__credits">
           <h1 className="credits__title">{site.creditsTitle}</h1>
-          <p className="credits__text" dangerouslySetInnerHTML={{ __html: site.body }}></p>
+          <div className="credits__text" dangerouslySetInnerHTML={{ __html: site.body }}></div>
         </div>
       </div>
     )
