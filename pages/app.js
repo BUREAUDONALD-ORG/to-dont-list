@@ -13,9 +13,9 @@ export default class Index extends React.Component {
           <div>
             <pre><h1 className="viewer__title">{ app.textTitle }</h1></pre>
             <div className="viewer__content viewer__content--app" dangerouslySetInnerHTML={{ __html: app.body }}></div>
-            <div className="viewer__button-container">
-              <div className="viewer__button">
-                <a href={app.btn[0].link} ><h1 className="viewer__button-text">{app.btn[0].text}</h1></a>
+            <div className="button__container">
+              <div className="button">
+                <a href={app.btn[0].link} ><h1 className="button__text">{app.btn[0].text}</h1></a>
               </div>
             </div>
           </div>

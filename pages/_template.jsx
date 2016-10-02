@@ -66,20 +66,20 @@ module.exports = React.createClass({
           <Form />
         </div>
         <div className="layout__social">
-          <div className="social__hashtag">
+          <a href={site.hashtagLink} className="social__hashtag">
             {site.hashtag}
             <span className="social__hashtag-dot"></span>
-          </div>
+          </a>
           <div className="social__text-container">
             <p className="social__text">{site.socialText[0]}</p> 
             <p className="social__text">{site.socialText[1]}</p> 
           </div>
-          <div className="social__button-container">
+          <div className="button__container">
             {site.socialbtn.map((btn, key)=>{
-              return <div key={key} className="social__button">
-                <img className="social__button-img" src={ key ? instagram : twitter } />
-                <h1 className="social__button-text">{btn.text}</h1>
-              </div>
+              return <a href={btn.link} key={key} className="button">
+                <img className="button__img" src={ key ? instagram : twitter } />
+                <h1 className="button__text">{btn.text}</h1>
+              </a>
             })}
           </div>
         </div>

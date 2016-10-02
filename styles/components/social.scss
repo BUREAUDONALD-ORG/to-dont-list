@@ -43,35 +43,9 @@
 }
 
 .social__text-container {
-  padding: 6rem 0;
+  padding: 10rem 0 6rem;
 }
 
 .social__text {
-  @include t--x-small;
-}
-
-.social__button-container {
-  display: flex;
-}
-
-.social__button {
-  display: flex;
-  align-items: center;
-  padding: 4rem 20rem;
-  background: $night;
-  color: $day;
-}
-
-.social__button + .social__button {
-  margin-left: 4rem;
-}
-
-.social__button-img {
-  height: 8rem;
-  width: 8rem;
-  margin-right: 3rem;
-}
-
-.social__button-text {
   @include t--x-small;
 }
