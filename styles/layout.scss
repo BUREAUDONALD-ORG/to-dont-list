@@ -6,33 +6,39 @@
 }
 
 .layout__header {
-  padding: 15rem 30rem;
+  @include row-component-center;
+  padding: $unit * 2 $side-padding;
   background: $night;
 }
 
 .layout__tabs {
-  padding: 6rem 30rem;
+  @include row-component-center;
+  padding: $unit $side-padding;
   background: $complementary;
 }
 
 .layout__viewer {
-  padding: 8rem 30rem 0;
+  @include row-component-center;
+  padding: $unit $side-padding 0;
   background: $day;
   width: 100%;
 }
 
 .layout__form {
-  padding: 0 30rem;
+  @include row-component-center;
+  padding: 0 $side-padding;
   background: $complementary;
 }
 
 .layout__social {
-  padding: 12rem 30rem;
+  @include row-component-center;
+  padding: $unit $side-padding;
   min-height: 80rem;
   background: $complementary;
 }
 
 .layout__credits {
-  padding: 10rem 34rem 20rem;
+  @include row-component-center;
+  padding: $unit $side-padding 20rem;
   background: $night;
 }

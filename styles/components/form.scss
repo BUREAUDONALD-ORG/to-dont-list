@@ -1,5 +1,6 @@
 .form {
-
+  width: 100%;
+  max-width: 1200px;
 }
 
 .form__header {
@@ -30,10 +31,10 @@
   flex-direction: column;
   width: 100%;
   padding-bottom: 4rem;
+}
 
-  .form__fields-container .form__field:placeholder-shown + .form__label {
-    display: none;
-  }
+.form__fields-container .form__field:placeholder-shown + .form__label {
+  display: none;
 }
 
 .form__label {

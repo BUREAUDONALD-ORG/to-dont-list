@@ -29,13 +29,14 @@ export default class Tabs extends React.Component {
             >
               <h3 className="tab__title">{project.title}</h3>
               <pre><h2 className="tab__subtitle">{project.subtitle}</h2></pre>
-              {(route === ((project.link !== '') ? `/${project.link}/` : undefined)) ? (
-                <img className="tab__arrow" role="presentation" src={arrow} />) : (
-                <img
-                  className="tab__arrow tab__arrow-black"
-                  role="presentation"
-                  src={arrowBlack}
-                />)}
+              <img
+                className="tab__arrow tab__arrow-black"
+                role="presentation"
+                src={arrowBlack}
+              />
+              {(route === `/${project.link}/` ||
+                project.link === ((route === undefined) && '')) &&
+                (<img className="tab__arrow" role="presentation" src={arrow} />)}
             </Link>
           ))}
         </div>

@@ -1,3 +1,8 @@
+.social {
+  width: 100%;
+  max-width: 1200px;
+}
+
 .social__hashtag {
   @include t--hashtag;
   position: relative;
@@ -26,6 +31,7 @@
 }
 
 .social__hashtag::after {
+  bottom: 0;
   border-width: 16rem 16rem 0 0;
 }
 
