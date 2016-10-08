@@ -18,20 +18,20 @@ export default class Tabs extends React.Component {
 
   render () {
     const route = this.props.route.path
+    console.log(route)
     return (
       <div id="tools" className="layout__tabs">
         <div className="tab__container">
-          {[app, book].map((project, key) => (
+          {[app, book, workshop].map((project, key) => (
             <Link
-              to={prefixLink(`/${project.link}/`)}
+              to={prefixLink(((project.link !== '') ? `/${project.link}/` : ''))}
               key={key} className="tab"
               onClick={() => {}}
             >
               <h3 className="tab__title"> { project.title }</h3>
               <h2 className="tab__subtitle"> { project.subtitle }</h2>
-              {(route === `/${project.link}/`) && (
-                <img className="tab__arrow" role="presentation" src={arrow} />)}
-              {(route === `/${project.link}/`) && (
+              {(route === ((project.link !== '') ? `/${project.link}/` : undefined)) ? (
+                <img className="tab__arrow" role="presentation" src={arrow} />) : (
                 <img
                   className="tab__arrow tab__arrow-black"
                   role="presentation"
@@ -39,15 +39,6 @@ export default class Tabs extends React.Component {
                 />)}
             </Link>
           ))}
-          <Link to={prefixLink('/')} key={3} className="tab" onClick={() => {}}>
-            <pre><h3 className="tab__workshop-title">{ workshop.title }</h3></pre>
-            {(!route) && <img className="tab__arrow" src={arrow} role="presentation" />}
-            {(!route) && (
-              <img
-                className="tab__arrow tab__arrow-black"
-                src={arrowBlack} role="presentation"
-              />)}
-          </Link>
         </div>
       </div>
     )
