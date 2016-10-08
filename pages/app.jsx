@@ -8,7 +8,7 @@ import Tabs from '../partials/tabs.jsx'
 import app from '../content/app.md'
 import iphone from '../assets/images/iphone.png'
 
-export default class Index extends React.Component {
+export default class App extends React.Component {
   static propTypes () {
     return {
       route: React.PropTypes.any,

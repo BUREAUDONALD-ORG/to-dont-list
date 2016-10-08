@@ -37,9 +37,9 @@ export default class Form extends React.Component {
     event.preventDefault()
     if (typeof window !== undefined) {
       const fields = this.state.fields
-      const body = '#{fields[0]},\n\n#{fields[1]}.\n#{fields[2]}.\n#{fields[3]}.\n\n#{fields[4]}'
+      const body = `${fields[0]},\n\n${fields[1]}.\n${fields[2]}.\n${fields[3]}.\n\n${fields[4]}`
       const bodyURI = encodeURIComponent(body)
-      const mail = 'mailto:#{form.mailTo}?subject=ToDontForm%20-%20#{fields[1]}&body=#{bodyURI}'
+      const mail = `mailto:${form.mailTo}?subject=ToDontForm%20-%20${fields[1]}&body=${bodyURI}`
       window.location.href = mail
       this.setState((prevState) => {
         const newState = prevState

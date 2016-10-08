@@ -23,15 +23,15 @@ export default class Tabs extends React.Component {
         <div className="tab__container">
           {[app, book].map((project, key) => (
             <Link
-              to={prefixLink('/#{project.link}/')}
+              to={prefixLink(`/${project.link}/`)}
               key={key} className="tab"
               onClick={() => {}}
             >
               <h3 className="tab__title"> { project.title }</h3>
               <h2 className="tab__subtitle"> { project.subtitle }</h2>
-              {(route === '/#{project.link}/') && (
+              {(route === `/${project.link}/`) && (
                 <img className="tab__arrow" role="presentation" src={arrow} />)}
-              {(route === '/#{project.link}/') && (
+              {(route === `/${project.link}/`) && (
                 <img
                   className="tab__arrow tab__arrow-black"
                   role="presentation"

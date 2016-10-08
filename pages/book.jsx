@@ -2,12 +2,12 @@ import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 
-import Tabs from '../partials/tabs.js'
+import Tabs from '../partials/tabs.jsx'
 
 import book from '../content/book.md'
 import Issuu from '../partials/issuu.jsx'
 
-export default class Index extends React.Component {
+export default class Book extends React.Component {
   static propTypes () {
     return {
       route: React.PropTypes.any,

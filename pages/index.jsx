@@ -2,7 +2,7 @@ import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { config } from 'config'
 
-import Tabs from '../partials/tabs.js'
+import Tabs from '../partials/tabs.jsx'
 
 import workshop from '../content/workshop.md'
 import marker from '../assets/images/marker.png'

@@ -2,10 +2,10 @@ import React from 'react'
 
 import '../styles/app.scss'
 
-import Header from '../partials/header.js'
-import Form from '../partials/form.js'
-import Social from '../partials/social.js'
-import Credits from '../partials/credits.js'
+import Header from '../partials/header.jsx'
+import Form from '../partials/form.jsx'
+import Social from '../partials/social.jsx'
+import Credits from '../partials/credits.jsx'
 
 export default class Template extends React.Component {
   static propTypes () {
