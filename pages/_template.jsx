@@ -1,29 +1,26 @@
 import React from 'react'
 
+import '../styles/app.scss'
+
 import Header from '../partials/header.js'
 import Form from '../partials/form.js'
 import Social from '../partials/social.js'
 import Credits from '../partials/credits.js'
 
-if (typeof document != "undefined"){ 
-  var smoothScroll = require('smooth-scroll');
-}
-
-import "styles/app.scss";
-
 export default class Template extends React.Component {
-  static () {
+  static propTypes () {
     return {
       children: React.PropTypes.any,
     }
   }
 
   componentDidMount () {
-    if (typeof document != "undefined"){ 
-      smoothScroll.init();
+    if (typeof document !== undefined) {
+      const smoothScroll = require('smooth-scroll')
+
+      smoothScroll.init()
     }
   }
-
   render () {
     return (
       <div className="layout__wrapper">
