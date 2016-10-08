@@ -1,3 +1,10 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 400rem;
+}
+
 .header__title {
   @include t--title;
   color: $day;
@@ -25,37 +32,4 @@
 .header__author {
   @include t--small;
   color: $day;
-}
-
-// Mobile
-
-@media (min-width: 0px) and (max-width: 800px) {
-  .header {
-    display: flex;
-    flex-direction: column;
-    padding: 5rem 15rem;
-  }
-
-  .header__nav {
-    background: $complementary;
-    height: 100%;
-    min-width: 20rem;
-    padding: 30rem 0 0 0;
-  }
-
-  .header__section {
-    width: 100%;
-    padding: 10rem 5rem;
-  }
-
-  div.header__section:last-of-type {
-    flex: 1;
-  }
-
-  .header__line {
-    display: block;
-    width: 100%;
-    height: auto;
-    padding: 0;
-  }
 }

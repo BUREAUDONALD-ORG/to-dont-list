@@ -17,9 +17,3 @@ li.nav__item:last-child:after
 {
   content: '';
 }
-
-@media (min-width: 0px) and (max-width: 800px) {
-  .nav__arrow {
-    width: 15rem;
-  }
-}

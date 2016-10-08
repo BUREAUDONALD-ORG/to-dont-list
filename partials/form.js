@@ -37,7 +37,7 @@ export default class Form extends React.Component {
     event.preventDefault();
     if (typeof window != "undefined"){ 
       let fields = Object.assign([], this.state.fields);
-      let body = fields.shift() + ", \n\n" + fields.shift() + ". " + fields.shift() + ". " + fields.shift() + ".\n\n" + fields.shift();
+      let body = fields.shift() + ", \n\n" + fields.shift() + ".\n " + fields.shift() + ".\n " + fields.shift() + ".\n\n" + fields.shift();
       let bodyURI = encodeURIComponent(body);
       let mail = "mailto:" + form.mailTo + "?subject=" + "ToDontForm%20-%20" + this.state.fields[1] + "&body=" + bodyURI;
       window.location.href = mail;

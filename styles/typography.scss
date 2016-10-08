@@ -21,17 +21,9 @@
 }
 
 @mixin t--hashtag {
-  @media (min-width: 801px) and (max-width: 9999px) {
-    font-family: nittigrotesk-black;
-    font-size: 27rem;
-    line-height: 25rem;
-  }
-
-  @media (min-width: 0px) and (max-width: 800px) {
-    font-family: nittigrotesk-black;
-    font-size: 20rem;
-    line-height: 15rem;
-  }
+  font-family: nittigrotesk-black;
+  font-size: 27rem;
+  line-height: 25rem;
 }
 
 @mixin t--subtitle {

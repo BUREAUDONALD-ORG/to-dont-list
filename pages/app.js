@@ -12,7 +12,7 @@ export default class Index extends React.Component {
   render () {
     return (
       <DocumentTitle title={config.siteTitle}>
-        <div>
+        <main className="layout__main">
           <Tabs route={this.props.route}/>
           <article id="viewer" className="layout__viewer">
             <div className="viewer viewer--app">
@@ -26,11 +26,11 @@ export default class Index extends React.Component {
                 </div>
               </div>
               <div className="viewer__iphone-container">
-                <img className="viewer__iphone" src={prefixLink("/" + iphone)}></img>
+                <img className="viewer__iphone" src={prefixLink(iphone)}></img>
               </div>
             </div>
           </article>
-        </div>
+        </main>
       </DocumentTitle>
     )
   }

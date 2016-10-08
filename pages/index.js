@@ -11,7 +11,7 @@ export default class Index extends React.Component {
   render () {
     return (
       <DocumentTitle title={config.siteTitle}>
-        <div>
+        <main className="layout__main">
           <Tabs route={this.props.route}/>
           <article id="viewer" className="layout__viewer">
             <div className="viewer">
@@ -20,7 +20,7 @@ export default class Index extends React.Component {
               <img className="viewer__marker" src={marker}></img>
             </div>
           </article>
-        </div>
+        </main>
       </DocumentTitle>
     )
   }

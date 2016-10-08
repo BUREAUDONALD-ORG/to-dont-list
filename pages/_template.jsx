@@ -1,9 +1,15 @@
 import React from 'react'
 
-import "styles/app.scss";
+import Header from '../partials/header.js'
+import Form from '../partials/form.js'
+import Social from '../partials/social.js'
+import Credits from '../partials/credits.js'
 
-import Desktop from '../partials/desktop.jsx'
-import Mobile from '../partials/mobile.jsx'
+if (typeof document != "undefined"){ 
+  var smoothScroll = require('smooth-scroll');
+}
+
+import "styles/app.scss";
 
 export default class Template extends React.Component {
   static () {
@@ -12,18 +18,30 @@ export default class Template extends React.Component {
     }
   }
 
+  componentDidMount () {
+    if (typeof document != "undefined"){ 
+      smoothScroll.init();
+    }
+  }
+
   render () {
     return (
       <div className="layout__wrapper">
-        {(()=>{ 
-          if (typeof window == "undefined"){
-            return <Desktop children={this.props.children} />
-          } else {
-            if (window.innerWidth >= 800) {
-              return <Desktop children={this.props.children} />
-            } else {
-              return <Mobile children={this.props.children} /> 
-        }}})()}
+        <div className="layout__app">
+          <header className="layout__header">
+            <Header />
+          </header>
+          {this.props.children}
+          <div id="mail" className="layout__form">
+            <Form />
+          </div>
+          <div id="social" className="layout__social">
+            <Social />
+          </div>
+          <div id="credits" className="layout__credits">
+            <Credits />
+          </div>
+        </div>
       </div>
     )
   }
