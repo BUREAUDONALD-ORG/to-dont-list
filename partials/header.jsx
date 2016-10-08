@@ -2,6 +2,7 @@ import React from 'react'
 import { prefixLink } from 'gatsby-helpers'
 
 import line from '../assets/images/line.png'
+import lineHz from '../assets/images/line-hz.png'
 import site from '../content/site.md'
 
 export default class Header extends React.Component {
@@ -24,12 +25,19 @@ export default class Header extends React.Component {
           <img
             className="header__line"
             src={prefixLink(line)}
-            alt="Drawn Line"
+            role="presentation"
+          />
+          <img
+            className="header__line-hz"
+            src={prefixLink(lineHz)}
+            role="presentation"
           />
           <div className="header__section">
             <pre><h3 className="header__subtitle">{site.subTitle}</h3></pre>
             <h4 className="header__author">
-              <a target="_blank" href={site.authorLink}> {site.authorPrefix} {site.author}</a>
+              <a rel="noopener noreferrer" target="_blank" href={site.authorLink}>
+                {site.authorPrefix} {site.author}
+              </a>
             </h4>
           </div>
         </div>

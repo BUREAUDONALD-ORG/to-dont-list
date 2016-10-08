@@ -1,6 +1,6 @@
 .tab__container {
   display: flex;
-  padding-bottom: 10rem;
+  padding-bottom: $two;
   width: 100%;
   max-width: 1200px;
 }
@@ -8,7 +8,7 @@
 .tab {
   display: block;
   position: relative;
-  padding: $unit / 2 $unit;
+  padding: $half $unit;
   width: 33%;
   min-height: $unit * 9;
   background: $day;
@@ -47,10 +47,29 @@
 
 .tab__arrow {
   position: absolute;
-  height: 10rem;
+  height: $two;
   width: auto;
-  bottom: -10rem;
+  bottom: -$two;
   margin: 0 auto;
   left: 0;
   right: 0;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .tab__container {
+    @include column-component;
+    padding: $unit 0;
+  }
+
+  .tab {
+    width: 100%;
+  }
+
+  .tab + .tab {
+    margin: $unit 0 0;
+  }
+
+  .tab__arrow {
+    display: none;
+  }
 }

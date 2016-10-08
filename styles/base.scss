@@ -27,12 +27,11 @@ a {
   color: $night;
 }
 
-@media (min-width: 0px) and (max-width: 800px) {
+@media (min-width: 0px) and (max-width: 600px) {
   html,
   body,
   #react-mount {
     width: 100%;
     height: 100%;
-    overflow: hidden;
   }
 }

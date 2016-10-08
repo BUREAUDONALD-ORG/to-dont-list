@@ -14,7 +14,6 @@ nav:
 - title: Credits
   link: "#credits"
 tabsHeader: "ToDon\u2019tList Tools"
-hashtag: "#ToDon\u2019tList"
 hashtagLink: "https://twitter.com/hashtag/todontlist"
 socialText:
 - Donald posts sketches and pictures of type regularly.

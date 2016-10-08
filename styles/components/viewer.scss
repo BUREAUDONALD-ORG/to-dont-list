@@ -1,7 +1,7 @@
 .viewer {
   display: flex;
   flex-direction: column;
-  padding-bottom: 8rem;
+  padding: 0 0 $two $unit;
   width: 100%;
   max-width: 1200px;
 }
@@ -75,4 +75,10 @@
   width: 100%;
   padding: 10rem;
   max-width: 128.5rem;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .viewer__content {
+    max-width: 100%;
+  }
 }

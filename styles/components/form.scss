@@ -34,20 +34,26 @@
 }
 
 .form__fields-container .form__field:placeholder-shown + .form__label {
-  display: none;
+  margin: 0 0 -9rem;
 }
 
 .form__label {
   @include t--x-small;
   order: 1;
   padding: 0 0 3rem 3.5rem;
+  transition: all 1s ease;
+  position: relative;
+  z-index: 0;
+  margin: 0 0 0rem;
 }
 
 .form__field {
   @include t--medium;
+  position: relative;
+  z-index: 10;
   order: 2;
   width: 100%;
-  padding: 3.5rem;
+  padding: $unit;
   border: 0;
   color: $night;
   border-radius: 0;
@@ -84,4 +90,12 @@
   cursor: pointer;
   border-radius: 0;
   appearance: none;
+}
+
+.form__submit-text {
+  @include t--small;
+  @include row-component;
+  justify-content: flex-end;
+  width: 100%;
+  padding-bottom: $unit;
 }

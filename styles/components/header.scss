@@ -6,6 +6,8 @@
   max-width: 1200px;
 }
 
+
+
 .header__title {
   @include t--title;
   color: $day;
@@ -25,6 +27,10 @@
   padding: 0 $unit;
 }
 
+.header__line-hz {
+  display: none;
+}
+
 .header__subtitle {
   @include t--subtitle;
   color: $complementary;
@@ -33,10 +39,26 @@
 .header__author {
   @include t--small;
   color: $day;
+  padding-top: $unit;
 }
 
 
 .header__author:hover {
   text-decoration: underline;
   vertical-align: baseline;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .header {
+    flex-direction: column;
+  }
+
+  .header__line {
+    display: none;
+  }
+
+  .header__line-hz {
+    display: block;
+    width: 100%;
+  }
 }

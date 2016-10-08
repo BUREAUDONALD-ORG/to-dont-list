@@ -15,7 +15,7 @@ export default class Form extends React.Component {
         '',
         '',
       ],
-      email: '',
+      name: '',
     }
   }
 
@@ -24,8 +24,8 @@ export default class Form extends React.Component {
     this.setState((prevState) => {
       const newState = prevState
       const value = event.target.value
-      if (field === 'email') {
-        newState.email = value
+      if (field === 'name') {
+        newState.name = value
       } else {
         newState.fields[field] = value
       }
@@ -37,7 +37,8 @@ export default class Form extends React.Component {
     event.preventDefault()
     if (typeof window !== undefined) {
       const fields = this.state.fields
-      const body = `${fields[0]},\n\n${fields[1]}.\n${fields[2]}.\n${fields[3]}.\n\n${fields[4]}`
+      const body = `${fields[0]},\n\n${fields[1]}.\n${fields[2]}.\n${fields[3]}.
+        \n${fields[4]}\n${this.state.name}`
       const bodyURI = encodeURIComponent(body)
       const mail = `mailto:${form.mailTo}?subject=ToDontForm%20-%20${fields[1]}&body=${bodyURI}`
       window.location.href = mail
@@ -79,10 +80,10 @@ export default class Form extends React.Component {
                 <input
                   className="form__field form__field--cc"
                   type="text"
-                  onChange={this.updateField.bind(this, 'email')}
+                  onChange={this.updateField.bind(this, 'name')}
                   placeholder={form.ccField}
                 />
-                <label htmlFor="1" className="form__label">{form.ccField}</label>
+                <label htmlFor="ccField" className="form__label">{form.ccField}</label>
               </div>
               <input
                 className="form__submit"
@@ -90,6 +91,9 @@ export default class Form extends React.Component {
                 value={this.state.isSubmitted ? 'Thank You!' : 'send'}
               />
             </div>
+            { this.state.isSubmitted && (
+              <p className="form__submit-text">Your mailclient will now open!</p>
+            ) }
           </div>
         </form>
       </div>

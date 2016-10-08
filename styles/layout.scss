@@ -7,7 +7,7 @@
 
 .layout__header {
   @include row-component-center;
-  padding: $unit * 2 $side-padding;
+  padding: $two $side-padding;
   background: $night;
 }
 
@@ -19,7 +19,7 @@
 
 .layout__viewer {
   @include row-component-center;
-  padding: $unit $side-padding 0;
+  padding: $two $side-padding 0;
   background: $day;
   width: 100%;
 }
@@ -39,6 +39,6 @@
 
 .layout__credits {
   @include row-component-center;
-  padding: $unit $side-padding 20rem;
+  padding: $two $side-padding $unit * 5;
   background: $night;
 }
