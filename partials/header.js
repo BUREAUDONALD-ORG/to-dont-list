@@ -19,7 +19,6 @@ export default class Header extends React.Component {
             </ul>
           </nav>
         </div>
-        <div> </div>
         <img className="header__line" src={prefixLink(line)} />
         <div className="header__section">
           <pre><h3 className="header__subtitle">{site.subTitle}</h3></pre>
