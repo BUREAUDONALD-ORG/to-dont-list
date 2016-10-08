@@ -9,6 +9,12 @@ import app from '../content/app.md'
 import iphone from '../assets/images/iphone.png'
 
 export default class Index extends React.Component {
+  static propTypes () {
+    return {
+      route: React.PropTypes.any,
+    }
+  }
+
   render () {
     return (
       <DocumentTitle title={config.siteTitle}>

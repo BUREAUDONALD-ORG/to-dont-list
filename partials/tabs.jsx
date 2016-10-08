@@ -10,6 +10,12 @@ import arrow from '../assets/images/arrow.png'
 import arrowBlack from '../assets/images/arrow-black.png'
 
 export default class Tabs extends React.Component {
+  static propTypes () {
+    return {
+      route: React.PropTypes.any,
+    }
+  }
+
   render () {
     const route = this.props.route.path
     return (

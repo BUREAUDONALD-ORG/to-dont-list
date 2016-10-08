@@ -8,6 +8,12 @@ import book from '../content/book.md'
 import Issuu from '../partials/issuu.jsx'
 
 export default class Index extends React.Component {
+  static propTypes () {
+    return {
+      route: React.PropTypes.any,
+    }
+  }
+
   render () {
     return (
       <DocumentTitle title={config.siteTitle}>

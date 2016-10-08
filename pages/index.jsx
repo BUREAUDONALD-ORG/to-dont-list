@@ -11,6 +11,7 @@ export default class Index extends React.Component {
   static propTypes () {
     return {
       children: React.PropTypes.any,
+      route: React.PropTypes.any,
     }
   }
 
