@@ -1,7 +1,7 @@
 ---
 title: "App"
-subtitle: "To Don\u2019tList"
-textTitle: "To Don\u2019tList"
+subtitle: "ToDon\u2019tList"
+textTitle: "ToDon\u2019tList"
 link: "app"
 btn:
 - text: "Download for iOS"

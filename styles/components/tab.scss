@@ -8,14 +8,14 @@
 .tab {
   display: block;
   position: relative;
-  padding: 2rem 6rem;
+  padding: $unit / 2 $unit;
   width: 33%;
-  min-height: 35rem;
+  min-height: $unit * 9;
   background: $day;
 }
 
 .tab + .tab {
-  margin: 0 0 0 4rem;
+  margin: 0 0 0 $unit;
 }
 
 
