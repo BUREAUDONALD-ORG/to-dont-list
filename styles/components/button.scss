@@ -1,6 +1,6 @@
 .button__container {
   display: flex;
-  padding: 4rem 0 2rem 0;
+  padding: 4rem 0 2rem;
 }
 
 .button {
@@ -11,15 +11,14 @@
   color: $day;
 }
 
-.button:hover {
-  background: $day;
-  color: $night;
-}
-
 .button + .button {
   margin-left: 4rem;
 }
 
+.button:hover {
+  background: $day;
+  color: $night;
+}
 
 .button__text {
   @include t--x-small;
@@ -30,4 +29,3 @@
   width: 8rem;
   margin-right: 3rem;
 }
-

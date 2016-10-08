@@ -18,7 +18,6 @@ export default class Tabs extends React.Component {
 
   render () {
     const route = this.props.route.path
-    console.log(route)
     return (
       <div id="tools" className="layout__tabs">
         <div className="tab__container">
@@ -28,8 +27,8 @@ export default class Tabs extends React.Component {
               key={key} className="tab"
               onClick={() => {}}
             >
-              <h3 className="tab__title"> { project.title }</h3>
-              <h2 className="tab__subtitle"> { project.subtitle }</h2>
+              <h3 className="tab__title">{project.title}</h3>
+              <pre><h2 className="tab__subtitle">{project.subtitle}</h2></pre>
               {(route === ((project.link !== '') ? `/${project.link}/` : undefined)) ? (
                 <img className="tab__arrow" role="presentation" src={arrow} />) : (
                 <img

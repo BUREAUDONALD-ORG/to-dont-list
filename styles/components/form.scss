@@ -14,10 +14,10 @@
 }
 
 .form__title {
+  @include t--x-small;
   display: inline-block;
   padding: 4rem;
   border: 1rem solid $day;
-  @include t--x-small;
   color: $day;
 }
 
@@ -30,20 +30,24 @@
   flex-direction: column;
   width: 100%;
   padding-bottom: 4rem;
+
+  .form__fields-container .form__field:placeholder-shown + .form__label {
+    display: none;
+  }
 }
 
 .form__label {
+  @include t--x-small;
   order: 1;
   padding: 0 0 3rem 3.5rem;
-  @include t--x-small;
 }
 
 .form__field {
+  @include t--medium;
   order: 2;
   width: 100%;
   padding: 3.5rem;
-  border: none;
-  @include t--medium;
+  border: 0;
   color: $night;
   border-radius: 0;
 }
@@ -54,16 +58,12 @@
 }
 
 .form__field--cc {
-  height: 16rem;
   @include t--x-small;
+  height: 16rem;
 }
 
 .form__field::placeholder {
   color: $complementary;
-}
-
-.form__fields-container .form__field:placeholder-shown + .form__label {
-  display: none;
 }
 
 .form__submit-container {
@@ -71,16 +71,16 @@
 }
 
 .form__submit {
+  @include t--medium;
   align-self: flex-end;
   display: block;
   width: 33.33%;
   height: 16rem;
-  border: none;
+  border: 0;
   background: $night;
-  @include t--medium;
   color: $day;
-  margin: 0 0 4rem 0;
-  cursor:pointer;
+  margin: 0 0 4rem;
+  cursor: pointer;
   border-radius: 0;
   appearance: none;
 }

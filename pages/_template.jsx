@@ -21,23 +21,16 @@ export default class Template extends React.Component {
       smoothScroll.init()
     }
   }
+
   render () {
     return (
       <div className="layout__wrapper">
         <div className="layout__app">
-          <header className="layout__header">
-            <Header />
-          </header>
+          <Header />
           {this.props.children}
-          <div id="mail" className="layout__form">
-            <Form />
-          </div>
-          <div id="social" className="layout__social">
-            <Social />
-          </div>
-          <div id="credits" className="layout__credits">
-            <Credits />
-          </div>
+          <Form />
+          <Social />
+          <Credits />
         </div>
       </div>
     )

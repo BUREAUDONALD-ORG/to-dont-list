@@ -1,6 +1,7 @@
 .tab__container {
   display: flex;
   padding-bottom: 10rem;
+  max-width: 140rem;
 }
 
 .tab {
@@ -16,8 +17,13 @@
   margin: 0 0 0 4rem;
 }
 
+
 .tab:hover {
   background: $night;
+
+  .tab__subtitle {
+    color: $day;
+  }
 }
 
 .tab__title {
@@ -26,13 +32,9 @@
 }
 
 .tab__subtitle {
-  padding: 0 0 1rem 0;
   @include t--medium;
+  padding: 0 0 1rem;
   color: $night;
-}
-
-.tab:hover .tab__subtitle {
-  color: white;
 }
 
 .tab__workshop-title {
@@ -49,12 +51,4 @@
   margin: 0 auto;
   left: 0;
   right: 0;
-}
-
-.tab__arrow-black {
-  display: none;
-}
-
-.tab:hover .tab__arrow-black {
-  display: block;
 }

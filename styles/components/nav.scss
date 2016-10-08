@@ -5,15 +5,14 @@
 
 .nav__item {
   @include t--x-small;
-  color: white;
+  color: $day;
 }
 
 .nav__item::after {
-  content: "|";
+  content: '|';
   padding: 0 2rem;
 }
 
-li.nav__item:last-child:after
-{
+.nav__item:last-child::after {
   content: '';
 }

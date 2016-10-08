@@ -1,6 +1,6 @@
 .credits__title {
-  padding-bottom: 2rem;
   @include t--medium;
+  padding-bottom: 2rem;
   color: $day;
 }
 
@@ -10,10 +10,10 @@
 }
 
 .credits__text a {
-  border-bottom: 0.5rem solid $complementary;
+  border-bottom: .5rem solid $complementary;
 }
 
 .credits__text a:first-of-type {
-  color: white;
-  border-bottom: 0.5rem solid $day;
+  color: $day;
+  border-bottom: .5rem solid $day;
 }

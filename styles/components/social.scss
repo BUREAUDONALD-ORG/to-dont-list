@@ -1,31 +1,31 @@
 .social__hashtag {
+  @include t--hashtag;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 10rem 14rem 10rem 6rem;
-  @include t--hashtag;
   color: $day;
   background: $night;
 }
 
-.social__hashtag:before, .social__hashtag:after {
+.social__hashtag::before,
+.social__hashtag::after {
   position: absolute;
   right: 0;
-  content: "";
+  content: '';
   width: 0;
   height: 0;
   border-style: solid;
   border-color: transparent $complementary transparent transparent;
 }
 
-.social__hashtag:before {
+.social__hashtag::before {
   top: 0;
   border-width: 0 16rem 16rem 0;
 }
 
-.social__hashtag:after {
-  bottom: 0;
+.social__hashtag::after {
   border-width: 16rem 16rem 0 0;
 }
 
