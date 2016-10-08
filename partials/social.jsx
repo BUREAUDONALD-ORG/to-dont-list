@@ -1,7 +1,11 @@
 import React from 'react'
 
 import twitter from '../assets/images/twitter.svg'
+import twitterPink from '../assets/images/twitter-pink.svg'
 import instagram from '../assets/images/instagram.svg'
+import instagramPink from '../assets/images/instagram-pink.svg'
+import tag from '../assets/images/tag.svg'
+
 import site from '../content/site.md'
 
 export default class Social extends React.Component {
@@ -10,8 +14,7 @@ export default class Social extends React.Component {
       <div id="social" className="layout__social">
         <div className="social">
           <a href={site.hashtagLink} className="social__hashtag">
-            {site.hashtag}
-            <span className="social__hashtag-dot" />
+            <img src={tag} alt="#ToDontList" className="social__hashtag" />
           </a>
           <div className="social__text-container">
             <p className="social__text">{site.socialText[0]}</p>
@@ -23,7 +26,12 @@ export default class Social extends React.Component {
                 <img
                   className="button__img"
                   src={key ? instagram : twitter}
-                  alt={key ? 'Instagram' : 'Twitter'}
+                  role="presentation"
+                />
+                <img
+                  className="button__img button__img--hover"
+                  src={key ? instagramPink : twitterPink}
+                  role="presentation"
                 />
                 <h1 className="button__text">{btn.text}</h1>
               </a>

@@ -5,12 +5,17 @@
 
 .nav__item {
   @include t--x-small;
+  line-height: 5rem;
   color: $day;
+}
+
+.nav__item:hover a {
+  text-decoration: underline;
 }
 
 .nav__item::after {
   content: '|';
-  padding: 0 2rem;
+  padding: 0 $half;
 }
 
 .nav__item:last-child::after {

@@ -6,7 +6,9 @@
 .button {
   display: flex;
   align-items: center;
-  padding: 4rem 20rem;
+  justify-content: center;
+  width: 33%;
+  padding: 4rem 0;
   background: $night;
   color: $day;
 }
@@ -16,8 +18,16 @@
 }
 
 .button:hover {
-  background: $day;
-  color: $night;
+  background: $white;
+  color: $complementary;
+
+  .button__img {
+    display: none;
+  }
+
+  .button__img--hover {
+    display: block;
+  }
 }
 
 .button__text {
@@ -28,4 +38,10 @@
   height: 8rem;
   width: 8rem;
   margin-right: 3rem;
+}
+
+
+
+.button__img--hover {
+  display: none;
 }

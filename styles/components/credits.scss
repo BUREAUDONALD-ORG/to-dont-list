@@ -4,7 +4,7 @@
 }
 
 .credits__title {
-  @include t--medium;
+  @include t--small;
   padding-bottom: 2rem;
   color: $day;
 }
@@ -18,7 +18,7 @@
   border-bottom: .5rem solid $complementary;
 }
 
-.credits__text a:first-of-type {
+.credits__text a:hover {
   color: $day;
   border-bottom: .5rem solid $day;
 }

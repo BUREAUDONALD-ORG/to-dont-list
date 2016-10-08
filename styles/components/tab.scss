@@ -12,20 +12,21 @@
   width: 33%;
   min-height: $unit * 9;
   background: $day;
+  transition: all 0.4s ease;
 }
 
-.tab + .tab {
-  margin: 0 0 0 $unit;
-}
-
-
-.tab:hover {
+.tab:hover:not(.tab--active) {
   background: $night;
 
   .tab__subtitle {
     color: $day;
   }
 }
+
+.tab + .tab {
+  margin: 0 0 0 $unit;
+}
+
 
 .tab__title {
   @include t--medium;
@@ -38,7 +39,7 @@
   color: $night;
 }
 
-.tab__workshop-title {
+.tab__big-title {
   @include t--large;
   padding-bottom: 4rem;
   color: $complementary;
@@ -52,8 +53,4 @@
   margin: 0 auto;
   left: 0;
   right: 0;
-}
-
-.tab__arrow-black {
-  display: none;
 }

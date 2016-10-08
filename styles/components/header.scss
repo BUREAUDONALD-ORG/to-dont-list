@@ -34,3 +34,9 @@
   @include t--small;
   color: $day;
 }
+
+
+.header__author:hover {
+  text-decoration: underline;
+  vertical-align: baseline;
+}

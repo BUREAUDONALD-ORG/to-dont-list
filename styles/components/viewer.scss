@@ -12,7 +12,7 @@
 }
 
 .viewer__content {
-  max-width: 140rem;
+  max-width: calc(66% - #{$two});
 
   h2 {
     @include t--x-small;
