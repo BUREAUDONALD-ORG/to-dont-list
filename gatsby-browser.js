@@ -1,3 +1,1 @@
-
-exports.onRouteUpdate = function(a, b, c) {
-}
+exports.onRouteUpdate = function () {}
