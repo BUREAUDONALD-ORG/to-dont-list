@@ -65,7 +65,7 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "build-prefix": "gatsby build --prefix-links && cp CNAME public/CNAME && gh-pages -d public",
+    "build-prefix": "gatsby build --prefix-links",
     "cname": "cp CNAME public/CNAME",
     "push": "gh-pages -d public",
     "push-travis": "gh-pages -d public -o https://${GH_TOKEN}@github.com/BUREAUDONALD-ORG/to-dont-list.git -x",
