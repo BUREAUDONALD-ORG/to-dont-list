@@ -1,4 +1,7 @@
-language: node
+language:
+  - node_js
+node_js:
+  - "6.2.2"
 script:
   - npm install
   - npm run build-prefix
