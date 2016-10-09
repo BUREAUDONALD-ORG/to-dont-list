@@ -36,3 +36,12 @@ addons:
 script:
   - npm install
   - npm run lint
+  - npm run build-prefix
+  - npm run cname
+deploy:
+  provider: script
+  script: npm run push
+  skip_cleanup: true
+  on:
+    branch:
+    - master

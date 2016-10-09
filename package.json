@@ -65,7 +65,10 @@
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
-    "deploy": "gatsby build --prefix-links && cp CNAME public/CNAME && gh-pages -d public",
+    "build-prefix": "gatsby build --prefix-links && cp CNAME public/CNAME && gh-pages -d public",
+    "cname": "cp CNAME public/CNAME",
+    "push": "gh-pages -d public",
+    "deploy": "npm run build-prefix && npm run cname && npm run push",
     "dev": "gatsby develop",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1"
