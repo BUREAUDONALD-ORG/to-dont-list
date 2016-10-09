@@ -59,6 +59,12 @@
   width: calc(100% - 20rem);
 }
 
+@media (min-width: 0px) and (max-width: 600px) {
+  .viewer--app {
+    flex-direction: column;
+  }
+}
+
 // Book specific
 
 .viewer__issuuembed {
