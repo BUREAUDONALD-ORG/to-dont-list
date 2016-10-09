@@ -40,8 +40,11 @@ script:
   - npm run cname
 deploy:
   provider: script
-  script: npm run push
+  script: npm run push-travis
   skip_cleanup: true
   on:
     branch:
     - master
+env:
+  global:
+  - secure: "S9/WS+Kt8XHLJkNx9tHAOMlXg47MzjNTmkVlo54vzM2EAwxY+o61nWU7hEzf5Bna8IZhZMlEFnQJGsPkI7c13bnhR077s7whno44UiYp9bg0aWAVPW+oIhoF9YZ7MqsnXuY3/JS2ReXGYybbX9O9pXczgVVrlPhu4w4geXOy2cb4aWb7HJJY2LSdNxvYgM2gf+HKno/KPEu8i/97vIyw2ztKIrwF9qn99nvmXPCDEsPk0ymrMjwsHEyDaV/8jDZ5OgssjdkQtV/GrO2eQimj3hFd3kEEXoEVGFBrenyKggYbK6UsIsezVRvVlRBLPrX8Da/9TSeKjgUJqf/p/bMVmUg8s/48VhpD8qBrH1WhUbLzSc4gQ4sXQit4ULQaZIa4MIVpDr53fFvpwDlWNA2wxz/TTkqSBMnpLPl4fQzXzmxSPjajin1pOpWyrM22TI9nLzqF9sQZCqoMe5q8m5s+TDPmpkz1RUtoQpLmwqb7SxHGglDi6Khxek7PpaFB8f1slcFpi/7mZN8lwjBYAFzvZdLiTcWr3X+fvwRhD+i2bRiO1E5FfDDQAE601J60DsaWSWcLCY76Jhld4wgUAirfr+ZSi+8abF09P2SK+8u1V+WTPoeYl77ESQjFrlJ4mbR6kXGeY9UWT55mx64LOK/BgwyaXgl7B7xgNZ9O8J4GBjU="
