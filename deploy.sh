@@ -1,7 +1,7 @@
 # Map branch to repo and set the correct domain
 if [ $TRAVIS_BRANCH = "master" ]
 then
-  GH_REF="github.com/BUREAUDONALD-ORG/to-dont-list.git -x"
+  GH_REF="github.com/BUREAUDONALD-ORG/to-dont-list.git"
   # echo todontlist.net > build/CNAME
 elif [ $TRAVIS_BRANCH = "production" ]
 then
