@@ -14,7 +14,7 @@ The project dependencies themselves can then be installed with the command:
 
 ```npm install```
 
-To run a local development server at localhost:8000:
+To run a local development server at localhost:8000
 ```npm run dev```
 
 To deploy (given the right security clearance):
