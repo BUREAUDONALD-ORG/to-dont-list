@@ -1,8 +1,8 @@
 ---
 title: "Workshops"
 bigTitle: "Work\nshops"
-subtitle: "Don\u2019t Talk,\nSketch!"
-textTitle: "Don\u2019t Talk,\nSketch!"
+subtitle: "Sketch!\nDon\u2019t Talk"
+textTitle: "Sketch!\nDon\u2019t Talk"
 link: ""
 ---
 Workshop
