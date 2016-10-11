@@ -16,4 +16,4 @@ git config user.name "Zaturrby"
 git config user.email "rjkorteschiel@gmail.com"
 git add -A
 git commit -m "deploy"
-git push -f --quiet "https://${GH_TOKEN}@${GH_REF}" master:gh-pages > /dev/null 2>&1
+git push -f "https://${GH_TOKEN}@${GH_REF}" master:gh-pages
