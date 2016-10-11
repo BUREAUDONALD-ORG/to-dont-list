@@ -26,4 +26,4 @@ socialbtn:
 creditsTitle: "Credits"
 creditsMobile: "The ToDon\u2019tList is a project by Bureaudonald, with the help of many others."
 ---
-The ToDon’tList is a project by <a data-scroll href="http://www.bureaudonald.com">Bureaudonald</a>, inspired and supported by <a data-scroll href="">Anne de Bruijn</a>, <a data-scroll href="">Peter Heykamp</a>, Frank van der Peet, Benz Roos, Robert-Jan Korteschiel, Jan Harm Lieftinck, Guus de Graaf, Petr van Blokland, Barbara Bigosińska, Pieter van Rosmalen, Dennis Kleyn, and Gerrit Heijkoop.
+The ToDon’tList is a project by [Bureaudonald](http://www.bureaudonald.com), inspired and supported by [Anne de Bruijn](http://www.acertainmissbrown.com), [Peter Heykamp](http://www.websitevanons.nl), Frank van der Peet, [Benz Roos](http://www.RoosBros.com), Robert-Jan Korteschiel, Niels van der Donk, [Jan Harm Lieftinck](djeeks.nl), [Guus de Graaf](deck-vormgeving.nl), [Petr van Blokland](Petr.com), [Barbara Bigosińska](http://studiobigosinska.com/), [Pieter van Rosmalen](boldmonday.com), [Dennis Kleyn](planetx.nl), and [Gerrit Heijkoop](gerritheijkoop.com).
