@@ -24,6 +24,6 @@ socialbtn:
 - text: "Instagram"
   link: "https://www.instagram.com/bureaudonald/"
 creditsTitle: "Credits"
-creditsMobile: "The ToDon\u2019tList is a project by Bureaudonald, with the help of many others."
+creditsMobile: "The ToDon\u2019tList is a project by Bureaudonald, buro van Ons, A Certain Miss Brown, and Frank van der Peet, with the help of many others."
 ---
 The ToDon’tList is a project by [Bureaudonald](http://www.bureaudonald.com), [buro van Ons](http://www.websitevanons.nl), [A Certain Miss Brown](http://www.acertainmissbrown.com), and Frank van der Peet, inspired and supported by [Anne de Bruijn](http://www.acertainmissbrown.com), [Peter Heykamp](http://www.websitevanons.nl), Frank van der Peet, [Benz Roos](http://www.RoosBros.com), Robert-Jan Korteschiel, Niels van der Donk, [Jan Harm Lieftinck](djeeks.nl), [Guus de Graaf](deck-vormgeving.nl), [Barbara Bigosińska](http://studiobigosinska.com/), [Pieter van Rosmalen en Paul van der Laan](boldmonday.com), [Petr van Blokland](Petr.com), [Dennis Kleyn](planetx.nl), and [Gerrit Heijkoop](gerritheijkoop.com).
