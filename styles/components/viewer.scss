@@ -120,6 +120,10 @@
     width: 100%;
   }
 
+  .viewer__book-grid-section:first-of-type {
+    padding-left: 0;
+  }
+
   .viewer__book-grid-section:last-of-type {
     padding: $two;
   }
