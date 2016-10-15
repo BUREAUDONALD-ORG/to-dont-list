@@ -27,6 +27,20 @@
   }
 }
 
+@media (min-width: 0px) and (max-width: 600px) {
+  .viewer__title {
+    padding-left: $unit;
+  }
+
+  h3 {
+    @include t--x-small-responsive;
+  }
+
+  p {
+    @include t--body-responsive;
+  }
+}
+
 .viewer__button-header {
   @include t--small;
   padding: $unit $unit 0;
@@ -58,6 +72,10 @@
 @media (min-width: 0px) and (max-width: 600px) {
   .viewer--app {
     flex-direction: column;
+  }
+
+  .viewer__content--app {
+    padding: 0 $unit;
   }
 }
 
@@ -128,5 +146,6 @@
 @media (min-width: 0px) and (max-width: 600px) {
   .viewer__content {
     max-width: 100%;
+    padding: 0 $unit;
   }
 }
