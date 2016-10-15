@@ -2,7 +2,7 @@
 
 ![](https://travis-ci.org/BUREAUDONALD-ORG/to-dont-list.svg?branch=master)
 
-Site for the To Don't List book.
+Site for the To Don't List book by BureauDonald.
 
 ## Technical
 
