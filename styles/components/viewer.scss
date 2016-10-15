@@ -31,13 +31,14 @@
   .viewer__title {
     padding-left: $unit;
   }
+  .viewer__content {
+    h2 {
+      @include t--x-small-responsive;
+    }
 
-  h3 {
-    @include t--x-small-responsive;
-  }
-
-  p {
-    @include t--body-responsive;
+    p {
+      @include t--body-responsive;
+    }
   }
 }
 
