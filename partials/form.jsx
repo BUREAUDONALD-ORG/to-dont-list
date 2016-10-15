@@ -92,11 +92,11 @@ export default class Form extends React.Component {
               <input
                 className="form__submit"
                 type="submit"
-                value={this.state.isSubmitted ? 'Thank You!' : 'send'}
+                value={this.state.isSubmitted ? form.submitResponse : form.submit}
               />
             </div>
             { this.state.isSubmitted && (
-              <p className="form__submit-text">Your mailclient will now open!</p>
+              <p className="form__submit-text">{form.submitExpandedResponse}</p>
             ) }
           </div>
         </form>

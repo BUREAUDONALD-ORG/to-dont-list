@@ -7,4 +7,6 @@ fields:
 - "5. Say \u201CBye\u201D"
 ccField: "What is your name?"
 submit: "Send"
+submitResponse: "Done"
+submitExpandedResponse: "Thanks! Your mailclient will now open."
 mailTo: "bureau@donald.eu"
