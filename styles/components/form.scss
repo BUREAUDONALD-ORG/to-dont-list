@@ -22,6 +22,12 @@
   color: $day;
 }
 
+@media (min-width: 0px) and (max-width: 600px) {
+  .form__title {
+    @include t--small-responsive;
+  }
+}
+
 .form__fields-container {
   padding: $half 0;
 }
@@ -72,6 +78,12 @@
 .form__field--cc {
   @include t--x-small;
   height: 4 * $unit;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .form__field--cc {
+    @include t--small;
+  }
 }
 
 .form__field::placeholder {

@@ -15,6 +15,12 @@
   @include t--x-small;
 }
 
+@media (min-width: 0px) and (max-width: 600px) {
+  .social__text {
+    @include t--small-responsive;
+  }
+}
+
 .social__placeholder {
   width: 33%;
   margin-left: $unit;

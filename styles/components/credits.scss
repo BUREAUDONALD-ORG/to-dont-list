@@ -14,6 +14,20 @@
   color: $complementary;
 }
 
+@media (min-width: 0px) and (max-width: 600px) {
+  .credits {
+    padding: 0 $unit;
+  }
+
+  .credits__title {
+    @include t--x-small-responsive;
+  }
+
+  .credits__text p {
+    @include t--small-responsive;
+  }
+}
+
 .credits__text a {
   border-bottom: .5rem solid $complementary;
 }
