@@ -32,7 +32,7 @@ module.exports = React.createClass({
           <link rel="icon" type="image/png" sizes="192x192" href="icons-b7efdbe84125e7cb64fdfb9bbacb113a/android-chrome-192x192.png" />
           <meta name="mobile-web-app-capable" content="yes" />
           <meta name="theme-color" content="#fff" />
-          <meta name="application-name" content="favicons-webpack-plugin" />
+          <meta name="application-name" content="ToDon'tList" />
           <link rel="apple-touch-icon" sizes="57x57" href="icons-b7efdbe84125e7cb64fdfb9bbacb113a/apple-touch-icon-57x57.png" />
           <link rel="apple-touch-icon" sizes="60x60" href="icons-b7efdbe84125e7cb64fdfb9bbacb113a/apple-touch-icon-60x60.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="icons-b7efdbe84125e7cb64fdfb9bbacb113a/apple-touch-icon-72x72.png" />
@@ -44,7 +44,7 @@ module.exports = React.createClass({
           <link rel="apple-touch-icon" sizes="180x180" href="icons-b7efdbe84125e7cb64fdfb9bbacb113a/apple-touch-icon-180x180.png" />
           <meta name="apple-mobile-web-app-capable" content="yes" />
           <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
-          <meta name="apple-mobile-web-app-title" content="favicons-webpack-plugin" />
+          <meta name="apple-mobile-web-app-title" content="ToDon'tList" />
           <link rel="icon" type="image/png" sizes="16x16" href="icons-b7efdbe84125e7cb64fdfb9bbacb113a/favicon-16x16.png" />
           <link rel="icon" type="image/png" sizes="32x32" href="icons-b7efdbe84125e7cb64fdfb9bbacb113a/favicon-32x32.png" />
           <link rel="icon" type="image/png" sizes="96x96" href="icons-b7efdbe84125e7cb64fdfb9bbacb113a/favicon-96x96.png" />
