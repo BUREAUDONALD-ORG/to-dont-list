@@ -2,6 +2,7 @@ import React from 'react'
 import DocumentTitle from 'react-document-title'
 /* eslint-disable */
 import { config } from 'config'
+import { prefixLink } from 'gatsby-helpers'
 /* eslint-enable */
 import Tabs from '../partials/tabs.jsx'
 

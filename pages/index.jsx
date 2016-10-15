@@ -24,7 +24,7 @@ export default class Index extends React.Component {
             <div className="viewer">
               <pre><h1 className="viewer__title">{ workshop.textTitle }</h1></pre>
               <div
-                className="viewer__content"
+                className="viewer__content viewer__content--workshop"
                 dangerouslySetInnerHTML={{ __html: workshop.body }}
               />
               <img className="viewer__marker" alt="big marker" src={marker} />
