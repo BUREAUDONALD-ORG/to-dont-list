@@ -4,11 +4,11 @@ subtitle: "Don\u2019t Read \nThis Book"
 textTitle: "Don\u2019t Read \nThis Book"
 link: "book"
 images:
-- link: book-1.png
+- link: book-1-compressed.png
   text: Cover
-- link: book-2.png
+- link: book-2-compressed.png
   text: Text
-- link: book-3.png
+- link: book-3-compressed.png
   text: Diagram
 buybtnHeader: "Order a Copy"
 buybtn:

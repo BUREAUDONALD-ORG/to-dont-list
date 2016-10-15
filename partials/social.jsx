@@ -47,6 +47,7 @@ export default class Social extends React.Component {
                 <h1 className="button__text">{btn.text}</h1>
               </a>
             )) }
+            <div className="social__placeholder" />
           </div>
         </div>
       </div>

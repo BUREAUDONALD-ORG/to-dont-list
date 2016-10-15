@@ -17,20 +17,20 @@
 .form__title {
   @include t--x-small;
   display: inline-block;
-  padding: 4rem;
+  padding: $unit;
   border: 1rem solid $day;
   color: $day;
 }
 
 .form__fields-container {
-  padding: 2rem 0;
+  padding: $half 0;
 }
 
 .form__field-container {
   display: flex;
   flex-direction: column;
   width: 100%;
-  padding-bottom: 4rem;
+  padding-bottom: $unit;
 }
 
 .form__fields-container .form__field[data-placeholder-shown='true'] + .form__label {
@@ -66,13 +66,12 @@
 }
 
 .form__field-container--cc {
-  width: calc(66.66% + 4rem);
-  margin-right: 4rem;
+  width: calc(66.66% + #{$unit});
 }
 
 .form__field--cc {
   @include t--x-small;
-  height: 16rem;
+  height: 4 * $unit;
 }
 
 .form__field::placeholder {
@@ -87,12 +86,12 @@
   @include t--medium;
   align-self: flex-end;
   display: block;
-  width: calc(33.33% - 4rem);
-  height: 16rem;
+  width: calc(33.33%);
+  height: 4 * $unit;
   border: 0;
   background: $night;
   color: $day;
-  margin: 0 0 4rem;
+  margin: 0 0 $unit $unit;
   cursor: pointer;
   border-radius: 0;
   appearance: none;

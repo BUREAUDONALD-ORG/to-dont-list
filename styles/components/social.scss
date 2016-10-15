@@ -14,3 +14,8 @@
 .social__text {
   @include t--x-small;
 }
+
+.social__placeholder {
+  width: 33%;
+  margin-left: $unit;
+}
