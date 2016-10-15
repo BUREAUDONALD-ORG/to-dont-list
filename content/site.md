@@ -1,7 +1,7 @@
 ---
 siteTitle: "To\nDon\u2019t\nList"
 subTitle: "Time\nManagement\nfor Creative\nPeople"
-authorPrefix: "by "
+authorPrefix: ""
 author: "Donald Roos"
 authorLink: "http://www.bureaudonald.com"
 nav:
@@ -24,6 +24,5 @@ socialbtn:
 - text: "Instagram"
   link: "https://www.instagram.com/bureaudonald/"
 creditsTitle: "Credits"
-creditsMobile: "The ToDon\u2019tList is a project by Bureaudonald, buro van Ons, A Certain Miss Brown, and Frank van der Peet, with the help of many others."
 ---
-The ToDon’tList is a project by [Bureaudonald](http://www.bureaudonald.com), [buro van Ons](http://www.websitevanons.nl), [A Certain Miss Brown](http://www.acertainmissbrown.com), and Frank van der Peet, inspired and supported by [Anne de Bruijn](http://www.acertainmissbrown.com), [Peter Heykamp](http://www.websitevanons.nl), Frank van der Peet, [Benz Roos](http://www.RoosBros.com), Robert-Jan Korteschiel, Niels van der Donk, [Jan Harm Lieftinck](djeeks.nl), [Guus de Graaf](deck-vormgeving.nl), [Barbara Bigosińska](http://studiobigosinska.com/), [Pieter van Rosmalen en Paul van der Laan](boldmonday.com), [Petr van Blokland](Petr.com), [Dennis Kleyn](planetx.nl), and [Gerrit Heijkoop](gerritheijkoop.com).
+The ToDon’tList is a project by <a target="_blank" rel="noopener noreferrer" href="http://www.bureaudonald.com">Bureaudonald</a>, <a target="_blank" rel="noopener noreferrer" href="http://www.websitevanons.nl">buro van Ons</a>, Frank van der Peet, inspired and supported by <a target="_blank" rel="noopener noreferrer" href="http://www.acertainmissbrown.com">Anne de Bruijn</a>, <a target="_blank" rel="noopener noreferrer" href="http://www.websitevanons.nl">Peter Heykamp</a>, <a target="_blank" rel="noopener noreferrer" href="http://www.RoosBros.com">Benz Roos</a>, Robert-Jan Korteschiel, Niels van der Donk, <a target="_blank" rel="noopener noreferrer" href="http://www.djeeks.nl">Jan Harm Lieftinck</a>, <a target="_blank" rel="noopener noreferrer" href="http://www.deck-vormgeving.nl">Guus de Graaf</a>, <a target="_blank" rel="noopener noreferrer" href="http://www.Petr.com">Petr van Blokland</a>, <a target="_blank" rel="noopener noreferrer" href="http://studiobigosinska.com/">Barbara Bigosińska</a>, <a target="_blank" rel="noopener noreferrer" href="http://www.boldmonday.com">Pieter van Rosmalen en Paul van der Laan</a>, <a target="_blank" rel="noopener noreferrer" href="http://www.planetx.nl">Dennis Kleyn</a>, and <a target="_blank" rel="noopener noreferrer" href="http://www.gerritheijkoop.com">Gerrit Heijkoop</a>.

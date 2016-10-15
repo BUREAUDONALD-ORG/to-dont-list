@@ -8,7 +8,6 @@ import book from '../content/book.md'
 import workshop from '../content/workshop.md'
 
 import arrow from '../assets/images/arrow.png'
-import arrowBlack from '../assets/images/arrow-black.png'
 
 export default class Tabs extends React.Component {
   static propTypes () {
@@ -32,12 +31,14 @@ export default class Tabs extends React.Component {
                 onClick={() => {}}
               >
                 { isActive ? (
-                  <pre><h2 className="tab__big-title">{project.bigTitle || project.title}</h2></pre>
+                  <pre>
+                    <h2 className="tab__big-title">{project.bigTitle || project.title}</h2>
+                  </pre>
                   ) : (
-                  <div>
-                    <h2 className="tab__title">{project.title}</h2>
-                    <pre><h3 className="tab__subtitle">{project.subtitle}</h3></pre>
-                  </div>
+                    <div>
+                      <h2 className="tab__title">{project.title}</h2>
+                      <pre><h3 className="tab__subtitle">{project.subtitle}</h3></pre>
+                    </div>
                 )}
                 {isActive &&
                   (<img className="tab__arrow" role="presentation" src={arrow} />)}

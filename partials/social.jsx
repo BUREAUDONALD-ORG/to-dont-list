@@ -13,7 +13,12 @@ export default class Social extends React.Component {
     return (
       <div id="social" className="layout__social">
         <div className="social">
-          <a href={site.hashtagLink} className="social__hashtag">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href={site.hashtagLink}
+            className="social__hashtag"
+          >
             <img src={tag} alt="#ToDontList" className="social__hashtag" />
           </a>
           <div className="social__text-container">
@@ -22,7 +27,13 @@ export default class Social extends React.Component {
           </div>
           <div className="button__container">
             {site.socialbtn.map((btn, key) => (
-              <a href={btn.link} key={key} className="button">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={btn.link}
+                key={key}
+                className="button"
+              >
                 <img
                   className="button__img"
                   src={key ? instagram : twitter}

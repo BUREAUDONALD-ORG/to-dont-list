@@ -1,4 +1,5 @@
 import ExtractTextPlugin from 'extract-text-webpack-plugin'
+let FaviconsWebpackPlugin = require('favicons-webpack-plugin')
 
 exports.modifyWebpackConfig = function(config, env) {
   config.loader('woff', {
@@ -17,7 +18,10 @@ exports.modifyWebpackConfig = function(config, env) {
         exclude: /\.module\.(sass|scss)$/,
         loaders: ['style', 'css', 'postcss', 'sass']
       })
-     config.merge({
+
+      config.plugin('favicongen', FaviconsWebpackPlugin, ['favicon.png'])
+
+      config.merge({
         postcss: [
           require('postcss-import')(),
           require('postcss-cssnext')({ browsers: '> 1%' }),
@@ -27,6 +31,7 @@ exports.modifyWebpackConfig = function(config, env) {
       })
       return config
     case 'build-css':
+      config.plugin('favicongen', FaviconsWebpackPlugin, ['favicon.png'])
       config.loader('sass', {
         test: /\.(sass|scss)/,
         exclude: /\.module\.(sass|scss)$/,

@@ -10,7 +10,7 @@
 }
 
 .nav__item:hover a {
-  text-decoration: underline;
+  border-bottom: 1px solid $day;
 }
 
 .nav__item::after {

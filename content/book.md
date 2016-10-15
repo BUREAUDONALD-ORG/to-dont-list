@@ -3,12 +3,19 @@ title: "Book"
 subtitle: "Don\u2019t Read \nThis Book"
 textTitle: "Don\u2019t Read \nThis Book"
 link: "book"
+images:
+- link: book-1.png
+  text: Cover
+- link: book-2.png
+  text: Text
+- link: book-3.png
+  text: Diagram
 buybtnHeader: "Order a Copy"
 buybtn:
 - text: Amazon
   link: "https://www.amazon.com/Dont-Read-This-Book-Management/dp/9063694237/ref=sr_1_1?ie=UTF8&qid=1475415664&sr=8-1&keywords=donald+roos"
 - text: "BIS Publishers"
-  link: "http://www.bispublishers.com/donald-roos-dont-read-this-book.html"
+  link: "http://www.bispublishers.com/dont-read-this-book.html"
 - text: Bol.com
   link: "https://www.bol.com/nl/p/don-t-read-this-book/9200000050365106/?suggestionType=typedsearch"
 ---

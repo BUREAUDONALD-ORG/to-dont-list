@@ -1,7 +1,7 @@
 .viewer {
   display: flex;
   flex-direction: column;
-  padding: 0 0 $two $unit;
+  padding: 0 0 $two;
   width: 100%;
   max-width: 1200px;
 }
@@ -12,8 +12,6 @@
 }
 
 .viewer__content {
-  max-width: calc(66% - #{$two});
-
   h2 {
     @include t--x-small;
     padding: 1rem 0 .8rem;
@@ -31,7 +29,7 @@
 
 .viewer__button-header {
   @include t--small;
-  padding: 4rem 0 0;
+  padding: $unit $unit 0;
   color: $complementary;
 }
 
@@ -73,7 +71,37 @@
   background-size: cover;
 }
 
+.viewer__book-grid {
+  display: flex;
+}
+
+.viewer__book-grid-section {
+  width: calc(66.66% + #{4rem});
+}
+
+.viewer__book-grid-section:first-of-type {
+  padding-left: $unit;
+}
+
+.viewer__book-grid-section:last-of-type {
+  margin-left: $unit;
+  width: calc(33.33%);
+  padding-left: 8rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.viewer__book-image {
+  display: block;
+  width: 100%;
+  margin: 0 0 $unit;
+}
+
 // Workshop specific
+
+.viewer__content--workshop {
+  max-width: calc(66% - #{$two});
+}
 
 .viewer__marker {
   width: 100%;

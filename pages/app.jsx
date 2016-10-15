@@ -1,7 +1,9 @@
 import React from 'react'
+/* eslint-disable import/no-extraneous-dependencies */
 import { prefixLink } from 'gatsby-helpers'
-import DocumentTitle from 'react-document-title'
 import { config } from 'config'
+/* eslint-enable import/no-extraneous-dependencies */
+import DocumentTitle from 'react-document-title'
 
 import Tabs from '../partials/tabs.jsx'
 
@@ -29,8 +31,8 @@ export default class App extends React.Component {
                   dangerouslySetInnerHTML={{ __html: app.body }}
                 />
                 <div className="button__container">
-                  <div className="button">
-                    <a href={app.btn[0].link} >
+                  <div className="button button--wide">
+                    <a target="_blank" rel="noopener noreferrer" href={app.btn[0].link} >
                       <h1 className="button__text">
                         {app.btn[0].text}
                       </h1>

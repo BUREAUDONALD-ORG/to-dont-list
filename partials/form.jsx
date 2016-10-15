@@ -65,14 +65,16 @@ export default class Form extends React.Component {
                 <input
                   className="form__field"
                   type="text"
+                  value={this.state.fields[key]}
                   placeholder={field}
+                  data-placeholder-shown={this.state.fields[key] === ''}
                   onChange={this.updateField.bind(this, key)} autoComplete="off"
                 />
                 <label
                   htmlFor={'field #{key}'}
                   className="form__label"
                 >
-                    {field}
+                  {field}
                 </label>
               </div>)) }
             <div className="form__submit-container">
@@ -80,6 +82,8 @@ export default class Form extends React.Component {
                 <input
                   className="form__field form__field--cc"
                   type="text"
+                  value={this.state.name}
+                  data-placeholder-shown={this.state.name === ''}
                   onChange={this.updateField.bind(this, 'name')}
                   placeholder={form.ccField}
                 />
