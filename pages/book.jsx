@@ -35,7 +35,7 @@ export default class Book extends React.Component {
 
                     return (
                       <img
-                        src={src}
+                        src={prefixLink(src)}
                         className="viewer__book-image"
                         alt={image.text}
                         key={key}
