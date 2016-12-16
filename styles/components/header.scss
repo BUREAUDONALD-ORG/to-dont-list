@@ -36,7 +36,7 @@
 }
 
 .header__author {
-  @include t--x-small;
+  @include t--x-small-responsive;
   color: $day;
 }
 

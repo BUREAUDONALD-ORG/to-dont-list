@@ -109,6 +109,7 @@
   }
 
   .form__submit {
+    @include t--small;
     width: 50%;
     height: 14rem;
   }
