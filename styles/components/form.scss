@@ -27,6 +27,10 @@
 }
 
 @media (min-width: 0px) and (max-width: 600px) {
+  .form__header {
+    width: 100%;
+  }
+
   .form__title {
     @include t--small-responsive;
   }
@@ -70,12 +74,6 @@
   border-radius: 0;
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
-  .form__field {
-    @include t--small;
-  }
-}
-
 .form__field::placeholder {
   color: $complementary;
 }
@@ -103,4 +101,15 @@
   @include t--small;
   @include row-component;
   padding-left: $unit;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .form__field {
+    @include t--small;
+  }
+
+  .form__submit {
+    width: 50%;
+    height: 14rem;
+  }
 }

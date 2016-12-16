@@ -44,3 +44,9 @@
   padding: $two $side-padding $unit * 5;
   background: $night;
 }
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .layout__tabs {
+    padding: $unit $side-padding;
+  }
+}

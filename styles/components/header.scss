@@ -41,7 +41,7 @@
 }
 
 .header__author:hover a {
-  border-bottom: 1px solid $day;
+  border-bottom: .5rem solid $day;
 }
 
 @media (min-width: 0px) and (max-width: 600px) {
@@ -56,5 +56,9 @@
   .header__line-hz {
     display: block;
     width: 100%;
+  }
+
+  .header__author {
+    padding-top: $two;
   }
 }
