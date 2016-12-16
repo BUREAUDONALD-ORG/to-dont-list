@@ -36,15 +36,12 @@
 }
 
 .header__author {
-  @include t--small;
+  @include t--x-small;
   color: $day;
-  padding-top: $unit;
 }
 
-
-.header__author:hover {
-  text-decoration: underline;
-  vertical-align: baseline;
+.header__author:hover a {
+  border-bottom: 1px solid $day;
 }
 
 @media (min-width: 0px) and (max-width: 600px) {

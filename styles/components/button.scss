@@ -48,3 +48,8 @@
 .button__img--hover {
   display: none;
 }
+
+.button--complementary:hover {
+  background: $complementary;
+  color: $day;
+}

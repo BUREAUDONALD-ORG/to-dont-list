@@ -15,7 +15,7 @@
 
 .layout__tabs {
   @include row-component-center;
-  padding: $unit $side-padding;
+  padding: $unit $side-padding $half;
   background: $complementary;
 }
 
@@ -28,13 +28,13 @@
 
 .layout__form {
   @include row-component-center;
-  padding: 0 $side-padding;
+  padding: 0 $side-padding $unit;
   background: $complementary;
 }
 
 .layout__social {
   @include row-component-center;
-  padding: $unit $side-padding;
+  padding: $unit $side-padding $two;
   min-height: 80rem;
   background: $complementary;
 }

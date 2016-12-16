@@ -15,7 +15,15 @@ export default class Book extends React.Component {
     }
   }
 
+  images () {
+    return book.images.map((image) => {
+      const src = require(`../assets/images/${image.link}`)
+      return prefixLink(src)
+    })
+  }
+
   render () {
+    const images = this.images()
     return (
       <DocumentTitle title={config.siteTitle}>
         <main className="layout__main">
@@ -29,19 +37,13 @@ export default class Book extends React.Component {
                     className="viewer__content"
                     dangerouslySetInnerHTML={{ __html: book.body }}
                   />
+                  <div className="viewer__book-image-container">
+                    <img src={images[1]} className="viewer__book-image-hz" role="presentation" />
+                    <img src={images[2]} className="viewer__book-image-hz" role="presentation" />
+                  </div>
                 </div>
                 <div className="viewer__book-grid-section">
-                  { book.images.map((image, key) => {
-                    const src = require(`../assets/images/${image.link}`)
-
-                    return (
-                      <img
-                        src={prefixLink(src)}
-                        className="viewer__book-image"
-                        alt={image.text}
-                        key={key}
-                      />
-                  ) }) }
+                  <img src={images[0]} className="viewer__book-image" role="presentation" />
                 </div>
               </div>
               <h1 className="viewer__button-header">{book.buybtnHeader}</h1>
@@ -52,7 +54,7 @@ export default class Book extends React.Component {
                     rel="noopener noreferrer"
                     href={btn.link}
                     key={key}
-                    className="button"
+                    className="button button--complementary"
                   >
                     <h1 className="button__text">{btn.text}</h1>
                   </a>

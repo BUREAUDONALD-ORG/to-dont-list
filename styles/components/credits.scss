@@ -1,6 +1,7 @@
 .credits {
   width: 100%;
   max-width: 1200px;
+  padding: 0 $unit;
 }
 
 .credits__title {
@@ -12,6 +13,7 @@
 .credits__text p {
   @include t--x-small;
   color: $complementary;
+  line-height: 5.5rem;
 }
 
 @media (min-width: 0px) and (max-width: 600px) {
@@ -28,7 +30,7 @@
   }
 }
 
-.credits__text a {
+.credits__text a:hover {
   border-bottom: .5rem solid $complementary;
 }
 

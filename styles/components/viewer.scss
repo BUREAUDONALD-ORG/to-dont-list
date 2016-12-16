@@ -25,12 +25,17 @@
   a {
     color: $complementary;
   }
+
+  a:hover {
+    text-decoration: underline;
+  }
 }
 
 @media (min-width: 0px) and (max-width: 600px) {
   .viewer__title {
     padding-left: $unit;
   }
+
   .viewer__content {
     h2 {
       @include t--x-small-responsive;
@@ -130,10 +135,28 @@
   }
 }
 
+.viewer__book-image-container {
+  display: flex;
+  align-items: flex-start;
+  padding: $unit 0;
+}
+
 .viewer__book-image {
   display: block;
   width: 100%;
   margin: 0 0 $unit;
+}
+
+.viewer__book-image-hz {
+  display: block;
+  width: 50%;
+  margin: 0 $half 0 0;
+}
+
+.viewer__book-image-hz:last-child {
+  display: block;
+  width: 50%;
+  margin: 0 0 0 $half;
 }
 
 // Workshop specific

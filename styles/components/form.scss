@@ -4,9 +4,11 @@
 }
 
 .form__header {
-  display: inline-flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: $two;
+  width: calc(33% - 2rem);
 }
 
 .form__arrow {
@@ -16,7 +18,9 @@
 
 .form__title {
   @include t--x-small;
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  width: 100%;
   padding: $unit;
   border: 1rem solid $day;
   color: $day;
@@ -55,6 +59,7 @@
 
 .form__field {
   @include t--medium;
+  line-height: 11rem;
   position: relative;
   z-index: 10;
   order: 2;
@@ -71,39 +76,24 @@
   }
 }
 
-.form__field-container--cc {
-  width: calc(66.66% + #{$unit});
-}
-
-.form__field--cc {
-  @include t--x-small;
-  height: 4 * $unit;
-}
-
-@media (min-width: 0px) and (max-width: 600px) {
-  .form__field--cc {
-    @include t--small;
-  }
-}
-
 .form__field::placeholder {
   color: $complementary;
 }
 
 .form__submit-container {
   display: flex;
+  align-items: center;
 }
 
 .form__submit {
   @include t--medium;
   align-self: flex-end;
   display: block;
-  width: calc(33.33%);
-  height: 4 * $unit;
+  width: 33.33%;
+  height: 5 * $unit;
   border: 0;
   background: $night;
   color: $day;
-  margin: 0 0 $unit $unit;
   cursor: pointer;
   border-radius: 0;
   appearance: none;
@@ -112,7 +102,5 @@
 .form__submit-text {
   @include t--small;
   @include row-component;
-  justify-content: flex-end;
-  width: 100%;
-  padding-bottom: $unit;
+  padding-left: $unit;
 }

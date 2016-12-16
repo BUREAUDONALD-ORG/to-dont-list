@@ -55,7 +55,6 @@ export default class Form extends React.Component {
       <div id="mail" className="layout__form">
         <form className="form" onSubmit={this.submitEmail.bind(this)}>
           <div className="form__header">
-            <img className="form__arrow" src={arrow} alt="arrow" />
             <div className="form__title">{form.title}</div>
             <img className="form__arrow" src={arrow} alt="arrow" />
           </div>
@@ -78,26 +77,15 @@ export default class Form extends React.Component {
                 </label>
               </div>)) }
             <div className="form__submit-container">
-              <div className="form__field-container form__field-container--cc">
-                <input
-                  className="form__field form__field--cc"
-                  type="text"
-                  value={this.state.name}
-                  data-placeholder-shown={this.state.name === ''}
-                  onChange={this.updateField.bind(this, 'name')}
-                  placeholder={form.ccField}
-                />
-                <label htmlFor="ccField" className="form__label">{form.ccField}</label>
-              </div>
               <input
                 className="form__submit"
                 type="submit"
                 value={this.state.isSubmitted ? form.submitResponse : form.submit}
               />
+              { this.state.isSubmitted && (
+                <p className="form__submit-text">{form.submitExpandedResponse}</p>
+              ) }
             </div>
-            { this.state.isSubmitted && (
-              <p className="form__submit-text">{form.submitExpandedResponse}</p>
-            ) }
           </div>
         </form>
       </div>
