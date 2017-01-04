@@ -35,8 +35,9 @@ export default class Header extends React.Component {
           <div className="header__section">
             <pre><h3 className="header__subtitle">{site.subTitle}</h3></pre>
             <h4 className="header__author">
+              {site.authorPrefix}
               <a rel="noopener noreferrer" target="_blank" href={site.authorLink}>
-                {site.authorPrefix} {site.author}
+                {site.author}
               </a>
             </h4>
           </div>
