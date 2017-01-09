@@ -1,6 +1,7 @@
 import React from 'react'
 import DocumentTitle from 'react-document-title'
 import { prefixLink } from 'gatsby-helpers'
+import site from 'content/site.md'
 
 const BUILD_TIME = new Date().getTime()
 
@@ -27,6 +28,7 @@ module.exports = React.createClass({
             name="viewport"
             content="width=device-width, initial-scale=1.0"
           />
+          <meta name="description" content={site.description} />
           <title>{title}</title>
           {/* eslint-disable max-len*/}
           <link rel="icon" type="image/png" sizes="192x192" href="/icons-b7efdbe84125e7cb64fdfb9bbacb113a/android-chrome-192x192.png" />
