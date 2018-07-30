@@ -1,10 +1,10 @@
 language:
-  - node_js
+- node_js
 node_js:
-  - "6.2.2"
+- 6.2.2
 script:
-  - npm run build-prefix
-  - npm run cname
+- npm run build-prefix
+- npm run cname
 deploy:
   provider: script
   script: npm run push-travis
@@ -14,7 +14,7 @@ deploy:
     - master
 env:
   global:
-  - secure: "Bl5r0reWqsULfqDi+5o3BjdEjVz/dnFKc9JY8LnpViJpy7JVE99MFe/32hwXNXmrjozJnZG8d57BaZare91X4Xr0mIOMFJVUM2S1FXCYFiErZG8zY5XOD0liDGr9wu3L8J1UYHB8vZNH2xiirwekn6Bkk3tBrtR7LCvFeu5z9i1jBqP80CLYWPzZuZ/ttuk60tAzCGgmxplHeAyDTmk5+PFKuXM0YvPA6pB9/Bh5Vo2bxD6w8DFUMTy38ogxTTGJCOcpXu3ozLKe4tUMkLilNT9AIjUiOJpFAYCYTiICEJYBuo9+SsOUVm7ZOEXdZN6JJGMZAGXr+TEkLh8WSayVx5CdtUu5YuDUvBKn8ao4RuhT5IoOGI9+bPc7YnLyo9h9KChXoLumWUXm1IVPistPmkLJM+6Af1Ovh/4EpVlK7z/3Wi+6ViULmeecBGfBgYmDyC9MZr8/Y7qZn/7MXc3vba7W2Y75sTv0+hGDCbP8ISGjImGbPUkotDweiztUU5eWOmG9Ufv5U0eTdSWp+sDBr431rbdwCy82ZSaF/EmA7SBmOQ0WtBwEymxOM59g0fAeYdAs2jNU97cKO+8w0I56zW8Z4M4+YgAgdKKFroG2XK/lZmutzv/DuP+SAyldCn6ZqIZV/AhO6rvtr9V32l5wWbLyi/tkMdPuAeuwD6yaJBM="
+  - secure:  VyiOrYen4qOPqz8iUhbtKGHJViiqWLRuW5nk/d9unjVBgiUdsgBFH/8yP9kLV7ZRweTaS4NSdJxW/8Oitf0LYykU6WyZJhF/cvvb8gnbTOuQKGBDfiz51p84cE5xRt31ip32y6hzrOMbBGqu65ayWtFBmoWn5M9B6rbS41pCiygpL4m0J8ioPpR+GSvA6g+En6m1+ew6/P1zxMHbP22Qnm5a88BwCG4o49OxIu6ptsiG/ZYAP+XLYYj1Pzt1QXoPnejVUvQd122Y6yfJfDCj7NtAcCtlgkGheOXL3LJm71wf7ZhjSi8FOPoIjBr35yU6bMWzvJzPmYasYeROty77eRgEDcHM6Tk3RjVxHW0VAv80tiRbJ3H32SHI9MAS9LDgMofeIO5hbhYitWmFPTaeTiGaZvILaczuqye77yLXVowdZ0aZIQjuOtOfJ1o4GtqfMPaGWx4V+nuu6anER0zdQDk/FFQ73u0ElWhupMHhYy+1SwRIm+mkWOf69IllTzVgT+xRFMCcHDiC07IO8Wyg1KQGAiNdPQderNJ45WqxT8yS/7+TklIxwYI409O/7D604OpOAT/lFWYdxgE3K7KUUxnkMQJzI6gDZa0K6J0emwKW1svDitHhXXMdDE6Aw/QXcu/gf9MbpMt2/HkPt5VStYUdd11T4gJGI9OG5Mj1Ekw=
 cache:
   directories:
-    - node_modules
+  - node_modules
