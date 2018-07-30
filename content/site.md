@@ -1,5 +1,5 @@
 ---
-siteTitle: "To\nDon\u2019t\nList"
+siteTitle: "To\nDon\u2019t\nCo."
 subTitle: "Time\nManagement\nfor Creative\nPeople"
 authorPrefix: "By "
 author: "Donald Roos"
@@ -13,7 +13,7 @@ nav:
   link: "#social"
 - title: Credits
   link: "#credits"
-tabsHeader: "ToDon\u2019tList Tools"
+tabsHeader: "ToDon\u2019tCo. Tools"
 hashtagLink: "https://twitter.com/hashtag/todontlist"
 socialText:
 - Donald posts sketches and pictures of type regularly.
