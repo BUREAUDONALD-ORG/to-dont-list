@@ -1,12 +1,14 @@
 ---
 title: "Workshops"
 bigTitle: "Work\nshops"
-subtitle: "Sketch!\nDon\u2019t Talk"
-textTitle: "Sketch!\nDon\u2019t Talk"
+subtitle: "Work\nDon\u2019t Shop"
+textTitle: "Work\nDon\u2019t Shop"
 link: ""
 ---
 ## Workshop
-The workshop revolves around your creative process: how to make it more effective by making choices, how to make those choices (fast and good) and how to manage your time and ideas better. Donald’s motto is ‘Visualize your ideas, then we can talk about it’ and in the workshop, he will bring that into practice.
+The workshop revolves around your creative process: how to make it more effective by making choices, how to make those choices (fast and good) and how to manage your time and ideas better. Donald’s motto is ‘Visualize your ideas, then we can talk about it’ and in the workshop, he will bring that into practice. 
+
+Main focus: How to create something without adding stuff, but use what is allready there. Work, Don’t Shop!
 
 You’ll sketch, talk and work according to the To Don’tList method. You will work alone, in pairs and in small teams. The duration of the workshop can be anything from 30 minutes to 3 weeks. Bring your pencils and a bunch of sketch paper (or just steal paper from the copy machine).
 
