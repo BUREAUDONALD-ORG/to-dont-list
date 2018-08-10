@@ -1,16 +1,26 @@
 import React from 'react';
 
-// import Tabs from '../partials/tabs.jsx';
-//
-// import app from '../content/app.md';
+import Tabs from '../components/Tabs.js';
+
 import iphone from '../../static/img/iphone.png';
 
 export default class App extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { products: [], timeToRead: 5 };
+    this.setProducts = this.setProducts.bind(this);
+  }
+
+  setProducts() {
+    console.log('yaaay');
+  }
+
   render() {
-    let product = this.props.data.products.edges[0].node;
-    console.log(product);
+    let products = this.props.data.products.edges;
+    let product = products[0].node;
     return (
       <main className="layout__main">
+        <Tabs products={products} />
         <article id="viewer" className="layout__viewer">
           <div className="viewer viewer--app">
             <div>

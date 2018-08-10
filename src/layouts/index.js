@@ -40,7 +40,6 @@ class Layout extends React.Component {
   }
 
   render() {
-    console.log(this.props);
     let siteData = this.props.data.site.edges[0].node;
     let formData = this.props.data.form.edges[0].node.frontmatter;
     return (
