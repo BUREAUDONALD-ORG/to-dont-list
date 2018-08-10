@@ -3,7 +3,7 @@ import React from 'react';
 import Tabs from '../components/Tabs.js';
 import Product from '../components/Product.js';
 
-export default class App extends React.Component {
+export default class indexPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { products: {}, timeToRead: 5 };
@@ -32,17 +32,20 @@ export default class App extends React.Component {
   render() {
     console.log(this.timeToRead());
     let products = this.props.data.products.edges;
-    let product = products[0].node;
     return (
       <main className="layout__main">
-        <Tabs products={products} toggleProducts={this.toggleProducts} />
+        <Tabs
+          products={products}
+          activeProducts={this.state.products}
+          toggleProducts={this.toggleProducts}
+        />
         {products
           .filter(product => {
             console.log(product);
             return this.state.products[product.node.frontmatter.id];
           })
-          .map(product => {
-            return <Product product={product.node} />;
+          .map((product, key) => {
+            return <Product key={key} product={product.node} />;
           })}
       </main>
     );

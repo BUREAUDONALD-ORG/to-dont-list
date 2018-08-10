@@ -3,27 +3,19 @@ import cx from 'classnames';
 
 import arrow from '../../static/img/arrow.png';
 
-const Tab = ({ product, key, active, toggleProducts }) => {
-  product = product.node.frontmatter;
+const Tab = ({ product, active, toggleProducts }) => {
   return (
     <div
-      key={key}
       className={cx({ tab: true, 'tab--active': active })}
       onClick={toggleProducts.bind(this, product.id)}
     >
-      {active ? (
+      <div>
+        <h2 className="tab__title">{product.checkboxTitle}</h2>
         <pre>
-          <h2 className="tab__big-title">{product.checkboxTitle}</h2>
+          <h3 className="tab__subtitle">{product.checkboxText}</h3>
         </pre>
-      ) : (
-        <div>
-          <h2 className="tab__title">{product.checkboxTitle}</h2>
-          <pre>
-            <h3 className="tab__subtitle">{product.checkboxText}</h3>
-          </pre>
-        </div>
-      )}
-      {active && <img className="tab__arrow" role="presentation" src={arrow} />}
+        {active && 'active'}
+      </div>
     </div>
   );
 };
@@ -34,11 +26,13 @@ export default class Tabs extends React.Component {
       <div id="tools" className="layout__tabs">
         <div className="tab__container">
           {this.props.products.map((product, key) => {
+            let productData = product.node.frontmatter;
+            console.log(this.props.activeProducts, productData);
             return (
               <Tab
                 key={key}
-                product={product}
-                active={false}
+                product={productData}
+                active={this.props.activeProducts[productData.id]}
                 toggleProducts={this.props.toggleProducts}
               />
             );
