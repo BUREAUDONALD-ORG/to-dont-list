@@ -102,7 +102,7 @@ export const layoutQuery = graphql`
           frontmatter {
             title
             fields {
-              field
+              text
             }
             ccField
             submit

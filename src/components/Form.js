@@ -66,7 +66,7 @@ export default class Form extends React.Component {
                   autoComplete="off"
                 />
                 <label htmlFor={'field #{key}'} className="form__label">
-                  {field}
+                  {field.text}
                 </label>
               </div>
             ))}
