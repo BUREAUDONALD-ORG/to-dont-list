@@ -101,7 +101,9 @@ export const layoutQuery = graphql`
           id
           frontmatter {
             title
-            fields
+            fields {
+              field
+            }
             ccField
             submit
             submitResponse

@@ -60,7 +60,7 @@ export default class Form extends React.Component {
                   className="form__field"
                   type="text"
                   value={this.state.fields[key]}
-                  placeholder={field}
+                  placeholder={field.text}
                   data-placeholder-shown={this.state.fields[key] === ''}
                   onChange={this.updateField.bind(this, key)}
                   autoComplete="off"
