@@ -43,7 +43,10 @@ collections:
         file: "src/pages/frontpage/site/form.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "fields", name: "fields", widget: "list"}
+          - label: "fields"
+            name: "fields"
+            widget: "list"
+            field: {label: "Field Text", name: "field", widget: "string"}
           - {label: "ccField", name: "ccField", widget: "text"}
           - {label: "Submit", name: "submit", widget: "string"}
           - {label: "submitResponse", name: "submitResponse", widget: "string"}
