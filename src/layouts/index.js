@@ -64,7 +64,7 @@ Layout.propTypes = {
 export const layoutQuery = graphql`
   query layoutQuery {
     site: allMarkdownRemark(
-      filter: { id: { regex: "//pages/frontpage/default/site.md/" } }
+      filter: { id: { regex: "//pages/frontpage/site/algemeen.md/" } }
     ) {
       edges {
         node {
@@ -94,7 +94,7 @@ export const layoutQuery = graphql`
       }
     }
     form: allMarkdownRemark(
-      filter: { id: { regex: "//pages/frontpage/default/form.md/" } }
+      filter: { id: { regex: "//pages/frontpage/site/form.md/" } }
     ) {
       edges {
         node {
