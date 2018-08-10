@@ -19,17 +19,27 @@ collections:
           - {label: "authorPrefix", name: "authorPrefix", widget: "string"}
           - {label: "author", name: "author", widget: "string"}
           - {label: "authorLink", name: "authorLink", widget: "string"}
-          - {label: "nav", name: "nav", widget: "list"}
+          - label: "nav"
+            name: "nav"
+            widget: "list"
+            fields:
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Link", name: "link", widget: string }
           - {label: "tabsHeader", name: "tabsHeader", widget: "string"}
           - {label: "hashtagLink", name: "hashtagLink", widget: "string"}
           - {label: "socialText", name: "socialText", widget: "list"}
-          - {label: "socialbtn", name: "socialbtn", widget: "list"}
+          - label: "socialbtn"
+            name: "socialbtn"
+            widget: "list"
+            fields:
+              - { label: "text", name: "text", widget: "string" }
+              - { label: "Link", name: "link", widget: string }
           - {label: "description", name: "description", widget: "text"}
           - {label: "creditsTitle", name: "creditsTitle", widget: "string"}
           - {label: "Credits", name: "body", widget: "markdown"}
       - name: "form"
         label: "Formuliergegevens"
-        file: "src/pages/frontpage/default/form.md"
+        file: "src/pages/frontpage/site/form.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "fields", name: "string", widget: "list"}
@@ -43,12 +53,12 @@ collections:
     folder: "src/pages/frontpage/products"
     create: true
     fields:
-      - {label: "id", name: "id", widget: "number"}
+      - {label: "id", name: "id", widget: "number", valueType: "int"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Subtitle", name: "subTitle", widget: "string"}
       - {label: "checkboxTitle", name: "checkboxTitle", widget: "string"}
       - {label: "checkboxText", name: "checkboxText", widget: "string"}
-      - {label: "timeToRead", name: "timeToRead", widget: "number"}
+      - {label: "timeToRead", name: "timeToRead", widget: "number", valueType: "int"}
       - {label: "activated", name: "activated", widget: "boolean"}
       - {label: "image", name: "image", widget: "image"}
       - {label: "linkText", name: "linkText", widget: "string"}

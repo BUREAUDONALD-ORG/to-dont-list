@@ -6,7 +6,7 @@ checkboxTitle: "Don\u2019t Read \nThis Book"
 checkboxText: "Don\u2019t Read \nThis Book"
 timeToRead: 4
 activated: false
-image: false
+image: null
 layout: "default"
 linkText: "Go"
 link: "http://www.bureaudonald.com"
