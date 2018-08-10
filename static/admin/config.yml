@@ -53,4 +53,12 @@ collections:
       - {label: "image", name: "image", widget: "image"}
       - {label: "linkText", name: "linkText", widget: "string"}
       - {label: "link", name: "link", widget: "string"}
-      - {label: "layout", name: "layout", widget: "list", default: ["left", "right"], allow_add: "false"}
+      - label: "layout"
+        name: "layout"
+        widget: "select"
+        options:
+          - label: "Content left, image right"
+            value: "left"
+          - label: "Content right, image left"
+            value: "right"
+        default: "left"
