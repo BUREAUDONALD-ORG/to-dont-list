@@ -26,7 +26,7 @@ export default class Tabs extends React.Component {
               project.link === (route === undefined && '');
             return (
               <Link
-                to={prefixLink(project.link !== '' ? `/${project.link}/` : '')}
+                to={project.link}
                 key={key}
                 className={cx({ tab: true, 'tab--active': isActive })}
                 onClick={() => {}}

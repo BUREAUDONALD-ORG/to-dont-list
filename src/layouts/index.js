@@ -9,7 +9,7 @@ import Form from '../components/Form.js';
 import Social from '../components/Social.js';
 import Credits from '../components/Credits.js';
 
-class TemplateWrapper extends React.Component {
+class Layout extends React.Component {
   componentDidMount() {
     // if (typeof document !== undefined) {
     //   const smoothScroll = require('smooth-scroll');
@@ -40,9 +40,9 @@ class TemplateWrapper extends React.Component {
   }
 
   render() {
+    console.log(this.props);
     let siteData = this.props.data.site.edges[0].node;
     let formData = this.props.data.form.edges[0].node.frontmatter;
-    console.log(siteData.html);
     return (
       <div className="layout__wrapper">
         <Helmet title="Home | Gatsby + Netlify CMS" />
@@ -58,12 +58,12 @@ class TemplateWrapper extends React.Component {
   }
 }
 
-TemplateWrapper.propTypes = {
+Layout.propTypes = {
   children: PropTypes.func
 };
 
 export const layoutQuery = graphql`
-  query defaultData {
+  query layoutQuery {
     site: allMarkdownRemark(
       filter: { id: { regex: "//pages/frontpage/default/site.md/" } }
     ) {
@@ -115,4 +115,4 @@ export const layoutQuery = graphql`
   }
 `;
 
-export default TemplateWrapper;
+export default Layout;
