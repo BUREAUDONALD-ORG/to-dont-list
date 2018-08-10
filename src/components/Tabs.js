@@ -3,13 +3,13 @@ import cx from 'classnames';
 
 import arrow from '../../static/img/arrow.png';
 
-const Tab = ({ product, key, active }) => {
+const Tab = ({ product, key, active, toggleProducts }) => {
   product = product.node.frontmatter;
   return (
     <div
       key={key}
       className={cx({ tab: true, 'tab--active': active })}
-      onClick={() => {}}
+      onClick={toggleProducts.bind(this, product.id)}
     >
       {active ? (
         <pre>
@@ -30,12 +30,18 @@ const Tab = ({ product, key, active }) => {
 
 export default class Tabs extends React.Component {
   render() {
-    console.log(this.props.products);
     return (
       <div id="tools" className="layout__tabs">
         <div className="tab__container">
           {this.props.products.map((product, key) => {
-            return <Tab key={key} product={product} active={false} />;
+            return (
+              <Tab
+                key={key}
+                product={product}
+                active={false}
+                toggleProducts={this.props.toggleProducts}
+              />
+            );
           })}
         </div>
       </div>

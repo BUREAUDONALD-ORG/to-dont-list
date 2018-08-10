@@ -7,12 +7,17 @@ import iphone from '../../static/img/iphone.png';
 export default class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { products: [], timeToRead: 5 };
-    this.setProducts = this.setProducts.bind(this);
+    this.state = { products: {}, timeToRead: 5 };
+    this.toggleProducts = this.toggleProducts.bind(this);
   }
 
-  setProducts() {
-    console.log('yaaay');
+  toggleProducts(id) {
+    this.setState({
+      products: {
+        ...this.state.products,
+        [id]: !this.state.products[id]
+      }
+    });
   }
 
   render() {
@@ -20,7 +25,7 @@ export default class App extends React.Component {
     let product = products[0].node;
     return (
       <main className="layout__main">
-        <Tabs products={products} />
+        <Tabs products={products} toggleProducts={this.toggleProducts} />
         <article id="viewer" className="layout__viewer">
           <div className="viewer viewer--app">
             <div>
@@ -65,6 +70,7 @@ export const productQuery = graphql`
           id
           html
           frontmatter {
+            id
             title
             subTitle
             checkboxTitle
