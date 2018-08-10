@@ -19,7 +19,7 @@ collections:
           - {label: "authorPrefix", name: "authorPrefix", widget: "string"}
           - {label: "author", name: "author", widget: "string"}
           - {label: "authorLink", name: "authorLink", widget: "string"}
-          - label: "nav"
+          - label: "Navigation"
             name: "nav"
             widget: "list"
             fields:
@@ -30,6 +30,7 @@ collections:
           - {label: "socialText", name: "socialText", widget: "list"}
           - label: "socialbtn"
             name: "socialbtn"
+            create: false
             widget: "list"
             fields:
               - { label: "text", name: "text", widget: "string" }
@@ -42,7 +43,7 @@ collections:
         file: "src/pages/frontpage/site/form.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "fields", name: "string", widget: "list"}
+          - {label: "fields", name: "fields", widget: "list"}
           - {label: "ccField", name: "ccField", widget: "text"}
           - {label: "Submit", name: "submit", widget: "string"}
           - {label: "submitResponse", name: "submitResponse", widget: "string"}
