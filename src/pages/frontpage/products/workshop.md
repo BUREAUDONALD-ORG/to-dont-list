@@ -1,7 +1,7 @@
 ---
 id: 3
 title: "Workshops"
-subtitle: "Work\nDon\u2019t Shop"
+subTitle: "Work\nDon\u2019t Shop"
 checkboxTitle: "Work\nDon\u2019t Shop"
 checkboxText: "Work\nDon\u2019t Shop"
 timeToRead: 3

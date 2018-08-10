@@ -1,7 +1,7 @@
 ---
 id: 2
 title: "Book"
-subtitle: "Don\u2019t Read \nThis Book"
+subTitle: "Don\u2019t Read \nThis Book"
 checkboxTitle: "Don\u2019t Read \nThis Book"
 checkboxText: "Don\u2019t Read \nThis Book"
 timeToRead: 4
