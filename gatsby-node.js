@@ -1,43 +1,16 @@
-import ExtractTextPlugin from 'extract-text-webpack-plugin'
-let FaviconsWebpackPlugin = require('favicons-webpack-plugin')
+const _ = require('lodash');
+const path = require('path');
+const { createFilePath } = require('gatsby-source-filesystem');
 
-exports.modifyWebpackConfig = function(config, env) {
-  switch (env) {
-    case 'develop':
-      config.removeLoader('sass')
-      config.loader('sass', {
-        test: /\.(sass|scss)/,
-        exclude: /\.module\.(sass|scss)$/,
-        loaders: ['style', 'css', 'postcss', 'sass']
-      })
+exports.onCreateNode = ({ node, boundActionCreators, getNode }) => {
+  const { createNodeField } = boundActionCreators;
 
-      config.plugin('favicongen', FaviconsWebpackPlugin, ['favicon.png'])
-
-      config.merge({
-        postcss: [
-          require('postcss-import')(),
-          require('postcss-cssnext')({ browsers: '> 1%' }),
-          require('postcss-browser-reporter'),
-          require('postcss-reporter'),
-        ],
-      })
-      return config
-    case 'build-css':
-      config.plugin('favicongen', FaviconsWebpackPlugin, ['favicon.png'])
-      config.loader('sass', {
-        test: /\.(sass|scss)/,
-        exclude: /\.module\.(sass|scss)$/,
-        loader: ExtractTextPlugin.extract(['css?minimize', 'postcss', 'sass']),
-      })
-      config.merge({
-        postcss: [
-          require('postcss-import')(),
-          require('postcss-cssnext')({
-            browsers: '> 1%',
-          }),
-        ],
-      })
-      return config
+  if (node.internal.type === `MarkdownRemark`) {
+    const value = createFilePath({ node, getNode });
+    createNodeField({
+      name: `slug`,
+      node,
+      value
+    });
   }
-  return config
-}
+};

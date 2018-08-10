@@ -1,0 +1,99 @@
+@font-face {
+  font-family: 'nittigrotesk-normal';
+  src: url('../../static/fonts/nittigrotesk-normal-v20.eot');
+  src: url('../../static/fonts/nittigrotesk-normal-v20.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'nittigrotesk-black';
+  src: url('../../static/fonts/nittigrotesk-black-v20.eot');
+  src: url('../../static/fonts/nittigrotesk-black-v20.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@mixin t--title {
+  font-family: nittigrotesk-black;
+  font-size: 43.5rem;
+  line-height: 28rem;
+}
+
+@mixin t--hashtag {
+  font-family: nittigrotesk-black;
+  font-size: 27rem;
+  line-height: 25rem;
+}
+
+@mixin t--subtitle {
+  font-family: nittigrotesk-black;
+  font-size: 17rem;
+  line-height: 14rem;
+}
+
+@mixin t--x-large {
+  font-family: nittigrotesk-black;
+  font-size: 22rem;
+  line-height: 15.5rem;
+}
+
+@mixin t--large {
+  font-family: nittigrotesk-black;
+  font-size: 16.5rem;
+  line-height: 11.8rem;
+}
+
+@mixin t--medium {
+  font-family: nittigrotesk-black;
+  font-size: 11rem;
+  line-height: 9rem;
+}
+
+@mixin t--small-responsive {
+  font-family: nittigrotesk-black;
+  font-size: 6rem;
+  line-height: 7.5rem;
+}
+
+@mixin t--small {
+  font-family: nittigrotesk-black;
+  font-size: 6rem;
+  line-height: 6rem;
+}
+
+@mixin t--x-small-responsive {
+  font-family: nittigrotesk-black;
+  font-size: 7rem;
+  line-height: 8.5rem;
+}
+
+@mixin t--x-small {
+  font-family: nittigrotesk-black;
+  font-size: 4.5rem;
+  line-height: 5rem;
+}
+
+@mixin t--body-responsive {
+  font-family: nittigrotesk-normal;
+  font-size: 6rem;
+  line-height: 7.5rem;
+}
+
+@mixin t--body {
+  font-family: nittigrotesk-normal;
+  font-size: 4rem;
+  line-height: 5rem;
+}
+
+@each $min, $max, $size in (0, 800, 3.5), (300, 400, 2.5), (400, 500, 2.6),
+  (500, 600, 2.7), (600, 700, 2.5), (700, 800, 3), (800, 900, 3.5),
+  (900, 1000, 4), (1000, 1200, 4.5), (1100, 1200, 5), (1200, 1400, 5.5),
+  (1400, 1600, 5.5), (1600, 9999, 5.5)
+{
+  @media (min-width: $min + px) and (max-width: $max + px) {
+    html {
+      font-size: $size + px;
+    }
+  }
+}
