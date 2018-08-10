@@ -27,7 +27,6 @@ export default class Tabs extends React.Component {
         <div className="tab__container">
           {this.props.products.map((product, key) => {
             let productData = product.node.frontmatter;
-            console.log(this.props.activeProducts, productData);
             return (
               <Tab
                 key={key}

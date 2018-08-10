@@ -41,7 +41,6 @@ export default class indexPage extends React.Component {
         />
         {products
           .filter(product => {
-            console.log(product);
             return this.state.products[product.node.frontmatter.id];
           })
           .map((product, key) => {
