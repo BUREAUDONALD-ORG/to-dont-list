@@ -11,9 +11,7 @@ collections:
     files:
       - name: "site"
         label: "Algemeen"
-        file: "src/pages/default/site.md"
-        create: true
-        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        file: "src/pages/frontpage/site/algemeen.md"
         fields:
           - {label: "Site Title", name: "siteTitle", widget: "string"}
           - {label: "subTitle", name: "subTitle", widget: "string"}
@@ -31,8 +29,6 @@ collections:
       - name: "form"
         label: "Formuliergegevens"
         file: "src/pages/default/form.md"
-        create: true
-        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "fields", name: "string", widget: "list"}
@@ -43,9 +39,8 @@ collections:
           - {label: "mailTo", name: "mailTo", widget: "string"}
   - name: "products"
     label: "Producten"
-    folder: "src/pages/products"
+    folder: "src/pages/frontpage/products"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
       - {label: "Title", name: "title", widget: "string"}
