@@ -8,6 +8,7 @@ public_folder: /img
 collections:
   - name: "site"
     label: "Site"
+    delete: false
     files:
       - name: "site"
         label: "Algemeen"
@@ -28,7 +29,7 @@ collections:
           - {label: "Credits", name: "body", widget: "markdown"}
       - name: "form"
         label: "Formuliergegevens"
-        file: "src/pages/default/form.md"
+        file: "src/pages/frontpage/default/form.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - {label: "fields", name: "string", widget: "list"}
@@ -42,9 +43,14 @@ collections:
     folder: "src/pages/frontpage/products"
     create: true
     fields:
-      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "blog-post"}
+      - {label: "id", name: "id", widget: "number"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "text"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Subtitle", name: "subTitle", widget: "string"}
+      - {label: "checkboxTitle", name: "checkboxTitle", widget: "string"}
+      - {label: "checkboxText", name: "checkboxText", widget: "string"}
+      - {label: "timeToRead", name: "timeToRead", widget: "number"}
+      - {label: "activated", name: "activated", widget: "boolean"}
+      - {label: "image", name: "image", widget: "image"}
+      - {label: "linkText", name: "linkText", widget: "string"}
+      - {label: "link", name: "link", widget: "string"}
+      - {label: "layout", name: "layout", widget: "list", default: ["left", "right"], allow_add: "false"}
