@@ -1,14 +1,49 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: next
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "src/pages/blog"
+  - name: "site"
+    label: "Site"
+    files:
+      - name: "site"
+        label: "Algemeen"
+        file: "src/pages/default/site.md"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Site Title", name: "siteTitle", widget: "string"}
+          - {label: "subTitle", name: "subTitle", widget: "string"}
+          - {label: "authorPrefix", name: "authorPrefix", widget: "string"}
+          - {label: "author", name: "author", widget: "string"}
+          - {label: "authorLink", name: "authorLink", widget: "string"}
+          - {label: "nav", name: "nav", widget: "list"}
+          - {label: "tabsHeader", name: "tabsHeader", widget: "string"}
+          - {label: "hashtagLink", name: "hashtagLink", widget: "string"}
+          - {label: "socialText", name: "socialText", widget: "list"}
+          - {label: "socialbtn", name: "socialbtn", widget: "list"}
+          - {label: "description", name: "description", widget: "text"}
+          - {label: "creditsTitle", name: "creditsTitle", widget: "string"}
+          - {label: "Credits", name: "body", widget: "markdown"}
+      - name: "form"
+        label: "Formuliergegevens"
+        file: "src/pages/default/form.md"
+        create: true
+        slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "fields", name: "string", widget: "list"}
+          - {label: "ccField", name: "ccField", widget: "text"}
+          - {label: "Submit", name: "submit", widget: "string"}
+          - {label: "submitResponse", name: "submitResponse", widget: "string"}
+          - {label: "submitExpandedResponse", name: "submitExpandedResponse", widget: "string"}
+          - {label: "mailTo", name: "mailTo", widget: "string"}
+  - name: "products"
+    label: "Producten"
+    folder: "src/pages/products"
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
