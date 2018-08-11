@@ -69,7 +69,7 @@ collections:
       - {label: "checkboxText", name: "checkboxText", widget: "string"}
       - {label: "timeToRead", name: "timeToRead", widget: "number", valueType: "int"}
       - {label: "activated", name: "activated", widget: "boolean"}
-      - {label: "image", name: "image", widget: custompathimage, customMediaPath: "../../../static/img", rawMediaPath: "https://raw.githubusercontent.com/cultuur-gif/expertisedag-gatsby/content/src/static/img"}
+      - {label: "image", name: "image", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
       - {label: "linkText", name: "linkText", widget: "string"}
       - {label: "link", name: "link", widget: "string"}
       - label: "layout"
