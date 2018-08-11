@@ -32,6 +32,7 @@ export default class indexPage extends React.Component {
   render() {
     console.log(this.timeToRead());
     let products = this.props.data.products.edges;
+    console.log(products);
     return (
       <main className="layout__main">
         <Tabs
@@ -68,7 +69,13 @@ export const productQuery = graphql`
             checkboxText
             timeToRead
             activated
-            image
+            image {
+              childImageSharp {
+                sizes(maxWidth: 1920) {
+                  ...GatsbyImageSharpSizes
+                }
+              }
+            }
             layout
             link
             linkText

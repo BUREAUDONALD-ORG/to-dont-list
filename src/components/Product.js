@@ -1,6 +1,7 @@
 import React from 'react';
 
 import iphone from '../../static/img/iphone.png';
+import Img from 'gatsby-image';
 
 export default ({ product }) => {
   return (
@@ -27,7 +28,7 @@ export default ({ product }) => {
           </div>
         </div>
         <div className="viewer__iphone-container">
-          <img alt="Iphone App" className="viewer__iphone" src={iphone} />
+          <Img sizes={product.frontmatter.image.childImageSharp.sizes} />
         </div>
       </div>
     </article>

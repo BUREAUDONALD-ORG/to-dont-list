@@ -9,6 +9,8 @@ collections:
   - name: "site"
     label: "Site"
     delete: false
+    editor:
+      preview: false
     files:
       - name: "site"
         label: "Algemeen"
@@ -38,8 +40,6 @@ collections:
           - {label: "description", name: "description", widget: "text"}
           - {label: "creditsTitle", name: "creditsTitle", widget: "string"}
           - {label: "Credits", name: "body", widget: "markdown"}
-        editor:
-          preview: false
       - name: "form"
         label: "Formuliergegevens"
         file: "src/pages/frontpage/site/form.md"
@@ -48,18 +48,20 @@ collections:
           - label: "fields"
             name: "fields"
             widget: "list"
-            field: {label: "Field Text", name: "text", widget: "string"}
+            fields:
+              - {label: "Field Text", name: "text", widget: "string"}
           - {label: "ccField", name: "ccField", widget: "text"}
           - {label: "Submit", name: "submit", widget: "string"}
           - {label: "submitResponse", name: "submitResponse", widget: "string"}
           - {label: "submitExpandedResponse", name: "submitExpandedResponse", widget: "string"}
           - {label: "mailTo", name: "mailTo", widget: "string"}
-        editor:
-          preview: false
+
   - name: "products"
     label: "Producten"
     folder: "src/pages/frontpage/products"
     create: true
+    editor:
+      preview: false
     fields:
       - {label: "id", name: "id", widget: "number", valueType: "int"}
       - {label: "Title", name: "title", widget: "string"}

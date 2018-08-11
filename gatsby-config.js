@@ -12,12 +12,36 @@ module.exports = {
         name: 'pages'
       }
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `static`,
+        path: `${__dirname}/static/`
+      }
+    },
     'gatsby-plugin-sharp',
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-transformer-remark',
       options: {
-        plugins: []
+        plugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 1920
+            }
+          }
+        ]
+      }
+    },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: 'UA-89952488-1',
+        head: false,
+        anonymize: true,
+        respectDNT: true,
+        exclude: ['/admin/**']
       }
     },
     {

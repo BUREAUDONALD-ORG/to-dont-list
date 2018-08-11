@@ -6,7 +6,7 @@ checkboxTitle: "Work\nDon\u2019t Shop"
 checkboxText: "Work\nDon\u2019t Shop"
 timeToRead: 3
 activated: false
-image: ""
+image: "../../../../static/img/marker.png"
 layout: "default"
 linkText: "Go"
 link: "http://www.bureaudonald.com"
