@@ -1,5 +1,6 @@
 ---
 id: 1
+slug: app
 title: "App"
 subTitle: "ToDon\u2019tList"
 checkboxTitle: "ToDon\u2019tList"

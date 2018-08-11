@@ -1,5 +1,6 @@
 ---
 id: 2
+slug: book
 title: "Book"
 subTitle: "Don\u2019t Read \nThis Book"
 checkboxTitle: "Don\u2019t Read \nThis Book"

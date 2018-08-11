@@ -1,5 +1,6 @@
 ---
 id: 3
+slug: workshops
 title: "Workshops"
 subTitle: "Work\nDon\u2019t Shop"
 checkboxTitle: "Work\nDon\u2019t Shop"

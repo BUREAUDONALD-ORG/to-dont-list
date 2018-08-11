@@ -1,4 +1,7 @@
 import React from 'react';
+import { Link } from 'react-scroll';
+const ScrollLink = Link;
+import slugify from 'slugify';
 
 import line from '../../static/img/line.png';
 import lineHz from '../../static/img/line-hz.png';
@@ -17,9 +20,9 @@ export default class Header extends React.Component {
               <ul className="nav__list">
                 {site.nav.map((navItem, key) => (
                   <li key={key} className="nav__item">
-                    <a data-scroll href={navItem.link}>
+                    <ScrollLink to={navItem.slug} smooth={true} hashSpy={true}>
                       {navItem.title}
-                    </a>
+                    </ScrollLink>
                   </li>
                 ))}
               </ul>

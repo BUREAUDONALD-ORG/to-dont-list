@@ -66,7 +66,7 @@ export const layoutQuery = graphql`
             socialText
             nav {
               title
-              link
+              slug
             }
           }
         }
