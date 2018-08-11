@@ -8,8 +8,8 @@ module.exports = {
     {
       resolve: 'gatsby-source-filesystem',
       options: {
-        path: `${__dirname}/src/content`,
-        name: 'pages'
+        name: 'content',
+        path: `${__dirname}/content`
       }
     },
     {
@@ -25,9 +25,6 @@ module.exports = {
       resolve: 'gatsby-transformer-remark',
       options: {
         plugins: [
-          {
-            resolve: `gatsby-remark-relative-images`
-          },
           {
             resolve: `gatsby-remark-images`,
             options: {

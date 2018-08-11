@@ -1,13 +1,13 @@
 ---
-id: 3
-slug: workshops
-title: "Workshops"
-subTitle: "Work\nDon\u2019t Shop"
-checkboxTitle: "Work\nDon\u2019t Shop"
-checkboxText: "Work\nDon\u2019t Shop"
+id: 1
+slug: app
+title: "App"
+subTitle: "ToDon\u2019tList"
+checkboxTitle: "ToDon\u2019tList"
+checkboxText: "ToDon\u2019tList"
 timeToRead: 3
 activated: false
-image: "/img/marker.png"
+image: "../../../static/img/iphone.png"
 layout: "default"
 linkText: "Go"
 link: "http://www.bureaudonald.com"
