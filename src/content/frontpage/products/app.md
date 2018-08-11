@@ -7,7 +7,7 @@ checkboxTitle: "ToDon\u2019tList"
 checkboxText: "ToDon\u2019tList"
 timeToRead: 3
 activated: false
-image: "/static/img/iphone.png"
+image: "/img/iphone.png"
 layout: "default"
 linkText: "Go"
 link: "http://www.bureaudonald.com"
