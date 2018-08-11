@@ -55,7 +55,7 @@ export default class indexPage extends React.Component {
 export const productQuery = graphql`
   query productQuery {
     products: allMarkdownRemark(
-      filter: { id: { regex: "//pages/frontpage/products/" } }
+      filter: { id: { regex: "//content/frontpage/products/" } }
     ) {
       edges {
         node {

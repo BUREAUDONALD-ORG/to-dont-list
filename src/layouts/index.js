@@ -10,14 +10,6 @@ import Social from '../components/Social.js';
 import Credits from '../components/Credits.js';
 
 class Layout extends React.Component {
-  componentDidMount() {
-    // if (typeof document !== undefined) {
-    //   const smoothScroll = require('smooth-scroll');
-    //
-    //   smoothScroll.init();
-    // }
-  }
-
   render() {
     let siteData = this.props.data.site.edges[0].node;
     let formData = this.props.data.form.edges[0].node.frontmatter;
@@ -43,7 +35,7 @@ Layout.propTypes = {
 export const layoutQuery = graphql`
   query layoutQuery {
     site: allMarkdownRemark(
-      filter: { id: { regex: "//pages/frontpage/site/algemeen.md/" } }
+      filter: { id: { regex: "//content/frontpage/site/algemeen.md/" } }
     ) {
       edges {
         node {
@@ -73,7 +65,7 @@ export const layoutQuery = graphql`
       }
     }
     form: allMarkdownRemark(
-      filter: { id: { regex: "//pages/frontpage/site/form.md/" } }
+      filter: { id: { regex: "//content/frontpage/site/form.md/" } }
     ) {
       edges {
         node {

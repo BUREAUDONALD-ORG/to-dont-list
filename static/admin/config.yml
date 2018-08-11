@@ -14,7 +14,7 @@ collections:
     files:
       - name: "site"
         label: "Algemeen"
-        file: "src/pages/frontpage/site/algemeen.md"
+        file: "src/content/frontpage/site/algemeen.md"
         fields:
           - {label: "Site Title", name: "siteTitle", widget: "string"}
           - {label: "subTitle", name: "subTitle", widget: "string"}
@@ -42,7 +42,7 @@ collections:
           - {label: "Credits", name: "body", widget: "markdown"}
       - name: "form"
         label: "Formuliergegevens"
-        file: "src/pages/frontpage/site/form.md"
+        file: "src/content/frontpage/site/form.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - label: "fields"
@@ -58,7 +58,7 @@ collections:
 
   - name: "products"
     label: "Producten"
-    folder: "src/pages/frontpage/products"
+    folder: "src/content/frontpage/products"
     create: true
     editor:
       preview: false
