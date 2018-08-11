@@ -14,7 +14,7 @@ collections:
     files:
       - name: "site"
         label: "Algemeen"
-        file: "src/content/frontpage/site/algemeen.md"
+        file: "content/frontpage/site/algemeen.md"
         fields:
           - {label: "Site Title", name: "siteTitle", widget: "string"}
           - {label: "subTitle", name: "subTitle", widget: "string"}
@@ -42,7 +42,7 @@ collections:
           - {label: "Credits", name: "body", widget: "markdown"}
       - name: "form"
         label: "Formuliergegevens"
-        file: "src/content/frontpage/site/form.md"
+        file: "content/frontpage/site/form.md"
         fields:
           - {label: "Title", name: "title", widget: "string"}
           - label: "fields"
@@ -57,7 +57,7 @@ collections:
           - {label: "mailTo", name: "mailTo", widget: "string"}
   - name: "products"
     label: "Producten"
-    folder: "src/content/frontpage/products"
+    folder: "content/frontpage/products"
     create: true
     editor:
       preview: false
@@ -69,7 +69,7 @@ collections:
       - {label: "checkboxText", name: "checkboxText", widget: "string"}
       - {label: "timeToRead", name: "timeToRead", widget: "number", valueType: "int"}
       - {label: "activated", name: "activated", widget: "boolean"}
-      - {label: "image", name: "image", widget: "image"}
+      - {label: "image", name: "image", widget: custompathimage, customMediaPath: "../../../static/img", rawMediaPath: "https://raw.githubusercontent.com/cultuur-gif/expertisedag-gatsby/content/src/static/img"}
       - {label: "linkText", name: "linkText", widget: "string"}
       - {label: "link", name: "link", widget: "string"}
       - label: "layout"
