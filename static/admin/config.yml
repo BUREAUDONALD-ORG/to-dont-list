@@ -55,7 +55,6 @@ collections:
           - {label: "submitResponse", name: "submitResponse", widget: "string"}
           - {label: "submitExpandedResponse", name: "submitExpandedResponse", widget: "string"}
           - {label: "mailTo", name: "mailTo", widget: "string"}
-
   - name: "products"
     label: "Producten"
     folder: "src/content/frontpage/products"

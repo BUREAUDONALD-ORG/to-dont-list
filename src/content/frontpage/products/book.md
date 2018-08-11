@@ -7,7 +7,7 @@ checkboxTitle: "Don\u2019t Read \nThis Book"
 checkboxText: "Don\u2019t Read \nThis Book"
 timeToRead: 4
 activated: false
-image: "../../../../static/img/book-1-compressed-ultra.png"
+image: "/static/img/book-1-compressed-ultra.png"
 layout: "default"
 linkText: "Go"
 link: "http://www.bureaudonald.com"
