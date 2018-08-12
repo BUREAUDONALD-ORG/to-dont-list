@@ -32,7 +32,6 @@ export default class indexPage extends React.Component {
   render() {
     console.log(this.timeToRead());
     let products = this.props.data.products.edges;
-    console.log(products);
     return (
       <main className="layout__main">
         <Tabs

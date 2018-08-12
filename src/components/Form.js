@@ -9,6 +9,8 @@ export default class Form extends React.Component {
       fields: ['', '', '', '', ''],
       name: ''
     };
+    this.submitEmail = this.submitEmail.bind(this);
+    this.updateField = this.updateField.bind(this);
   }
 
   updateField(field, event) {
@@ -32,7 +34,7 @@ export default class Form extends React.Component {
       const body = `${fields[0]},\n\n${fields[1]}.\n${fields[2]}.\n${fields[3]}.
         \n${fields[4]}\n${this.state.name}`;
       const bodyURI = encodeURIComponent(body);
-      const mail = `mailto:${form.mailTo}?subject=ToDontForm%20-%20${
+      const mail = `mailto:${this.props.data.mailTo}?subject=ToDontForm%20-%20${
         fields[1]
       }&body=${bodyURI}`;
       window.location.href = mail;
@@ -48,7 +50,7 @@ export default class Form extends React.Component {
     let form = this.props.data;
     return (
       <div id="mail" className="layout__form">
-        <form className="form" onSubmit={this.submitEmail.bind(this)}>
+        <form className="form" onSubmit={this.submitEmail}>
           <div className="form__header">
             <div className="form__title">{form.title}</div>
             <img className="form__arrow" src={arrow} alt="arrow" />

@@ -16,6 +16,13 @@ collections:
         label: "Algemeen"
         file: "content/frontpage/site/algemeen.md"
         fields:
+          - {label: "Head Title", name: "headTitle", widget: "string"}
+          - label: "Head Tags"
+            name: "headTitle"
+            widget: "list"
+            fields:
+              - {label: "Tag", name: "tagName", widget: "string"}
+          - {label: "Site Title", name: "siteTitle", widget: "string"}
           - {label: "Site Title", name: "siteTitle", widget: "string"}
           - {label: "subTitle", name: "subTitle", widget: "string"}
           - {label: "authorPrefix", name: "authorPrefix", widget: "string"}
@@ -28,15 +35,23 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Link", name: "link", widget: string }
           - {label: "tabsHeader", name: "tabsHeader", widget: "string"}
-          - {label: "hashtagLink", name: "hashtagLink", widget: "string"}
+          - label: "Hashtag"
+            name: "hashtag"
+            widget: "object"
+            fields:
+              - { label: "Hovertext (Alt)", name: "alt", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+              - { label: "Image", name: "image", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
           - {label: "socialText", name: "socialText", widget: "list"}
           - label: "socialbtn"
             name: "socialbtn"
             create: false
             widget: "list"
             fields:
-              - { label: "text", name: "text", widget: "string" }
+              - { label: "Text", name: "text", widget: "string" }
               - { label: "Link", name: "link", widget: string }
+              - {label: "Image", name: "image", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
+              - {label: "Inversed Image", name: "imageInverse", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
           - {label: "description", name: "description", widget: "text"}
           - {label: "creditsTitle", name: "creditsTitle", widget: "string"}
           - {label: "Credits", name: "body", widget: "markdown"}

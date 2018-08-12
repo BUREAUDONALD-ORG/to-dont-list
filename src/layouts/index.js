@@ -15,7 +15,26 @@ class Layout extends React.Component {
     let formData = this.props.data.form.edges[0].node.frontmatter;
     return (
       <div className="layout__wrapper">
-        <Helmet title="Home | Gatsby + Netlify CMS" />
+        <Helmet
+          title={siteData.frontmatter.headTitle}
+          meta={[
+            {
+              name: 'keywords',
+              content: siteData.frontmatter.headTags
+                .map(tag => {
+                  return tag.tagName;
+                })
+                .join(', ')
+            }
+          ]}
+          link={[
+            {
+              rel: 'icon',
+              type: 'image/png',
+              href: 'img/favicon.png'
+            }
+          ]}
+        />
         <div className="layout__app">
           <Header data={siteData.frontmatter} />
           {this.props.children()}
@@ -43,17 +62,33 @@ export const layoutQuery = graphql`
           html
           frontmatter {
             description
+            headTitle
+            headTags {
+              tagName
+            }
             siteTitle
             subTitle
             authorPrefix
             author
             authorLink
             tabsHeader
-            hashtagLink
+            hashtag {
+              link
+              alt
+              image {
+                relativePath
+              }
+            }
             creditsTitle
             socialbtn {
               text
               link
+              image {
+                relativePath
+              }
+              imageInverse {
+                relativePath
+              }
             }
             socialText
             nav {

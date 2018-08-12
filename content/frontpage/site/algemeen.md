@@ -1,4 +1,9 @@
 ---
+headTitle: "To\nDon\u2019t\nCo."
+headTags:
+  - tagName: "creative"
+  - tagName: "time-management"
+  - tagName: "Bureaudonald"
 siteTitle: "To\nDon\u2019t\nCo."
 subTitle: "Time\nManagement\nfor Creative\nPeople"
 authorPrefix: "By "
@@ -14,15 +19,22 @@ nav:
   - title: Credits
     slug: "credits"
 tabsHeader: "ToDon\u2019tCo. Tools"
-hashtagLink: "https://twitter.com/hashtag/todontlist"
+hashtag:
+  image: "../../../static/img/tag.svg"
+  alt: "#ToDontList"
+  link: "https://twitter.com/hashtag/todontlist"
 socialText:
   - Donald posts sketches and pictures of type regularly.
   - Check @Bureaudonald on Twitter and Instagram.
 socialbtn:
   - text: "Twitter"
     link: "https://twitter.com/bureaudonald"
+    image: "../../../static/img/twitter.svg"
+    imageInverse: "../../../static/img/twitter-pink.svg"
   - text: "Instagram"
     link: "https://www.instagram.com/bureaudonald/"
+    image: "../../../static/img/instagram.svg"
+    imageInverse: "../../../static/img/instagram-pink.svg"
 description: "The ToDon’tList [app], Don’t Read This Book [book], and Work Don’t Shop [Workshop] focuses on how to make choices about everything you do in your daily creative practice and life."
 creditsTitle: "Credits"
 ---

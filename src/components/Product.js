@@ -1,6 +1,4 @@
 import React from 'react';
-
-import iphone from '../../static/img/iphone.png';
 import Img from 'gatsby-image';
 
 export default ({ product }) => {
