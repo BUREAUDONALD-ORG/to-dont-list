@@ -6,7 +6,7 @@ subTitle: "Don\u2019t Read \nThis Book"
 checkboxTitle: "Don\u2019t Read \nThis Book"
 checkboxText: "Don\u2019t Read \nThis Book"
 timeToRead: 4
-activated: false
+activated: true
 image: "../../../static/img/book-1-compressed-ultra.png"
 layout: "default"
 linkText: "Go"

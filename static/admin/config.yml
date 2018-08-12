@@ -71,7 +71,7 @@ collections:
           - {label: "submitExpandedResponse", name: "submitExpandedResponse", widget: "string"}
           - {label: "mailTo", name: "mailTo", widget: "string"}
   - name: "products"
-    label: "Producten"
+    label: "Product"
     folder: "content/frontpage/products"
     create: true
     editor:

@@ -6,28 +6,30 @@ import Product from '../components/Product.js';
 export default class indexPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { products: {}, timeToRead: 5 };
-    this.toggleProducts = this.toggleProducts.bind(this);
-    this.timeToRead = this.timeToRead.bind(this);
+    let products = this.props.data.products.edges.reduce((acc, p) => {
+      acc[p.node.frontmatter.id] = p.node.frontmatter.activated;
+      return acc;
+    }, {});
+    this.state = { products: products, timeToRead: 5 };
   }
 
-  toggleProducts(id) {
+  toggleProducts = id => {
     this.setState({
       products: {
         ...this.state.products,
         [id]: !this.state.products[id]
       }
     });
-  }
+  };
 
-  timeToRead() {
+  timeToRead = () => {
     return this.props.data.products.edges.reduce((acc, product) => {
       if (this.state.products[product.node.frontmatter.id]) {
         acc += product.node.frontmatter.timeToRead;
       }
       return acc;
     }, 0);
-  }
+  };
 
   render() {
     console.log(this.timeToRead());
