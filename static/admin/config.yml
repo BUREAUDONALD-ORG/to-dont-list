@@ -17,8 +17,8 @@ collections:
         file: "content/frontpage/site/algemeen.md"
         fields:
           - {label: "Head Title", name: "headTitle", widget: "string"}
-          - label: "Head Tags"
-            name: "headTitle"
+          - label: "SEO Tags"
+            name: "headTags"
             widget: "list"
             fields:
               - {label: "Tag", name: "tagName", widget: "string"}
@@ -33,7 +33,7 @@ collections:
             widget: "list"
             fields:
               - { label: "Title", name: "title", widget: "string" }
-              - { label: "Link", name: "link", widget: string }
+              - { label: "Scroll To", name: "slug", widget: string }
           - {label: "tabsHeader", name: "tabsHeader", widget: "string"}
           - label: "Hashtag"
             name: "hashtag"

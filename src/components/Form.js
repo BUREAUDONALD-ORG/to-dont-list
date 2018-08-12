@@ -9,11 +9,9 @@ export default class Form extends React.Component {
       fields: ['', '', '', '', ''],
       name: ''
     };
-    this.submitEmail = this.submitEmail.bind(this);
-    this.updateField = this.updateField.bind(this);
   }
 
-  updateField(field, event) {
+  updateField = (field, event) => {
     event.persist();
     this.setState(prevState => {
       const newState = prevState;
@@ -25,9 +23,9 @@ export default class Form extends React.Component {
       }
       return newState;
     });
-  }
+  };
 
-  submitEmail(event) {
+  submitEmail = event => {
     event.preventDefault();
     if (typeof window !== undefined) {
       const fields = this.state.fields;
@@ -44,7 +42,7 @@ export default class Form extends React.Component {
         return newState;
       });
     }
-  }
+  };
 
   render() {
     let form = this.props.data;
