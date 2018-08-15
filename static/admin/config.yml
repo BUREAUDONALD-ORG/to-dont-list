@@ -70,6 +70,7 @@ collections:
           - {label: "submitResponse", name: "submitResponse", widget: "string"}
           - {label: "submitExpandedResponse", name: "submitExpandedResponse", widget: "string"}
           - {label: "mailTo", name: "mailTo", widget: "string"}
+
   - name: "products"
     label: "Product"
     folder: "content/frontpage/products"
@@ -79,20 +80,34 @@ collections:
     fields:
       - {label: "id", name: "id", widget: "number", valueType: "int"}
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Subtitle", name: "subTitle", widget: "string"}
-      - {label: "checkboxTitle", name: "checkboxTitle", widget: "string"}
-      - {label: "checkboxText", name: "checkboxText", widget: "string"}
       - {label: "timeToRead", name: "timeToRead", widget: "number", valueType: "int"}
-      - {label: "activated", name: "activated", widget: "boolean"}
-      - {label: "image", name: "image", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
-      - {label: "linkText", name: "linkText", widget: "string"}
-      - {label: "link", name: "link", widget: "string"}
+      - label: "Images"
+        name: "images"
+        widget: "object"
+        fields:
+          - {label: "Default", name: "default", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
+          - {label: "Diapositive", name: "diapositive", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
+      - label: "Button"
+        name: "button"
+        widget: "object"
+        fields:
+          - { label: "Text", name: "text", widget: "string" }
+          - { label: "Link", name: "link", widget: "string" }
+      - label: "Checkbox"
+        name: "checkbox"
+        widget: "object"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Text", name: "text", widget: "string" }
+          - { label: "Visible?", name: "visible", widget: "boolean" }
       - label: "layout"
         name: "layout"
         widget: "select"
         options:
-          - label: "Content left, image right"
-            value: "left"
-          - label: "Content right, image left"
-            value: "right"
-        default: "left"
+          - label: "Visual left, image right"
+            value: "horizontal-right"
+          - label: "Visual right, content left"
+            value: "horizontal-left"
+          - label: "Visual top, content bottem"
+            value: "vertical"
+        default: "horizontal-right"

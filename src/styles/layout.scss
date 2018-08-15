@@ -13,7 +13,7 @@
   background: $night;
 }
 
-.layout__tabs {
+.layout__checkbox {
   @include row-component-center;
   padding: $unit $side-padding $half;
   background: $complementary;

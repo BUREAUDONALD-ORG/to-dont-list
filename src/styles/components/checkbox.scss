@@ -1,0 +1,58 @@
+.checkbox__container {
+  display: flex;
+  padding-bottom: $two;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.checkbox {
+  display: flex;
+  justify-content: space-between;
+  padding: $half $unit;
+  background: $day;
+  transition: all 0.4s ease;
+}
+
+.checkbox + .checkbox {
+  margin: 0 0 0 $unit;
+}
+
+.checkbox__title {
+  @include t--small;
+  color: $night;
+}
+
+.checkbox__text {
+  @include t--x-small;
+  padding: 0 0 1rem;
+  color: $complementary;
+}
+
+.checkbox__arrow {
+  position: absolute;
+  height: $two;
+  width: auto;
+  bottom: -$two;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .checkbox__container {
+    @include column-component;
+    padding: $unit 0;
+  }
+
+  .checkbox {
+    width: 100%;
+  }
+
+  .checkbox + .checkbox {
+    margin: $unit 0 0;
+  }
+
+  .checkbox__arrow {
+    display: none;
+  }
+}

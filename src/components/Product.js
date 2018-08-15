@@ -26,7 +26,9 @@ export default ({ product }) => {
           </div>
         </div>
         <div className="viewer__iphone-container">
-          <Img sizes={product.frontmatter.image.childImageSharp.sizes} />
+          <Img
+            sizes={product.frontmatter.images.default.childImageSharp.sizes}
+          />
         </div>
       </div>
     </article>

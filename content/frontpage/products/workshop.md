@@ -1,16 +1,18 @@
 ---
-id: 3
-slug: workshops
+id: 2
 title: "Workshops"
-subTitle: "Work\nDon\u2019t Shop"
-checkboxTitle: "Work\nDon\u2019t Shop"
-checkboxText: "Work\nDon\u2019t Shop"
-timeToRead: 3
-activated: false
-image: "../../../static/img/marker.png"
-layout: "default"
-linkText: "Go"
-link: "http://www.bureaudonald.com"
+timeToRead: 4
+images:
+  default: "../../../static/img/marker.png"
+  diapositive: "../../../static/img/marker.png"
+checkbox:
+  title: "Work\nDon\u2019t Shop"
+  text: "Workshops"
+  visible: false
+button:
+  text: "Go"
+  link: "http://www.bureaudonald.com"
+layout: "horizontal-right"
 ---
 
 Do you need a simple, but effective to-do list app? The ToDon’tList helps you make choices about what you will do, but more importantly, also about what you won’t do. That way, you get to focus on what truly matters.
