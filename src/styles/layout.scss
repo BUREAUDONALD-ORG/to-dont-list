@@ -14,9 +14,10 @@
 }
 
 .layout__checkbox {
-  @include row-component-center;
+  @include column-component;
   padding: $unit $side-padding $half;
   background: $complementary;
+  align-items: flex-start;
 }
 
 .layout__viewer {

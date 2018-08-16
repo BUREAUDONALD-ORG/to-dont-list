@@ -18,7 +18,8 @@ nav:
     slug: "social"
   - title: Credits
     slug: "credits"
-tabsHeader: "ToDon\u2019tCo. Tools"
+checkboxesTitle: "Choose what you would like to see... Oh, you can only select 3 items."
+checkboxesFooter: "Now Scroll Down"
 hashtag:
   image: "../../../static/img/tag.svg"
   alt: "#ToDontList"

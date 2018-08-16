@@ -71,7 +71,6 @@ export const layoutQuery = graphql`
             authorPrefix
             author
             authorLink
-            tabsHeader
             hashtag {
               link
               alt

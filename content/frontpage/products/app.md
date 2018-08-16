@@ -6,9 +6,9 @@ images:
   default: "../../../static/img/iphone.png"
   diapositive: "../../../static/img/iphone.png"
 checkbox:
-  title: "Don\u2019t Read \nThis Book"
+  title: "Don\u2019t Do \nThis App"
   text: "Book"
-  visible: true
+  visible: false
 button:
   text: "Go"
   link: "http://www.bureaudonald.com"
