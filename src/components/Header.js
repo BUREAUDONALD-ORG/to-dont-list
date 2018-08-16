@@ -10,8 +10,8 @@ export default class Header extends React.Component {
   render() {
     let site = this.props.data;
     return (
-      <header className="layout__header">
-        <div className="header">
+      <header className="layout__block-container layout__header">
+        <div className="layout__block header">
           <div className="header__section">
             <pre>
               <h1 className="header__title">{site.siteTitle}</h1>

@@ -83,7 +83,7 @@
 @mixin t--body {
   font-family: nittigrotesk-normal;
   font-size: 4rem;
-  line-height: 5rem;
+  line-height: 8rem;
 }
 
 @each $min, $max, $size in (0, 800, 3.5), (300, 400, 2.5), (400, 500, 2.6),

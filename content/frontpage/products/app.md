@@ -7,8 +7,8 @@ images:
   diapositive: "../../../static/img/iphone.png"
 checkbox:
   title: "Don\u2019t Do \nThis App"
-  text: "Book"
-  visible: false
+  text: "App"
+  visible: 0
 button:
   text: "Go"
   link: "http://www.bureaudonald.com"

@@ -8,7 +8,7 @@ images:
 checkbox:
   title: "Work\nDon\u2019t Shop"
   text: "Workshops"
-  visible: false
+  visible: 0
 button:
   text: "Go"
   link: "http://www.bureaudonald.com"

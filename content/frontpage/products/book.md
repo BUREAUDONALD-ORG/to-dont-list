@@ -8,7 +8,7 @@ images:
 checkbox:
   title: "Don\u2019t Read \nThis Book"
   text: "Book"
-  visible: true
+  visible: 0
 button:
   text: "Go"
   link: "http://www.bureaudonald.com"

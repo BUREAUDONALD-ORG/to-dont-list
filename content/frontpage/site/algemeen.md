@@ -19,6 +19,7 @@ nav:
   - title: Credits
     slug: "credits"
 checkboxesTitle: "Choose what you would like to see... Oh, you can only select 3 items."
+checkboxesError: "Stop wasting time!"
 checkboxesFooter: "Now Scroll Down"
 hashtag:
   image: "../../../static/img/tag.svg"

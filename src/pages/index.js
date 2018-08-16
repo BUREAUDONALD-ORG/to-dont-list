@@ -8,18 +8,26 @@ import Button from '../components/Button.js';
 export default class indexPage extends React.Component {
   constructor(props) {
     super(props);
-    let products = this.props.data.products.edges;
-    this.state = { products: products, timeToRead: 0 };
+    this.state = { products: this.props.data.products.edges };
   }
 
   toggleProducts = product => {
+    let count = this.state.products.reduce((acc, p) => {
+      acc =
+        acc < p.node.frontmatter.checkbox.visible
+          ? p.node.frontmatter.checkbox.visible
+          : acc;
+      return acc;
+    }, 0);
+
     let newProducts = this.state.products.map((p, k) => {
-      if (p.node.frontmatter.id == product.id) {
-        p.node.frontmatter.checkbox.visible = !p.node.frontmatter.checkbox
-          .visible;
+      let pData = p.node.frontmatter;
+      if (pData.id == product.id) {
+        pData.checkbox.visible = pData.checkbox.visible ? 0 : count + 1;
       }
       return p;
     });
+
     this.setState({
       products: newProducts
     });
@@ -38,56 +46,75 @@ export default class indexPage extends React.Component {
     // console.log(this.timeToRead());
     let products = this.state.products;
     return (
-      <main className="layout__main">
-        <div id="tools" className="layout__checkbox">
-          <h2 className="checkboxes__title">
-            {this.props.data.site.edges[0].node.frontmatter.checkboxesTitle}
-          </h2>
-          <div className="checkboxes__container">
-            {products.map((product, key) => {
-              return (
-                <Checkbox
-                  key={key}
-                  product={product.node.frontmatter}
-                  toggleProducts={this.toggleProducts}
+      <div>
+        <div id="tools" className="layout__block-container">
+          <div className="layout__block">
+            <h2 className="checkboxes__title">
+              {this.props.data.site.edges[0].node.frontmatter.checkboxesTitle}
+            </h2>
+            <div className="checkboxes__container">
+              {products.map((product, key) => {
+                return (
+                  <Checkbox
+                    key={key}
+                    product={product.node.frontmatter}
+                    toggleProducts={this.toggleProducts}
+                  />
+                );
+              })}
+            </div>
+            <ReactCSSTransitionGroup
+              transitionName="slide"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={500}
+            >
+              {products.reduce((acc, product) => {
+                product.node.frontmatter.checkbox.visible && acc++;
+                return acc;
+              }, 0) && (
+                <Button
+                  className="btn"
+                  type="point"
+                  text={
+                    this.props.data.site.edges[0].node.frontmatter
+                      .checkboxesFooter
+                  }
                 />
-              );
-            })}
+              )}
+            </ReactCSSTransitionGroup>
           </div>
-          <ReactCSSTransitionGroup
-            transitionName="slide"
-            transitionEnterTimeout={500}
-            transitionLeaveTimeout={500}
-          >
-            {products.reduce((acc, product) => {
-              product.node.frontmatter.checkbox.visible && acc++;
-              return acc;
-            }, 0) && (
-              <Button
-                className="btn"
-                type="point"
-                text={
-                  this.props.data.site.edges[0].node.frontmatter
-                    .checkboxesFooter
-                }
-              />
-            )}
-          </ReactCSSTransitionGroup>
         </div>
         <ReactCSSTransitionGroup
           transitionName="slide"
           transitionEnterTimeout={500}
-          transitionLeaveTimeout={300}
+          transitionLeaveTimeout={500}
         >
           {products
             .filter(product => {
               return product.node.frontmatter.checkbox.visible;
             })
+            .sort((a, b) => {
+              return (
+                a.node.frontmatter.checkbox.visible -
+                b.node.frontmatter.checkbox.visible
+              );
+            })
             .map((product, key) => {
-              return <Product key={key} product={product.node} />;
+              console.log(product.node.frontmatter.id);
+              return (
+                <div
+                  key={product.node.frontmatter.id}
+                  id="tools"
+                  className="layout__block-container layout__products"
+                >
+                  <div className="layout__block">
+                    <Product product={product.node} />
+                  </div>
+                </div>
+              );
             })}
         </ReactCSSTransitionGroup>
-      </main>
+      </div>
     );
   }
 }

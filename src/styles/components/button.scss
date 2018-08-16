@@ -59,17 +59,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.btn[type='point'] {
-}
-
-.btn[size='large'] {
-}
-
-.btn__arrow {
-  width: 10rem;
-  padding-bottom: $half;
+  background: $night;
+  color: $day;
+  width: 25%;
+  word-wrap: break-word;
 }
 
 .btn__text {
@@ -77,29 +70,22 @@
   text-align: center;
   width: 100%;
   padding: $unit;
-  border: 1rem solid $day;
-  color: $day;
 }
 
-// Button animations
-.slide-enter {
-  max-height: 0;
-  opacity: 0.01;
+.btn[type='point'] {
+  background: unset;
+
+  .btn__text {
+    color: $day;
+    border: 1rem solid $day;
+  }
 }
 
-.slide-enter.slide-enter-active {
-  max-height: 100vh;
-  opacity: 1;
-  transition: all 500ms ease-in;
+.btn__arrow {
+  width: 10rem;
+  padding-bottom: $half;
 }
 
-.slide-leave {
-  max-height: 100vh;
-  opacity: 1;
-}
-
-.slide-leave.slide-leave-active {
-  max-height: 0;
-  opacity: 0.01;
-  transition: all 500ms ease-out;
+.btn[data-size='large'] {
+  width: 33%;
 }

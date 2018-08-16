@@ -1,0 +1,19 @@
+.product {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.product__content {
+  width: calc(50% - #{$unit});
+}
+
+.product__title {
+  @include t--x-large;
+  padding-bottom: 7rem;
+}
+
+.product__image {
+  width: calc(50% - #{$unit});
+}

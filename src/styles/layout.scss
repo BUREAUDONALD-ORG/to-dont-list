@@ -7,9 +7,19 @@
   background: $complementary;
 }
 
-.layout__header {
-  @include row-component-center;
+.layout__block-container {
+  display: flex;
   padding: $two $side-padding;
+  justify-content: center;
+}
+
+.layout__block {
+  max-width: 1200px;
+  width: 100%;
+}
+
+// Block specific colors
+.layout__header {
   background: $night;
 }
 
@@ -20,15 +30,14 @@
   align-items: flex-start;
 }
 
-.layout__viewer {
-  @include row-component-center;
-  padding: $two $side-padding 0;
+.layout__products {
   background: $day;
-  width: 100%;
 }
 
 .layout__form {
   @include row-component-center;
+  position: relative;
+  z-index: 20; // for animation overlap
   padding: 0 $side-padding $unit;
   background: $complementary;
 }
