@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+const AnimationGroup = ReactCSSTransitionGroup;
 
 import Checkbox from '../components/Checkbox.js';
 import Product from '../components/Product.js';
@@ -33,14 +34,35 @@ export default class indexPage extends React.Component {
     });
   };
 
-  // timeToRead = () => {
-  //   return this.props.data.products.edges.reduce((acc, product) => {
-  //     if (this.state.products[product.node.frontmatter.id]) {
-  //       acc += product.node.frontmatter.timeToRead;
-  //     }
-  //     return acc;
-  //   }, 0);
-  // };
+  timeToRead = () => {
+    return this.props.data.products.edges.reduce((acc, product) => {
+      if (this.state.products[product.node.frontmatter.id]) {
+        acc += product.node.frontmatter.timeToRead;
+      }
+      return acc;
+    }, 0);
+  };
+
+  selectedProducts = () => {
+    return this.state.products
+      .filter(product => {
+        return product.node.frontmatter.checkbox.visible;
+      })
+      .sort((a, b) => {
+        return (
+          a.node.frontmatter.checkbox.visible -
+          b.node.frontmatter.checkbox.visible
+        );
+      });
+  };
+
+  showScroll = () => {
+    let count = this.state.products.reduce((acc, product) => {
+      acc = product.node.frontmatter.checkbox.visible ? acc + 1 : acc;
+      return acc;
+    }, 0);
+    return count;
+  };
 
   render() {
     // console.log(this.timeToRead());
@@ -63,15 +85,12 @@ export default class indexPage extends React.Component {
                 );
               })}
             </div>
-            <ReactCSSTransitionGroup
+            <AnimationGroup
               transitionName="slide"
               transitionEnterTimeout={500}
               transitionLeaveTimeout={500}
             >
-              {products.reduce((acc, product) => {
-                product.node.frontmatter.checkbox.visible && acc++;
-                return acc;
-              }, 0) && (
+              {this.showScroll() && (
                 <Button
                   className="btn"
                   type="point"
@@ -81,39 +100,28 @@ export default class indexPage extends React.Component {
                   }
                 />
               )}
-            </ReactCSSTransitionGroup>
+            </AnimationGroup>
           </div>
         </div>
-        <ReactCSSTransitionGroup
+        <AnimationGroup
           transitionName="slide"
           transitionEnterTimeout={500}
           transitionLeaveTimeout={500}
         >
-          {products
-            .filter(product => {
-              return product.node.frontmatter.checkbox.visible;
-            })
-            .sort((a, b) => {
-              return (
-                a.node.frontmatter.checkbox.visible -
-                b.node.frontmatter.checkbox.visible
-              );
-            })
-            .map((product, key) => {
-              console.log(product.node.frontmatter.id);
-              return (
-                <div
-                  key={product.node.frontmatter.id}
-                  id="tools"
-                  className="layout__block-container layout__products"
-                >
-                  <div className="layout__block">
-                    <Product product={product.node} />
-                  </div>
+          {this.selectedProducts().map(product => {
+            return (
+              <div
+                key={product.node.frontmatter.id}
+                id="tools"
+                className="layout__block-container layout__products"
+              >
+                <div className="layout__block">
+                  <Product product={product.node} />
                 </div>
-              );
-            })}
-        </ReactCSSTransitionGroup>
+              </div>
+            );
+          })}
+        </AnimationGroup>
       </div>
     );
   }
