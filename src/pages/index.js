@@ -23,7 +23,12 @@ export default class indexPage extends React.Component {
 
   handleScroll = e => {
     let scrollY = window.scrollY;
-    this.setState({ sticky: scrollY > 300 });
+    let count = this.state.products.reduce((acc, p) => {
+      p.node.frontmatter.checkbox.visible && acc++;
+      return acc;
+    }, 0);
+
+    count && this.setState({ sticky: scrollY > 0 });
   };
 
   toggleProducts = (product, sticky, e) => {
@@ -149,7 +154,7 @@ export default class indexPage extends React.Component {
           </div>
         </header>
 
-        <div className="layout__products">
+        <div className="layout__products" data-sticky={this.state.sticky}>
           <AnimationGroup
             transitionName="slide"
             transitionEnterTimeout={500}
@@ -160,26 +165,9 @@ export default class indexPage extends React.Component {
                 <div
                   id={slugify(product.node.frontmatter.checkbox.title)}
                   key={product.node.frontmatter.id}
-                  className="layout__block-container layout__product-container"
+                  data-layout={product.node.frontmatter.layout}
+                  className="layout__product-container product"
                 >
-                  <div className="layout__block layout__product">
-                    <article className="product">
-                      <div className="product__content">
-                        <pre>
-                          <h1 className="product__title">
-                            {product.node.frontmatter.title}
-                          </h1>
-                        </pre>
-                        <div
-                          className="markdown"
-                          dangerouslySetInnerHTML={{
-                            __html: product.node.html
-                          }}
-                        />
-                        <Button text={product.node.frontmatter.button.text} />
-                      </div>
-                    </article>
-                  </div>
                   <div className="product__image">
                     <Img
                       sizes={
@@ -187,6 +175,22 @@ export default class indexPage extends React.Component {
                           .sizes
                       }
                     />
+                  </div>
+                  <div className="layout__block product__block">
+                    <div className="product__content">
+                      <pre>
+                        <h1 className="product__title">
+                          {product.node.frontmatter.title}
+                        </h1>
+                      </pre>
+                      <div
+                        className="markdown"
+                        dangerouslySetInnerHTML={{
+                          __html: product.node.html
+                        }}
+                      />
+                      <Button text={product.node.frontmatter.button.text} />
+                    </div>
                   </div>
                 </div>
               );

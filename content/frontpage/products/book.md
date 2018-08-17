@@ -10,9 +10,9 @@ checkbox:
   text: "Book"
   visible: 0
 button:
-  text: "Go"
+  text: "Order a Copy"
   link: "http://www.bureaudonald.com"
-layout: "horizontal-right"
+layout: "horizontal-left"
 ---
 
 As creative people, we have ideas. Bad, good, weird, clever, and even brilliant ideas. But most of them (even the great ideas) never see the light of day. Why? If you ask a creative person, the answer will always revolve around time. We simply need time to execute an idea, and do it well — more time than we have.

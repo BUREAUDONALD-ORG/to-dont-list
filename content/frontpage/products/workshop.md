@@ -3,16 +3,16 @@ id: 2
 title: "Workshops"
 timeToRead: 4
 images:
-  default: "../../../static/img/marker.png"
-  diapositive: "../../../static/img/marker.png"
+  default: "../../../static/img/horizontal.jpg"
+  diapositive: "../../../static/img/horizontal.jpg"
 checkbox:
   title: "Work\nDon\u2019t Shop"
   text: "Workshops"
   visible: 0
 button:
-  text: "Go"
+  text: "Order a Copy"
   link: "http://www.bureaudonald.com"
-layout: "horizontal-right"
+layout: "vertical"
 ---
 
 ## Workshop

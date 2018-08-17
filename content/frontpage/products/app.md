@@ -10,7 +10,7 @@ checkbox:
   text: "App"
   visible: 0
 button:
-  text: "Go"
+  text: "Order a Copy"
   link: "http://www.bureaudonald.com"
 layout: "horizontal-right"
 ---

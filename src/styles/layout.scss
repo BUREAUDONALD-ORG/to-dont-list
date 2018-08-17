@@ -33,19 +33,22 @@
 }
 
 .layout__products {
-  padding: 250rem 0 0 0;
   background: $day;
   overflow: hidden;
+  transition: all 0.5s ease;
+  padding: 192rem 0 0 0;
+}
+
+.layout__products[data-sticky='true'] {
+  padding: 55rem 0 0 0;
 }
 
 .layout__product-container {
+  display: flex;
+  justify-content: center;
   position: relative;
-  min-height: 80vh;
+  min-height: 50vh;
   overflow: hidden;
-}
-
-.layout__product {
-  padding: 0 $side-padding;
 }
 
 .layout__form {

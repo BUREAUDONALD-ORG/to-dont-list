@@ -100,7 +100,7 @@ collections:
         name: "layout"
         widget: "select"
         options:
-          - label: "Visual left, image right"
+          - label: "Visual left, content right"
             value: "horizontal-right"
           - label: "Visual right, content left"
             value: "horizontal-left"
