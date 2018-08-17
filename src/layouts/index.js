@@ -9,9 +9,6 @@ import '../styles/app.scss';
 
 import Form from '../components/Form.js';
 
-import line from '../../static/img/line.png';
-import lineHz from '../../static/img/line-hz.png';
-
 class Layout extends React.Component {
   render() {
     let siteData = this.props.data.site.edges[0].node.frontmatter;
@@ -39,55 +36,10 @@ class Layout extends React.Component {
           ]}
         />
         <div className="layout__app">
-          <header className="layout__block-container layout__header">
-            <div className="layout__block header">
-              <div className="header__section">
-                <pre>
-                  <h1 className="header__title">{siteData.siteTitle}</h1>
-                </pre>
-                <nav>
-                  <ul className="nav__list">
-                    {siteData.nav.map((navItem, key) => (
-                      <li key={key} className="nav__item">
-                        <ScrollLink
-                          to={navItem.slug}
-                          smooth={true}
-                          hashSpy={true}
-                        >
-                          {navItem.title}
-                        </ScrollLink>
-                      </li>
-                    ))}
-                  </ul>
-                </nav>
-              </div>
-              <img className="header__line" src={line} role="presentation" />
-              <img
-                className="header__line-hz"
-                src={lineHz}
-                role="presentation"
-              />
-              <div className="header__section">
-                <pre>
-                  <h3 className="header__subtitle">{siteData.subTitle}</h3>
-                </pre>
-                <h4 className="header__author">
-                  {siteData.authorPrefix}
-                  <a
-                    rel="noopener noreferrer"
-                    target="_blank"
-                    href={siteData.authorLink}
-                  >
-                    {siteData.author}
-                  </a>
-                </h4>
-              </div>
-            </div>
-          </header>
           {this.props.children()}
           <Form data={formData} />
-          <div id="social" className="layout__social">
-            <div className="social">
+          <div id="social" className="layout__block-container layout__social">
+            <div className="layout__block social">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -132,8 +84,8 @@ class Layout extends React.Component {
               </div>
             </div>
           </div>
-          <div id="credits" className="layout__credits">
-            <div className="credits">
+          <div id="credits" className="layout__block-container layout__credits">
+            <div className="layout__block credits">
               <h1 className="credits__title">{siteData.creditsTitle}</h1>
               <div
                 className="credits__text"

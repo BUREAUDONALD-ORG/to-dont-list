@@ -6,11 +6,23 @@ import Checkbox from '../components/Checkbox.js';
 import Product from '../components/Product.js';
 import Button from '../components/Button.js';
 
+import line from '../../static/img/line.png';
+import lineHz from '../../static/img/line-hz.png';
+
 export default class indexPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = { products: this.props.data.products.edges };
   }
+
+  componentDidMount() {
+    window.addEventListener('scroll', this.handleScroll);
+  }
+
+  handleScroll = e => {
+    let scrollY = window.scrollY;
+    this.setState({ sticky: scrollY > 100 });
+  };
 
   toggleProducts = product => {
     let count = this.state.products.reduce((acc, p) => {
@@ -67,9 +79,40 @@ export default class indexPage extends React.Component {
   render() {
     // console.log(this.timeToRead());
     let products = this.state.products;
+    let siteData = this.props.data.site.edges[0].node.frontmatter;
     return (
       <div>
-        <div id="tools" className="layout__block-container">
+        <header
+          data-sticky={this.state.sticky}
+          className="layout__block-container layout__header header__container"
+        >
+          <div className="layout__block header">
+            <div className="header__section">
+              <pre>
+                <h1 className="header__title">{siteData.siteTitle}</h1>
+              </pre>
+            </div>
+            <img className="header__line" src={line} role="presentation" />
+            <img className="header__line-hz" src={lineHz} role="presentation" />
+            <div className="header__section">
+              <pre>
+                <h3 className="header__subtitle">{siteData.subTitle}</h3>
+              </pre>
+              <div className="header__contact">Contact</div>
+              <h4 className="header__author">
+                {siteData.authorPrefix}
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={siteData.authorLink}
+                >
+                  {siteData.author}
+                </a>
+              </h4>
+            </div>
+          </div>
+        </header>
+        <div className="layout__block-container layout__checkboxes">
           <div className="layout__block">
             <h2 className="checkboxes__title">
               {this.props.data.site.edges[0].node.frontmatter.checkboxesTitle}
@@ -135,6 +178,11 @@ export const productQuery = graphql`
       edges {
         node {
           frontmatter {
+            siteTitle
+            subTitle
+            author
+            authorLink
+            authorPrefix
             checkboxesTitle
             checkboxesFooter
           }

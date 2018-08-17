@@ -47,8 +47,8 @@ export default class Form extends React.Component {
   render() {
     let form = this.props.data;
     return (
-      <div id="mail" className="layout__form">
-        <form className="form" onSubmit={this.submitEmail}>
+      <div id="mail" className="layout__block-container layout__form">
+        <form className="layout__block form" onSubmit={this.submitEmail}>
           <div className="form__header">
             <div className="form__title">{form.title}</div>
             <img className="form__arrow" src={arrow} alt="arrow" />
