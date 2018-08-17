@@ -7,7 +7,7 @@
   background-color: $day;
   position: relative;
   height: 100%;
-  padding: $unit * 2 0 $unit * 2 $unit;
+  padding: $unit * 8 0 $unit * 4 $unit;
   width: calc(66.66% + #{$unit});
   z-index: 2;
 }
@@ -28,7 +28,7 @@
   .product__content {
     margin-left: unset;
     margin-right: calc(33.33% - #{$unit});
-    padding: $unit * 2 $unit $unit * 2 0;
+    padding: $unit * 8 $unit $unit * 8 0;
   }
 
   .product__image {
@@ -45,7 +45,7 @@
   align-items: center;
 
   .product__content {
-    padding: $unit * 2 0 $unit * 2 0;
+    padding: $unit * 4 0 $unit * 8 0;
     margin-left: unset;
   }
 
