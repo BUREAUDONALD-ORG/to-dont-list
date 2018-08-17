@@ -25,12 +25,21 @@ collections:
           - {label: "Site Title", name: "siteTitle", widget: "string"}
           - {label: "Site Title", name: "siteTitle", widget: "string"}
           - {label: "subTitle", name: "subTitle", widget: "string"}
-          - {label: "authorPrefix", name: "authorPrefix", widget: "string"}
-          - {label: "author", name: "author", widget: "string"}
-          - {label: "authorLink", name: "authorLink", widget: "string"}
+          - label: "Author"
+            name: "author"
+            widget: "object"
+            fields:
+            - {label: "prefix", name: "authorPrefix", widget: "string"}
+            - {label: "name", name: "author", widget: "string"}
+            - {label: "link", name: "authorLink", widget: "string"}
           - {label: "tabsHeader", name: "tabsHeader", widget: "string"}
-          - {label: "Checkboxes title", name: "checkboxesTitle", widget: "string"}
-          - {label: "Checkboxes pointer box", name: "checkboxesPointer", widget: "string"}
+          - label: "Checkboxes"
+            name: "checkboxes"
+            widget: "object"
+            fields:
+            - {label: "Title", name: "checkboxesTitle", widget: "string"}
+            - {label: "Error", name: "checkboxesError", widget: "string"}
+            - {label: "Pointer button", name: "checkboxesFooter", widget: "string"}
           - label: "Hashtag"
             name: "hashtag"
             widget: "object"
