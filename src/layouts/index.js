@@ -121,10 +121,6 @@ export const layoutQuery = graphql`
               tagName
             }
             siteTitle
-            subTitle
-            authorPrefix
-            author
-            authorLink
             hashtag {
               link
               alt

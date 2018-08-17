@@ -82,6 +82,7 @@ export default class indexPage extends React.Component {
     // console.log(this.timeToRead());
     let products = this.state.products;
     let siteData = this.props.data.site.edges[0].node.frontmatter;
+    console.log(siteData);
     return (
       <div>
         <header
@@ -100,15 +101,15 @@ export default class indexPage extends React.Component {
               <pre>
                 <h3 className="header__subtitle">{siteData.subTitle}</h3>
               </pre>
-              <div className="header__contact">Contact</div>
+              <div className="header__contact">{siteData.contact.title}</div>
               <h4 className="header__author">
-                {siteData.authorPrefix}
+                {siteData.author.prefix}
                 <a
                   rel="noopener noreferrer"
                   target="_blank"
-                  href={siteData.authorLink}
+                  href={siteData.author.link}
                 >
-                  {siteData.author}
+                  {siteData.author.name}
                 </a>
               </h4>
             </div>
@@ -212,11 +213,19 @@ export const productQuery = graphql`
           frontmatter {
             siteTitle
             subTitle
-            author
-            authorLink
-            authorPrefix
-            checkboxesTitle
-            checkboxesFooter
+            author {
+              link
+              name
+              prefix
+            }
+            contact {
+              title
+              link
+            }
+            checkboxes {
+              title
+              footer
+            }
           }
         }
       }

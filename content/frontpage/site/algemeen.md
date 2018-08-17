@@ -6,12 +6,18 @@ headTags:
   - tagName: "Bureaudonald"
 siteTitle: "To\nDon\u2019t\nCo."
 subTitle: "Time\nManagement\nfor Creative\nPeople"
-authorPrefix: "By "
-author: "Donald Roos"
-authorLink: "http://www.bureaudonald.com"
-checkboxesTitle: "Choose what you would like to see... Oh, you can only select 3 items."
-checkboxesError: "Stop wasting time!"
-checkboxesFooter: "Now Scroll Down"
+description: "The ToDon’tList [app], Don’t Read This Book [book], and Work Don’t Shop [Workshop] focuses on how to make choices about everything you do in your daily creative practice and life."
+author:
+  prefix: "By "
+  name: "Donald Roos"
+  link: "http://www.bureaudonald.com"
+contact:
+  title: "Contact"
+  link: "http://www.bureaudonald.com"
+checkboxes:
+  title: "Choose what you would like to see... Oh, you can only select 3 items."
+  error: "Stop wasting time!"
+  footer: "Now Scroll Down"
 hashtag:
   image: "../../../static/img/tag.svg"
   alt: "#ToDontList"
@@ -28,7 +34,6 @@ socialbtn:
     link: "https://www.instagram.com/bureaudonald/"
     image: "../../../static/img/instagram.svg"
     imageInverse: "../../../static/img/instagram-pink.svg"
-description: "The ToDon’tList [app], Don’t Read This Book [book], and Work Don’t Shop [Workshop] focuses on how to make choices about everything you do in your daily creative practice and life."
 creditsTitle: "Credits"
 ---
 
