@@ -5,7 +5,7 @@ import slugify from 'slugify';
 
 import arrow from '../../static/img/arrow.png';
 
-export default ({ product, toggleProducts }) => {
+export default ({ product, toggleProducts, sticky }) => {
   return (
     <ScrollLink
       className="checkbox"
@@ -17,6 +17,7 @@ export default ({ product, toggleProducts }) => {
       offset={-600}
       duration={500}
       isDynamic
+      onClick={toggleProducts.bind(this, product, sticky)}
     >
       <input
         className="checkbox__input"
@@ -24,10 +25,7 @@ export default ({ product, toggleProducts }) => {
         checked={product.checkbox.visible}
         readOnly
       />
-      <label
-        className="checkbox__label"
-        onClick={toggleProducts.bind(this, product)}
-      >
+      <label className="checkbox__label">
         <div className="checkbox__content">
           <h2 className="checkbox__title">{product.checkbox.title}</h2>
           <h3 className="checkbox__text">{product.checkbox.text}</h3>

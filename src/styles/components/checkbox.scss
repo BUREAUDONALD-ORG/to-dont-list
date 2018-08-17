@@ -13,7 +13,6 @@
 }
 
 .checkbox {
-  pointer-events: none;
   width: calc(50% - #{$half});
   margin: 0 0 $unit 0;
   padding: $half $unit;
@@ -70,7 +69,6 @@
 
 .checkboxes__container[data-sticky='true'] {
   .checkbox {
-    pointer-events: auto;
     width: calc(33% - #{$half});
     background-color: $complementary;
     color: $day;
@@ -86,7 +84,6 @@
     display: none;
   }
   .checkbox__label {
-    pointer-events: none;
   }
   .checkbox__label::before {
     display: none;
