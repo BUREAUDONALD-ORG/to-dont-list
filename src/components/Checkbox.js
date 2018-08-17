@@ -16,9 +16,7 @@ export default ({ product, toggleProducts }) => {
       smooth={true}
       offset={-500}
       duration={500}
-      delay={1000}
       isDynamic
-      onClick={toggleProducts.bind(this, product)}
     >
       <input
         className="checkbox__input"
@@ -26,7 +24,10 @@ export default ({ product, toggleProducts }) => {
         checked={product.checkbox.visible}
         readOnly
       />
-      <label className="checkbox__label">
+      <label
+        className="checkbox__label"
+        onClick={toggleProducts.bind(this, product)}
+      >
         <div className="checkbox__content">
           <h2 className="checkbox__title">{product.checkbox.title}</h2>
           <h3 className="checkbox__text">{product.checkbox.text}</h3>

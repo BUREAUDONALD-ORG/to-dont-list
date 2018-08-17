@@ -13,6 +13,7 @@
 }
 
 .checkbox {
+  pointer-events: none;
   width: calc(50% - #{$half});
   margin: 0 0 $unit 0;
   padding: $half $unit;
@@ -43,6 +44,7 @@
 }
 
 .checkbox__label {
+  pointer-events: auto;
   display: flex;
   justify-content: flex-start;
 }
@@ -67,9 +69,8 @@
 }
 
 .checkboxes__container[data-sticky='true'] {
-  justify-content: flex-start;
-
   .checkbox {
+    pointer-events: auto;
     width: calc(33% - #{$half});
     background-color: $complementary;
     color: $day;
@@ -83,6 +84,9 @@
   }
   .checkbox__text {
     display: none;
+  }
+  .checkbox__label {
+    pointer-events: none;
   }
   .checkbox__label::before {
     display: none;
