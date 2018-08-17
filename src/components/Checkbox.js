@@ -14,7 +14,7 @@ export default ({ product, toggleProducts }) => {
       to={slugify(product.checkbox.title)}
       spy={true}
       smooth={true}
-      offset={-500}
+      offset={-600}
       duration={500}
       isDynamic
     >

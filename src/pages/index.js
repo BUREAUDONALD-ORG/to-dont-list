@@ -22,7 +22,7 @@ export default class indexPage extends React.Component {
 
   handleScroll = e => {
     let scrollY = window.scrollY;
-    this.setState({ sticky: scrollY > 100 });
+    this.setState({ sticky: scrollY > 300 });
   };
 
   toggleProducts = product => {
