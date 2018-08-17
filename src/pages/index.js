@@ -84,7 +84,7 @@ export default class indexPage extends React.Component {
       <div>
         <header
           data-sticky={this.state.sticky}
-          className="layout__block-container layout__header header__container"
+          className="layout__header header__container"
         >
           <div className="layout__block header">
             <div className="header__section">
@@ -111,60 +111,67 @@ export default class indexPage extends React.Component {
               </h4>
             </div>
           </div>
-        </header>
-        <div className="layout__block-container layout__checkboxes">
-          <div className="layout__block">
-            <h2 className="checkboxes__title">
-              {this.props.data.site.edges[0].node.frontmatter.checkboxesTitle}
-            </h2>
-            <div className="checkboxes__container">
-              {products.map((product, key) => {
-                return (
-                  <Checkbox
-                    key={key}
-                    product={product.node.frontmatter}
-                    toggleProducts={this.toggleProducts}
-                  />
-                );
-              })}
-            </div>
-            <AnimationGroup
-              transitionName="slide"
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={500}
-            >
-              {this.showScroll() && (
-                <Button
-                  className="btn"
-                  type="point"
-                  text={
-                    this.props.data.site.edges[0].node.frontmatter
-                      .checkboxesFooter
-                  }
-                />
-              )}
-            </AnimationGroup>
-          </div>
-        </div>
-        <AnimationGroup
-          transitionName="slide"
-          transitionEnterTimeout={500}
-          transitionLeaveTimeout={500}
-        >
-          {this.selectedProducts().map(product => {
-            return (
+          <div className="layout__block-container layout__checkboxes">
+            <div className="layout__block">
+              <h2 className="checkboxes__title" data-sticky={this.state.sticky}>
+                {this.props.data.site.edges[0].node.frontmatter.checkboxesTitle}
+              </h2>
               <div
-                key={product.node.frontmatter.id}
-                id="tools"
-                className="layout__block-container layout__products"
+                className="checkboxes__container"
+                data-sticky={this.state.sticky}
               >
-                <div className="layout__block">
-                  <Product product={product.node} />
-                </div>
+                {products.map((product, key) => {
+                  return (
+                    <Checkbox
+                      key={key}
+                      product={product.node.frontmatter}
+                      toggleProducts={this.toggleProducts}
+                    />
+                  );
+                })}
               </div>
-            );
-          })}
-        </AnimationGroup>
+
+              {/* <AnimationGroup
+                transitionName="slide"
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={500}
+              >
+                {this.showScroll() && (
+                  <Button
+                    className="btn"
+                    type="point"
+                    text={
+                      this.props.data.site.edges[0].node.frontmatter
+                        .checkboxesFooter
+                    }
+                  />
+                )}
+              </AnimationGroup> */}
+            </div>
+          </div>
+        </header>
+
+        <div className="layout__products">
+          <AnimationGroup
+            transitionName="slide"
+            transitionEnterTimeout={500}
+            transitionLeaveTimeout={500}
+          >
+            {this.selectedProducts().map(product => {
+              return (
+                <div
+                  key={product.node.frontmatter.id}
+                  id="tools"
+                  className="layout__block-container layout__product"
+                >
+                  <div className="layout__block">
+                    <Product product={product.node} />
+                  </div>
+                </div>
+              );
+            })}
+          </AnimationGroup>
+        </div>
       </div>
     );
   }
