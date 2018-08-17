@@ -117,7 +117,10 @@ export default class indexPage extends React.Component {
           <div className="layout__block-container layout__checkboxes">
             <div className="layout__block">
               <h2 className="checkboxes__title" data-sticky={this.state.sticky}>
-                {this.props.data.site.edges[0].node.frontmatter.checkboxesTitle}
+                {
+                  this.props.data.site.edges[0].node.frontmatter.checkboxes
+                    .title
+                }
               </h2>
               <div
                 className="checkboxes__container"
