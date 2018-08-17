@@ -18,6 +18,7 @@
   padding: $half $unit;
   background: $day;
   transition: all 0.4s ease;
+  cursor: pointer;
 }
 
 .checkbox__input {
@@ -29,6 +30,7 @@
 .checkbox__label::before {
   content: '';
   display: inline-block;
+  cursor: pointer;
 
   height: $two;
   width: $two;
@@ -43,12 +45,13 @@
 }
 
 .checkbox__label {
-  pointer-events: auto;
+  cursor: pointer;
   display: flex;
   justify-content: flex-start;
 }
 
 .checkbox__content {
+  cursor: pointer;
   padding-left: $unit;
 }
 

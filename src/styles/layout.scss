@@ -3,8 +3,12 @@
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  overflow: hidden;
+  // overflow: hidden;
   background: $complementary;
+}
+
+.layout__page-container {
+  position: relative;
 }
 
 .layout__block-container {
@@ -20,6 +24,9 @@
 
 // Block specific colors
 .layout__header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -36,11 +43,11 @@
   background: $day;
   overflow: hidden;
   transition: all 0.5s ease;
-  padding: 187rem 0 0 0;
+  // padding: 187rem 0 0 0;
 }
 
 .layout__products[data-sticky='true'] {
-  padding: 53rem 0 0 0;
+  // padding: 53rem 0 0 0;
 }
 
 .layout__product-container {

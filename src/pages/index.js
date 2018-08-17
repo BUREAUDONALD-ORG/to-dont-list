@@ -3,6 +3,7 @@ import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 const AnimationGroup = ReactCSSTransitionGroup;
 import slugify from 'slugify';
 import Img from 'gatsby-image';
+import { throttle, debounce } from 'lodash';
 
 import Checkbox from '../components/Checkbox.js';
 import Product from '../components/Product.js';
@@ -18,17 +19,22 @@ export default class indexPage extends React.Component {
   }
 
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
+    window.addEventListener(
+      'scroll',
+      debounce(this.handleScroll, 24, { leading: true, trailing: true })
+      // throttle(this.handleScroll, 50)
+    );
   }
 
   handleScroll = e => {
+    console.log('handling');
     let scrollY = window.scrollY;
     let count = this.state.products.reduce((acc, p) => {
       p.node.frontmatter.checkbox.visible && acc++;
       return acc;
     }, 0);
 
-    count && this.setState({ sticky: scrollY > 0 });
+    count && this.setState({ sticky: scrollY > 200 });
   };
 
   toggleProducts = (product, sticky, e) => {
@@ -82,9 +88,8 @@ export default class indexPage extends React.Component {
     // console.log(this.timeToRead());
     let products = this.state.products;
     let siteData = this.props.data.site.edges[0].node.frontmatter;
-    console.log(siteData);
     return (
-      <div>
+      <div className="layout__page-container">
         <header
           data-sticky={this.state.sticky}
           className="layout__header header__container"
