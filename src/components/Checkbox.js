@@ -1,13 +1,24 @@
 import React from 'react';
-import cx from 'classnames';
+import { Link } from 'react-scroll';
+const ScrollLink = Link;
+import slugify from 'slugify';
 
 import arrow from '../../static/img/arrow.png';
 
 export default ({ product, toggleProducts }) => {
   return (
-    <div
+    <ScrollLink
+      className="checkbox"
+      data-checked={product.checkbox.visible}
+      activeClass="checkbox__active"
+      to={slugify(product.checkbox.title)}
+      spy={true}
+      smooth={true}
+      offset={-500}
+      duration={500}
+      delay={1000}
+      isDynamic
       onClick={toggleProducts.bind(this, product)}
-      className={cx({ checkbox: true })}
     >
       <input
         className="checkbox__input"
@@ -21,6 +32,6 @@ export default ({ product, toggleProducts }) => {
           <h3 className="checkbox__text">{product.checkbox.text}</h3>
         </div>
       </label>
-    </div>
+    </ScrollLink>
   );
 };

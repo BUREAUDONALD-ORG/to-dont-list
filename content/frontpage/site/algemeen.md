@@ -9,15 +9,6 @@ subTitle: "Time\nManagement\nfor Creative\nPeople"
 authorPrefix: "By "
 author: "Donald Roos"
 authorLink: "http://www.bureaudonald.com"
-nav:
-  - title: "Tools"
-    slug: "tools"
-  - title: Mail
-    slug: "mail"
-  - title: Social
-    slug: "social"
-  - title: Credits
-    slug: "credits"
 checkboxesTitle: "Choose what you would like to see... Oh, you can only select 3 items."
 checkboxesError: "Stop wasting time!"
 checkboxesFooter: "Now Scroll Down"

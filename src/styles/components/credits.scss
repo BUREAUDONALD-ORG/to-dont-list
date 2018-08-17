@@ -1,7 +1,6 @@
 .credits {
   width: 100%;
   max-width: 1200px;
-  padding: 0 $unit;
 }
 
 .credits__title {
@@ -31,10 +30,10 @@
 }
 
 .credits__text a:hover {
-  border-bottom: .5rem solid $complementary;
+  border-bottom: 0.5rem solid $complementary;
 }
 
 .credits__text a:hover {
   color: $day;
-  border-bottom: .5rem solid $day;
+  border-bottom: 0.5rem solid $day;
 }

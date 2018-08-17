@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 const AnimationGroup = ReactCSSTransitionGroup;
+import slugify from 'slugify';
 
 import Checkbox from '../components/Checkbox.js';
 import Product from '../components/Product.js';
@@ -56,16 +57,9 @@ export default class indexPage extends React.Component {
   };
 
   selectedProducts = () => {
-    return this.state.products
-      .filter(product => {
-        return product.node.frontmatter.checkbox.visible;
-      })
-      .sort((a, b) => {
-        return (
-          a.node.frontmatter.checkbox.visible -
-          b.node.frontmatter.checkbox.visible
-        );
-      });
+    return this.state.products.filter(product => {
+      return product.node.frontmatter.checkbox.visible;
+    });
   };
 
   showScroll = () => {
@@ -160,8 +154,8 @@ export default class indexPage extends React.Component {
             {this.selectedProducts().map(product => {
               return (
                 <div
+                  id={slugify(product.node.frontmatter.checkbox.title)}
                   key={product.node.frontmatter.id}
-                  id="tools"
                   className="layout__block-container layout__product"
                 >
                   <div className="layout__block">

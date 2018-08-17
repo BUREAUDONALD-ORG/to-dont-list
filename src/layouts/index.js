@@ -38,7 +38,7 @@ class Layout extends React.Component {
         <div className="layout__app">
           {this.props.children()}
           <Form data={formData} />
-          <div id="social" className="layout__block-container layout__social">
+          <div className="layout__block-container layout__social">
             <div className="layout__block social">
               <a
                 target="_blank"
@@ -84,7 +84,7 @@ class Layout extends React.Component {
               </div>
             </div>
           </div>
-          <div id="credits" className="layout__block-container layout__credits">
+          <div className="layout__block-container layout__credits">
             <div className="layout__block credits">
               <h1 className="credits__title">{siteData.creditsTitle}</h1>
               <div
@@ -144,10 +144,6 @@ export const layoutQuery = graphql`
               }
             }
             socialText
-            nav {
-              title
-              slug
-            }
           }
         }
       }
