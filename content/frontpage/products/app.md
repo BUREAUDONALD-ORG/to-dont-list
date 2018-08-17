@@ -3,8 +3,8 @@ id: 3
 title: "App"
 timeToRead: 5
 images:
-  default: "../../../static/img/iphone.png"
-  diapositive: "../../../static/img/iphone.png"
+  default: "../../../static/img/vertical.jpg"
+  diapositive: "../../../static/img/vertical.jpg"
 checkbox:
   title: "Don\u2019t Do \nThis App"
   text: "App"

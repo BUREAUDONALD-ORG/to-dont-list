@@ -2,6 +2,7 @@ import React from 'react';
 import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
 const AnimationGroup = ReactCSSTransitionGroup;
 import slugify from 'slugify';
+import Img from 'gatsby-image';
 
 import Checkbox from '../components/Checkbox.js';
 import Product from '../components/Product.js';
@@ -159,10 +160,33 @@ export default class indexPage extends React.Component {
                 <div
                   id={slugify(product.node.frontmatter.checkbox.title)}
                   key={product.node.frontmatter.id}
-                  className="layout__block-container layout__product"
+                  className="layout__block-container layout__product-container"
                 >
-                  <div className="layout__block">
-                    <Product product={product.node} />
+                  <div className="layout__block layout__product">
+                    <article className="product">
+                      <div className="product__content">
+                        <pre>
+                          <h1 className="product__title">
+                            {product.node.frontmatter.title}
+                          </h1>
+                        </pre>
+                        <div
+                          className="markdown"
+                          dangerouslySetInnerHTML={{
+                            __html: product.node.html
+                          }}
+                        />
+                        <Button text={product.node.frontmatter.button.text} />
+                      </div>
+                    </article>
+                  </div>
+                  <div className="product__image">
+                    <Img
+                      sizes={
+                        product.node.frontmatter.images.default.childImageSharp
+                          .sizes
+                      }
+                    />
                   </div>
                 </div>
               );

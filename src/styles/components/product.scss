@@ -6,7 +6,13 @@
 }
 
 .product__content {
-  width: calc(50% - #{$unit});
+  margin-left: calc(33.33% - #{$unit});
+  min-height: 80vh;
+  background-color: $day;
+  position: relative;
+  padding-left: $unit;
+  width: calc(66.66% + #{$unit});
+  z-index: 2;
 }
 
 .product__title {
@@ -15,5 +21,8 @@
 }
 
 .product__image {
-  width: calc(50% - #{$unit});
+  position: absolute;
+  left: 0;
+  z-index: 1;
+  width: 50%;
 }

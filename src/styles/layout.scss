@@ -33,11 +33,19 @@
 }
 
 .layout__products {
-  padding: 250rem 0 10rem 0;
+  padding: 250rem 0 0 0;
   background: $day;
+  overflow: hidden;
+}
+
+.layout__product-container {
+  position: relative;
+  min-height: 80vh;
+  overflow: hidden;
 }
 
 .layout__product {
+  padding: 0 $side-padding;
 }
 
 .layout__form {
