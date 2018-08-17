@@ -5,20 +5,9 @@ import slugify from 'slugify';
 
 import arrow from '../../static/img/arrow.png';
 
-export default ({ product, toggleProducts, sticky }) => {
+const Checkbox = ({ product, toggleProducts, sticky }) => {
   return (
-    <ScrollLink
-      className="checkbox"
-      data-checked={product.checkbox.visible}
-      activeClass="checkbox__active"
-      to={slugify(product.checkbox.title)}
-      spy={true}
-      smooth={true}
-      offset={-600}
-      duration={500}
-      isDynamic
-      onClick={toggleProducts.bind(this, product, sticky)}
-    >
+    <div>
       <input
         className="checkbox__input"
         type="checkbox"
@@ -31,6 +20,43 @@ export default ({ product, toggleProducts, sticky }) => {
           <h3 className="checkbox__text">{product.checkbox.text}</h3>
         </div>
       </label>
-    </ScrollLink>
+    </div>
   );
+};
+
+export default ({ product, toggleProducts, sticky }) => {
+  if (sticky) {
+    return (
+      <ScrollLink
+        className="checkbox"
+        data-checked={product.checkbox.visible}
+        activeClass="checkbox__active"
+        to={slugify(product.checkbox.title)}
+        spy={true}
+        smooth={true}
+        offset={-600}
+        duration={500}
+        isDynamic
+      >
+        <Checkbox
+          product={product}
+          toggleProducts={toggleProducts}
+          sticky={sticky}
+        />
+      </ScrollLink>
+    );
+  } else {
+    return (
+      <div
+        className="checkbox"
+        onClick={toggleProducts.bind(this, product, sticky)}
+      >
+        <Checkbox
+          product={product}
+          toggleProducts={toggleProducts}
+          sticky={sticky}
+        />
+      </div>
+    );
+  }
 };

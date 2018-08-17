@@ -25,20 +25,18 @@ export default class indexPage extends React.Component {
     this.setState({ sticky: scrollY > 300 });
   };
 
-  toggleProducts = (product, sticky) => {
+  toggleProducts = (product, sticky, e) => {
     if (!sticky) {
       let count = this.state.products.reduce((acc, p) => {
-        acc =
-          acc < p.node.frontmatter.checkbox.visible
-            ? p.node.frontmatter.checkbox.visible
-            : acc;
+        p.node.frontmatter.checkbox.visible && acc++;
         return acc;
       }, 0);
 
       let newProducts = this.state.products.map((p, k) => {
         let pData = p.node.frontmatter;
         if (pData.id == product.id) {
-          pData.checkbox.visible = pData.checkbox.visible ? 0 : count + 1;
+          pData.checkbox.visible =
+            !pData.checkbox.visible && count < 3 ? count + 1 : 0;
         }
         return p;
       });
@@ -46,6 +44,8 @@ export default class indexPage extends React.Component {
       this.setState({
         products: newProducts
       });
+    } else {
+      // this.scrollTo(this.props.to, this.props);
     }
   };
 
