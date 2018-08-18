@@ -26,8 +26,7 @@ export default class indexPage extends React.Component {
   componentDidMount() {
     window.addEventListener(
       'scroll',
-      debounce(this.handleScroll, 25, { leading: false, trailing: true })
-      // this.handleScroll
+      debounce(this.handleScroll, 25, { leading: true, trailing: true })
     );
   }
 
@@ -37,7 +36,7 @@ export default class indexPage extends React.Component {
 
     this.setState({
       scroll: {
-        resizeHeader: scrollY > 200,
+        resizeHeader: scrollY > 0,
         transitionCheckboxes: scrollY > 400
       }
     });
