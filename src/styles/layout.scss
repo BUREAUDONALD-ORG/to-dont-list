@@ -7,7 +7,7 @@
 @mixin block {
   display: flex;
   width: 100%;
-  max-width: 1200px;
+  max-width: 1250px;
   padding: $two $side-padding;
 }
 
@@ -21,9 +21,6 @@
 
 .layout__header-container {
   @include block-container;
-  position: sticky;
-  top: 0;
-  z-index: 100;
   width: 100%;
   height: 120rem;
 
@@ -34,13 +31,30 @@
   background: $night;
 }
 
+// Here to fix a small issue with fast scrolling
+.layout__header-container::before {
+  position: fixed;
+  top: -1px;
+  z-index: 99;
+  height: 26rem;
+  width: 100%;
+  background: $night;
+  content: '';
+}
+// endfix
+
 .layout__header-container[data-size='small'] {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   justify-content: flex-end;
   top: -94rem;
 }
 
 .layout__header {
   @include block;
+  position: relative;
+  z-index: 100;
   justify-content: space-between;
 }
 
@@ -58,7 +72,7 @@
   @include block-container;
   position: sticky;
   top: 25rem;
-  z-index: 5;
+  z-index: 95;
   width: 100%;
   background: $complementary;
 }
@@ -76,7 +90,8 @@
 
 .layout__product-container {
   @include block-container;
-
+  position: relative;
+  background: $day;
   min-height: 50vh;
 }
 

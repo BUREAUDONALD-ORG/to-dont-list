@@ -14,10 +14,6 @@
   color: $day;
 }
 
-.navbar[data-sticky='true'] {
-  opacity: visible;
-}
-
 .navbar__item--active {
   background: $day;
   .navbar__item-title {

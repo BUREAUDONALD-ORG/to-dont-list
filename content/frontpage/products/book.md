@@ -3,8 +3,8 @@ id: 1
 title: "Book"
 timeToRead: 4
 images:
-  default: "../../../static/img/book-1-compressed-ultra.png"
-  diapositive: "../../../static/img/book-1-compressed-ultra.png"
+  default: "../../../static/img/vertical.jpg"
+  diapositive: "../../../static/img/vertical.jpg"
 checkbox:
   title: "Don\u2019t Read \nThis Book"
   text: "Book"

@@ -9,6 +9,7 @@ import NavItem from '../components/Nav-item.js';
 import Checkbox from '../components/Checkbox.js';
 import Product from '../components/Product.js';
 import Button from '../components/Button.js';
+import Form from '../components/Form.js';
 
 import line from '../../static/img/line.png';
 import lineHz from '../../static/img/line-hz.png';
@@ -25,8 +26,8 @@ export default class indexPage extends React.Component {
   componentDidMount() {
     window.addEventListener(
       'scroll',
-      debounce(this.handleScroll, 24, { leading: true, trailing: true })
-      // throttle(this.handleScroll, 50)
+      debounce(this.handleScroll, 25, { leading: false, trailing: true })
+      // this.handleScroll
     );
   }
 
@@ -41,8 +42,8 @@ export default class indexPage extends React.Component {
     count &&
       this.setState({
         scroll: {
-          resizeHeader: scrollY > 50,
-          transitionCheckboxes: scrollY > 300
+          resizeHeader: scrollY > 200,
+          transitionCheckboxes: scrollY > 400
         }
       });
   };
@@ -98,6 +99,7 @@ export default class indexPage extends React.Component {
     // console.log(this.timeToRead());
     let products = this.state.products;
     let siteData = this.props.data.site.edges[0].node.frontmatter;
+    let formData = this.props.data.form.edges[0].node.frontmatter;
     return (
       <div className="layout__page-container">
         <header
@@ -208,6 +210,66 @@ export default class indexPage extends React.Component {
             })}
           </AnimationGroup>
         </div>
+
+        <Form data={formData} />
+
+        <div className="layout__social-container">
+          <div className="layout__social">
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={siteData.hashtag.link}
+              className="social__hashtag"
+            >
+              <img
+                src={siteData.hashtag.image.relativePath}
+                alt="#ToDontList"
+                className="social__hashtag"
+              />
+            </a>
+            <div className="social__text-container">
+              <p className="social__text">{siteData.socialText[0]}</p>
+              <p className="social__text">{siteData.socialText[1]}</p>
+            </div>
+            <div className="button__container">
+              {siteData.socialbtn.map((btn, key) => {
+                return (
+                  <a
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    href={btn.link}
+                    key={key}
+                    className="button"
+                  >
+                    <img
+                      className="button__img"
+                      src={btn.image.relativePath}
+                      role="presentation"
+                    />
+                    <img
+                      className="button__img button__img--hover"
+                      src={btn.imageInverse.relativePath}
+                      role="presentation"
+                    />
+                    <h1 className="button__text">{btn.text}</h1>
+                  </a>
+                );
+              })}
+              <div className="social__placeholder" />
+            </div>
+          </div>
+        </div>
+        <div className="layout__credits-container">
+          <div className="layout__credits">
+            <h1 className="credits__title">{siteData.creditsTitle}</h1>
+            <div
+              className="credits__text"
+              dangerouslySetInnerHTML={{
+                __html: this.props.data.site.edges[0].node.html
+              }}
+            />
+          </div>
+        </div>
       </div>
     );
   }
@@ -236,7 +298,27 @@ export const productQuery = graphql`
               title
               footer
             }
+            hashtag {
+              link
+              alt
+              image {
+                relativePath
+              }
+            }
+            socialbtn {
+              text
+              link
+              image {
+                relativePath
+              }
+              imageInverse {
+                relativePath
+              }
+            }
+            socialText
+            creditsTitle
           }
+          html
         }
       }
     }
@@ -276,6 +358,26 @@ export const productQuery = graphql`
               }
             }
             layout
+          }
+        }
+      }
+    }
+    form: allMarkdownRemark(
+      filter: { id: { regex: "//content/frontpage/site/form.md/" } }
+    ) {
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            fields {
+              text
+            }
+            ccField
+            submit
+            submitResponse
+            submitExpandedResponse
+            mailTo
           }
         }
       }

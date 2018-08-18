@@ -1,15 +1,10 @@
-.product__block {
-  padding: 0 $side-padding;
-}
-
 .product__content {
   margin-left: calc(33.33% - #{$unit});
   background-color: $day;
   position: relative;
   height: 100%;
-  padding: $unit * 8 0 $unit * 4 $unit;
+  padding: $unit * 4 0 $unit * 4 $unit;
   width: calc(66.66% + #{$unit});
-  z-index: 2;
 }
 
 .product__title {
@@ -20,26 +15,24 @@
 .product__image {
   position: absolute;
   left: 0;
-  z-index: 1;
   width: 50%;
 }
 
-.product[data-layout='horizontal-left'] {
+.layout__product-container[data-layout='horizontal-left'] {
   .product__content {
     margin-left: unset;
     margin-right: calc(33.33% - #{$unit});
-    padding: $unit * 8 $unit $unit * 8 0;
+    padding: $unit * 4 $unit $unit * 8 0;
   }
 
   .product__image {
     left: unset;
     right: 0;
-    z-index: 1;
     width: 50%;
   }
 }
 
-.product[data-layout='vertical'] {
+.layout__product-container[data-layout='vertical'] {
   display: flex;
   flex-direction: column;
   align-items: center;
