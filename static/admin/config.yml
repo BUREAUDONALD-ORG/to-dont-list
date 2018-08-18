@@ -115,3 +115,6 @@ collections:
           - label: "Visual top, content bottem"
             value: "vertical"
         default: "horizontal-right"
+      - label: "Body Text"
+        name: "body"
+        widget: "markdown"

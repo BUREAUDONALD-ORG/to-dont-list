@@ -120,6 +120,7 @@
 
 .layout__product {
   @include block;
+  background: $day;
   padding-top: 0;
   padding-bottom: 0;
 }
