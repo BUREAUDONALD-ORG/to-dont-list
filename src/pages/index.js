@@ -34,18 +34,13 @@ export default class indexPage extends React.Component {
   handleScroll = e => {
     // console.log('handling');
     let scrollY = window.scrollY;
-    let count = this.state.products.reduce((acc, p) => {
-      p.node.frontmatter.checkbox.visible && acc++;
-      return acc;
-    }, 0);
 
-    count &&
-      this.setState({
-        scroll: {
-          resizeHeader: scrollY > 200,
-          transitionCheckboxes: scrollY > 400
-        }
-      });
+    this.setState({
+      scroll: {
+        resizeHeader: scrollY > 200,
+        transitionCheckboxes: scrollY > 400
+      }
+    });
   };
 
   toggleProducts = (product, sticky, e) => {

@@ -48,7 +48,7 @@ export default class Form extends React.Component {
     let form = this.props.data;
     return (
       <div id="mail" className="layout__form-container">
-        <form className="layout__form" onSubmit={this.submitEmail}>
+        <form className="layout__form">
           <div className="form__header">
             <div className="form__title">{form.title}</div>
             <img className="form__arrow" src={arrow} alt="arrow" />
@@ -71,13 +71,11 @@ export default class Form extends React.Component {
               </div>
             ))}
             <div className="form__submit-container">
-              <input
-                className="form__submit"
-                type="submit"
-                value={
-                  this.state.isSubmitted ? form.submitResponse : form.submit
-                }
-              />
+              <a className="btn" type="submit" onClick={this.submitEmail}>
+                <p className="btn__text">
+                  {this.state.isSubmitted ? form.submitResponse : form.submit}
+                </p>
+              </a>
               {this.state.isSubmitted && (
                 <p className="form__submit-text">
                   {form.submitExpandedResponse}

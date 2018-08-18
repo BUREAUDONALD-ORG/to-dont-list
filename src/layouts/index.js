@@ -55,8 +55,6 @@ export const layoutQuery = graphql`
               tagName
             }
             siteTitle
-
-            creditsTitle
           }
         }
       }
