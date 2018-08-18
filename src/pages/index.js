@@ -34,7 +34,7 @@ export default class indexPage extends React.Component {
       return acc;
     }, 0);
 
-    count && this.setState({ sticky: scrollY > 200 });
+    count && this.setState({ sticky: scrollY > 50 });
   };
 
   toggleProducts = (product, sticky, e) => {
