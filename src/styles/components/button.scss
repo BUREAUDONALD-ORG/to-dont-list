@@ -92,6 +92,8 @@
 }
 
 .btn[data-diapositive='true'] {
+  background: white;
+
   .btn__text {
     color: $night;
   }
