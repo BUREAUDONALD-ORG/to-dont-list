@@ -163,28 +163,30 @@ export default class indexPage extends React.Component {
             transitionEnterTimeout={500}
             transitionLeaveTimeout={500}
           >
-            {this.selectedProducts().map(product => {
+            {this.selectedProducts().map((product, key) => {
+              let frontmatter = product.node.frontmatter;
+              let diapositive = key === 1;
               return (
                 <div
-                  id={slugify(product.node.frontmatter.checkbox.title)}
-                  key={product.node.frontmatter.id}
-                  data-layout={product.node.frontmatter.layout}
+                  id={slugify(frontmatter.checkbox.title)}
+                  key={frontmatter.id}
+                  data-layout={frontmatter.layout}
+                  data-diapositive={diapositive}
                   className="layout__product-container"
                 >
                   <div className="product__image">
                     <Img
                       sizes={
-                        product.node.frontmatter.images.default.childImageSharp
-                          .sizes
+                        !diapositive
+                          ? frontmatter.images.default.childImageSharp.sizes
+                          : frontmatter.images.diapositive.childImageSharp.sizes
                       }
                     />
                   </div>
                   <div className="layout__product">
                     <div className="product__content">
                       <pre>
-                        <h1 className="product__title">
-                          {product.node.frontmatter.title}
-                        </h1>
+                        <h1 className="product__title">{frontmatter.title}</h1>
                       </pre>
                       <div
                         className="markdown"
@@ -192,7 +194,11 @@ export default class indexPage extends React.Component {
                           __html: product.node.html
                         }}
                       />
-                      <Button text={product.node.frontmatter.button.text} />
+                      <Button
+                        text={frontmatter.button.text}
+                        position={key}
+                        diapositive={diapositive}
+                      />
                     </div>
                   </div>
                 </div>

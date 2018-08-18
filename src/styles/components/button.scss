@@ -90,3 +90,9 @@
 .btn[data-size='large'] {
   width: 33%;
 }
+
+.btn[data-diapositive='true'] {
+  .btn__text {
+    color: $night;
+  }
+}

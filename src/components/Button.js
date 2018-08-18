@@ -2,9 +2,14 @@ import React from 'react';
 
 import arrow from '../../static/img/arrow.png';
 
-const Button = ({ text, size, link }) => {
+const Button = ({ text, size, link, diapositive }) => {
   return (
-    <a className="btn" href={link} data-size={size}>
+    <a
+      className="btn"
+      href={link}
+      data-size={size}
+      data-diapositive={diapositive}
+    >
       <p className="btn__text">{text}</p>
     </a>
   );
@@ -19,7 +24,7 @@ const ButtonPoint = ({ text, link }) => {
   );
 };
 
-export default ({ type, text }) => {
-  if (type === 'point') return <ButtonPoint text={text} />;
-  return <Button text={text} size="large" />;
+export default props => {
+  if (props.type === 'point') return <ButtonPoint text={text} />;
+  return <Button {...props} />;
 };

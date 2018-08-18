@@ -49,6 +49,19 @@
   }
 }
 
+.layout__product-container[data-diapositive='true'] {
+  background: $night;
+  .product__content {
+    background: $night;
+    .product__title {
+      color: $day;
+    }
+    .markdown {
+      color: $day;
+    }
+  }
+}
+
 @media (min-width: 0px) and (max-width: 600px) {
   .layout__product-container.layout__product-container {
     display: flex;
