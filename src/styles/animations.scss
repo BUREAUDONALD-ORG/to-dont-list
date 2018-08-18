@@ -1,5 +1,6 @@
 // Button animations
 .slide-enter {
+  min-height: 0;
   max-height: 0;
 }
 
@@ -9,10 +10,12 @@
 }
 
 .slide-leave {
+  min-height: 0;
   max-height: 100vh;
 }
 
 .slide-leave.slide-leave-active {
+  min-height: 0;
   max-height: 0;
   transition: all 500ms linear;
 }

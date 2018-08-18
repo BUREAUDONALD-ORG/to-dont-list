@@ -4,38 +4,38 @@
   justify-content: space-between;
   width: 50%;
   padding: 10rem 0;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s linear;
   overflow: hidden;
 }
 
 .header__title {
   @include t--title;
   color: $day;
-  transition: all 0.1s ease-out;
+  transition: all 0.1s linear;
 }
 
 .header__line {
   display: block;
   height: 100rem;
   padding: 0 $unit;
-  transition: all 0.5s ease-out;
+  transition: all 0.3s linear;
 }
 
 .header__line-hz {
   display: none;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s linear;
 }
 
 .header__subtitle {
   @include t--subtitle;
   color: $complementary;
-  transition: all 0.1s ease-out;
+  transition: all 0.1s linear;
 }
 
 .header__author {
   @include t--x-small;
   color: $day;
-  transition: all 0.5s ease-out;
+  transition: all 0.5s linear;
 }
 
 .header__author:hover a {

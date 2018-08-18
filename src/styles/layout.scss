@@ -32,15 +32,15 @@
 }
 
 // Here to fix a small issue with fast scrolling
-// .layout__header-container::before {
-//   position: fixed;
-//   top: -1px;
-//   z-index: 99;
-//   height: 26rem;
-//   width: 100%;
-//   background: $night;
-//   content: '';
-// }
+.layout__header-container::before {
+  position: fixed;
+  top: -1px;
+  z-index: 99;
+  height: 26rem;
+  width: 100%;
+  background: $night;
+  content: '';
+}
 // endfix
 
 .layout__header-container[data-size='small'] {
@@ -111,7 +111,9 @@
   @include block-container;
   position: relative;
   background: $day;
-  min-height: 50vh;
+  overflow: hidden;
+
+  transition: all 300ms linear;
 }
 
 .layout__product {
