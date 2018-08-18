@@ -71,7 +71,7 @@ collections:
               - {label: "Field Text", name: "text", widget: "string"}
           - {label: "ccField", name: "ccField", widget: "text"}
           - {label: "Submit", name: "submit", widget: "string"}
-          - {label: "submitResponse", name: "submitResponse", widget: "string"}
+          - {label: "Submit Button After Submit", name: "submitResponse", widget: "string"}
           - {label: "submitExpandedResponse", name: "submitExpandedResponse", widget: "string"}
           - {label: "mailTo", name: "mailTo", widget: "string"}
 
