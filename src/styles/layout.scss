@@ -32,20 +32,19 @@
 }
 
 // Here to fix a small issue with fast scrolling
-.layout__header-container::before {
-  position: fixed;
-  top: -1px;
-  z-index: 99;
-  height: 26rem;
-  width: 100%;
-  background: $night;
-  content: '';
-}
+// .layout__header-container::before {
+//   position: fixed;
+//   top: -1px;
+//   z-index: 99;
+//   height: 26rem;
+//   width: 100%;
+//   background: $night;
+//   content: '';
+// }
 // endfix
 
 .layout__header-container[data-size='small'] {
   position: sticky;
-  top: 0;
   z-index: 100;
   justify-content: flex-end;
   top: -94rem;
@@ -56,6 +55,20 @@
   position: relative;
   z-index: 100;
   justify-content: space-between;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .layout__header-container {
+    height: 200rem;
+  }
+
+  .layout__header-container[data-size='small'] {
+    top: -160rem;
+  }
+
+  .layout__header {
+    flex-direction: column;
+  }
 }
 
 .layout__checkboxes-container {
@@ -81,6 +94,12 @@
   @include block;
   display: flex;
   justify-content: space-between;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .layout__navbar-container {
+    top: 39rem;
+  }
 }
 
 .layout__products-container {
@@ -125,7 +144,7 @@
 
 .layout__credits-container {
   @include block-container;
-  padding: $two $side-padding $unit * 5;
+  padding-bottom: $unit * 5;
   background: $night;
 }
 

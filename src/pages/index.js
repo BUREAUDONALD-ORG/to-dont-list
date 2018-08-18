@@ -49,27 +49,23 @@ export default class indexPage extends React.Component {
   };
 
   toggleProducts = (product, sticky, e) => {
-    if (!sticky) {
-      let count = this.state.products.reduce((acc, p) => {
-        p.node.frontmatter.checkbox.visible && acc++;
-        return acc;
-      }, 0);
+    let count = this.state.products.reduce((acc, p) => {
+      p.node.frontmatter.checkbox.visible && acc++;
+      return acc;
+    }, 0);
 
-      let newProducts = this.state.products.map((p, k) => {
-        let pData = p.node.frontmatter;
-        if (pData.id == product.id) {
-          pData.checkbox.visible =
-            !pData.checkbox.visible && count < 3 ? count + 1 : 0;
-        }
-        return p;
-      });
+    let newProducts = this.state.products.map((p, k) => {
+      let pData = p.node.frontmatter;
+      if (pData.id == product.id) {
+        pData.checkbox.visible =
+          !pData.checkbox.visible && count < 3 ? count + 1 : 0;
+      }
+      return p;
+    });
 
-      this.setState({
-        products: newProducts
-      });
-    } else {
-      // this.scrollTo(this.props.to, this.props);
-    }
+    this.setState({
+      products: newProducts
+    });
   };
 
   timeToRead = () => {
