@@ -5,6 +5,7 @@ import slugify from 'slugify';
 import Img from 'gatsby-image';
 import { throttle, debounce } from 'lodash';
 
+import NavItem from '../components/Nav-item.js';
 import Checkbox from '../components/Checkbox.js';
 import Product from '../components/Product.js';
 import Button from '../components/Button.js';
@@ -15,7 +16,10 @@ import lineHz from '../../static/img/line-hz.png';
 export default class indexPage extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { products: this.props.data.products.edges };
+    this.state = {
+      products: this.props.data.products.edges,
+      scroll: { resizeHeader: false, transitionCheckboxes: false }
+    };
   }
 
   componentDidMount() {
@@ -27,14 +31,20 @@ export default class indexPage extends React.Component {
   }
 
   handleScroll = e => {
-    console.log('handling');
+    // console.log('handling');
     let scrollY = window.scrollY;
     let count = this.state.products.reduce((acc, p) => {
       p.node.frontmatter.checkbox.visible && acc++;
       return acc;
     }, 0);
 
-    count && this.setState({ sticky: scrollY > 50 });
+    count &&
+      this.setState({
+        scroll: {
+          resizeHeader: scrollY > 50,
+          transitionCheckboxes: scrollY > 300
+        }
+      });
   };
 
   toggleProducts = (product, sticky, e) => {
@@ -91,10 +101,10 @@ export default class indexPage extends React.Component {
     return (
       <div className="layout__page-container">
         <header
-          data-sticky={this.state.sticky}
-          className="layout__header header__container"
+          data-size={this.state.scroll.resizeHeader ? 'small' : 'large'}
+          className="layout__header-container"
         >
-          <div className="layout__block header">
+          <div className="layout__header">
             <div className="header__section">
               <pre>
                 <h1 className="header__title">{siteData.siteTitle}</h1>
@@ -119,51 +129,43 @@ export default class indexPage extends React.Component {
               </h4>
             </div>
           </div>
-          <div className="layout__block-container layout__checkboxes">
-            <div className="layout__block">
-              <h2 className="checkboxes__title" data-sticky={this.state.sticky}>
+        </header>
+
+        <div className="layout__products-container">
+          <div className="layout__checkboxes-container">
+            <div className="layout__checkboxes" data-sticky={this.state.sticky}>
+              <h2 className="checkboxes__title">
                 {
                   this.props.data.site.edges[0].node.frontmatter.checkboxes
                     .title
                 }
               </h2>
-              <div
-                className="checkboxes__container"
-                data-sticky={this.state.sticky}
-              >
+              <div className="checkboxes__container">
                 {products.map((product, key) => {
                   return (
                     <Checkbox
                       key={key}
-                      sticky={this.state.sticky}
                       product={product.node.frontmatter}
                       toggleProducts={this.toggleProducts}
                     />
                   );
                 })}
               </div>
-
-              {/* <AnimationGroup
-                transitionName="slide"
-                transitionEnterTimeout={500}
-                transitionLeaveTimeout={500}
-              >
-                {this.showScroll() && (
-                  <Button
-                    className="btn"
-                    type="point"
-                    text={
-                      this.props.data.site.edges[0].node.frontmatter
-                        .checkboxesFooter
-                    }
-                  />
-                )}
-              </AnimationGroup> */}
             </div>
           </div>
-        </header>
-
-        <div className="layout__products" data-sticky={this.state.sticky}>
+          <div className="layout__navbar-container">
+            <div className="layout__navbar" data-sticky={this.state.sticky}>
+              {this.selectedProducts().map((product, key) => {
+                return (
+                  <NavItem
+                    key={key}
+                    product={product.node.frontmatter}
+                    toggleProducts={this.toggleProducts}
+                  />
+                );
+              })}
+            </div>
+          </div>
           <AnimationGroup
             transitionName="slide"
             transitionEnterTimeout={500}
@@ -175,7 +177,7 @@ export default class indexPage extends React.Component {
                   id={slugify(product.node.frontmatter.checkbox.title)}
                   key={product.node.frontmatter.id}
                   data-layout={product.node.frontmatter.layout}
-                  className="layout__product-container product"
+                  className="layout__product-container"
                 >
                   <div className="product__image">
                     <Img
@@ -185,7 +187,7 @@ export default class indexPage extends React.Component {
                       }
                     />
                   </div>
-                  <div className="layout__block product__block">
+                  <div className="layout__product">
                     <div className="product__content">
                       <pre>
                         <h1 className="product__title">
@@ -280,3 +282,23 @@ export const productQuery = graphql`
     }
   }
 `;
+
+{
+  /* <AnimationGroup
+                transitionName="slide"
+                transitionEnterTimeout={500}
+                transitionLeaveTimeout={500}
+              >
+                {this.showScroll() && (
+                  <Button
+                    className="btn"
+                    type="point"
+                    text={
+                      this.props.data.site.edges[0].node.frontmatter
+                        .checkboxesFooter
+                    }
+                  />
+                )}
+              </AnimationGroup>
+} */
+}

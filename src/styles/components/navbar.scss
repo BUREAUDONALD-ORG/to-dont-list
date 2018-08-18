@@ -1,0 +1,26 @@
+.navbar__item-container {
+  width: calc(33% - #{2 / 3 * $unit});
+  padding: $unit;
+
+  background-color: $complementary;
+  color: $day;
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+}
+
+.navbar__item-title {
+  @include t--small;
+  color: $day;
+}
+
+.navbar[data-sticky='true'] {
+  opacity: visible;
+}
+
+.navbar__item--active {
+  background: $day;
+  .navbar__item-title {
+    color: $night;
+  }
+}

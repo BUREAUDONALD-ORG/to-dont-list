@@ -38,8 +38,8 @@ class Layout extends React.Component {
         <div className="layout__app">
           {this.props.children()}
           <Form data={formData} />
-          <div className="layout__block-container layout__social">
-            <div className="layout__block social">
+          <div className="layout__social-container">
+            <div className="layout__social">
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -84,8 +84,8 @@ class Layout extends React.Component {
               </div>
             </div>
           </div>
-          <div className="layout__block-container layout__credits">
-            <div className="layout__block credits">
+          <div className="layout__credits-container">
+            <div className="layout__credits">
               <h1 className="credits__title">{siteData.creditsTitle}</h1>
               <div
                 className="credits__text"

@@ -1,59 +1,47 @@
-.header__container {
-}
-
-.header {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  transition: all 0.5s ease;
-}
-
 .header__section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 50%;
   padding: 10rem 0;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-out;
 }
 
 .header__title {
   @include t--title;
   color: $day;
-  transition: all 0.1s linear;
+  transition: all 0.1s ease-out;
 }
 
 .header__line {
   display: block;
   height: 100rem;
   padding: 0 $unit;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease-out;
 }
 
 .header__line-hz {
   display: none;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-out;
 }
 
 .header__subtitle {
   @include t--subtitle;
   color: $complementary;
-  transition: all 0.1s linear;
+  transition: all 0.1s ease-out;
 }
 
 .header__author {
   @include t--x-small;
   color: $day;
-  transition: all 0.5s ease;
+  transition: all 0.5s ease-out;
 }
 
 .header__author:hover a {
   border-bottom: 0.5rem solid $day;
-  transition: all 0.5s ease;
 }
 
-.header__container[data-sticky='true'] {
+.layout__header-container[data-size='small'] {
   width: 100%;
 
   .header__section {

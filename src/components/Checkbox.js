@@ -25,38 +25,16 @@ const Checkbox = ({ product, toggleProducts, sticky }) => {
 };
 
 export default ({ product, toggleProducts, sticky }) => {
-  if (sticky) {
-    return (
-      <ScrollLink
-        className="checkbox"
-        data-checked={product.checkbox.visible}
-        activeClass="checkbox__active"
-        to={slugify(product.checkbox.title)}
-        spy={true}
-        smooth={true}
-        offset={-600}
-        duration={500}
-        isDynamic
-      >
-        <Checkbox
-          product={product}
-          toggleProducts={toggleProducts}
-          sticky={sticky}
-        />
-      </ScrollLink>
-    );
-  } else {
-    return (
-      <div
-        className="checkbox"
-        onClick={toggleProducts.bind(this, product, sticky)}
-      >
-        <Checkbox
-          product={product}
-          toggleProducts={toggleProducts}
-          sticky={sticky}
-        />
-      </div>
-    );
-  }
+  return (
+    <div
+      className="checkbox"
+      onClick={toggleProducts.bind(this, product, sticky)}
+    >
+      <Checkbox
+        product={product}
+        toggleProducts={toggleProducts}
+        sticky={sticky}
+      />
+    </div>
+  );
 };
