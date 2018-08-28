@@ -95,8 +95,8 @@ collections:
               name: "images"
               widget: "object"
               fields:
-                - {label: "Image", name: "image", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
-                - {label: "Inversed Image", name: "imageInverse", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
+                - {label: "Default", name: "normal", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
+                - {label: "Diapositive", name: "inverse", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
 
       - name: "credits"
         label: "Credits"
