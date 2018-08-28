@@ -298,8 +298,8 @@ export default class indexPage extends React.Component {
               />
             </a>
             <div className="social__text-container">
-              <p className="social__text">{social.text[0]}</p>
-              <p className="social__text">{social.text[1]}</p>
+              <p className="social__text">{social.text[0].line}</p>
+              <p className="social__text">{social.text[1].line}</p>
             </div>
             <div className="btn__container">
               {social.btn.map((btn, key) => {
@@ -462,7 +462,9 @@ export const productQuery = graphql`
           frontmatter {
             text
             btn {
-              text
+              text {
+                line
+              }
               link
               images {
                 normal {
