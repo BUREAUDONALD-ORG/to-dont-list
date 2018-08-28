@@ -72,8 +72,8 @@ collections:
         label: "Social Media"
         file: "content/frontpage/site/social.md"
         fields:
-        - label: "fields"
-          name: "fields"
+        - label: "Social Media Text"
+          name: "text"
           widget: "list"
           fields:
             - {label: "Line", name: "text", widget: "string"}
