@@ -37,7 +37,7 @@ class Layout extends React.Component {
             },
             {
               name: 'og:image',
-              content: head.openGraph.image.relativePath
+              content: head.openGraphImage.relativePath
             },
             {
               name: 'og:description',
@@ -75,10 +75,8 @@ export const layoutQuery = graphql`
               tagName
             }
             description
-            openGraph {
-              image {
-                relativePath
-              }
+            openGraphImage {
+              relativePath
             }
           }
         }

@@ -149,7 +149,7 @@ export default class indexPage extends React.Component {
             <img className="header__line-hz" src={lineHz} role="presentation" />
             <div className="header__section">
               <pre>
-                <h3 className="header__subtitle">{header.subTitle.large}</h3>
+                <h3 className="header__subtitle">{header.subTitle}</h3>
               </pre>
               <div className="header__contact">{header.contact.title}</div>
               <h4 className="header__author">
@@ -369,10 +369,7 @@ export const productQuery = graphql`
         node {
           frontmatter {
             title
-            subTitle {
-              large
-              small
-            }
+            subTitle
             author {
               link
               name
