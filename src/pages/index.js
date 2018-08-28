@@ -460,11 +460,11 @@ export const productQuery = graphql`
       edges {
         node {
           frontmatter {
-            text
+            text {
+              line
+            }
             btn {
-              text {
-                line
-              }
+              text
               link
               images {
                 normal {
