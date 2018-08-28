@@ -44,6 +44,10 @@
   border-bottom: $border-width solid $day;
 }
 
+.header__contact {
+  display: none;
+}
+
 .layout__header-container[data-size='small'] {
   width: 100%;
 
@@ -69,6 +73,7 @@
 
   .header__contact {
     @include t--header-3;
+    display: block;
     color: $day;
     align-self: flex-end;
     border-bottom: $border-width solid $night;
@@ -85,6 +90,7 @@
 
 @media (min-width: 0px) and (max-width: 600px) {
   .header__section {
+    padding: $unit 0;
     width: 100%;
   }
 
