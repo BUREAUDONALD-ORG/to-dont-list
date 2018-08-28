@@ -9,8 +9,9 @@ button:
   link: 'http://bureaudonald.com'
   text: Color Now
 checkbox:
-  text: Instagram
+  text: Insta
   title: ToDon'tColors
 layout: horizontal-right
 ---
+
 Instagram, check it out!

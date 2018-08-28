@@ -88,13 +88,26 @@
     width: 100%;
   }
 
+  .header__line-hz {
+    display: block;
+    width: 100%;
+  }
+
   .header__line {
     display: none;
   }
 
-  .header__line-hz {
-    display: block;
-    width: 100%;
+  .layout__header-container[data-size='small'] {
+    .header__section:last-of-type {
+      flex: 1 0 0;
+    }
+    .header__subtitle {
+      display: none;
+    }
+    .header__line-hz {
+      display: none;
+      width: 100%;
+    }
   }
 
   .header__author {

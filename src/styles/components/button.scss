@@ -3,6 +3,12 @@
   padding-top: $unit;
 }
 
+@media (min-width: 0px) and (max-width: 600px) {
+  .btn__container {
+    flex-direction: column;
+  }
+}
+
 .btn {
   display: flex;
   flex-direction: row;
@@ -13,6 +19,12 @@
   width: calc(33% - #{$unit});
   margin-right: $unit;
   cursor: pointer;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .btn {
+    width: 100%;
+  }
 }
 
 .btn__text {
@@ -45,6 +57,16 @@
   }
 }
 
+@media (min-width: 0px) and (max-width: 600px) {
+  .btn[data-type='large'] {
+    width: 100%;
+    margin-right: 0;
+    .btn__text {
+      @include t--body-black;
+    }
+  }
+}
+
 .btn[data-diapositive='true'] {
   background: white;
 
@@ -57,7 +79,7 @@
   .btn__img {
     height: $two;
     width: $two;
-    margin-right: $unit;
+    margin: 0 $unit 0 0;
   }
 
   .btn__img--hover {
@@ -75,5 +97,11 @@
 
   .btn__img--hover {
     display: block;
+  }
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .btn[data-type='image'] {
+    margin: 0 0 $unit 0;
   }
 }

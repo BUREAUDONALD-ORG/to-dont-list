@@ -7,7 +7,7 @@ images:
   diapositive: "../../../static/img/horizontal.jpg"
 checkbox:
   title: "Work\nDon\u2019t Shop"
-  text: "Workshops"
+  text: "Work"
   visible: 0
 button:
   text: "Order a Copy"

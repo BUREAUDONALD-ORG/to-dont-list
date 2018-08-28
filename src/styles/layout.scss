@@ -9,6 +9,9 @@
   width: 100%;
   max-width: $max-width;
   padding: $two $side-padding;
+  @media (min-width: 0px) and (max-width: 600px) {
+    padding: $two $side-padding-responsive;
+  }
 }
 
 .layout__app {
@@ -21,6 +24,9 @@
 
 $header-height-full: 33rem;
 $header-height-small: 7rem;
+
+$header-height-full-responsive: 38rem;
+$header-height-small-responsive: 4rem;
 
 .layout__header-container {
   @include block-container;
@@ -66,29 +72,40 @@ $header-height-small: 7rem;
   padding: $unit $side-padding;
 }
 
-// @media (min-width: 0px) and (max-width: 600px) {
-//   .layout__header-container {
-//     height: 200rem;
-//   }
-//
-//   .layout__header-container[data-size='small'] {
-//     top: -160rem;
-//   }
-//
-//   .layout__header {
-//     flex-direction: column;
-//   }
-// }
+@media (min-width: 0px) and (max-width: 600px) {
+  .layout__header-container {
+    height: $header-height-full-responsive;
+  }
+
+  .layout__header {
+    flex-direction: column;
+    padding: $unit $side-padding-responsive;
+  }
+
+  .layout__header-container[data-size='small'] {
+    top: ($header-height-full-responsive - $header-height-small-responsive) * -1;
+    .layout__header {
+      flex-direction: row;
+    }
+  }
+}
 
 .layout__checkboxes-container {
   @include block-container;
   background: $complementary;
+  padding-bottom: unset;
 }
 
 .layout__checkboxes {
   @include block;
   padding: $unit $side-padding 0;
   flex-direction: column;
+}
+
+@media (min-width: 0px) and (max-width: 600px) {
+  .layout__checkboxes {
+    padding-bottom: 0;
+  }
 }
 
 .layout__navbar-container {
@@ -110,7 +127,10 @@ $header-height-small: 7rem;
 
 @media (min-width: 0px) and (max-width: 600px) {
   .layout__navbar-container {
-    top: 39rem;
+    top: #{$header-height-small-responsive};
+  }
+  .layout__navbar {
+    padding: $unit;
   }
 }
 

@@ -49,17 +49,10 @@
 .form__submit-container {
   display: flex;
   align-items: center;
-  padding-top: $two;
 }
 
 .form__submit-text {
   @include t--header-3;
   @include row-component;
   padding-left: $unit;
-}
-
-@media (min-width: 0px) and (max-width: 600px) {
-  .form__field {
-    @include t--body;
-  }
 }

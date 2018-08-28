@@ -13,10 +13,4 @@
 
 .social__text {
   @include t--header-3;
-  padding-left: $unit;
-}
-
-.social__placeholder {
-  width: 33%;
-  margin-left: $unit;
 }

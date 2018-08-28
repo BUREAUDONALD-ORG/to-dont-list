@@ -7,7 +7,7 @@ images:
   diapositive: "../../../static/img/horizontal.jpg"
 checkbox:
   title: "Don\u2019t\n do this Game"
-  text: "Cardgame"
+  text: "Game"
   visible: 0
 button:
   text: "Order a Copy"

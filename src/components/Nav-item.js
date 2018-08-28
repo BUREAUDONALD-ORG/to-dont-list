@@ -19,6 +19,9 @@ export default ({ product, toggleProducts, sticky }) => {
       isDynamic
     >
       <h2 className="navbar__item-title">{product.checkbox.title}</h2>
+      <h2 className="navbar__item-title navbar__item-title--responsive">
+        {product.checkbox.text}
+      </h2>
     </ScrollLink>
   );
 };
