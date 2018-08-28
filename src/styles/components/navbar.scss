@@ -14,6 +14,12 @@
   position: absolute;
 }
 
+@media (min-width: 0px) and (max-width: 600px) {
+  .layout__navbar > .btn[data-type='point'] {
+    width: calc((100% - #{1rem * 2}));
+  }
+}
+
 .navbar__item:hover {
   background: $day;
   .navbar__item-title {
