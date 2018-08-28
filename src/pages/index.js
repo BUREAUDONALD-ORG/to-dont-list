@@ -5,7 +5,6 @@ import slugify from 'slugify';
 import Img from 'gatsby-image';
 import { throttle, debounce } from 'lodash';
 import stableSort from 'stable';
-import { Flipper, Flipped } from 'react-flip-toolkit';
 
 import NavItem from '../components/Nav-item.js';
 import Checkbox from '../components/Checkbox.js';
@@ -143,7 +142,7 @@ export default class indexPage extends React.Component {
           <div className="layout__header">
             <div className="header__section">
               <pre>
-                <h1 className="header__title">{header.siteTitle}</h1>
+                <h1 className="header__title">{header.title}</h1>
               </pre>
             </div>
             <img className="header__line" src={line} role="presentation" />
@@ -369,7 +368,7 @@ export const productQuery = graphql`
       edges {
         node {
           frontmatter {
-            siteTitle
+            title
             subTitle {
               large
               small

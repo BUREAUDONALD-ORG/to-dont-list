@@ -1,5 +1,5 @@
 ---
-siteTitle: |-
+title: |-
   To
   Don’t
   Co.

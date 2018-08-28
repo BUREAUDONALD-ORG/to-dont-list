@@ -1,6 +1,7 @@
 {
   "name": "to-dont-company",
-  "description": "Presentational site for all the to dont list company products",
+  "description":
+    "Presentational site for all the to dont list company products",
   "version": "1.1.3",
   "author": "Austin Green",
   "dependencies": {
@@ -26,16 +27,13 @@
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-addons-css-transition-group": "^15.6.2",
-    "react-flip-toolkit": "^4.0.2",
     "react-helmet": "^5.2.0",
     "react-scroll": "^1.7.10",
     "slugify": "^1.3.1",
     "stable": "^0.1.8",
     "uuid": "^3.2.1"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby"],
   "license": "MIT",
   "main": "n/a",
   "scripts": {
@@ -43,7 +41,8 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "serve": "gatsby serve",
-    "format": "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
+    "format":
+      "prettier --trailing-comma es5 --no-semi --single-quote --write \"{gatsby-*.js,src/**/*.js}\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
