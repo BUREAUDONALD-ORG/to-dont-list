@@ -17,10 +17,10 @@ const Button = ({ text, link, images, diapositive, size }) => {
 
 const ButtonPoint = ({ text, link }) => {
   return (
-    <a className="btn" data-type="point" href={link}>
+    <div className="btn" data-type="point" href={link}>
       <p className="btn__text">{text}</p>
       <img className="btn__arrow" src={arrow} alt="arrow" />
-    </a>
+    </div>
   );
 };
 
