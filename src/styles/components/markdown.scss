@@ -3,6 +3,7 @@
   h1 {
     @include t--header-1;
     padding: $unit 0;
+    padding-bottom: $unit;
   }
 
   h2 {

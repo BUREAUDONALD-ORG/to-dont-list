@@ -1,4 +1,4 @@
-// Button animations
+// slide animations
 .slide-enter {
   min-height: 0;
   max-height: 0;
@@ -18,4 +18,27 @@
   min-height: 0;
   max-height: 0;
   transition: all 500ms linear;
+}
+
+// line animations
+.fade-enter,
+.fade-enter * {
+  opacity: 0;
+}
+
+.fade-enter.fade-enter-active,
+.fade-enter.fade-enter-active * {
+  transition: all 500ms linear;
+  opacity: 1;
+}
+
+.fade-leave,
+.fade-leave * {
+  opacity: 1;
+}
+
+.fade-leave.fade-leave-active,
+.fade-leave.fade-leave-active * {
+  transition: all 500ms linear;
+  opacity: 0;
 }

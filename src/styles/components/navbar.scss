@@ -1,5 +1,5 @@
 .navbar__item {
-  width: calc(100% / 3 - #{$unit});
+  width: calc(100% / 3 - #{($unit * 2) / 3 });
   padding: $unit;
 
   background-color: $complementary;
@@ -9,8 +9,9 @@
   transition: all 0.4s ease;
 }
 
-.navbar__item:last-of-type {
-  width: calc(100% / 3);
+.layout__navbar > .btn[data-type='point'] {
+  width: calc((100% - #{$side-padding * 2}) / 3 - #{$unit * 2 / 3 + $two});
+  position: absolute;
 }
 
 .navbar__item:hover {

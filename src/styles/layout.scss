@@ -112,7 +112,9 @@ $header-height-small-responsive: 4.5rem;
   @include block-container;
   position: sticky;
   position: -webkit-sticky;
-  top: calc(#{$header-height-small} - 1px); // Rounding optical correction
+  top: calc(
+    #{$header-height-small + -4rem} - 1px
+  ); // Rounding optical correction
   z-index: 95;
   width: 100%;
   background: $complementary;
@@ -120,9 +122,19 @@ $header-height-small-responsive: 4.5rem;
 
 .layout__navbar {
   @include block;
+  align-items: flex-end;
+  min-height: 10rem;
   padding: 1.25rem $side-padding;
-  display: flex;
   justify-content: space-between;
+}
+
+.layout__line-container {
+  background-color: $complementary;
+}
+
+.layout__line {
+  width: 100%;
+  display: block;
 }
 
 @media (min-width: 0px) and (max-width: 600px) {

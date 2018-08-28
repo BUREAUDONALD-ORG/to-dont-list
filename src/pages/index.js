@@ -180,6 +180,7 @@ export default class indexPage extends React.Component {
                   });
                   return (
                     <Checkbox
+                      key={key}
                       product={product.node.frontmatter}
                       toggleProducts={this.toggleProducts}
                       disabled={
@@ -194,13 +195,13 @@ export default class indexPage extends React.Component {
           </div>
 
           <div className="layout__navbar-container">
-            <div className="layout__navbar">
-              {/* <AnimationGroup
-              transitionName="slide"
+            {/* <div className="layout__navbar"> */}
+            <AnimationGroup
+              transitionName="fade"
               transitionEnterTimeout={500}
               transitionLeaveTimeout={0}
               className="layout__navbar"
-            > */}
+            >
               {!this.state.scroll.showNav &&
                 this.countSelectedProducts() > 0 && (
                   <Button
@@ -219,9 +220,10 @@ export default class indexPage extends React.Component {
                     />
                   );
                 })}
-              {/* </AnimationGroup> */}
-            </div>
+            </AnimationGroup>
+            {/* </div> */}
           </div>
+
           <AnimationGroup
             transitionName="slide"
             transitionEnterTimeout={500}
@@ -269,6 +271,17 @@ export default class indexPage extends React.Component {
           </AnimationGroup>
         </div>
 
+        {this.selectedProducts() < 1 && (
+          <div className="layout__line-container">
+            <AnimationGroup
+              transitionName="fade"
+              transitionEnterTimeout={500}
+              transitionLeaveTimeout={500}
+            >
+              <img className="layout__line" src={lineHz} role="presentation" />
+            </AnimationGroup>
+          </div>
+        )}
         <Form data={form} />
 
         <div className="layout__social-container">
@@ -318,17 +331,26 @@ export default class indexPage extends React.Component {
                 })}
                 {credits.partnersText}
                 {credits.partners.map((partner, key) => {
-                  return (
-                    <a
-                      target="_blank"
-                      key={key}
-                      rel="noopener noreferrer"
-                      href={partner.link}
-                    >
-                      {partner.name}
-                      {key === credits.partners.length - 1 ? '. ' : ', '}
-                    </a>
-                  );
+                  if (partner.link) {
+                    return (
+                      <a
+                        target="_blank"
+                        key={key}
+                        rel="noopener noreferrer"
+                        href={partner.link}
+                      >
+                        {partner.name}
+                        {key === credits.partners.length - 1 ? '. ' : ', '}
+                      </a>
+                    );
+                  } else {
+                    return (
+                      <span key={key}>
+                        {partner.name}
+                        {key === credits.partners.length - 1 ? '. ' : ', '}
+                      </span>
+                    );
+                  }
                 })}
               </p>
             </div>
