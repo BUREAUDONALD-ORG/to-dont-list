@@ -72,7 +72,11 @@ collections:
         label: "Social Media"
         file: "content/frontpage/site/social.md"
         fields:
-        - {label: "Tussentext", name: "text", widget: "text"}
+        - label: "fields"
+          name: "fields"
+          widget: "list"
+          fields:
+            - {label: "Line", name: "text", widget: "string"}
         - label: "Hashtag Properties"
           name: "hashtag"
           widget: "object"
@@ -94,25 +98,25 @@ collections:
                 - {label: "Image", name: "image", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
                 - {label: "Inversed Image", name: "imageInverse", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
 
-        - name: "credits"
-          label: "Credits"
-          file: "content/frontpage/site/credits.md"
-          fields:
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Authors text", name: "authorsText", widget: "string"}
-            - label: "Authors"
-              name: "authors"
-              widget: "list"
-              fields:
-                - {label: "Name", name: "name", widget: "string"}
-                - {label: "Link", name: "link", widget: "string"}
-            - {label: "Partners text", name: "partnersText", widget: "string"}
-            - label: "Partners"
-              name: "partners"
-              widget: "list"
-              fields:
-                - {label: "Name", name: "name", widget: "string"}
-                - {label: "Link", name: "link", widget: "string"}
+      - name: "credits"
+        label: "Credits"
+        file: "content/frontpage/site/credits.md"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Authors text", name: "authorsText", widget: "string"}
+          - label: "Authors"
+            name: "authors"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Link", name: "link", widget: "string"}
+          - {label: "Partners text", name: "partnersText", widget: "string"}
+          - label: "Partners"
+            name: "partners"
+            widget: "list"
+            fields:
+              - {label: "Name", name: "name", widget: "string"}
+              - {label: "Link", name: "link", widget: "string"}
 
   - name: "products"
     label: "Product"
