@@ -18,7 +18,7 @@ collections:
         fields:
           - {label: "Head Title", name: "title", widget: "string"}
           - label: "SEO Tags"
-            name: "headTags"
+            name: "tags"
             widget: "list"
             fields:
               - {label: "Tag", name: "tagName", widget: "string"}
@@ -29,8 +29,8 @@ collections:
         label: "Header"
         file: "content/frontpage/site/header.md"
         fields:
-          - {label: "Header Title", name: "title", widget: "string"}
-          - {label: "subTitle", name: "subTitle", widget: "string"}
+          - {label: "Header Title", name: "title", widget: "text"}
+          - {label: "Sub Title", name: "subTitle", widget: "text"}
           - label: "Author"
             name: "author"
             widget: "object"
@@ -72,16 +72,16 @@ collections:
         label: "Social Media"
         file: "content/frontpage/site/social.md"
         fields:
-        - {label: "Tussentext", name: "text", widget: "list"}
-        - label: "Hashtag"
+        - {label: "Tussentext", name: "text", widget: "text"}
+        - label: "Hashtag Properties"
           name: "hashtag"
           widget: "object"
           fields:
             - { label: "Hovertext (Alt)", name: "alt", widget: "string" }
             - { label: "Link", name: "link", widget: "string" }
             - { label: "Image", name: "image", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
-        - label: "btn"
-          name: "socialbtn"
+        - label: "Social Media Buttons"
+          name: "btn"
           create: false
           widget: "list"
           fields:
@@ -94,9 +94,9 @@ collections:
                 - {label: "Image", name: "image", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
                 - {label: "Inversed Image", name: "imageInverse", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
 
-        - name: "social"
-          label: "Social Media"
-          file: "content/frontpage/site/social.md"
+        - name: "credits"
+          label: "Credits"
+          file: "content/frontpage/site/credits.md"
           fields:
             - {label: "Title", name: "title", widget: "string"}
             - {label: "Authors text", name: "authorsText", widget: "string"}
