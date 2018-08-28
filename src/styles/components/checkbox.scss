@@ -4,7 +4,16 @@
   justify-content: space-between;
   width: 100%;
   max-width: $max-width;
-  transition: all 0.4s ease;
+  transition: all 0.5s ease;
+}
+
+.checkbox {
+  width: calc(50% - #{$half});
+  margin: 0 0 $unit 0;
+  padding: $half $unit;
+  background: $day;
+  cursor: pointer;
+  transition: all 0.5s ease;
 }
 
 .checkboxes__title {
@@ -14,24 +23,18 @@
   padding: $unit 0 $two 0;
 }
 
-.checkbox {
-  width: calc(50% - #{$half});
-  margin: 0 0 $unit 0;
-  padding: $half $unit;
-  background: $day;
-  transition: all 0.4s ease;
-  cursor: pointer;
-}
-
 .checkbox__input {
   width: 0;
   opacity: 0;
   position: absolute;
 }
 
-.checkbox__label::before {
+.checkbox__icon-container {
   content: '';
-  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   cursor: pointer;
 
   height: $two;
@@ -41,7 +44,7 @@
   border: $border-width solid $complementary;
 }
 
-.checkbox__label[disabled]::before {
+.checkbox__label[disabled] .checkbox__icon-container {
   border: $border-width dashed $complementary;
   background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="30" width="100" height="100" fill="#{$complementary}"/></svg>');
 
@@ -51,9 +54,10 @@
   background-repeat: no-repeat;
 }
 
-.checkbox__input:checked + label::before {
+.checkbox__input:checked + label .checkbox__number {
   content: '';
-  background-color: $complementary;
+  @include t--header-3;
+  color: $complementary;
 }
 
 .checkbox__label {

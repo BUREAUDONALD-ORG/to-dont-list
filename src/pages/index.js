@@ -4,6 +4,8 @@ const AnimationGroup = ReactCSSTransitionGroup;
 import slugify from 'slugify';
 import Img from 'gatsby-image';
 import { throttle, debounce } from 'lodash';
+import stableSort from 'stable';
+import { Flipper, Flipped } from 'react-flip-toolkit';
 
 import NavItem from '../components/Nav-item.js';
 import Checkbox from '../components/Checkbox.js';
@@ -19,6 +21,9 @@ export default class indexPage extends React.Component {
     super(props);
     this.state = {
       products: this.props.data.products.edges,
+      initialProducts: JSON.parse(
+        JSON.stringify(this.props.data.products.edges)
+      ),
       scroll: { resizeHeader: false, transitionCheckboxes: false }
     };
   }
@@ -46,13 +51,53 @@ export default class indexPage extends React.Component {
   toggleProducts = (product, sticky, e) => {
     let count = this.countSelectedProducts();
 
+    // do simple
     let newProducts = this.state.products.map((p, k) => {
       let pData = p.node.frontmatter;
       if (pData.id == product.id) {
-        pData.checkbox.visible =
-          !pData.checkbox.visible && count < 3 ? count + 1 : 0;
+        if (!pData.checkbox.visible && count < 3) {
+          count++;
+          pData.checkbox.visible = 4;
+        } else {
+          pData.checkbox.visible = 0;
+        }
       }
       return p;
+    });
+
+    // Reset the numbers to proper --> Can probably done waaaaay smarter
+    count = 0;
+    newProducts = newProducts.map((p, k) => {
+      let pData = p.node.frontmatter;
+      if (pData.checkbox.visible > 0) {
+        count++;
+        pData.checkbox.visible = count;
+      }
+      return p;
+    });
+
+    // Sort products
+    newProducts = stableSort(newProducts, (a, b) => {
+      if (a.node.frontmatter.checkbox.visible === 0) {
+        return 1;
+      } else if (b.node.frontmatter.checkbox.visible === 0) {
+        return -1;
+      } else if (
+        a.node.frontmatter.checkbox.visible ===
+        b.node.frontmatter.checkbox.visible
+      ) {
+        return null;
+      } else if (true) {
+        return a.node.frontmatter.checkbox.visible <
+          b.node.frontmatter.checkbox.visible
+          ? -1
+          : 1;
+      } else if (false) {
+        return a.node.frontmatter.checkbox.visible <
+          b.node.frontmatter.checkbox.visible
+          ? 1
+          : -1;
+      }
     });
 
     this.setState({
@@ -68,7 +113,7 @@ export default class indexPage extends React.Component {
 
   countSelectedProducts = () => {
     return this.state.products.reduce((acc, p) => {
-      p.node.frontmatter.checkbox.visible && acc++;
+      p.node.frontmatter.checkbox.visible > 0 && acc++;
       return acc;
     }, 0);
   };
@@ -85,6 +130,7 @@ export default class indexPage extends React.Component {
     let header = this.props.data.header.edges[0].node.frontmatter;
     let checkboxes = this.props.data.checkboxes.edges[0].node.frontmatter;
     let products = this.state.products;
+    let initialProducts = this.state.initialProducts;
     let form = this.props.data.form.edges[0].node.frontmatter;
     let social = this.props.data.social.edges[0].node.frontmatter;
     let credits = this.props.data.credits.edges[0].node.frontmatter;
@@ -126,15 +172,19 @@ export default class indexPage extends React.Component {
             <div className="layout__checkboxes" data-sticky={this.state.sticky}>
               <h2 className="checkboxes__title">{checkboxes.title}</h2>
               <div className="checkboxes__container">
-                {products.map((product, key) => {
+                {initialProducts.map((product, key) => {
+                  product = products.find(p => {
+                    return (
+                      product.node.frontmatter.id === p.node.frontmatter.id
+                    );
+                  });
                   return (
                     <Checkbox
-                      key={key}
                       product={product.node.frontmatter}
                       toggleProducts={this.toggleProducts}
                       disabled={
                         this.countSelectedProducts() > 2 &&
-                        !product.node.frontmatter.order
+                        product.node.frontmatter.checkbox.visible < 1
                       }
                     />
                   );
@@ -151,9 +201,14 @@ export default class indexPage extends React.Component {
               transitionLeaveTimeout={0}
               className="layout__navbar"
             > */}
-              {!this.state.scroll.showNav && (
-                <Button className="btn" type="point" text={checkboxes.footer} />
-              )}
+              {!this.state.scroll.showNav &&
+                this.countSelectedProducts() > 0 && (
+                  <Button
+                    className="btn"
+                    type="point"
+                    text={checkboxes.footer}
+                  />
+                )}
               {this.state.scroll.showNav &&
                 this.selectedProducts().map((product, key) => {
                   return (
@@ -236,7 +291,7 @@ export default class indexPage extends React.Component {
             </div>
             <div className="btn__container">
               {social.btn.map((btn, key) => {
-                return <Button {...btn} type="image" />;
+                return <Button {...btn} key={key} type="image" />;
               })}
               <div className="social__placeholder" />
             </div>
