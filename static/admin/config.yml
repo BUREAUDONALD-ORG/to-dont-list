@@ -76,7 +76,7 @@ collections:
           name: "text"
           widget: "list"
           fields:
-            - {label: "Line", name: "text", widget: "string"}
+            - {label: "Line", name: "line", widget: "string"}
         - label: "Hashtag Properties"
           name: "hashtag"
           widget: "object"

@@ -1,7 +1,7 @@
 ---
 text:
-  - Donald posts sketches and pictures of type regularly.
-  - Check @Bureaudonald on Twitter and Instagram.
+  - line: Donald posts sketches and pictures of type regularly.
+  - line: Check @Bureaudonald on Twitter and Instagram.
 btn:
   - images:
       normal: ../../../static/img/twitter.svg
