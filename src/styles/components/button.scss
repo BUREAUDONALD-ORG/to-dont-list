@@ -1,94 +1,48 @@
-.button__container {
+.btn__container {
   display: flex;
-  padding: 4rem 0 2rem;
+  padding-top: $unit;
 }
-
-.button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 33%;
-  padding: 4rem 0;
-  background: $night;
-  color: $day;
-}
-
-.button + .button {
-  margin-left: 4rem;
-}
-
-.button:hover {
-  background: $white;
-  color: $complementary;
-
-  .button__img {
-    display: none;
-  }
-
-  .button__img--hover {
-    display: block;
-  }
-}
-
-.button__text {
-  @include t--x-small;
-}
-
-.button__img {
-  height: 8rem;
-  width: 8rem;
-  margin-right: 3rem;
-}
-
-.button--wide {
-  width: 66%;
-}
-
-.button__img--hover {
-  display: none;
-}
-
-.button--complementary:hover {
-  background: $complementary;
-  color: $day;
-}
-
-// New btn styles
 
 .btn {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
   background: $night;
   color: $day;
-  width: 25%;
-  word-wrap: break-word;
+  width: calc(33% - #{$unit});
+  margin-right: $unit;
   cursor: pointer;
 }
 
 .btn__text {
-  @include t--x-small;
-  text-align: center;
-  width: 100%;
+  @include t--header-3;
   padding: $unit;
 }
 
-.btn[type='point'] {
+.btn[data-type='point'] {
   background: unset;
-
+  flex-direction: column;
   .btn__text {
+    @include t--body-black;
     color: $day;
-    border: 1rem solid $day;
+    border: $border-width solid $day;
+    width: 100%;
+    text-align: center;
   }
 }
 
 .btn__arrow {
-  width: 10rem;
+  width: 3rem;
   padding-bottom: $half;
 }
 
-.btn[data-size='large'] {
-  width: 33%;
+.btn[data-type='large'] {
+  width: calc(50% - #{$unit});
+
+  .btn__text {
+    @include t--header-1;
+  }
 }
 
 .btn[data-diapositive='true'] {
@@ -96,5 +50,30 @@
 
   .btn__text {
     color: $night;
+  }
+}
+
+.btn[data-type='image'] {
+  .btn__img {
+    height: $two;
+    width: $two;
+    margin-right: $unit;
+  }
+
+  .btn__img--hover {
+    display: none;
+  }
+}
+
+.btn[data-type='image']:hover {
+  background: $day;
+  color: $night;
+
+  .btn__img {
+    display: none;
+  }
+
+  .btn__img--hover {
+    display: block;
   }
 }

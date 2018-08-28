@@ -6,15 +6,15 @@ import '../styles/app.scss';
 
 class Layout extends React.Component {
   render() {
-    let siteData = this.props.data.site.edges[0].node.frontmatter;
+    let head = this.props.data.head.edges[0].node.frontmatter;
     return (
       <div className="layout__wrapper">
         <Helmet
-          title={siteData.headTitle}
+          title={head.title}
           meta={[
             {
               name: 'keywords',
-              content: siteData.headTags
+              content: head.tags
                 .map(tag => {
                   return tag.tagName;
                 })
@@ -41,20 +41,17 @@ Layout.propTypes = {
 
 export const layoutQuery = graphql`
   query layoutQuery {
-    site: allMarkdownRemark(
-      filter: { id: { regex: "//content/frontpage/site/algemeen.md/" } }
+    head: allMarkdownRemark(
+      filter: { id: { regex: "//content/frontpage/site/head.md/" } }
     ) {
       edges {
         node {
-          id
-          html
           frontmatter {
-            description
-            headTitle
-            headTags {
+            title
+            tags {
               tagName
             }
-            siteTitle
+            description
           }
         }
       }

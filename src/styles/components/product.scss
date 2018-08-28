@@ -1,15 +1,15 @@
 .product__content {
-  margin-left: calc(33.33% - #{$unit});
+  margin-left: calc(100% / 3 - #{$unit});
   background-color: $day;
   position: relative;
   height: 100%;
-  padding: $unit * 4 0 $unit * 4 $unit;
-  width: calc(66.66% + #{$unit});
+  padding: $unit * 4 0 $unit * 4 $two;
+  width: calc(#{200% / 3});
 }
 
 .product__title {
-  @include t--x-large;
-  padding-bottom: 7rem;
+  @include t--header-1;
+  padding-bottom: 1rem;
 }
 
 .product__image {
@@ -21,8 +21,8 @@
 .layout__product-container[data-layout='horizontal-left'] {
   .product__content {
     margin-left: unset;
-    margin-right: calc(33.33% - #{$unit});
-    padding: $unit * 4 $unit $unit * 8 0;
+    margin-right: calc(100/3% - #{$unit});
+    padding: $unit * 4 $unit $unit * 8 $unit;
   }
 
   .product__image {
@@ -38,7 +38,7 @@
   align-items: center;
 
   .product__content {
-    padding: $unit * 4 0 $unit * 8 0;
+    padding: $unit * 4 0 $unit * 8 $unit;
     margin-left: unset;
   }
 

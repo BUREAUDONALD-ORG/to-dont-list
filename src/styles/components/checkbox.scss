@@ -3,15 +3,15 @@
   flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
-  max-width: 1200px;
+  max-width: $max-width;
   transition: all 0.4s ease;
 }
 
 .checkboxes__title {
-  @include t--small;
+  @include t--header-3;
   color: $day;
   transition: all 0.4s ease;
-  padding: $unit 0 $two 0;
+  padding: $unit 0 $two $unit;
 }
 
 .checkbox {
@@ -36,9 +36,19 @@
 
   height: $two;
   width: $two;
-  margin-top: 1.4rem;
+  margin: 0.33rem 0;
 
-  border: 1rem solid $complementary;
+  border: $border-width solid $complementary;
+}
+
+.checkbox__label[disabled]::before {
+  border: $border-width dashed $complementary;
+  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><rect x="30" y="30" width="100" height="100" fill="#{$complementary}"/></svg>');
+
+  // border: none;
+  // background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="30" height="30" fill="#{$complementary}"/><rect x="130" y="0" width="30" height="30" fill="#{$complementary}"/><rect x="0" y="130" width="30" height="30" fill="#{$complementary}"/><rect x="130" y="130" width="30" height="30" fill="#{$complementary}"/></svg>');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .checkbox__input:checked + label::before {
@@ -58,13 +68,13 @@
 }
 
 .checkbox__title {
-  @include t--small;
+  @include t--header-3;
   color: $night;
 }
 
 .checkbox__text {
-  @include t--x-small;
-  padding: 0 0 1rem;
+  @include t--body-black;
+  font-weight: bold;
   color: $complementary;
 }
 

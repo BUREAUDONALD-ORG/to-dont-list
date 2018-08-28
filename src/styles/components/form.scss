@@ -1,36 +1,3 @@
-.form__header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: $two;
-  width: calc(33% - 2rem);
-}
-
-.form__arrow {
-  width: 10rem;
-  padding-bottom: 3rem;
-}
-
-.form__title {
-  @include t--x-small;
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  padding: $unit;
-  border: 1rem solid $day;
-  color: $day;
-}
-
-@media (min-width: 0px) and (max-width: 600px) {
-  .form__header {
-    width: 100%;
-  }
-
-  .form__title {
-    @include t--small-responsive;
-  }
-}
-
 .form__fields-container {
   padding: $half 0;
 }
@@ -45,13 +12,17 @@
 .form__fields-container
   .form__field[data-placeholder-shown='true']
   + .form__label {
-  margin: 0 0 -9rem;
+  margin: 0 0 -2.5rem;
+}
+
+.form__fields-container .form__field:focus + .form__label {
+  margin: 0;
 }
 
 .form__label {
-  @include t--x-small;
+  @include t--header-3;
   order: 1;
-  padding: 0 0 3rem 3.5rem;
+  padding: 0 0 $unit $unit;
   transition: all 1s ease;
   position: relative;
   z-index: 0;
@@ -59,8 +30,8 @@
 }
 
 .form__field {
-  @include t--medium;
-  line-height: 11rem;
+  @include t--header-1;
+  line-height: 4rem;
   position: relative;
   z-index: 10;
   order: 2;
@@ -78,36 +49,17 @@
 .form__submit-container {
   display: flex;
   align-items: center;
-}
-
-.form__submit {
-  @include t--medium;
-  align-self: flex-end;
-  display: block;
-  width: 33.33%;
-  height: 5 * $unit;
-  border: 0;
-  background: $night;
-  color: $day;
-  cursor: pointer;
-  border-radius: 0;
-  appearance: none;
+  padding-top: $two;
 }
 
 .form__submit-text {
-  @include t--small;
+  @include t--header-3;
   @include row-component;
   padding-left: $unit;
 }
 
 @media (min-width: 0px) and (max-width: 600px) {
   .form__field {
-    @include t--small;
-  }
-
-  .form__submit {
-    @include t--small;
-    width: 50%;
-    height: 14rem;
+    @include t--body;
   }
 }

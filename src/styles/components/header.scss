@@ -2,10 +2,10 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 50%;
-  padding: 10rem 0;
+  width: calc(50% - #{$unit * 1.5});
+  padding: 2rem 0;
   transition: all 0.3s linear;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 .header__title {
@@ -15,9 +15,10 @@
 }
 
 .header__line {
+  position: absolute;
+  left: calc(50% - #{0.3rem});
   display: block;
-  height: 100rem;
-  padding: 0 $unit;
+  height: ($header-height-full - 2rem);
   transition: all 0.3s linear;
 }
 
@@ -27,19 +28,20 @@
 }
 
 .header__subtitle {
-  @include t--subtitle;
+  @include t--header-1;
   color: $complementary;
   transition: all 0.1s linear;
 }
 
 .header__author {
-  @include t--x-small;
+  @include t--header-3;
   color: $day;
   transition: all 0.5s linear;
+  cursor: pointer;
 }
 
 .header__author:hover a {
-  border-bottom: 0.5rem solid $day;
+  border-bottom: $border-width solid $day;
 }
 
 .layout__header-container[data-size='small'] {
@@ -47,26 +49,34 @@
 
   .header__section {
     flex-direction: row;
-    padding: 0 $half;
+    align-items: flex-end;
+    padding: 0 0;
   }
   .header__title {
-    @include t--large;
+    @include t--header-1;
   }
   pre {
     white-space: normal;
   }
   .header__line {
-    height: 10rem;
+    height: ($header-height-small - 2rem);
   }
   .header__subtitle {
-    @include t--small;
+    @include t--header-2;
     color: $complementary;
-    max-width: 50rem;
+    max-width: 18rem;
   }
+
   .header__contact {
-    @include t--small;
+    @include t--header-3;
     color: $day;
     align-self: flex-end;
+    border-bottom: $border-width solid $night;
+    cursor: pointer;
+  }
+
+  .header__contact:hover {
+    border-bottom: $border-width solid $day;
   }
   .header__author {
     display: none;

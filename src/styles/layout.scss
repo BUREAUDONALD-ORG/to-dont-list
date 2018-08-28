@@ -7,7 +7,7 @@
 @mixin block {
   display: flex;
   width: 100%;
-  max-width: 1250px;
+  max-width: $max-width;
   padding: $two $side-padding;
 }
 
@@ -19,10 +19,13 @@
   background: $complementary;
 }
 
+$header-height-full: 33rem;
+$header-height-small: 7rem;
+
 .layout__header-container {
   @include block-container;
   width: 100%;
-  height: 120rem;
+  height: $header-height-full;
 
   display: flex;
   flex-direction: column;
@@ -32,45 +35,50 @@
 }
 
 // Here to fix a small issue with fast scrolling
-.layout__header-container::before {
-  position: fixed;
-  top: -1px;
-  z-index: 99;
-  height: 26rem;
-  width: 100%;
-  background: $night;
-  content: '';
-}
+// .layout__header-container::before {
+//   position: fixed;
+//   top: -1px;
+//   z-index: 99;
+//   height: 5rem;
+//   width: 100%;
+//   background: $night;
+//   content: '';
+// }
 // endfix
 
 .layout__header-container[data-size='small'] {
   position: sticky;
   position: -webkit-sticky;
+  top: ($header-height-full - $header-height-small) * -1;
   z-index: 100;
+
   justify-content: flex-end;
-  top: -94rem;
 }
 
 .layout__header {
   @include block;
+  justify-content: space-between;
   position: relative;
   z-index: 100;
+  overflow: hidden;
+
   justify-content: space-between;
+  padding: $unit $side-padding;
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
-  .layout__header-container {
-    height: 200rem;
-  }
-
-  .layout__header-container[data-size='small'] {
-    top: -160rem;
-  }
-
-  .layout__header {
-    flex-direction: column;
-  }
-}
+// @media (min-width: 0px) and (max-width: 600px) {
+//   .layout__header-container {
+//     height: 200rem;
+//   }
+//
+//   .layout__header-container[data-size='small'] {
+//     top: -160rem;
+//   }
+//
+//   .layout__header {
+//     flex-direction: column;
+//   }
+// }
 
 .layout__checkboxes-container {
   @include block-container;
@@ -79,6 +87,7 @@
 
 .layout__checkboxes {
   @include block;
+  padding: $unit $side-padding 0;
   flex-direction: column;
 }
 
@@ -86,7 +95,7 @@
   @include block-container;
   position: sticky;
   position: -webkit-sticky;
-  top: 25rem;
+  top: calc(#{$header-height-small} - 1px); // Rounding optical correction
   z-index: 95;
   width: 100%;
   background: $complementary;
@@ -94,6 +103,7 @@
 
 .layout__navbar {
   @include block;
+  padding: 1.25rem $side-padding;
   display: flex;
   justify-content: space-between;
 }

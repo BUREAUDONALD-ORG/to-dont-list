@@ -32,6 +32,12 @@ collections:
             - {label: "prefix", name: "prefix", widget: "string"}
             - {label: "name", name: "name", widget: "string"}
             - {label: "link", name: "link", widget: "string"}
+          - label: "Contact"
+            name: "contact"
+            widget: "object"
+            fields:
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Link", name: "link", widget: "string"}
           - label: "Checkboxes"
             name: "checkboxes"
             widget: "object"

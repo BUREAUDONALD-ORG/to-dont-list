@@ -1,39 +1,21 @@
-.credits {
-  width: 100%;
-  max-width: 1200px;
-}
-
 .credits__title {
-  @include t--small;
-  padding-bottom: 2rem;
+  @include t--header-2;
+  padding-bottom: $unit;
+  padding-left: $unit;
   color: $day;
 }
 
 .credits__text p {
-  @include t--x-small;
+  @include t--body-black;
+  padding-left: $unit;
   color: $complementary;
-  line-height: 5.5rem;
-}
-
-@media (min-width: 0px) and (max-width: 600px) {
-  .credits {
-    padding: 0 $unit;
-  }
-
-  .credits__title {
-    @include t--x-small-responsive;
-  }
-
-  .credits__text p {
-    @include t--small-responsive;
-  }
 }
 
 .credits__text a:hover {
-  border-bottom: 0.5rem solid $complementary;
+  border-bottom: $border-width solid $complementary;
 }
 
 .credits__text a:hover {
   color: $day;
-  border-bottom: 0.5rem solid $day;
+  border-bottom: $border-width solid $day;
 }

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import arrow from '../../static/img/arrow.png';
+import Button from './Button.js';
 
 export default class Form extends React.Component {
   constructor(props) {
@@ -49,10 +49,7 @@ export default class Form extends React.Component {
     return (
       <div id="mail" className="layout__form-container">
         <form className="layout__form">
-          <div className="form__header">
-            <div className="form__title">{form.title}</div>
-            <img className="form__arrow" src={arrow} alt="arrow" />
-          </div>
+          <Button className="btn" type="point" text={form.title} />
           <div className="form__fields-container">
             {form.fields.map((field, key) => (
               <div key={key} className="form__field-container">
@@ -71,11 +68,13 @@ export default class Form extends React.Component {
               </div>
             ))}
             <div className="form__submit-container">
-              <a className="btn" type="submit" onClick={this.submitEmail}>
-                <p className="btn__text">
-                  {this.state.isSubmitted ? form.submitResponse : form.submit}
-                </p>
-              </a>
+              <Button
+                text={
+                  this.state.isSubmitted ? form.submitResponse : form.submit
+                }
+                type="large"
+                handler={this.submitEmail}
+              />
               {this.state.isSubmitted && (
                 <p className="form__submit-text">
                   {form.submitExpandedResponse}

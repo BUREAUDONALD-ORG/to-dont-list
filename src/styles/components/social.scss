@@ -12,13 +12,8 @@
 }
 
 .social__text {
-  @include t--x-small;
-}
-
-@media (min-width: 0px) and (max-width: 600px) {
-  .social__text {
-    @include t--small-responsive;
-  }
+  @include t--header-3;
+  padding-left: $unit;
 }
 
 .social__placeholder {

@@ -1,5 +1,5 @@
-.navbar__item-container {
-  width: calc(33% - #{2 / 3 * $unit});
+.navbar__item {
+  width: calc(100% / 3 - #{$unit});
   padding: $unit;
 
   background-color: $complementary;
@@ -9,8 +9,19 @@
   transition: all 0.4s ease;
 }
 
+.navbar__item:last-of-type {
+  width: calc(100% / 3);
+}
+
+.navbar__item:hover {
+  background: $day;
+  .navbar__item-title {
+    color: $night;
+  }
+}
+
 .navbar__item-title {
-  @include t--small;
+  @include t--header-3;
   color: $day;
 }
 
