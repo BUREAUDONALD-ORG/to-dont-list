@@ -25,9 +25,7 @@ export default ({ product, toggleProducts, disabled, ...rest }) => {
           </p>
         </div>
         <div className="checkbox__content">
-          <h3 className="checkbox__title">
-            {product.checkbox.visible} {product.checkbox.title}
-          </h3>
+          <h3 className="checkbox__title">{product.checkbox.title}</h3>
           <h3 className="checkbox__text">{product.checkbox.text}</h3>
         </div>
       </label>

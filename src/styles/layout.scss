@@ -122,10 +122,10 @@ $header-height-small-responsive: 4.5rem;
 
 .layout__navbar {
   @include block;
+  justify-content: flex-start;
   align-items: flex-end;
   min-height: 10rem;
   padding: 1.25rem $side-padding;
-  justify-content: space-between;
 }
 
 .layout__line-container {

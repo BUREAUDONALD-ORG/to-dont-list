@@ -1,12 +1,17 @@
 .navbar__item {
   width: calc(100% / 3 - #{($unit * 2) / 3 });
   padding: $unit;
+  margin-right: $unit;
 
   background-color: $complementary;
   color: $day;
   cursor: pointer;
 
   transition: all 0.4s ease;
+}
+
+.navbar__item:last-of-type {
+  margin-right: 0;
 }
 
 .layout__navbar > .btn[data-type='point'] {
