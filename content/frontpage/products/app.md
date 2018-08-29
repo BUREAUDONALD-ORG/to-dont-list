@@ -1,18 +1,17 @@
 ---
 id: 3
-title: "App"
+title: ToDon’tList
 timeToRead: 5
 images:
-  default: "../../../static/img/vertical.jpg"
-  diapositive: "../../../static/img/vertical.jpg"
-checkbox:
-  title: "Don\u2019t Do \nThis App"
-  text: "App"
-  visible: 0
+  default: ../../../static/img/iphone.png
+  diapositive: ../../../static/img/vertical.jpg
 button:
-  text: "Order a Copy"
-  link: "http://www.bureaudonald.com"
-layout: "horizontal-right"
+  link: 'http://www.bureaudonald.com'
+  text: Download for iOS
+checkbox:
+  text: App
+  title: ToDon’tList
+  visible: 0
+layout: horizontal-left
 ---
-
 Do you need a simple, but effective to-do list app? The ToDon’tList helps you make choices about what you will do, but more importantly, also about what you won’t do. That way, you get to focus on what truly matters.
