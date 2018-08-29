@@ -1,34 +1,31 @@
 ---
 id: 4
-title: "Game"
+title: Don’t/Do This — Game
 timeToRead: 4
 images:
-  default: "../../../static/img/horizontal.jpg"
-  diapositive: "../../../static/img/horizontal.jpg"
-checkbox:
-  title: "Don\u2019t\n do this Game"
-  text: "Game"
-  visible: 0
+  default: ../../../static/img/978-90-6369-484-5-6.jpg
+  diapositive: ../../../static/img/978-90-6369-484-5-6.jpg
 button:
-  text: "Order a Copy"
-  link: "http://www.bureaudonald.com"
-layout: "vertical"
+  link: 'https://www.bispublishers.com/dont-do-this-game.html'
+  text: Order a Copy
+checkbox:
+  text: Game
+  title: Don’t/Do This — Game
+  visible: 0
+layout: horizontal-right
 ---
+Whatever kind of creative person you are, this thought experiment game will get you out of your comfort zone. How? It stimulates creativity through limitations. Boundaries push you to think beyond the usual solutions and send you in different directions. That’s exactly how you end up with unexpected and extraordinary ideas.
 
-## Workshop
+## How to play
 
-The workshop revolves around your creative process: how to make it more effective by making choices, how to make those choices (fast and good) and how to manage your time and ideas better. Donald’s motto is ‘Visualize your ideas, then we can talk about it’ and in the workshop, he will bring that into practice.
+Take three 'DO' cards that define a unique imaginary project. You need to come up with a solution for this project. But you also receive three 'DON'T' cards, which provide a set of rules.
 
-Main focus: How to create something without adding stuff, but use what is already there. Work, Don’t Shop!
+For Example\
+Do: Create clothing that is also a landmark | For two persons | To become more productive\
+Don’t: Don’t use straight shapes | Don’t make the size static | Don’t use non-recyclable material
 
-You’ll sketch, talk and work according to the To Don’tList method. You will work alone, in pairs and in small teams. The duration of the workshop can be anything from 30 minutes to 3 weeks. Bring your pencils and a bunch of sketch paper (or just steal paper from the copy machine).
+The 'DO' and 'DON'T' cards make you think differently than you normally would. In the beginning, the rules might feel like a big obstacle. But once you start playing, you will see that limitations also give you possibilities. Rules make you think about loopholes.
 
-## For whom?
+Play this game alone, together or in groups — for fun, to break the ice in a meeting or to get inspired when you're stuck.
 
-The workshop can be tailored to different groups, from corporate organizations to art students. For instance, art students could learn to organize the way of they work and executives could get a much-needed creative impulse while viewing their own methods from a different perspective.
-
-## Costs
-
-In the interest of saving everyone time: please don’t send an invitation for budgets under €1500, - (excluding travel expenses). Donald is based in Amsterdam, The Netherlands. He is happy to visit you all around the globe, but if his stay exceeds 4 days, he’ll probably ask for a ticket for his wife and 1-year-old son.
-
-Interested in a workshop? Send Donald a <a data-scroll href="#mail">5 sentence email</a>.
+Box with sleeve | 156 cards | 17.8 x 9.2 x 2.2 cm | ISBN 978 90 6369 484 5
