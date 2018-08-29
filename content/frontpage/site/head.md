@@ -1,5 +1,5 @@
 ---
-title: ToDon'tCo.
+title: ToDon'tCo. — Productivity Tools for Creative People
 tags:
   - tagName: creative
   - tagName: time-management
