@@ -1,18 +1,20 @@
 ---
 id: 1
-title: "Book"
+title: Don’t Read This Book
 timeToRead: 4
 images:
-  default: "../../../static/img/vertical.jpg"
-  diapositive: "../../../static/img/vertical.jpg"
-checkbox:
-  title: "Don\u2019t Read \nThis Book"
-  text: "Book"
-  visible: 0
+  default: ../../../static/img/vertical.jpg
+  diapositive: ../../../static/img/vertical.jpg
 button:
-  text: "Order a Copy"
-  link: "http://www.bureaudonald.com"
-layout: "horizontal-left"
+  link: 'http://www.bispublishers.com/dont-read-this-book.html'
+  text: Order a Copy
+checkbox:
+  text: Book
+  title: |-
+    Don’t Read 
+    This Book
+  visible: 0
+layout: horizontal-left
 ---
 
 As creative people, we have ideas. Bad, good, weird, clever, and even brilliant ideas. But most of them (even the great ideas) never see the light of day. Why? If you ask a creative person, the answer will always revolve around time. We simply need time to execute an idea, and do it well — more time than we have.
