@@ -1,18 +1,18 @@
 ---
 id: 2
-title: "Workshops"
+title: Work Don’t Shop
 timeToRead: 4
 images:
-  default: "../../../static/img/horizontal.jpg"
-  diapositive: "../../../static/img/horizontal.jpg"
-checkbox:
-  title: "Work\nDon\u2019t Shop"
-  text: "Work"
-  visible: 0
+  default: ''
+  diapositive: ''
 button:
-  text: "Order a Copy"
-  link: "http://www.bureaudonald.com"
-layout: "vertical"
+  link: 'mailto:donald@todont.co'
+  text: Contact Donald
+checkbox:
+  text: Workshop
+  title: Work Don’t Shop
+  visible: 0
+layout: vertical
 ---
 
 ## Workshop
