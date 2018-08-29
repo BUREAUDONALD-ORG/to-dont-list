@@ -13,6 +13,7 @@ author:
   name: Donald Roos
   prefix: 'By '
 contact:
+  link: '#mail'
   title: Contact
-  link: "http://www.bureaudonald.com"
 ---
+
