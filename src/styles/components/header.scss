@@ -75,6 +75,7 @@
     @include t--header-3;
     color: $complementary;
     max-width: 18rem;
+    margin-bottom: 0.4rem;
   }
 
   .header__contact {
@@ -83,12 +84,12 @@
     color: $day;
     align-self: flex-end;
     border-bottom: $underline-width solid $night;
-    margin-bottom: underline-width;
+    margin-bottom: 0.4rem - $underline-width;
     cursor: pointer;
   }
 
   .header__contact:hover {
-    border-bottom: $border-width solid $day;
+    border-bottom: $underline-width solid $day;
   }
   .header__author {
     display: none;
