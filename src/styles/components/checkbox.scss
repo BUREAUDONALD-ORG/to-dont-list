@@ -75,7 +75,7 @@
 
 .checkbox__text {
   @include t--body-black;
-  font-weight: bold;
+  line-height: 1rem;
   color: $complementary;
 }
 

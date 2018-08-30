@@ -197,8 +197,8 @@ export default class indexPage extends React.Component {
             {/* <div className="layout__navbar"> */}
             <AnimationGroup
               transitionName="fade"
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={0}
+              transitionEnterTimeout={100}
+              transitionLeaveTimeout={100}
               className="layout__navbar"
             >
               {!this.state.scroll.showNav &&

@@ -6,7 +6,7 @@
   background-color: $day;
   cursor: pointer;
 
-  transition: all 0.4s ease;
+  transition: all 0.1s ease;
   .navbar__item-title {
     color: $night;
   }
@@ -18,13 +18,13 @@
 
 .layout__navbar > .btn[data-type='point'] {
   // Real oddness here, don't understand why correcting with sidepadding is not enough
-  width: calc((100% - #{$side-padding * 2}) / 3 - #{$unit * 2 / 3} - 5rem);
+  width: calc((100% - #{$side-padding * 2}) / 3 - #{$unit * 2 / 3});
   position: absolute;
 }
 
 @media (min-width: 0px) and (max-width: 600px) {
   .layout__navbar > .btn[data-type='point'] {
-    width: calc((100% - #{1rem * 2}));
+    width: calc((100% - #{$unit * 2}));
   }
 }
 

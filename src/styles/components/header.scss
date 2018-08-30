@@ -40,7 +40,7 @@
   // oh horror: typography addition
   line-height: 1.1rem;
   color: $day;
-  transition: all 0.5s linear;
+  transition: all 0.1s linear;
   border-bottom: $underline-width solid $night;
   margin-bottom: -$underline-width;
   cursor: pointer;
@@ -121,6 +121,9 @@
     .header__line-hz {
       display: none;
       width: 100%;
+    }
+    .header__contact {
+      margin-bottom: 0.4rem;
     }
   }
 
