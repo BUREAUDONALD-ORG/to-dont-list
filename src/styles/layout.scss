@@ -22,7 +22,7 @@
   background: $complementary;
 }
 
-$header-height-full: 33rem;
+$header-height-full: 31rem;
 $header-height-small: 6rem;
 
 $header-height-full-responsive: 41rem;
@@ -148,7 +148,6 @@ $header-height-small-responsive: 4.5rem;
 
 .layout__products-container {
   background: $day;
-  transition: all 0.5s ease;
 }
 
 .layout__product-container {
@@ -156,8 +155,6 @@ $header-height-small-responsive: 4.5rem;
   position: relative;
   background: $day;
   overflow: hidden;
-
-  transition: all 300ms linear;
 }
 
 .layout__product {
