@@ -240,13 +240,29 @@ export default class indexPage extends React.Component {
                   className="layout__product-container"
                 >
                   <div className="product__image">
-                    <Img
-                      sizes={
-                        !diapositive
-                          ? frontmatter.images.default.childImageSharp.sizes
-                          : frontmatter.images.diapositive.childImageSharp.sizes
+                    {(() => {
+                      if (
+                        frontmatter.images &&
+                        frontmatter.images.default &&
+                        frontmatter.images.diapositive
+                      ) {
+                        return (
+                          <Img
+                            sizes={
+                              !diapositive
+                                ? frontmatter.images &&
+                                  frontmatter.images.default &&
+                                  frontmatter.images.default.childImageSharp
+                                    .sizes
+                                : frontmatter.images &&
+                                  frontmatter.images.diapositive &&
+                                  frontmatter.images.diapositive.childImageSharp
+                                    .sizes
+                            }
+                          />
+                        );
                       }
-                    />
+                    })()}
                   </div>
                   <div className="layout__product">
                     <div className="product__content">

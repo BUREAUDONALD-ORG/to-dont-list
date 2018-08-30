@@ -36,6 +36,7 @@
   background: unset;
   flex-direction: column;
   margin: 0;
+  cursor: default;
   .btn__text {
     @include t--body-black;
     color: $day;
@@ -46,7 +47,7 @@
 }
 
 .btn__arrow {
-  width: 3rem;
+  width: 2rem;
   padding-bottom: $half;
 }
 

@@ -10,10 +10,11 @@
 }
 
 .credits__text a:hover {
-  border-bottom: $border-width solid $complementary;
+  border-bottom: $underline-width solid $complementary;
+  margin-bottom: -$underline-width;
 }
 
 .credits__text a:hover {
   color: $day;
-  border-bottom: $border-width solid $day;
+  border-bottom: $underline-width solid $day;
 }

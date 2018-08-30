@@ -45,19 +45,16 @@
 }
 
 .checkbox__label[disabled] .checkbox__icon-container {
-  border: $border-width dashed $complementary;
-  background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><rect x="50" y="50" width="60" height="60" fill="#{$complementary}"/></svg>');
+}
 
-  // border: none;
-  // background-image: url('data:image/svg+xml;utf8,<svg viewBox="0 0 160 160" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="30" height="30" fill="#{$complementary}"/><rect x="130" y="0" width="30" height="30" fill="#{$complementary}"/><rect x="0" y="130" width="30" height="30" fill="#{$complementary}"/><rect x="130" y="130" width="30" height="30" fill="#{$complementary}"/></svg>');
-  background-size: cover;
-  background-repeat: no-repeat;
+.checkbox__input:checked + label .checkbox__icon-container {
+  background-color: $complementary;
 }
 
 .checkbox__input:checked + label .checkbox__number {
   content: '';
   @include t--header-3;
-  color: $complementary;
+  color: $day;
 }
 
 .checkbox__label {
