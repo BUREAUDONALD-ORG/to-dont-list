@@ -2,9 +2,6 @@
 id: 2
 title: Work Don’t Shop
 timeToRead: 4
-images:
-  default: ''
-  diapositive: ''
 button:
   link: 'mailto:donald@todont.co'
   text: Contact Donald
