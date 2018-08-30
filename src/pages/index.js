@@ -316,31 +316,44 @@ export default class indexPage extends React.Component {
               <p>
                 {credits.authorsText}
                 {credits.authors.map((author, key) => {
-                  return (
-                    <a
-                      target="_blank"
-                      key={key}
-                      rel="noopener noreferrer"
-                      href={author.link}
-                    >
-                      {author.name}
-                      {', '}
-                    </a>
-                  );
+                  if (author.link) {
+                    return (
+                      <span>
+                        <a
+                          target="_blank"
+                          key={key}
+                          rel="noopener noreferrer"
+                          href={author.link}
+                        >
+                          {author.name}
+                        </a>
+                        {', '}
+                      </span>
+                    );
+                  } else {
+                    return (
+                      <span key={key}>
+                        {author.name}
+                        {key === credits.authors.length - 1 ? '. ' : ', '}
+                      </span>
+                    );
+                  }
                 })}
                 {credits.partnersText}
                 {credits.partners.map((partner, key) => {
                   if (partner.link) {
                     return (
-                      <a
-                        target="_blank"
-                        key={key}
-                        rel="noopener noreferrer"
-                        href={partner.link}
-                      >
-                        {partner.name}
+                      <span>
+                        <a
+                          target="_blank"
+                          key={key}
+                          rel="noopener noreferrer"
+                          href={partner.link}
+                        >
+                          {partner.name}
+                        </a>
                         {key === credits.partners.length - 1 ? '. ' : ', '}
-                      </a>
+                      </span>
                     );
                   } else {
                     return (

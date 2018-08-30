@@ -29,19 +29,25 @@
 
 .header__subtitle {
   @include t--header-1;
+  // oh horror: typography addition
+  line-height: 4.175rem;
   color: $complementary;
   transition: all 0.1s linear;
 }
 
 .header__author {
   @include t--header-3;
+  // oh horror: typography addition
+  line-height: 1.1rem;
   color: $day;
   transition: all 0.5s linear;
+  border-bottom: $underline-width solid $night;
+  margin-bottom: -$underline-width;
   cursor: pointer;
 }
 
 .header__author:hover a {
-  border-bottom: $border-width solid $day;
+  border-bottom: $underline-width solid $day;
 }
 
 .header__contact {
@@ -66,7 +72,7 @@
     height: ($header-height-small - 2rem);
   }
   .header__subtitle {
-    @include t--header-2;
+    @include t--header-3;
     color: $complementary;
     max-width: 18rem;
   }
@@ -76,7 +82,8 @@
     display: block;
     color: $day;
     align-self: flex-end;
-    border-bottom: $border-width solid $night;
+    border-bottom: $underline-width solid $night;
+    margin-bottom: underline-width;
     cursor: pointer;
   }
 
