@@ -17,7 +17,8 @@
 }
 
 .layout__navbar > .btn[data-type='point'] {
-  width: calc((100% - #{$side-padding * 2}) / 3 - #{$unit * 2 / 3 + $two});
+  // Real oddness here, don't understand why correcting with sidepadding is not enough
+  width: calc((100% - #{$side-padding * 2}) / 3 - #{$unit * 2 / 3} - 5rem);
   position: absolute;
 }
 
