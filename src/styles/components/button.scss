@@ -63,9 +63,6 @@
   .btn[data-type='large'] {
     width: 100%;
     margin-right: 0;
-    .btn__text {
-      @include t--body-black;
-    }
   }
 }
 

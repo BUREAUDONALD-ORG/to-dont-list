@@ -1,5 +1,6 @@
 .navbar__item {
   width: calc(100% / 3 - #{($unit * 2) / 3 });
+  height: $fs--t--header-3 + $two;
   padding: $unit;
   margin-right: $unit;
 
@@ -7,8 +8,11 @@
   cursor: pointer;
 
   transition: all 0.1s ease;
+
   .navbar__item-title {
     color: $night;
+    white-space: nowrap;
+    overflow: hidden;
   }
 }
 

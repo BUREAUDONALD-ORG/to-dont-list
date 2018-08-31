@@ -63,9 +63,9 @@ $flh--t--header-2-responsive: 1.5rem;
 }
 
 $fs--t--header-3: 1.5rem;
-$flh--t--header-3: 1.25rem;
+$flh--t--header-3: 1.5rem;
 $fs--t--header-3-responsive: 1.5rem;
-$flh--t--header-3-responsive: 1.25rem;
+$flh--t--header-3-responsive: 1.5rem;
 
 @mixin t--header-3 {
   font-family: nittigrotesk-black;
@@ -113,10 +113,10 @@ $flh--t--body-responsive: 1.5rem;
 @each $min,
   $max,
   $size in (0, 300, 16),
-  (300, 400, 16),
-  (400, 500, 16),
-  (500, 600, 16),
-  (600, 700, 20),
+  (300, 400, 14),
+  (400, 500, 14),
+  (500, 600, 14),
+  (600, 700, 14),
   (700, 800, 20),
   (800, 900, 20),
   (900, 1000, 20),
