@@ -334,10 +334,9 @@ export default class indexPage extends React.Component {
                 {credits.authors.map((author, key) => {
                   if (author.link) {
                     return (
-                      <span>
+                      <span key={key}>
                         <a
                           target="_blank"
-                          key={key}
                           rel="noopener noreferrer"
                           href={author.link}
                         >
@@ -359,10 +358,9 @@ export default class indexPage extends React.Component {
                 {credits.partners.map((partner, key) => {
                   if (partner.link) {
                     return (
-                      <span>
+                      <span key={key}>
                         <a
                           target="_blank"
-                          key={key}
                           rel="noopener noreferrer"
                           href={partner.link}
                         >

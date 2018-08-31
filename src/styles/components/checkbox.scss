@@ -47,11 +47,11 @@
 .checkbox__label[disabled] .checkbox__icon-container {
 }
 
-.checkbox__input:checked + label .checkbox__icon-container {
+.checkbox__input:not([value='0']) + label .checkbox__icon-container {
   background-color: $complementary;
 }
 
-.checkbox__input:checked + label .checkbox__number {
+.checkbox__input:not([value='0']) + label .checkbox__number {
   content: '';
   @include t--header-3;
   color: $day;

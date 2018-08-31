@@ -15,8 +15,7 @@ export default ({ product, toggleProducts, disabled, ...rest }) => {
       <input
         className="checkbox__input"
         type="checkbox"
-        checked={product.checkbox.visible}
-        readOnly
+        value={product.checkbox.visible}
       />
       <label className="checkbox__label" disabled={disabled}>
         <div className="checkbox__icon-container">

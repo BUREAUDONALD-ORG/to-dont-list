@@ -11,8 +11,10 @@ button:
 checkbox:
   text: App
   title: ToDon’tTimer
+  visible: 0
 layout: horizontal-right
 ---
+
 A process that takes you from idea to final product can take 3 weeks, but could as well take 3 months, 3 days, or 3 years. You could even go through the process in 3 minutes: you sketch a few options, pick one, and ‘finalize’ it as much as you can in the short time you have left. The end result of such a 3-minute round could be a clear sketch or small mock-up, for instance.
 
 Use the ToDon’tTimer to sketch and test your ideas in a limited timeframe. Decide to add the idea to your ToDon’tList or to spend a bigger timeframe on it.

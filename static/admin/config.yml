@@ -126,27 +126,27 @@ collections:
       preview: false
     fields:
       - {label: "id", name: "id", widget: "number", valueType: "int"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "timeToRead", name: "timeToRead", widget: "number", valueType: "int"}
+      - {label: "Title", name: "title", widget: "string", default: ""}
+      - {label: "timeToRead", name: "timeToRead", widget: "number", valueType: "int", default: 1}
       - label: "Images"
         name: "images"
         widget: "object"
         fields:
-          - {label: "Default", name: "default", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
-          - {label: "Diapositive", name: "diapositive", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
+          - {label: "Default", name: "default", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/", default: ""}
+          - {label: "Diapositive", name: "diapositive", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/", default: ""}
       - label: "Button"
         name: "button"
         widget: "object"
         fields:
-          - { label: "Text", name: "text", widget: "string" }
-          - { label: "Link", name: "link", widget: "string" }
+          - { label: "Text", name: "text", widget: "string", default: "" }
+          - { label: "Link", name: "link", widget: "string", default: "" }
       - label: "Checkbox"
         name: "checkbox"
         widget: "object"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Text", name: "text", widget: "string" }
-          - { label: "Visible?", name: "visible", widget: "boolean" }
+          - { label: "Title", name: "title", widget: "string", default: "" }
+          - { label: "Text", name: "text", widget: "string", default: "" }
+          - { label: "Visible?", name: "visible", widget: "number", valueType: "int", default: 0 }
       - label: "layout"
         name: "layout"
         widget: "select"
@@ -161,3 +161,4 @@ collections:
       - label: "Body Text"
         name: "body"
         widget: "markdown"
+        default: ""

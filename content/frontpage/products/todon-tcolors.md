@@ -8,6 +8,7 @@ button:
 checkbox:
   text: Color Picker
   title: ToDon'tColors
+  visible: 0
 layout: horizontal-right
 ---
 
