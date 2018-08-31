@@ -26,7 +26,7 @@
   position: absolute;
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: $bp-small) {
   .layout__navbar > .btn[data-type='point'] {
     width: calc((100% - #{$unit * 2}));
   }
@@ -55,7 +55,7 @@
   display: none;
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: $bp-small) {
   .navbar__item-title {
     display: none;
   }

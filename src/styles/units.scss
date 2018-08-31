@@ -4,7 +4,11 @@ $half: $unit / 2;
 
 $side-padding: $unit * 3;
 $side-padding-responsive: $unit;
-$max-width: 1250px;
+$max-width: 1200px + 120px;
 
 $border-width: 0.2rem;
 $underline-width: 0.1rem;
+
+$bp-small: 800px;
+$bp-medium: 1000px;
+$bp-large: $max-width;

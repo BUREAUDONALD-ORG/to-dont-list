@@ -3,7 +3,7 @@
   padding-top: $unit;
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: $bp-small) {
   .btn__container {
     flex-direction: column;
   }
@@ -21,7 +21,7 @@
   cursor: pointer;
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: $bp-small) {
   .btn {
     width: 100%;
   }
@@ -59,7 +59,7 @@
   }
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: $bp-small) {
   .btn[data-type='large'] {
     width: 100%;
     margin-right: 0;
@@ -100,7 +100,7 @@
   }
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: $bp-small) {
   .btn[data-type='image'] {
     margin: 0 0 $unit 0;
   }

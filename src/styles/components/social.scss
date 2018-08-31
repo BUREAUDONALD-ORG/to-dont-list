@@ -15,7 +15,7 @@
   @include t--header-3;
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: $bp-small) {
   .social__text {
     @include t--body-black;
   }

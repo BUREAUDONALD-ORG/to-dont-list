@@ -87,7 +87,7 @@
   opacity: 0;
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: $bp-small) {
   .checkbox__container {
     @include column-component;
     padding: $unit 0;

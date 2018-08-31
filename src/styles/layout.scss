@@ -9,7 +9,7 @@
   width: 100%;
   max-width: $max-width;
   padding: $two $side-padding;
-  @media (min-width: 0px) and (max-width: 600px) {
+  @media (min-width: 0px) and (max-width: $bp-small) {
     padding: $two $side-padding-responsive;
   }
 }
@@ -73,7 +73,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   padding: $unit $side-padding;
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: $bp-small) {
   .layout__header-container {
     height: $header-height-full-responsive;
   }
@@ -103,7 +103,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   flex-direction: column;
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: $bp-small) {
   .layout__checkboxes {
     padding-bottom: 0;
   }
@@ -140,7 +140,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
 .layout__line {
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: $bp-small) {
   .layout__navbar-container {
     top: #{$header-height-small-responsive - 1.5rem};
   }

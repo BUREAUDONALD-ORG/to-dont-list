@@ -60,7 +60,7 @@
   }
 }
 
-@media (min-width: 0px) and (max-width: 600px) {
+@media (min-width: 0px) and (max-width: $bp-small) {
   .layout__product-container,
   .layout__product-container[data-layout='horizontal-left'],
   .layout__product-container[data-layout='vertical'] {
