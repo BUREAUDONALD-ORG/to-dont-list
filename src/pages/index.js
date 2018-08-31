@@ -14,6 +14,7 @@ import Form from '../components/Form.js';
 
 import line from '../../static/img/line.png';
 import lineHz from '../../static/img/line-hz.png';
+import lineShort from '../../static/img/line-short.png';
 
 export default class indexPage extends React.Component {
   constructor(props) {
@@ -146,6 +147,11 @@ export default class indexPage extends React.Component {
               </pre>
             </div>
             <img className="header__line" src={line} role="presentation" />
+            <img
+              className="header__line-short"
+              src={lineShort}
+              role="presentation"
+            />
             <img className="header__line-hz" src={lineHz} role="presentation" />
             <div className="header__section">
               <pre>
@@ -287,15 +293,7 @@ export default class indexPage extends React.Component {
         </div>
 
         {this.selectedProducts() < 1 && (
-          <div className="layout__line-container">
-            <AnimationGroup
-              transitionName="fade"
-              transitionEnterTimeout={500}
-              transitionLeaveTimeout={500}
-            >
-              <img className="layout__line" src={lineHz} role="presentation" />
-            </AnimationGroup>
-          </div>
+          <div className="layout__line-container" />
         )}
         <Form data={form} />
 

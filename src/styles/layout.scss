@@ -131,12 +131,14 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
 }
 
 .layout__line-container {
+  display: block;
   background-color: $complementary;
+  height: $border-width;
+  width: 100%;
+  background: $day;
 }
 
 .layout__line {
-  width: 100%;
-  display: block;
 }
 
 @media (min-width: 0px) and (max-width: 600px) {
