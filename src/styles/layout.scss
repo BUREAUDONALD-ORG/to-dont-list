@@ -132,10 +132,8 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
 
 .layout__line-container {
   display: block;
-  background-color: $complementary;
-  height: $border-width;
+  border: $border-width dashed $day;
   width: 100%;
-  background: $day;
 }
 
 .layout__line {

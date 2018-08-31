@@ -157,7 +157,15 @@ export default class indexPage extends React.Component {
               <pre>
                 <h3 className="header__subtitle">{header.subTitle}</h3>
               </pre>
-              <div className="header__contact">{header.contact.title}</div>
+              <h4 className="header__contact">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href={header.contact.link}
+                >
+                  {header.contact.title}
+                </a>
+              </h4>
               <h4 className="header__author">
                 {header.author.prefix}
                 <a
