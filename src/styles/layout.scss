@@ -142,7 +142,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
 
 @media (min-width: 0px) and (max-width: 600px) {
   .layout__navbar-container {
-    top: #{$header-height-small-responsive - 4.5rem};
+    top: #{$header-height-small-responsive - 1.5rem};
   }
   .layout__navbar {
     padding: $unit;
