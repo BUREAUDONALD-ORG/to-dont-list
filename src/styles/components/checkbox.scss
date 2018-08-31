@@ -39,7 +39,7 @@
 
   height: $two;
   width: $two;
-  margin: 0.33rem 0;
+  margin: $unit * 1 / 5 0;
 
   border: $border-width solid $complementary;
 }

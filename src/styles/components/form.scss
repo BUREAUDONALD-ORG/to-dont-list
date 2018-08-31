@@ -23,14 +23,14 @@
   @include t--header-3;
   order: 1;
   padding: 0 0 $unit $unit;
-  transition: all 1s ease;
+  transition: all 0.3s ease;
   position: relative;
   z-index: 0;
   margin: 0;
 }
 
 .form__field {
-  @include t--header-1;
+  @include t--header-2;
   line-height: 4rem;
   position: relative;
   z-index: 10;
@@ -42,14 +42,19 @@
   border-radius: 0;
 }
 
+.form__field::placeholder {
+  color: $complementary;
+  transition: all 0.3s ease;
+}
+
+.form__field:focus::placeholder {
+  opacity: 0;
+}
+
 @media (min-width: 0px) and (max-width: 600px) {
   .form__field {
     @include t--header-3;
   }
-}
-
-.form__field::placeholder {
-  color: $complementary;
 }
 
 .form__submit-container {
