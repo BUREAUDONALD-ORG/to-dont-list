@@ -114,7 +114,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   position: sticky;
   position: -webkit-sticky;
   top: calc(
-    #{$header-height-small + -4rem} - 1px
+    #{$header-height-small + -1rem} - 1px
   ); // Rounding optical correction
   z-index: 95;
   width: 100%;
@@ -126,13 +126,14 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   position: relative;
   justify-content: flex-start;
   align-items: flex-end;
-  min-height: 10rem;
+  min-height: 7rem;
   padding: 1.25rem $side-padding;
 }
 
 .layout__line-container {
   display: block;
-  border: $border-width dashed $day;
+  border-top: $border-width dashed $day;
+  padding-bottom: $unit * 5;
   width: 100%;
 }
 

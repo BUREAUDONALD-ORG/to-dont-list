@@ -1,9 +1,4 @@
 import React from 'react';
-import { Link } from 'react-scroll';
-const ScrollLink = Link;
-import slugify from 'slugify';
-
-import arrow from '../../static/img/arrow.png';
 
 export default ({ product, toggleProducts, disabled, ...rest }) => {
   return (

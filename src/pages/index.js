@@ -5,6 +5,8 @@ import slugify from 'slugify';
 import Img from 'gatsby-image';
 import { throttle, debounce } from 'lodash';
 import stableSort from 'stable';
+import { Link } from 'react-scroll';
+const ScrollLink = Link;
 
 import NavItem from '../components/Nav-item.js';
 import Checkbox from '../components/Checkbox.js';
@@ -158,13 +160,16 @@ export default class indexPage extends React.Component {
                 <h3 className="header__subtitle">{header.subTitle}</h3>
               </pre>
               <h4 className="header__contact">
-                <a
+                <ScrollLink
                   rel="noopener noreferrer"
                   target="_blank"
-                  href={header.contact.link}
+                  to={header.contact.link}
+                  smooth={true}
+                  offset={-300}
+                  duration={500}
                 >
                   {header.contact.title}
-                </a>
+                </ScrollLink>
               </h4>
               <h4 className="header__author">
                 {header.author.prefix}

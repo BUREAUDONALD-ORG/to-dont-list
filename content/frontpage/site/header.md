@@ -13,7 +13,6 @@ author:
   name: Donald Roos
   prefix: 'By '
 contact:
-  link: '#mail'
+  link: 'mail'
   title: Contact
 ---
-
