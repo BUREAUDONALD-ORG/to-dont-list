@@ -138,7 +138,8 @@ export default class indexPage extends React.Component {
       },
       subTitle: {
         fontSize: 4 - this.state.scroll.position / 300 * 2.5,
-        lineHeight: 4 - this.state.scroll.position / 300 * 2.5
+        lineHeight: 4 - this.state.scroll.position / 300 * 2.5,
+        bottom: 6.3 - this.state.scroll.position / 300 * 6.3
       },
       line: {
         height: 26.5 - this.state.scroll.position / 400 * 22.5
@@ -154,7 +155,8 @@ export default class indexPage extends React.Component {
         fontSize: `${a.subTitle.fontSize > 1.5 ? a.subTitle.fontSize : 1.5}rem`,
         lineHeight: `${
           a.subTitle.lineHeight > 1.5 ? a.subTitle.lineHeight : 1.5
-        }rem`
+        }rem`,
+        bottom: `${a.subTitle.bottom > 0 ? a.subTitle.bottom : 0}rem`
       },
       line: {
         height: `${a.line.height > 4 ? a.line.height : 4}rem`

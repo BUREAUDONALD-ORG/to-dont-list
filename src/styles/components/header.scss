@@ -1,10 +1,11 @@
 .header__section {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  align-self: flex-end;
   width: calc(50% - #{$unit * 1.5});
   padding: 2rem 0;
   transition: all 0.2s ease;
+  position: relative;
   // overflow: hidden;
 }
 
@@ -16,6 +17,7 @@
 .header__line {
   position: absolute;
   opacity: 1;
+  bottom: 1rem;
   left: calc(50% - #{0.3rem});
   display: block;
   height: ($header-height-full - 2rem);
@@ -31,6 +33,7 @@
 }
 
 .header__subtitle {
+  position: relative;
   @include t--header-1;
   // oh horror: typography addition
   line-height: 4.175rem;
@@ -39,8 +42,11 @@
 
 .header__author {
   @include t--header-3;
+  position: absolute;
+  bottom: 2rem;
   // oh horror: typography addition
   line-height: 0.8rem;
+
   color: $day;
   border-bottom: $underline-width solid $night;
   margin-bottom: -$underline-width;
