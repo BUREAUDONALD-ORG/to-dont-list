@@ -53,6 +53,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
 // }
 // endfix
 
+.layout__header-container[data-size='medium'],
 .layout__header-container[data-size='small'] {
   position: sticky;
   position: -webkit-sticky;

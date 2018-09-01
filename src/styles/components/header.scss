@@ -4,31 +4,30 @@
   justify-content: space-between;
   width: calc(50% - #{$unit * 1.5});
   padding: 2rem 0;
-  transition: all 0.3s linear;
+  transition: all 0.2s ease;
   // overflow: hidden;
 }
 
 .header__title {
   @include t--title;
   color: $day;
-  transition: all 0.1s linear;
 }
 
 .header__line {
   position: absolute;
+  opacity: 1;
   left: calc(50% - #{0.3rem});
   display: block;
   height: ($header-height-full - 2rem);
-  transition: all 0.3s linear;
+  transition: all 0.5s ease;
 }
 
 .header__line-short {
-  display: none;
+  opacity: 0;
 }
 
 .header__line-hz {
   display: none;
-  transition: all 0.5s linear;
 }
 
 .header__subtitle {
@@ -36,7 +35,6 @@
   // oh horror: typography addition
   line-height: 4.175rem;
   color: $complementary;
-  transition: all 0.1s linear;
 }
 
 .header__author {
@@ -44,7 +42,6 @@
   // oh horror: typography addition
   line-height: 0.8rem;
   color: $day;
-  transition: all 0.1s linear;
   border-bottom: $underline-width solid $night;
   margin-bottom: -$underline-width;
   cursor: pointer;
@@ -58,31 +55,20 @@
   display: none;
 }
 
+.layout__header-container[data-size='medium'],
 .layout__header-container[data-size='small'] {
-  width: 100%;
-
   .header__section {
     flex-direction: row;
     align-items: flex-end;
     padding: 0 0;
   }
-  .header__title {
-    @include t--header-1;
-  }
-  pre {
-    white-space: normal;
-  }
-  .header__line {
-    display: none;
-  }
 
-  .header__line-short {
-    display: block;
-    height: ($header-height-small - 2rem);
+  .header__title {
+    // @include t--header-1;
   }
 
   .header__subtitle {
-    @include t--header-3;
+    // @include t--header-3;
     color: $complementary;
     max-width: 18rem;
     margin-bottom: 0.4rem;
@@ -103,6 +89,21 @@
   }
   .header__author {
     display: none;
+  }
+}
+
+.layout__header-container[data-size='small'] {
+  .header__line {
+    display: none;
+    opacity: 0;
+  }
+  .header__line-short {
+    display: block;
+    opacity: 1;
+    height: ($header-height-small - 2rem);
+  }
+  pre {
+    white-space: normal;
   }
 }
 

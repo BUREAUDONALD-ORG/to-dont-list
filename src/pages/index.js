@@ -7,6 +7,7 @@ import { throttle, debounce } from 'lodash';
 import stableSort from 'stable';
 import { Link } from 'react-scroll';
 const ScrollLink = Link;
+import { Motion, spring } from 'react-motion';
 
 import NavItem from '../components/Nav-item.js';
 import Checkbox from '../components/Checkbox.js';
@@ -26,29 +27,25 @@ export default class indexPage extends React.Component {
       initialProducts: JSON.parse(
         JSON.stringify(this.props.data.products.edges)
       ),
-      scroll: { resizeHeader: false, transitionCheckboxes: false }
+      scroll: { resizeHeader: false, position: 0 }
     };
   }
 
   componentDidMount() {
     window.addEventListener(
       'scroll',
-      debounce(this.handleScroll, 25, { leading: true, trailing: true })
+      this.handleScroll
+      // debounce(this.handleScroll, 25, { leading: true, trailing: true })
     );
   }
 
-  handleScroll = e => {
-    // console.log('handling');
-    let scrollY = window.scrollY;
-
-    this.setState({
-      scroll: {
-        resizeHeader: scrollY > 0,
-        showNav: scrollY > 800,
-        transitionCheckboxes: scrollY > 400
-      }
-    });
-  };
+  // componentDidMount() {
+  //   window.addEventListener(
+  //     'touchmove',
+  //     this.handleScroll
+  //     // debounce(this.handleScroll, 25, { leading: true, trailing: true })
+  //   );
+  // }
 
   toggleProducts = (product, sticky, e) => {
     let count = this.countSelectedProducts();
@@ -120,12 +117,57 @@ export default class indexPage extends React.Component {
     }, 0);
   };
 
+  handleScroll = e => {
+    let scrollY = window.scrollY;
+
+    this.setState({
+      scroll: {
+        resizeHeader: scrollY > 10,
+        collapseHeader: scrollY > 300,
+        showNav: scrollY > 800,
+        position: scrollY
+      }
+    });
+  };
+
   showScroll = () => {
     let count = this.state.products.reduce((acc, product) => {
       acc = product.node.frontmatter.checkbox.visible ? acc + 1 : acc;
       return acc;
     }, 0);
     return count;
+  };
+
+  scrollAnimations = () => {
+    let a = {
+      title: {
+        fontSize: 12 - this.state.scroll.position / 300 * 8,
+        lineHeight: 7.5 - this.state.scroll.position / 300 * 3.5
+      },
+      subTitle: {
+        fontSize: 4 - this.state.scroll.position / 300 * 2.5,
+        lineHeight: 4 - this.state.scroll.position / 300 * 2.5
+      },
+      line: {
+        height: 26.5 - this.state.scroll.position / 400 * 22.5
+      }
+    };
+
+    return {
+      title: {
+        fontSize: `${a.title.fontSize > 4 ? a.title.fontSize : 4}rem`,
+        lineHeight: `${a.title.lineHeight > 3.5 ? a.title.lineHeight : 3.5}rem`
+      },
+      subTitle: {
+        fontSize: `${a.subTitle.fontSize > 1.5 ? a.subTitle.fontSize : 1.5}rem`,
+        lineHeight: `${
+          a.subTitle.lineHeight > 1.5 ? a.subTitle.lineHeight : 1.5
+        }rem`
+      },
+      line: {
+        height: `${a.line.height > 4 ? a.line.height : 4}rem`
+      }
+    };
   };
 
   render() {
@@ -139,16 +181,30 @@ export default class indexPage extends React.Component {
     return (
       <div className="layout__page-container">
         <header
-          data-size={this.state.scroll.resizeHeader ? 'small' : 'large'}
+          data-size={
+            !this.state.scroll.resizeHeader
+              ? 'large'
+              : !this.state.scroll.collapseHeader ? 'medium' : 'small'
+          }
           className="layout__header-container"
         >
           <div className="layout__header">
             <div className="header__section">
               <pre>
-                <h1 className="header__title">{header.title}</h1>
+                <h1
+                  style={this.scrollAnimations().title}
+                  className="header__title"
+                >
+                  {header.title}
+                </h1>
               </pre>
             </div>
-            <img className="header__line" src={line} role="presentation" />
+            <img
+              className="header__line"
+              src={line}
+              role="presentation"
+              style={this.scrollAnimations().line}
+            />
             <img
               className="header__line-short"
               src={lineShort}
@@ -157,7 +213,12 @@ export default class indexPage extends React.Component {
             <img className="header__line-hz" src={lineHz} role="presentation" />
             <div className="header__section">
               <pre>
-                <h3 className="header__subtitle">{header.subTitle}</h3>
+                <h3
+                  style={this.scrollAnimations().subTitle}
+                  className="header__subtitle"
+                >
+                  {header.subTitle}
+                </h3>
               </pre>
               <h4 className="header__contact">
                 <ScrollLink
