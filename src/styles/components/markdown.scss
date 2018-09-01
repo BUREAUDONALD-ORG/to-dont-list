@@ -1,19 +1,21 @@
 .markdown {
-  padding-bottom: $two;
+  padding-bottom: $unit;
   h1 {
     @include t--header-1;
     padding: $unit 0;
-    padding-bottom: $unit;
+    padding-bottom: $unit / 5;
   }
 
   h2 {
     @include t--header-2;
     padding: $unit 0;
+    padding-bottom: $unit / 5;
   }
 
   h3 {
     @include t--header-3;
     padding: $unit 0;
+    padding-bottom: $unit / 5;
   }
 
   p {

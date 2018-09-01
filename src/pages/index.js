@@ -360,7 +360,7 @@ export default class indexPage extends React.Component {
                     return (
                       <span key={key}>
                         {author.name}
-                        {key === credits.authors.length - 1 ? '. ' : ', '}
+                        {key === credits.authors.length - 1 ? ', ' : ', '}
                       </span>
                     );
                   }

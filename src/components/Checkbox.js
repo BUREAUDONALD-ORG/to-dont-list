@@ -4,7 +4,7 @@ export default ({ product, toggleProducts, disabled, ...rest }) => {
   return (
     <div
       className="checkbox"
-      onClick={toggleProducts.bind(this, product)}
+      onClick={!disabled ? toggleProducts.bind(this, product) : animate => {}}
       {...rest}
     >
       <input
