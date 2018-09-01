@@ -130,14 +130,6 @@ export default class indexPage extends React.Component {
     });
   };
 
-  showScroll = () => {
-    let count = this.state.products.reduce((acc, product) => {
-      acc = product.node.frontmatter.checkbox.visible ? acc + 1 : acc;
-      return acc;
-    }, 0);
-    return count;
-  };
-
   scrollAnimations = () => {
     let a = {
       title: {
@@ -178,6 +170,7 @@ export default class indexPage extends React.Component {
     let form = this.props.data.form.edges[0].node.frontmatter;
     let social = this.props.data.social.edges[0].node.frontmatter;
     let credits = this.props.data.credits.edges[0].node.frontmatter;
+    let animation = this.scrollAnimations();
     return (
       <div className="layout__page-container">
         <header
@@ -191,10 +184,7 @@ export default class indexPage extends React.Component {
           <div className="layout__header">
             <div className="header__section">
               <pre>
-                <h1
-                  style={this.scrollAnimations().title}
-                  className="header__title"
-                >
+                <h1 style={animation.title} className="header__title">
                   {header.title}
                 </h1>
               </pre>
@@ -203,7 +193,7 @@ export default class indexPage extends React.Component {
               className="header__line"
               src={line}
               role="presentation"
-              style={this.scrollAnimations().line}
+              style={animation.line}
             />
             <img
               className="header__line-short"
@@ -213,10 +203,7 @@ export default class indexPage extends React.Component {
             <img className="header__line-hz" src={lineHz} role="presentation" />
             <div className="header__section">
               <pre>
-                <h3
-                  style={this.scrollAnimations().subTitle}
-                  className="header__subtitle"
-                >
+                <h3 style={animation.subTitle} className="header__subtitle">
                   {header.subTitle}
                 </h3>
               </pre>
