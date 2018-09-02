@@ -127,9 +127,9 @@ export default class indexPage extends React.Component {
     });
   };
 
-  interpolatePosition = (start, end, speed) => {
+  interpolatePosition = (start, end, scrollHeight) => {
     let scrollY = window.scrollY;
-    let point = start - scrollY / speed * (start - end);
+    let point = start - scrollY / scrollHeight * (start - end);
     let edge = point > end ? point : end;
     return `${edge}rem`;
   };
@@ -141,9 +141,9 @@ export default class indexPage extends React.Component {
         lineHeight: this.interpolatePosition(7.5, 4, 250)
       },
       subTitle: {
-        fontSize: this.interpolatePosition(4, 1.5, 300),
-        lineHeight: this.interpolatePosition(4, 1.5, 300),
-        bottom: this.interpolatePosition(6.6, 0, 400)
+        fontSize: this.interpolatePosition(4, 1.5, 250),
+        lineHeight: this.interpolatePosition(4, 1.5, 250),
+        bottom: this.interpolatePosition(6.6, 0, 800)
       },
       line: {
         height: this.interpolatePosition(26.5, 4, 400)

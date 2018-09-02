@@ -68,7 +68,9 @@
     flex-direction: row;
     align-items: flex-end;
   }
-
+  .header__section:last-of-type {
+    justify-content: space-between;
+  }
   .header__title {
     // @include t--header-1;
   }
