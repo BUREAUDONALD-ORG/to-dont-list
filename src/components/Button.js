@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from 'react-scroll';
+const ScrollLink = Link;
 
 import arrow from '../../static/img/arrow.png';
 
@@ -17,10 +19,19 @@ const Button = ({ text, link, images, diapositive, size }) => {
 
 const ButtonPoint = ({ text, link }) => {
   return (
-    <div className="btn" data-type="point" href={link}>
+    <ScrollLink
+      rel="noopener noreferrer"
+      target="_blank"
+      to={link}
+      smooth={true}
+      offset={-190}
+      duration={500}
+      className="btn"
+      data-type="point"
+    >
       <p className="btn__text">{text}</p>
       <img className="btn__arrow" src={arrow} alt="arrow" />
-    </div>
+    </ScrollLink>
   );
 };
 

@@ -49,7 +49,12 @@ export default class Form extends React.Component {
     return (
       <div id="mail" className="layout__form-container">
         <form className="layout__form">
-          <Button className="btn" type="point" text={form.title} />
+          <Button
+            className="btn"
+            type="point"
+            text={form.title}
+            link="form__field-container"
+          />
           <div className="form__fields-container">
             {form.fields.map((field, key) => (
               <div key={key} className="form__field-container">

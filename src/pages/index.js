@@ -123,20 +123,45 @@ export default class indexPage extends React.Component {
   };
 
   scrollAnimations = () => {
-    return {
-      title: {
-        fontSize: this.interpolatePosition(12, 4, 250),
-        lineHeight: this.interpolatePosition(7.5, 4, 250)
-      },
-      subTitle: {
-        fontSize: this.interpolatePosition(4, 1.5, 250),
-        lineHeight: this.interpolatePosition(4, 1.5, 250),
-        bottom: this.interpolatePosition(6.6, 0, 800)
-      },
-      line: {
-        height: this.interpolatePosition(26.5, 4, 400)
+    if (typeof window !== 'undefined') {
+      if (window.innerWidth > 800) {
+        return {
+          title: {
+            fontSize: this.interpolatePosition(12, 4, 250),
+            lineHeight: this.interpolatePosition(7.5, 4, 250)
+          },
+          subTitle: {
+            fontSize: this.interpolatePosition(4, 1.5, 250),
+            lineHeight: this.interpolatePosition(4, 1.5, 250),
+            bottom: this.interpolatePosition(6.6, 0, 800)
+          },
+          line: {
+            height: this.interpolatePosition(26.5, 4, 400)
+          }
+        };
+      } else {
+        return {
+          title: {
+            fontSize: this.interpolatePosition(8, 2.5, 250),
+            lineHeight: this.interpolatePosition(6, 2.5, 250)
+          },
+          subTitle: {
+            fontSize: this.interpolatePosition(2.5, 1.5, 250),
+            lineHeight: this.interpolatePosition(2.5, 1.5, 250),
+            bottom: 0
+          },
+          line: {
+            height: 0
+          }
+        };
       }
-    };
+    } else {
+      return {
+        title: undefined,
+        subTitle: undefined,
+        line: undefined
+      };
+    }
   };
 
   scrollTriggers = () => {
@@ -147,7 +172,7 @@ export default class indexPage extends React.Component {
           this.state.scroll.position < 10
             ? 'large'
             : scrollY < 350 ? 'medium' : 'small',
-        nav: scrollY > 800
+        nav: scrollY > 780
       };
     } else {
       return {
@@ -284,6 +309,7 @@ export default class indexPage extends React.Component {
                     className="btn"
                     type="point"
                     text={checkboxes.footer}
+                    link="layout__product"
                   />
                 )}
               {this.scrollTriggers().nav &&
