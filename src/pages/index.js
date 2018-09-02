@@ -31,22 +31,6 @@ export default class indexPage extends React.Component {
     };
   }
 
-  componentDidMount() {
-    window.addEventListener(
-      'scroll',
-      this.handleScroll
-      // debounce(this.handleScroll, 25, { leading: true, trailing: true })
-    );
-  }
-
-  // componentDidMount() {
-  //   window.addEventListener(
-  //     'touchmove',
-  //     this.handleScroll
-  //     // debounce(this.handleScroll, 25, { leading: true, trailing: true })
-  //   );
-  // }
-
   toggleProducts = (product, sticky, e) => {
     let count = this.countSelectedProducts();
 
@@ -118,20 +102,24 @@ export default class indexPage extends React.Component {
   };
 
   handleScroll = e => {
-    let scrollY = window.scrollY;
-
-    this.setState({
-      scroll: {
-        position: window.scrollY
-      }
-    });
+    if (typeof window !== 'undefined') {
+      this.setState({
+        scroll: {
+          position: window.scrollY
+        }
+      });
+    }
   };
 
   interpolatePosition = (start, end, scrollHeight) => {
-    let scrollY = window.scrollY;
-    let point = start - scrollY / scrollHeight * (start - end);
-    let edge = point > end ? point : end;
-    return `${edge}rem`;
+    if (typeof window !== 'undefined') {
+      let scrollY = window.scrollY;
+      let point = start - scrollY / scrollHeight * (start - end);
+      let edge = point > end ? point : end;
+      return `${edge}rem`;
+    } else {
+      return undefined;
+    }
   };
 
   scrollAnimations = () => {
@@ -152,15 +140,40 @@ export default class indexPage extends React.Component {
   };
 
   scrollTriggers = () => {
-    let scrollY = window.scrollY;
-    return {
-      header:
-        this.state.scroll.position < 10
-          ? 'large'
-          : scrollY < 350 ? 'medium' : 'small',
-      nav: scrollY > 800
-    };
+    if (typeof window !== 'undefined') {
+      let scrollY = window.scrollY;
+      return {
+        header:
+          this.state.scroll.position < 10
+            ? 'large'
+            : scrollY < 350 ? 'medium' : 'small',
+        nav: scrollY > 800
+      };
+    } else {
+      return {
+        header: 'large',
+        nav: false
+      };
+    }
   };
+
+  componentDidMount() {
+    if (typeof window !== 'undefined') {
+      window.addEventListener(
+        'scroll',
+        this.handleScroll
+        // debounce(this.handleScroll, 25, { leading: true, trailing: true })
+      );
+    }
+  }
+
+  // componentDidMount() {
+  //   window.addEventListener(
+  //     'touchmove',
+  //     this.handleScroll
+  //     // debounce(this.handleScroll, 25, { leading: true, trailing: true })
+  //   );
+  // }
 
   render() {
     let header = this.props.data.header.edges[0].node.frontmatter;
