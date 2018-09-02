@@ -299,7 +299,7 @@ export default class indexPage extends React.Component {
             {/* <div className="layout__navbar"> */}
             <AnimationGroup
               transitionName="fade"
-              transitionEnterTimeout={100}
+              transitionEnterTimeout={1}
               transitionLeaveTimeout={100}
               className="layout__navbar"
             >

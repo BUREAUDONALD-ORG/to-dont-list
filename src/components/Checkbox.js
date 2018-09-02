@@ -1,10 +1,13 @@
 import React from 'react';
 
 export default ({ product, toggleProducts, disabled, ...rest }) => {
+  let animate = e => {
+    console.log(e);
+  };
   return (
     <div
       className="checkbox"
-      onClick={!disabled ? toggleProducts.bind(this, product) : animate => {}}
+      onClick={!disabled ? toggleProducts.bind(this, product) : animate}
       {...rest}
     >
       <input
