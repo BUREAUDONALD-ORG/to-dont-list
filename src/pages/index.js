@@ -122,45 +122,43 @@ export default class indexPage extends React.Component {
 
     this.setState({
       scroll: {
-        resizeHeader: scrollY > 10,
-        collapseHeader: scrollY > 300,
-        showNav: scrollY > 800,
-        position: scrollY
+        position: window.scrollY
       }
     });
   };
 
-  scrollAnimations = () => {
-    let a = {
-      title: {
-        fontSize: 12 - this.state.scroll.position / 300 * 8,
-        lineHeight: 7.5 - this.state.scroll.position / 300 * 3.5
-      },
-      subTitle: {
-        fontSize: 4 - this.state.scroll.position / 300 * 2.5,
-        lineHeight: 4 - this.state.scroll.position / 300 * 2.5,
-        bottom: 6.3 - this.state.scroll.position / 300 * 6.3
-      },
-      line: {
-        height: 26.5 - this.state.scroll.position / 400 * 22.5
-      }
-    };
+  interpolatePosition = (start, end, speed) => {
+    let scrollY = window.scrollY;
+    let point = start - scrollY / speed * (start - end);
+    let edge = point > end ? point : end;
+    return `${edge}rem`;
+  };
 
+  scrollAnimations = () => {
     return {
       title: {
-        fontSize: `${a.title.fontSize > 4 ? a.title.fontSize : 4}rem`,
-        lineHeight: `${a.title.lineHeight > 3.5 ? a.title.lineHeight : 3.5}rem`
+        fontSize: this.interpolatePosition(12, 4, 250),
+        lineHeight: this.interpolatePosition(7.5, 4, 250)
       },
       subTitle: {
-        fontSize: `${a.subTitle.fontSize > 1.5 ? a.subTitle.fontSize : 1.5}rem`,
-        lineHeight: `${
-          a.subTitle.lineHeight > 1.5 ? a.subTitle.lineHeight : 1.5
-        }rem`,
-        bottom: `${a.subTitle.bottom > 0 ? a.subTitle.bottom : 0}rem`
+        fontSize: this.interpolatePosition(4, 1.5, 300),
+        lineHeight: this.interpolatePosition(4, 1.5, 300),
+        bottom: this.interpolatePosition(6.6, 0, 400)
       },
       line: {
-        height: `${a.line.height > 4 ? a.line.height : 4}rem`
+        height: this.interpolatePosition(26.5, 4, 400)
       }
+    };
+  };
+
+  scrollTriggers = () => {
+    let scrollY = window.scrollY;
+    return {
+      header:
+        this.state.scroll.position < 10
+          ? 'large'
+          : scrollY < 350 ? 'medium' : 'small',
+      nav: scrollY > 800
     };
   };
 
@@ -173,14 +171,11 @@ export default class indexPage extends React.Component {
     let social = this.props.data.social.edges[0].node.frontmatter;
     let credits = this.props.data.credits.edges[0].node.frontmatter;
     let animation = this.scrollAnimations();
+
     return (
       <div className="layout__page-container">
         <header
-          data-size={
-            !this.state.scroll.resizeHeader
-              ? 'large'
-              : !this.state.scroll.collapseHeader ? 'medium' : 'small'
-          }
+          data-size={this.scrollTriggers().header}
           className="layout__header-container"
         >
           <div className="layout__header">
@@ -237,7 +232,7 @@ export default class indexPage extends React.Component {
 
         <div className="layout__products-container">
           <div className="layout__checkboxes-container">
-            <div className="layout__checkboxes" data-sticky={this.state.sticky}>
+            <div className="layout__checkboxes">
               <h2 className="checkboxes__title">{checkboxes.title}</h2>
               <div className="checkboxes__container">
                 {initialProducts.map((product, key) => {
@@ -270,7 +265,7 @@ export default class indexPage extends React.Component {
               transitionLeaveTimeout={100}
               className="layout__navbar"
             >
-              {!this.state.scroll.showNav &&
+              {!this.scrollTriggers().nav &&
                 this.countSelectedProducts() > 0 && (
                   <Button
                     className="btn"
@@ -278,7 +273,7 @@ export default class indexPage extends React.Component {
                     text={checkboxes.footer}
                   />
                 )}
-              {this.state.scroll.showNav &&
+              {this.scrollTriggers().nav &&
                 this.selectedProducts().map((product, key) => {
                   return (
                     <NavItem
