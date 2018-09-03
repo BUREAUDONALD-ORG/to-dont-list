@@ -142,12 +142,12 @@ export default class indexPage extends React.Component {
       } else {
         return {
           title: {
-            fontSize: this.interpolatePosition(8, 2.5, 250),
-            lineHeight: this.interpolatePosition(6, 2.5, 250)
+            fontSize: this.interpolatePosition(8, 2.5, 400),
+            lineHeight: this.interpolatePosition(6, 2.5, 400)
           },
           subTitle: {
-            fontSize: this.interpolatePosition(2.5, 1.5, 250),
-            lineHeight: this.interpolatePosition(2.5, 1.5, 250),
+            fontSize: this.interpolatePosition(2.5, 1.5, 400),
+            lineHeight: this.interpolatePosition(2.5, 1.5, 400),
             bottom: 0
           },
           line: {
@@ -167,13 +167,26 @@ export default class indexPage extends React.Component {
   scrollTriggers = () => {
     if (typeof window !== 'undefined') {
       let scrollY = window.scrollY;
-      return {
-        header:
-          this.state.scroll.position < 10
-            ? 'large'
-            : scrollY < 350 ? 'medium' : 'small',
-        nav: scrollY > 780
-      };
+      let navbarOffset =
+        document.querySelector('.layout__navbar-container').offsetTop - 100;
+      console.log(scrollY, navbarOffset);
+      if (window.innerWidth > 800) {
+        return {
+          header:
+            this.state.scroll.position < 10
+              ? 'large'
+              : scrollY < 350 ? 'medium' : 'small',
+          nav: scrollY > navbarOffset
+        };
+      } else {
+        return {
+          header:
+            this.state.scroll.position < 10
+              ? 'large'
+              : scrollY < 400 ? 'medium' : 'small',
+          nav: scrollY > navbarOffset
+        };
+      }
     } else {
       return {
         header: 'large',
