@@ -101,16 +101,6 @@ export default class indexPage extends React.Component {
     }, 0);
   };
 
-  handleScroll = e => {
-    if (typeof window !== 'undefined') {
-      this.setState({
-        scroll: {
-          position: window.scrollY
-        }
-      });
-    }
-  };
-
   interpolatePosition = (start, end, scrollHeight) => {
     if (typeof window !== 'undefined') {
       let scrollY = window.scrollY;
@@ -167,9 +157,10 @@ export default class indexPage extends React.Component {
   scrollTriggers = () => {
     if (typeof window !== 'undefined') {
       let scrollY = window.scrollY;
-      let navbarOffset =
-        document.querySelector('.layout__navbar-container').offsetTop - 100;
-      console.log(scrollY, navbarOffset);
+      let navbarElem = document.querySelector('.layout__navbar-container');
+      let navbarPos = navbarElem ? navbarElem.offsetTop : 400;
+      let navbarOffset = navbarPos - 100;
+
       if (window.innerWidth > 800) {
         return {
           header:
@@ -195,23 +186,24 @@ export default class indexPage extends React.Component {
     }
   };
 
+  handleScroll = e => {
+    console.log('stateupdate');
+    if (typeof window !== 'undefined') {
+      this.setState({
+        scroll: {
+          position: window.scrollY
+        }
+      });
+    }
+  };
+
   componentDidMount() {
     if (typeof window !== 'undefined') {
-      window.addEventListener(
-        'scroll',
-        this.handleScroll
-        // debounce(this.handleScroll, 25, { leading: true, trailing: true })
-      );
+      console.log('mounting events');
+      window.addEventListener('scroll', this.handleScroll);
+      window.addEventListener('resize', this.handleScroll);
     }
   }
-
-  // componentDidMount() {
-  //   window.addEventListener(
-  //     'touchmove',
-  //     this.handleScroll
-  //     // debounce(this.handleScroll, 25, { leading: true, trailing: true })
-  //   );
-  // }
 
   render() {
     let header = this.props.data.header.edges[0].node.frontmatter;
