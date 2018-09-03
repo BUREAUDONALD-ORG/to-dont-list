@@ -299,13 +299,7 @@ export default class indexPage extends React.Component {
           </div>
 
           <div className="layout__navbar-container">
-            {/* <div className="layout__navbar"> */}
-            <AnimationGroup
-              transitionName="fade"
-              transitionEnterTimeout={1}
-              transitionLeaveTimeout={100}
-              className="layout__navbar"
-            >
+            <div className="layout__navbar">
               {!this.scrollTriggers().nav &&
                 this.countSelectedProducts() > 0 && (
                   <Button
@@ -325,8 +319,7 @@ export default class indexPage extends React.Component {
                     />
                   );
                 })}
-            </AnimationGroup>
-            {/* </div> */}
+            </div>
           </div>
 
           <AnimationGroup

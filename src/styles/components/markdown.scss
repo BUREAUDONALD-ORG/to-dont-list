@@ -20,7 +20,7 @@
 
   p {
     @include t--body;
-    padding-bottom: $unit;
+    padding-bottom: $unit * 2 / 3;
   }
 
   a {

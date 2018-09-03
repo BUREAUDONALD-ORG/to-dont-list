@@ -4,7 +4,6 @@
   align-self: flex-end;
   width: calc(50% - #{$unit * 1.5});
   padding: 2rem 0;
-  transition: all 0.2s ease;
   position: relative;
   // overflow: hidden;
 }
@@ -21,7 +20,6 @@
   left: calc(50% - #{0.3rem});
   display: block;
   height: ($header-height-full - 2rem);
-  transition: all 0.2s ease;
 }
 
 .header__line-short {
