@@ -12,6 +12,13 @@
   padding: $half $unit;
   background: $day;
   cursor: pointer;
+  transition: background 100ms ease;
+}
+
+.checkbox[data-tapped='true'] {
+  .checkbox__icon-container {
+    background: $complementary;
+  }
 }
 
 .checkboxes__title {
