@@ -187,7 +187,6 @@ export default class indexPage extends React.Component {
   };
 
   handleScroll = e => {
-    console.log('stateupdate');
     if (typeof window !== 'undefined') {
       this.setState({
         scroll: {
@@ -199,7 +198,6 @@ export default class indexPage extends React.Component {
 
   componentDidMount() {
     if (typeof window !== 'undefined') {
-      console.log('mounting events');
       window.addEventListener('scroll', this.handleScroll);
       window.addEventListener('resize', this.handleScroll);
     }
