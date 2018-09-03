@@ -10,6 +10,7 @@
 
 .header__title {
   @include t--title;
+  white-space: pre;
   color: $day;
 }
 
@@ -32,6 +33,7 @@
 
 .header__subtitle {
   position: relative;
+  white-space: pre;
   @include t--header-1;
   // oh horror: typography addition
   line-height: 4.175rem;
@@ -101,6 +103,13 @@
 .layout__header-container[data-size='small'] {
   .header__section {
     padding: 0 0;
+  }
+
+  .header__title {
+    white-space: normal;
+  }
+  .header__subtitle {
+    white-space: normal;
   }
 
   .header__line {

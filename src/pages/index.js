@@ -221,11 +221,9 @@ export default class indexPage extends React.Component {
         >
           <div className="layout__header">
             <div className="header__section">
-              <pre>
-                <h1 style={animation.title} className="header__title">
-                  {header.title}
-                </h1>
-              </pre>
+              <h1 style={animation.title} className="header__title">
+                {header.title}
+              </h1>
             </div>
             <img
               className="header__line"
@@ -240,11 +238,9 @@ export default class indexPage extends React.Component {
             />
             <img className="header__line-hz" src={lineHz} role="presentation" />
             <div className="header__section">
-              <pre>
-                <h3 style={animation.subTitle} className="header__subtitle">
-                  {header.subTitle}
-                </h3>
-              </pre>
+              <h3 style={animation.subTitle} className="header__subtitle">
+                {header.subTitle}
+              </h3>
               <h4 className="header__contact">
                 <ScrollLink
                   rel="noopener noreferrer"
