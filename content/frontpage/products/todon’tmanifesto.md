@@ -14,5 +14,5 @@ checkbox:
 layout: vertical
 ---
 ### 1 — Make Choices
-### 2 — Do Less, Do it better
+### 2 — Do Less, Do it Better
 ### 3 — Work in Circles
