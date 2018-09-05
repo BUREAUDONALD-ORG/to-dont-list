@@ -13,6 +13,6 @@ checkbox:
   title: ToDon’tManifesto
 layout: vertical
 ---
-### 1 — Make Choices
-### 2 — Do Less, Do it Better
+### 1 — Do Less, Do it Better
+### 2 — Make Choices
 ### 3 — Work in Circles
