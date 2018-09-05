@@ -9,7 +9,7 @@ button:
   link: todont.co
   text: Download
 checkbox:
-  text: 3 Rules
+  text: The 3 Rules
   title: ToDon’tManifesto
 layout: vertical
 ---
