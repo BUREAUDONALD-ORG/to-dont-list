@@ -8,6 +8,9 @@ subTitle: |-
   Tools
   for Creative
   People
+subTitleSmall: |-
+  Productivity Tools
+  for Creative People
 author:
   link: 'http://www.bureaudonald.com'
   name: Donald Roos

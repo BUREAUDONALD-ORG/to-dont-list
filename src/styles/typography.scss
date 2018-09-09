@@ -123,8 +123,8 @@ $flh--t--body-responsive: 1.5rem;
   (1000, 1200, 16),
   (1100, 1200, 17),
   (1200, 1400, 18),
-  (1400, 1600, 20),
-  (1600, 9999, 20) {
+  (1400, 1600, 22),
+  (1600, 9999, 24) {
   @media (min-width: $min + px) and (max-width: $max + px) {
     html {
       font-size: $size + px;

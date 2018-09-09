@@ -1,11 +1,13 @@
 .header__section {
   display: flex;
-  flex-direction: row;
-  align-self: flex-end;
+  flex-direction: column;
   width: calc(50% - #{$unit * 1.5});
   padding: 2rem 0;
-  position: relative;
-  // overflow: hidden;
+  justify-content: space-between;
+}
+
+.header__section:last-of-type {
+  display: flex;
 }
 
 .header__title {
@@ -35,16 +37,17 @@
   position: relative;
   white-space: pre;
   @include t--header-1;
-  // oh horror: typography addition
   line-height: 4.175rem;
-  bottom: 6.5rem;
   color: $complementary;
+}
+
+.header__meta-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .header__author {
   @include t--header-3;
-  position: absolute;
-  bottom: 2rem;
   // oh horror: typography addition
   line-height: 0.8rem;
 
@@ -59,37 +62,33 @@
 }
 
 .header__contact {
-  display: none;
+  @include t--header-3;
+  display: block;
+  color: $day;
+  align-self: flex-end;
+  border-bottom: $underline-width solid $night;
+  margin-bottom: 0.4rem - $underline-width;
+  cursor: pointer;
 }
 
-.layout__header-container[data-size='medium'],
 .layout__header-container[data-size='small'] {
   .header__section {
     flex-direction: row;
     align-items: flex-end;
+    padding: 0 0;
   }
   .header__section:last-of-type {
     justify-content: space-between;
   }
   .header__title {
     @include t--header-1;
+    white-space: normal;
   }
 
   .header__subtitle {
     @include t--header-3;
     color: $complementary;
-    max-width: 18rem;
     margin-bottom: 0.4rem;
-  }
-
-  .header__contact {
-    @include t--header-3;
-    display: block;
-    color: $day;
-    align-self: flex-end;
-    border-bottom: $underline-width solid $night;
-    margin-bottom: 0.4rem - $underline-width;
-    cursor: pointer;
   }
 
   .header__contact:hover {
@@ -97,19 +96,6 @@
   }
   .header__author {
     display: none;
-  }
-}
-
-.layout__header-container[data-size='small'] {
-  .header__section {
-    padding: 0 0;
-  }
-
-  .header__title {
-    white-space: normal;
-  }
-  .header__subtitle {
-    white-space: normal;
   }
 
   .header__line {
@@ -120,12 +106,6 @@
     display: block;
     opacity: 1;
     height: ($header-height-small - 2rem);
-  }
-  .header__subtitle {
-    bottom: 0 !important;
-  }
-  pre {
-    white-space: normal;
   }
 }
 

@@ -104,53 +104,11 @@ export default class indexPage extends React.Component {
   interpolatePosition = (start, end, scrollHeight) => {
     if (typeof window !== 'undefined') {
       let scrollY = window.scrollY;
-      let point = start - scrollY / scrollHeight * (start - end);
+      let point = start - (scrollY / scrollHeight) * (start - end);
       let edge = point > end ? point : end;
       return `${edge}rem`;
     } else {
       return undefined;
-    }
-  };
-
-  scrollAnimations = () => {
-    if (typeof window !== 'undefined') {
-      if (window.innerWidth > 800) {
-        return {
-          title: {
-            fontSize: this.interpolatePosition(12, 4, 250),
-            lineHeight: this.interpolatePosition(7.5, 4, 250)
-          },
-          subTitle: {
-            fontSize: this.interpolatePosition(4, 1.5, 250),
-            lineHeight: this.interpolatePosition(4, 1.5, 250),
-            bottom: this.interpolatePosition(6.6, 0, 800)
-          },
-          line: {
-            height: this.interpolatePosition(26.5, 4, 400)
-          }
-        };
-      } else {
-        return {
-          title: {
-            fontSize: this.interpolatePosition(8, 2.5, 400),
-            lineHeight: this.interpolatePosition(6, 2.5, 400)
-          },
-          subTitle: {
-            fontSize: this.interpolatePosition(2.5, 1.5, 400),
-            lineHeight: this.interpolatePosition(2.5, 1.5, 400),
-            bottom: 0
-          },
-          line: {
-            height: 0
-          }
-        };
-      }
-    } else {
-      return {
-        title: undefined,
-        subTitle: undefined,
-        line: undefined
-      };
     }
   };
 
@@ -163,18 +121,12 @@ export default class indexPage extends React.Component {
 
       if (window.innerWidth > 800) {
         return {
-          header:
-            this.state.scroll.position < 10
-              ? 'large'
-              : scrollY < 350 ? 'medium' : 'small',
+          header: this.state.scroll.position < 400 ? 'large' : 'small',
           nav: scrollY > navbarOffset
         };
       } else {
         return {
-          header:
-            this.state.scroll.position < 10
-              ? 'large'
-              : scrollY < 400 ? 'medium' : 'small',
+          header: this.state.scroll.position < 400 ? 'large' : 'small',
           nav: scrollY > navbarOffset
         };
       }
@@ -211,7 +163,6 @@ export default class indexPage extends React.Component {
     let form = this.props.data.form.edges[0].node.frontmatter;
     let social = this.props.data.social.edges[0].node.frontmatter;
     let credits = this.props.data.credits.edges[0].node.frontmatter;
-    let animation = this.scrollAnimations();
 
     return (
       <div className="layout__page-container">
@@ -221,16 +172,9 @@ export default class indexPage extends React.Component {
         >
           <div className="layout__header">
             <div className="header__section">
-              <h1 style={animation.title} className="header__title">
-                {header.title}
-              </h1>
+              <h1 className="header__title">{header.title}</h1>
             </div>
-            <img
-              className="header__line"
-              src={line}
-              role="presentation"
-              style={animation.line}
-            />
+            <img className="header__line" src={line} role="presentation" />
             <img
               className="header__line-short"
               src={lineShort}
@@ -238,31 +182,35 @@ export default class indexPage extends React.Component {
             />
             <img className="header__line-hz" src={lineHz} role="presentation" />
             <div className="header__section">
-              <h3 style={animation.subTitle} className="header__subtitle">
-                {header.subTitle}
+              <h3 className="header__subtitle">
+                {this.scrollTriggers().header == 'large'
+                  ? header.subTitle
+                  : header.subTitleSmall}
               </h3>
-              <h4 className="header__contact">
-                <ScrollLink
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  to={header.contact.link}
-                  smooth={true}
-                  offset={-300}
-                  duration={500}
-                >
-                  {header.contact.title}
-                </ScrollLink>
-              </h4>
-              <h4 className="header__author">
-                {header.author.prefix}
-                <a
-                  rel="noopener noreferrer"
-                  target="_blank"
-                  href={header.author.link}
-                >
-                  {header.author.name}
-                </a>
-              </h4>
+              <div className="header__meta-container">
+                <h4 className="header__author">
+                  {header.author.prefix}
+                  <a
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    href={header.author.link}
+                  >
+                    {header.author.name}
+                  </a>
+                </h4>
+                <h4 className="header__contact">
+                  <ScrollLink
+                    rel="noopener noreferrer"
+                    target="_blank"
+                    to={header.contact.link}
+                    smooth={true}
+                    offset={-300}
+                    duration={500}
+                  >
+                    {header.contact.title}
+                  </ScrollLink>
+                </h4>
+              </div>
             </div>
           </div>
         </header>
@@ -484,6 +432,7 @@ export const productQuery = graphql`
           frontmatter {
             title
             subTitle
+            subTitleSmall
             author {
               link
               name
