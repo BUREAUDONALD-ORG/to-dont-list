@@ -31,7 +31,6 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
 
 .layout__header-container {
   @include block-container;
-  width: 100%;
   height: $header-height-full;
 
   display: flex;
@@ -41,32 +40,18 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   background: $night;
 }
 
-// Here to fix a small issue with fast scrolling
-// .layout__header-container::before {
-//   position: fixed;
-//   top: -1px;
-//   z-index: 99;
-//   height: 5rem;
-//   width: 100%;
-//   background: $night;
-//   content: '';
-// }
-// endfix
-
-.layout__header-container[data-size='medium'],
 .layout__header-container[data-size='small'] {
   position: sticky;
   position: -webkit-sticky;
   top: ($header-height-full - $header-height-small) * -1;
   z-index: 100;
-
-  justify-content: flex-end;
 }
 
 .layout__header {
   @include block;
   justify-content: space-between;
   position: relative;
+  height: 100%;
   z-index: 100;
   overflow: hidden;
 
@@ -115,7 +100,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   position: sticky;
   position: -webkit-sticky;
   top: calc(
-    #{$header-height-small + -1rem} - 1px
+    #{$header-height-small - 1rem} - 1px
   ); // Rounding optical correction
   z-index: 95;
   width: 100%;
@@ -136,9 +121,6 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   border-top: $border-width dashed $day;
   padding-bottom: $unit * 6;
   width: 100%;
-}
-
-.layout__line {
 }
 
 @media (min-width: 0px) and (max-width: $bp-small) {
