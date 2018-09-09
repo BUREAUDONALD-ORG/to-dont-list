@@ -77,7 +77,6 @@ export default class Form extends React.Component {
                 text={
                   this.state.isSubmitted ? form.submitResponse : form.submit
                 }
-                type="large"
                 handler={this.submitEmail}
               />
               {this.state.isSubmitted && (

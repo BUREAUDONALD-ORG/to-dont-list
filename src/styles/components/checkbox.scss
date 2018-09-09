@@ -22,6 +22,12 @@
 }
 
 .checkboxes__title {
+  @include t--header-1;
+  color: $day;
+  padding: $unit 0 0 0;
+}
+
+.checkboxes__subtitle {
   @include t--header-3;
   color: $day;
   padding: $unit 0 $two 0;
@@ -42,7 +48,7 @@
   cursor: pointer;
 
   height: $unit * 2.2;
-  width: $unit* 2.2;
+  width: $unit * 2.2;
   margin: $unit * 1 / 5 0;
 
   border: $border-width solid $complementary;

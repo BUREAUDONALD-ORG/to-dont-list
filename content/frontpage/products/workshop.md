@@ -1,6 +1,6 @@
 ---
 id: 2
-title: Work Don’t Shop
+title: WorkDon’tShop
 timeToRead: 4
 button:
   link: 'mailto:donald@todont.co'

@@ -1,5 +1,5 @@
 .product__content {
-  margin-left: calc(100% / 3 - #{($unit * 2) / 3 });
+  margin-left: calc(100% / 3 - #{($unit * 2) / 3});
   background-color: $day;
   position: relative;
   height: 100%;
@@ -12,7 +12,9 @@
 }
 
 .product__title {
-  @include t--header-1;
+  @include t--header-0;
+  padding-bottom: $unit;
+  word-wrap: break-word;
 }
 
 .product__image {

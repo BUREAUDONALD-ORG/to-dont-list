@@ -220,7 +220,8 @@ export default class indexPage extends React.Component {
         <div className="layout__products-container">
           <div className="layout__checkboxes-container">
             <div className="layout__checkboxes">
-              <h2 className="checkboxes__title">{checkboxes.title}</h2>
+              <h1 className="checkboxes__title">{checkboxes.title}</h1>
+              <h3 className="checkboxes__subtitle">{checkboxes.subtitle}</h3>
               <div className="checkboxes__container">
                 {initialProducts.map((product, key) => {
                   product = products.find(p => {
@@ -455,6 +456,7 @@ export const productQuery = graphql`
         node {
           frontmatter {
             title
+            subtitle
             footer
           }
         }

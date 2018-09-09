@@ -51,6 +51,7 @@ collections:
         file: "content/frontpage/site/checkboxes.md"
         fields:
         - {label: "Title", name: "title", widget: "string"}
+        - {label: "Subtitle", name: "subtitle", widget: "string"}
         - {label: "Pointer button", name: "footer", widget: "string"}
 
       - name: "form"
