@@ -48,17 +48,10 @@
 
 .header__author {
   @include t--header-3;
-  // oh horror: typography addition
-  line-height: 0.8rem;
-
   color: $day;
   border-bottom: $underline-width solid $night;
   margin-bottom: -$underline-width;
   cursor: pointer;
-}
-
-.header__author:hover a {
-  border-bottom: $underline-width solid $day;
 }
 
 .header__contact {
@@ -67,8 +60,13 @@
   color: $day;
   align-self: flex-end;
   border-bottom: $underline-width solid $night;
-  margin-bottom: 0.4rem - $underline-width;
+  margin-bottom: -$underline-width;
   cursor: pointer;
+}
+
+.header__author:hover a,
+.header__contact:hover {
+  border-bottom: $underline-width solid $day;
 }
 
 .layout__header-container[data-size='small'] {
@@ -91,9 +89,6 @@
     margin-bottom: 0.4rem;
   }
 
-  .header__contact:hover {
-    border-bottom: $underline-width solid $day;
-  }
   .header__author {
     display: none;
   }
