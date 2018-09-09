@@ -11,7 +11,6 @@ import { Motion, spring } from 'react-motion';
 
 import NavItem from '../components/Nav-item.js';
 import Checkbox from '../components/Checkbox.js';
-import Product from '../components/Product.js';
 import Button from '../components/Button.js';
 import Form from '../components/Form.js';
 
