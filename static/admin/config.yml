@@ -31,6 +31,7 @@ collections:
         fields:
           - {label: "Header Title", name: "title", widget: "text"}
           - {label: "Sub Title", name: "subTitle", widget: "text"}
+          - {label: "Sub Title Small", name: "subTitleSmall", widget: "text"}
           - label: "Author"
             name: "author"
             widget: "object"
@@ -146,7 +147,7 @@ collections:
         fields:
           - { label: "Title", name: "title", widget: "string", default: "" }
           - { label: "Text", name: "text", widget: "string", default: "" }
-          - { label: "Visible?", name: "visible", widget: "number", valueType: "int", default: 0 }
+          - { label: "Visible?", name: "visible", widget: "number", valueType: "int", default: 0, min: 0, max: 3, required: true}
       - label: "layout"
         name: "layout"
         widget: "select"

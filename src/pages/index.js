@@ -26,7 +26,9 @@ export default class indexPage extends React.Component {
       products: this.props.data.products.edges,
       initialProducts: JSON.parse(
         JSON.stringify(this.props.data.products.edges)
-      ),
+      ).sort((a, b) => {
+        return a.node.frontmatter.id < b.node.frontmatter.id;
+      }),
       scroll: { resizeHeader: false, position: 0 }
     };
   }

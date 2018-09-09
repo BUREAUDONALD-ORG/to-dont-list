@@ -11,13 +11,14 @@ button:
 checkbox:
   text: The 3 Rules
   title: ToDon’tManifesto
+  visible: 0
 layout: horizontal-left
 ---
+
 ### 1 — Do Less, Do it Better
+
 ### 2 — Make Choices
+
 ### 3 — Work in Circles
+
 <br/><br/><br/><br/><br/><br/>
-
-
-
-
