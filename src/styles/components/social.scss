@@ -12,7 +12,7 @@
 }
 
 .social__text {
-  @include t--header-3;
+  @include t--body-black;
 }
 
 @media (min-width: 0px) and (max-width: $bp-small) {
