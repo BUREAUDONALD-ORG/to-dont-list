@@ -74,6 +74,7 @@ export default class Form extends React.Component {
             ))}
             <div className="form__submit-container">
               <Button
+                type="large"
                 text={
                   this.state.isSubmitted ? form.submitResponse : form.submit
                 }

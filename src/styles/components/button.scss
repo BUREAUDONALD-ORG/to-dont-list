@@ -54,7 +54,7 @@
   width: calc(50% - #{$half});
 
   .btn__text {
-    @include t--body-black;
+    @include t--header-3;
   }
 }
 
