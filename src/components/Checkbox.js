@@ -28,7 +28,7 @@ export default class Checkbox extends React.Component {
         <input
           className="checkbox__input"
           type="checkbox"
-          value={product.checkbox.visible}
+          value={product.checkbox.visible ? product.checkbox.visible : 0}
         />
         <label className="checkbox__label" disabled={disabled}>
           <div className="checkbox__icon-container">
