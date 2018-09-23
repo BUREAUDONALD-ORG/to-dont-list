@@ -118,7 +118,7 @@ export default class indexPage extends React.Component {
       let scrollY = window.scrollY;
       let navbarElem = document.querySelector('.layout__navbar-container');
       let navbarPos = navbarElem ? navbarElem.offsetTop : 400;
-      let navbarOffset = navbarPos - 100;
+      let navbarOffset = navbarPos - 110;
 
       if (window.innerWidth > 800) {
         return {
