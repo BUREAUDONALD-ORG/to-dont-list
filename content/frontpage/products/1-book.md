@@ -11,7 +11,7 @@ button:
 checkbox:
   text: Book
   title: |-
-    Don’t Read 
+    Don’t Read
     This Book
   visible: 0
 layout: horizontal-left

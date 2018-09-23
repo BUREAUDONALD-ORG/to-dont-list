@@ -14,6 +14,7 @@ checkbox:
   visible: 0
 layout: horizontal-right
 ---
+
 Whatever kind of creative person you are, this thought experiment game will get you out of your comfort zone. How? It stimulates creativity through limitations. Boundaries push you to think beyond the usual solutions and send you in different directions. That’s exactly how you end up with unexpected and extraordinary ideas.
 
 ## How to play

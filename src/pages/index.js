@@ -26,7 +26,7 @@ export default class indexPage extends React.Component {
       initialProducts: JSON.parse(
         JSON.stringify(this.props.data.products.edges)
       ).sort((a, b) => {
-        return a.node.frontmatter.id < b.node.frontmatter.id;
+        return a.node.frontmatter.id > b.node.frontmatter.id;
       }),
       scroll: { resizeHeader: false, position: 0 }
     };
@@ -468,6 +468,7 @@ export const productQuery = graphql`
     }
     products: allMarkdownRemark(
       filter: { id: { regex: "//content/frontpage/products/" } }
+      sort: { order: ASC, fields: [frontmatter___id] }
     ) {
       edges {
         node {
