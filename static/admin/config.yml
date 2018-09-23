@@ -136,12 +136,16 @@ collections:
         fields:
           - {label: "Default", name: "default", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/", default: "", required: false}
           - {label: "Diapositive", name: "diapositive", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/", default: "", required: false}
-      - label: "Button"
-        name: "button"
-        widget: "object"
+      - label: "Buttons"
+        name: "buttons"
+        widget: "list"
         fields:
-          - { label: "Text", name: "text", widget: "string", default: "" }
-          - { label: "Link", name: "link", widget: "string", default: "" }
+          - label: "Button"
+            name: "button"
+            widget: "object"
+            fields:
+              - { label: "Text", name: "text", widget: "string", default: "" }
+              - { label: "Link", name: "link", widget: "string", default: "" }
       - label: "Checkbox"
         name: "checkbox"
         widget: "object"

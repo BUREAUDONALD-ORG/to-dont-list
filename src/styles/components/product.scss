@@ -5,10 +5,11 @@
   height: 100%;
   padding: $unit * 4 0 $unit * 4 $unit;
   width: calc(#{200% / 3} + #{$unit});
+}
 
-  .btn {
-    width: calc(100% / 2 - #{$half});
-  }
+.product__content .btn {
+  width: calc(100% / 2 - #{$half});
+  margin-bottom: 1rem;
 }
 
 .product__title {

@@ -2,9 +2,9 @@
 id: 2
 title: WorkDon’tShop
 timeToRead: 4
-button:
-  link: 'mailto:donald@todont.co'
-  text: Contact Donald
+buttons:
+  - link: 'mailto:donald@todont.co'
+    text: Contact Donald
 checkbox:
   text: Workshop
   title: Work Don’t Shop

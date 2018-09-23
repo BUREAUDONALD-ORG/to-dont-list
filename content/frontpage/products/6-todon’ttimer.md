@@ -5,9 +5,9 @@ timeToRead: 3
 images:
   default: ../../../static/img/tdc_app_todontlist.png
   diapositive: ../../../static/img/tdc_app_todontlist.png
-button:
-  link: 'https://itunes.apple.com/nl/app/todonttimer/id1218710160?l=en&mt=8'
-  text: Donwload for IOS
+buttons:
+  - link: 'https://itunes.apple.com/nl/app/todonttimer/id1218710160?l=en&mt=8'
+    text: Donwload for IOS
 checkbox:
   text: App
   title: ToDon’tTimer

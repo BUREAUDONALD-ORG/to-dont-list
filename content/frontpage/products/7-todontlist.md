@@ -5,9 +5,9 @@ timeToRead: 1
 images:
   default: ../../../static/img/tdc_fillerimage_white.png
   diapositive: ../../../static/img/tdc_fillerimage_black.png
-button:
-  link: 'https://www.bispublishers.com/to-dont-list.html'
-  text: Order a Copy
+buttons:
+  - link: 'https://www.bispublishers.com/to-dont-list.html'
+    text: Order a Copy
 checkbox:
   text: Block
   title: ToDon’tList

@@ -322,11 +322,17 @@ export default class indexPage extends React.Component {
                           __html: product.node.html
                         }}
                       />
-                      <Button
-                        text={frontmatter.button.text}
-                        position={key}
-                        diapositive={diapositive}
-                      />
+                      {frontmatter.buttons.map((btn, key) => {
+                        return (
+                          <Button
+                            text={btn.text}
+                            link={btn.link}
+                            key={key}
+                            position={key}
+                            diapositive={diapositive}
+                          />
+                        );
+                      })}
                     </div>
                   </div>
                 </div>
@@ -482,7 +488,7 @@ export const productQuery = graphql`
               text
               visible
             }
-            button {
+            buttons {
               text
               link
             }

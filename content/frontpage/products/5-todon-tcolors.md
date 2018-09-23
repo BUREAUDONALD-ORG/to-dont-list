@@ -2,9 +2,9 @@
 id: 5
 title: ToDon’tColors
 timeToRead: 6
-button:
-  link: 'http://instagram.com/todontcolors'
-  text: Follow @ToDontColors
+buttons:
+  - link: 'http://instagram.com/todontcolors'
+    text: Follow @ToDontColors
 checkbox:
   text: Color Picker
   title: ToDon'tColors

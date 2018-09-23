@@ -5,9 +5,9 @@ timeToRead: 4
 images:
   default: ../../../static/img/978-90-6369-484-5-6.jpg
   diapositive: ../../../static/img/978-90-6369-484-5-6.jpg
-button:
-  link: 'https://www.bispublishers.com/dont-do-this-game.html'
-  text: Order a Copy
+buttons:
+  - link: 'https://www.bispublishers.com/dont-do-this-game.html'
+    text: Order a Copy
 checkbox:
   text: Game
   title: Don’t/Do This — Game

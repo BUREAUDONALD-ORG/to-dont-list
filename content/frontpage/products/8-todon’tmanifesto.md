@@ -5,9 +5,9 @@ timeToRead: 1
 images:
   default: ../../../static/img/tdc_fillerimage_white.png
   diapositive: ../../../static/img/tdc_fillerimage_black.png
-button:
-  link: todont.co
-  text: Download
+buttons:
+  - link: todont.co
+    text: Download
 checkbox:
   text: The 3 Rules
   title: ToDon’tManifesto

@@ -5,9 +5,9 @@ timeToRead: 4
 images:
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
-button:
-  link: 'http://www.bispublishers.com/dont-read-this-book.html'
-  text: Order a Copy
+buttons:
+  - link: 'http://www.bispublishers.com/dont-read-this-book.html'
+    text: Order a Copy
 checkbox:
   text: Book
   title: |-
