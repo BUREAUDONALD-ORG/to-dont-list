@@ -173,7 +173,11 @@ export default class indexPage extends React.Component {
         >
           <div className="layout__header">
             <div className="header__section">
-              <h1 className="header__title">{header.title}</h1>
+              <h1 className="header__title">
+                {this.scrollTriggers().header == 'large'
+                  ? header.title
+                  : header.titleSmall}
+              </h1>
             </div>
             <img className="header__line" src={line} role="presentation" />
             <img
@@ -433,6 +437,7 @@ export const productQuery = graphql`
         node {
           frontmatter {
             title
+            titleSmall
             subTitle
             subTitleSmall
             author {

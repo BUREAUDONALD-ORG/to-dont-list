@@ -3,6 +3,8 @@ title: |-
   To
   Don’t
   Co.
+titleSmall: |-
+  ToDon’tCo.
 subTitle: |-
   Productivity
   Tools
