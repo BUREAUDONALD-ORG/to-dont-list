@@ -1,6 +1,7 @@
 ---
 id: 1
 title: Don’t Read This Book
+subTitle: A random subtitle, just to test
 timeToRead: 4
 images:
   default: ../../../static/img/vertical.jpg

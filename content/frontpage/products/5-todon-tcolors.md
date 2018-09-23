@@ -1,6 +1,7 @@
 ---
 id: 5
 title: ToDon’tColors
+subTitle: A random subtitle, just to test
 timeToRead: 6
 buttons:
   - link: 'http://instagram.com/todontcolors'

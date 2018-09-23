@@ -1,6 +1,7 @@
 ---
 id: 6
 title: ToDon’tTImer
+subTitle: A random subtitle, just to test
 timeToRead: 3
 images:
   default: ../../../static/img/tdc_app_todontlist.png

@@ -18,6 +18,13 @@
   word-wrap: break-word;
 }
 
+.product__subtitle {
+  @include t--header-2;
+  color: $complementary;
+  padding-bottom: $unit;
+  word-wrap: break-word;
+}
+
 .product__image {
   position: absolute;
   left: 0;

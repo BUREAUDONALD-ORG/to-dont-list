@@ -1,6 +1,7 @@
 ---
 id: 7
 title: ToDon‘tList
+subTitle: A random subtitle, just to test
 timeToRead: 1
 images:
   default: ../../../static/img/tdc_fillerimage_white.png

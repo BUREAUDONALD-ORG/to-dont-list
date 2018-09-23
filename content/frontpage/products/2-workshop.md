@@ -1,6 +1,7 @@
 ---
 id: 2
 title: WorkDon’tShop
+subTitle: A random subtitle, just to test
 timeToRead: 4
 buttons:
   - link: 'mailto:donald@todont.co'
