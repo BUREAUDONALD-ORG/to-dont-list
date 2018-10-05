@@ -1,6 +1,6 @@
 ---
 id: 5
-title: ToDon‘tList
+title: ToDon’tList
 subTitle: Project Planning for Creative People
 timeToRead: 1
 images:
