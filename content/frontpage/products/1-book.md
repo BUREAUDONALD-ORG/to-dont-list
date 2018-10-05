@@ -1,7 +1,7 @@
 ---
 id: 1
 title: Don’t Read This Book
-subTitle: A random subtitle, just to test
+subTitle: Time Management for Creative People
 timeToRead: 4
 images:
   default: ../../../static/img/vertical.jpg
