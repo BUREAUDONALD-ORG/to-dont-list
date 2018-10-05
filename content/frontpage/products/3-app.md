@@ -9,7 +9,7 @@ images:
 buttons:
   - link: 'https://itunes.apple.com/nl/app/todontlist/id1108348991?l=en&mt=8'
     text: Download for iOS
-  - link: 'https://itunes.apple.com/nl/app/todontlist/id1108348991?l=en&mt=8'
+  - link: 'https://play.google.com/store/apps/details?id=com.todontlist'
     text: Download for Android
 checkbox:
   text: App
