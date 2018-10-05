@@ -1,7 +1,7 @@
 ---
-id: 6
+id: 4
 title: ToDon’tTImer
-subTitle: A random subtitle, just to test
+subTitle: Process Timer for Creative People
 timeToRead: 3
 images:
   default: ../../../static/img/tdc_app_todontlist.png
