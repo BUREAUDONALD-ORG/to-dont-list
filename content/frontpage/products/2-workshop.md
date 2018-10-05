@@ -1,8 +1,11 @@
 ---
 id: 2
-title: WorkDon’tShop
-subTitle: A random subtitle, just to test
+title: Work Don’t Shop
+subTitle: Productivity Workshop for Creative People
 timeToRead: 4
+images:
+  default: ../../../static/img/tdc_fillerimage_white.png
+  diapositive: ../../../static/img/tdc_fillerimage_black.png
 buttons:
   - link: 'mailto:donald@todont.co'
     text: Contact Donald
