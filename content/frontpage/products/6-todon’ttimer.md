@@ -1,6 +1,6 @@
 ---
 id: 4
-title: ToDon’tTImer
+title: ToDon’tTimer
 subTitle: Process Timer for Creative People
 timeToRead: 3
 images:
