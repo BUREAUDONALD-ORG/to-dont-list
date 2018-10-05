@@ -10,7 +10,7 @@ buttons:
   - link: 'http://instagram.com/todontcolors'
     text: Follow @ToDontColors
 checkbox:
-  text: Color Picker
+  text: Instagram
   title: ToDon’tColors
   visible: 0
 layout: horizontal-right
