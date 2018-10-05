@@ -1,14 +1,17 @@
 ---
-id: 5
+id: 6
 title: ToDon’tColors
-subTitle: A random subtitle, just to test
+subTitle: Color Picker for Creative People
 timeToRead: 6
+images:
+  default: ../../../static/img/tdc_fillerimage_white.png
+  diapositive: ../../../static/img/tdc_fillerimage_black.png
 buttons:
   - link: 'http://instagram.com/todontcolors'
     text: Follow @ToDontColors
 checkbox:
   text: Color Picker
-  title: ToDon'tColors
+  title: ToDon’tColors
   visible: 0
 layout: horizontal-right
 ---
