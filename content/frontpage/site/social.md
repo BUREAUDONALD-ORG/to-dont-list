@@ -18,4 +18,3 @@ btn:
     link: 'https://www.instagram.com/bureaudonald/'
     text: Instagram
 ---
-
