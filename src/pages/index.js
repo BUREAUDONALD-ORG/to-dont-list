@@ -1,23 +1,23 @@
-import React from 'react';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import React from "react";
+import ReactCSSTransitionGroup from "react-addons-css-transition-group";
 const AnimationGroup = ReactCSSTransitionGroup;
-import slugify from 'slugify';
-import Img from 'gatsby-image';
-import { throttle, debounce } from 'lodash';
-import stableSort from 'stable';
-import { Link } from 'react-scroll';
+import slugify from "slugify";
+import Img from "gatsby-image";
+import { throttle, debounce } from "lodash";
+import stableSort from "stable";
+import { Link } from "react-scroll";
 const ScrollLink = Link;
-import { Motion, spring } from 'react-motion';
+import { Motion, spring } from "react-motion";
 
-import NavItem from '../components/Nav-item.js';
-import Checkbox from '../components/Checkbox.js';
-import Button from '../components/Button.js';
-import Form from '../components/Form.js';
-import ProductImage from '../components/Product-image.js';
+import NavItem from "../components/Nav-item.js";
+import Checkbox from "../components/Checkbox.js";
+import Button from "../components/Button.js";
+import Form from "../components/Form.js";
+import ProductImage from "../components/Product-image.js";
 
-import line from '../../static/img/line.png';
-import lineHz from '../../static/img/line-hz.png';
-import lineShort from '../../static/img/line-short.png';
+import line from "../../static/img/line.png";
+import lineHz from "../../static/img/line-hz.png";
+import lineShort from "../../static/img/line-short.png";
 
 export default class indexPage extends React.Component {
   constructor(props) {
@@ -104,7 +104,7 @@ export default class indexPage extends React.Component {
   };
 
   interpolatePosition = (start, end, scrollHeight) => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       let scrollY = window.scrollY;
       let point = start - (scrollY / scrollHeight) * (start - end);
       let edge = point > end ? point : end;
@@ -115,33 +115,33 @@ export default class indexPage extends React.Component {
   };
 
   scrollTriggers = () => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       let scrollY = window.scrollY;
-      let navbarElem = document.querySelector('.layout__navbar-container');
+      let navbarElem = document.querySelector(".layout__navbar-container");
       let navbarPos = navbarElem ? navbarElem.offsetTop : 400;
       let navbarOffset = navbarPos - 110;
 
       if (window.innerWidth > 800) {
         return {
-          header: this.state.scroll.position < 400 ? 'large' : 'small',
+          header: this.state.scroll.position < 400 ? "large" : "small",
           nav: scrollY > navbarOffset
         };
       } else {
         return {
-          header: this.state.scroll.position < 400 ? 'large' : 'small',
+          header: this.state.scroll.position < 400 ? "large" : "small",
           nav: scrollY > navbarOffset
         };
       }
     } else {
       return {
-        header: 'large',
+        header: "large",
         nav: false
       };
     }
   };
 
   handleScroll = e => {
-    if (typeof window !== 'undefined') {
+    if (typeof window !== "undefined") {
       this.setState({
         scroll: {
           position: window.scrollY
@@ -151,9 +151,9 @@ export default class indexPage extends React.Component {
   };
 
   componentDidMount() {
-    if (typeof window !== 'undefined') {
-      window.addEventListener('scroll', this.handleScroll);
-      window.addEventListener('resize', this.handleScroll);
+    if (typeof window !== "undefined") {
+      window.addEventListener("scroll", this.handleScroll);
+      window.addEventListener("resize", this.handleScroll);
     }
   }
 
@@ -175,7 +175,7 @@ export default class indexPage extends React.Component {
           <div className="layout__header">
             <div className="header__section">
               <h1 className="header__title">
-                {this.scrollTriggers().header == 'large'
+                {this.scrollTriggers().header == "large"
                   ? header.title
                   : header.titleSmall}
               </h1>
@@ -189,7 +189,7 @@ export default class indexPage extends React.Component {
             <img className="header__line-hz" src={lineHz} role="presentation" />
             <div className="header__section">
               <h3 className="header__subtitle">
-                {this.scrollTriggers().header == 'large'
+                {this.scrollTriggers().header == "large"
                   ? header.subTitle
                   : header.subTitleSmall}
               </h3>
@@ -289,6 +289,7 @@ export default class indexPage extends React.Component {
                   data-diapositive={diapositive}
                   className="layout__product-container"
                 >
+                  <ProductImage images={frontmatter.images} />
                   <div className="layout__product">
                     <div className="product__content">
                       <h1 className="product__title">{frontmatter.title}</h1>
@@ -314,7 +315,6 @@ export default class indexPage extends React.Component {
                       })}
                     </div>
                   </div>
-                  <ProductImage images={frontmatter.images} />
                 </div>
               );
             })}
@@ -369,14 +369,14 @@ export default class indexPage extends React.Component {
                         >
                           {author.name}
                         </a>
-                        {', '}
+                        {", "}
                       </span>
                     );
                   } else {
                     return (
                       <span key={key}>
                         {author.name}
-                        {key === credits.authors.length - 1 ? ', ' : ', '}
+                        {key === credits.authors.length - 1 ? ", " : ", "}
                       </span>
                     );
                   }
@@ -393,14 +393,14 @@ export default class indexPage extends React.Component {
                         >
                           {partner.name}
                         </a>
-                        {key === credits.partners.length - 1 ? '. ' : ', '}
+                        {key === credits.partners.length - 1 ? ". " : ", "}
                       </span>
                     );
                   } else {
                     return (
                       <span key={key}>
                         {partner.name}
-                        {key === credits.partners.length - 1 ? '. ' : ', '}
+                        {key === credits.partners.length - 1 ? ". " : ", "}
                       </span>
                     );
                   }

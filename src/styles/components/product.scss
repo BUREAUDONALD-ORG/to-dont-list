@@ -48,14 +48,14 @@
     padding: $unit * 4 $unit $unit * 8 0;
   }
 
-  // .product__image {
-  //   left: unset;
-  //   // right: 0;
-  //   width: 50%;
-  // }
+  .product__image {
+    left: unset;
+    right: calc(50% + (#{$max-width} / 6) + #{$unit});
+  }
 }
 
 .layout__product-container[data-layout="vertical"] {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
