@@ -4,8 +4,8 @@ title: ToDon’tTimer
 subTitle: Process Timer for Creative People
 timeToRead: 3
 images:
-  default: ../../../static/img/tdc_app_todontlist.png
-  diapositive: ../../../static/img/tdc_app_todontlist.png
+  default: ../../../static/img/vertical.jpg
+  diapositive: ../../../static/img/vertical.jpg
 buttons:
   - link: 'https://itunes.apple.com/nl/app/todonttimer/id1218710160?l=en&mt=8'
     text: Donwload for IOS

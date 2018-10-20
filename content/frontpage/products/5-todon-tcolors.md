@@ -4,8 +4,8 @@ title: ToDon’tColors
 subTitle: Color Picker for Creative People
 timeToRead: 6
 images:
-  default: ../../../static/img/tdc_fillerimage_white.png
-  diapositive: ../../../static/img/tdc_fillerimage_black.png
+  default: ../../../static/img/vertical.jpg
+  diapositive: ../../../static/img/vertical.jpg
 buttons:
   - link: 'http://instagram.com/todontcolors'
     text: Follow @ToDontColors

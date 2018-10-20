@@ -1,5 +1,4 @@
 .product__content {
-  margin-left: calc(100% / 3 - #{($unit * 2) / 3});
   background-color: $day;
   position: relative;
   height: 100%;
@@ -25,32 +24,74 @@
   word-wrap: break-word;
 }
 
-// Image at the top-right side (content left)
+// default product horizontal left!
+// explicit: .layout__product-container[data-layout="horizontal-left"]
+.product__content {
+  margin-left: unset;
+  margin-right: calc(100% / 3 - #{($unit * 2) / 3});
+  padding: $unit * 4 $unit $unit * 8 0;
+}
+
 .product__image {
   position: absolute;
   min-height: 100%;
-  // A third of the gridsize + half of the total space outside the grid
-  min-width: calc((#{$max-width} / 3) + (100vw - #{$max-width}) / 2);
-  // Start at the middle + a sixt + a gutter
-  left: calc(50% + (#{$max-width} / 6) + #{$unit});
+  // think from this one, the opposite has inversed logic
+  // image at the top-right side (content left)
+  // a third of the gridsize + half of the total space outside the grid
+  min-width: calc((100vw / 3));
+  // start at the middle + a sixt + a gutter
+  left: calc(100vw * 4 / 6 - #{$unit} * 2 / 3);
 }
 
-@media (min-width: 0px) and (max-width: $max-width) {
-  // .product__image {
-  //   width: calc(50% - 100% / 6 + 1rem * 1 / 3);
-  // }
+// however max-width starts to play up
+@media (min-width: #{$max-width}) and (max-width: 9999px) {
+  .product__image {
+    // so VWs arent reliable anymore, the grid is different (but fixed)
+    // the base is replaced by the max-width and gets the the right margin added
+    min-width: calc((#{$max-width} / 3) + ((100vw - #{$max-width})));
+    // start at the middle + a sixt + a gutter
+    // the starting position is determined by the maxwidth too
+    left: calc(
+      (#{$max-width} * 4 / 6 + ((100vw - #{$max-width}) / 2) - #{$unit} * 2 / 3)
+    );
+  }
 }
 
-.layout__product-container[data-layout="horizontal-left"] {
+@media (min-width: #{$max-width}) and (max-width: 9999px) {
+  .product__image {
+    min-width: calc((#{$max-width} / 3) + ((100vw - #{$max-width})));
+    left: calc(
+      (#{$max-width} * 4 / 6 + ((100vw - #{$max-width}) / 2) - #{$unit} * 2 / 3)
+    );
+  }
+}
+
+.layout__product-container[data-layout="horizontal-right"] {
   .product__content {
-    margin-left: unset;
-    margin-right: calc(100% / 3 - #{($unit * 2) / 3});
-    padding: $unit * 4 $unit $unit * 8 0;
+    margin-left: calc(100% / 3 - #{($unit * 2) / 3});
+    margin-right: unset;
+    padding: $unit * 4 0 $unit * 4 $unit;
   }
 
   .product__image {
     left: unset;
-    right: calc(50% + (#{$max-width} / 6) + #{$unit});
+    right: calc(100vw * 4 / 6);
+  }
+
+  @media (min-width: #{$max-width}) and (max-width: 9999px) {
+    .product__image {
+      // so VWs arent reliable anymore, the grid is different (but fixed)
+      // the base is replaced by the max-width and gets the the right margin added
+      min-width: calc((#{$max-width} / 3) + ((100vw - #{$max-width})));
+      // start at the middle + a sixt + a gutter
+      // the starting position is determined by the maxwidth too
+      right: calc(
+        (
+          #{$max-width} * 4 / 6 + ((100vw - #{$max-width}) / 2) - #{$unit} * 2 /
+            3
+        )
+      );
+    }
   }
 }
 
@@ -65,11 +106,11 @@
     margin-left: unset;
   }
 
-  // .product__image {
-  //   position: relative;
-  //   left: unset;
-  //   width: 100%;
-  // }
+  .product__image {
+    position: relative;
+    left: unset;
+    width: 100%;
+  }
 }
 
 @media (min-width: 0px) and (max-width: $bp-small) {

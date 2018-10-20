@@ -4,8 +4,8 @@ title: Work Don’t Shop
 subTitle: Productivity Workshop for Creative People
 timeToRead: 4
 images:
-  default: ../../../static/img/tdc_fillerimage_white.png
-  diapositive: ../../../static/img/tdc_fillerimage_black.png
+  default: ../../../static/img/vertical.jpg
+  diapositive: ../../../static/img/vertical.jpg
 buttons:
   - link: 'mailto:donald@todont.co'
     text: Contact Donald

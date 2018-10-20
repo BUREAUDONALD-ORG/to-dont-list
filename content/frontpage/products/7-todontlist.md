@@ -4,8 +4,8 @@ title: ToDon’tList
 subTitle: Project Planning for Creative People
 timeToRead: 1
 images:
-  default: ../../../static/img/tdc_fillerimage_white.png
-  diapositive: ../../../static/img/tdc_fillerimage_black.png
+  default: ../../../static/img/vertical.jpg
+  diapositive: ../../../static/img/vertical.jpg
 buttons:
   - link: 'https://www.bispublishers.com/to-dont-list.html'
     text: Order a Copy

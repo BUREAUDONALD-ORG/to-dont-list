@@ -119,7 +119,7 @@ export default class indexPage extends React.Component {
       let scrollY = window.scrollY;
       let navbarElem = document.querySelector(".layout__navbar-container");
       let navbarPos = navbarElem ? navbarElem.offsetTop : 400;
-      let navbarOffset = navbarPos - 110;
+      let navbarOffset = navbarPos - 130;
 
       if (window.innerWidth > 800) {
         return {
@@ -290,6 +290,7 @@ export default class indexPage extends React.Component {
                   className="layout__product-container"
                 >
                   <ProductImage images={frontmatter.images} />
+
                   <div className="layout__product">
                     <div className="product__content">
                       <h1 className="product__title">{frontmatter.title}</h1>
