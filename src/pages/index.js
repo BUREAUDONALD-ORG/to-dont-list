@@ -13,6 +13,7 @@ import NavItem from '../components/Nav-item.js';
 import Checkbox from '../components/Checkbox.js';
 import Button from '../components/Button.js';
 import Form from '../components/Form.js';
+import ProductImage from '../components/Product-image.js';
 
 import line from '../../static/img/line.png';
 import lineHz from '../../static/img/line-hz.png';
@@ -288,31 +289,6 @@ export default class indexPage extends React.Component {
                   data-diapositive={diapositive}
                   className="layout__product-container"
                 >
-                  <div className="product__image">
-                    {(() => {
-                      if (
-                        frontmatter.images &&
-                        frontmatter.images.default &&
-                        frontmatter.images.diapositive
-                      ) {
-                        return (
-                          <Img
-                            sizes={
-                              !diapositive
-                                ? frontmatter.images &&
-                                  frontmatter.images.default &&
-                                  frontmatter.images.default.childImageSharp
-                                    .sizes
-                                : frontmatter.images &&
-                                  frontmatter.images.diapositive &&
-                                  frontmatter.images.diapositive.childImageSharp
-                                    .sizes
-                            }
-                          />
-                        );
-                      }
-                    })()}
-                  </div>
                   <div className="layout__product">
                     <div className="product__content">
                       <h1 className="product__title">{frontmatter.title}</h1>
@@ -338,6 +314,7 @@ export default class indexPage extends React.Component {
                       })}
                     </div>
                   </div>
+                  <ProductImage images={frontmatter.images} />
                 </div>
               );
             })}
