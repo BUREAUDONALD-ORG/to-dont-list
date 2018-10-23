@@ -6,13 +6,12 @@ timeToRead: 1
 images:
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
-  align: top
 buttons:
   - link: 'https://www.bispublishers.com/to-dont-list.html'
     text: Order a Copy
 checkbox:
-  text: Block
-  title: ToDon’tList
+  text: Project Planning for Creative People
+  title: ToDon’tList — Analog App
   visible: 0
 layout: horizontal-right
 ---
