@@ -6,12 +6,11 @@ timeToRead: 4
 images:
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
-  align: top
 buttons:
   - link: 'https://www.bispublishers.com/dont-do-this-game.html'
     text: Order a Copy
 checkbox:
-  text: Game
+  text: Thought Experiments for Creative People
   title: Don’t/Do This — Game
   visible: 0
 layout: horizontal-right
