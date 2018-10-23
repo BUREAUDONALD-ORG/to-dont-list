@@ -39,12 +39,12 @@
   // think from this one, the opposite has inversed logic
   // image at the top-right side (content left)
   // a third of the gridsize + half of the total space outside the grid
-  min-width: calc((100vw / 3));
+  min-width: calc((100vw / 3) + #{$unit} * 2 / 3);
   // start at the middle + a sixt + a gutter
   left: calc(100vw * 4 / 6 - #{$unit} * 2 / 3);
 }
 
-.product__image[align='bottom'] {
+.product__image[data-align='bottom'] {
   bottom: 0;
 }
 
@@ -62,15 +62,6 @@
   }
 }
 
-@media (min-width: #{$max-width}) and (max-width: 9999px) {
-  .product__image {
-    min-width: calc((#{$max-width} / 3) + ((100vw - #{$max-width})));
-    left: calc(
-      (#{$max-width} * 4 / 6 + ((100vw - #{$max-width}) / 2) - #{$unit} * 2 / 3)
-    );
-  }
-}
-
 // Horizontal right
 .layout__product-container[data-layout='horizontal-right'] {
   .product__content {
@@ -80,8 +71,9 @@
   }
 
   .product__image {
+    // Unset default
     left: unset;
-    right: calc(100vw * 4 / 6);
+    right: calc(100vw * 4 / 6 - #{$unit} * 2 / 3);
   }
 
   @media (min-width: #{$max-width}) and (max-width: 9999px) {

@@ -1,9 +1,9 @@
-import React from "react";
-import Img from "gatsby-image";
+import React from 'react'
+import Img from 'gatsby-image'
 
 export default ({ images }) => {
   return (
-    <div className="product__image">
+    <div className="product__image" data-align={images.align && images.align}>
       {images &&
         images.default &&
         images.diapositive && (
@@ -20,5 +20,5 @@ export default ({ images }) => {
           />
         )}
     </div>
-  );
-};
+  )
+}
