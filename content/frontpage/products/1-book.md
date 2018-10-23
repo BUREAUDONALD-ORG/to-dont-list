@@ -6,15 +6,16 @@ timeToRead: 4
 images:
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
+  align: top
 buttons:
   - link: 'http://www.bispublishers.com/dont-read-this-book.html'
     text: Order a Copy
 checkbox:
   text: Book
+  visible: 0
   title: |-
     Don’t Read
     This Book
-  visible: 0
 layout: horizontal-left
 ---
 

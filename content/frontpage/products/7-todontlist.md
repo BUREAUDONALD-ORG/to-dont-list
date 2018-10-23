@@ -6,6 +6,7 @@ timeToRead: 1
 images:
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
+  align: top
 buttons:
   - link: 'https://www.bispublishers.com/to-dont-list.html'
     text: Order a Copy

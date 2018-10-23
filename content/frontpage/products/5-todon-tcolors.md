@@ -6,6 +6,7 @@ timeToRead: 6
 images:
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
+  align: top
 buttons:
   - link: 'http://instagram.com/todontcolors'
     text: Follow @ToDontColors

@@ -1,171 +1,171 @@
-import React from "react";
-import ReactCSSTransitionGroup from "react-addons-css-transition-group";
-const AnimationGroup = ReactCSSTransitionGroup;
-import slugify from "slugify";
-import Img from "gatsby-image";
-import { throttle, debounce } from "lodash";
-import stableSort from "stable";
-import { Link } from "react-scroll";
-const ScrollLink = Link;
-import { Motion, spring } from "react-motion";
+import React from 'react'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+const AnimationGroup = ReactCSSTransitionGroup
+import slugify from 'slugify'
+import Img from 'gatsby-image'
+import { throttle, debounce } from 'lodash'
+import stableSort from 'stable'
+import { Link } from 'react-scroll'
+const ScrollLink = Link
+import { Motion, spring } from 'react-motion'
 
-import NavItem from "../components/Nav-item.js";
-import Checkbox from "../components/Checkbox.js";
-import Button from "../components/Button.js";
-import Form from "../components/Form.js";
-import ProductImage from "../components/Product-image.js";
+import NavItem from '../components/Nav-item.js'
+import Checkbox from '../components/Checkbox.js'
+import Button from '../components/Button.js'
+import Form from '../components/Form.js'
+import ProductImage from '../components/Product-image.js'
 
-import line from "../../static/img/line.png";
-import lineHz from "../../static/img/line-hz.png";
-import lineShort from "../../static/img/line-short.png";
+import line from '../../static/img/line.png'
+import lineHz from '../../static/img/line-hz.png'
+import lineShort from '../../static/img/line-short.png'
 
 export default class indexPage extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       products: this.props.data.products.edges,
       initialProducts: JSON.parse(
         JSON.stringify(this.props.data.products.edges)
       ).sort((a, b) => {
-        return a.node.frontmatter.id > b.node.frontmatter.id;
+        return a.node.frontmatter.id > b.node.frontmatter.id
       }),
       scroll: { resizeHeader: false, position: 0 }
-    };
+    }
   }
 
   toggleProducts = (product, sticky, e) => {
-    let count = this.countSelectedProducts();
+    let count = this.countSelectedProducts()
 
     // do simple
     let newProducts = this.state.products.map((p, k) => {
-      let pData = p.node.frontmatter;
+      let pData = p.node.frontmatter
       if (pData.id == product.id) {
         if (!pData.checkbox.visible && count < 3) {
-          count++;
-          pData.checkbox.visible = 4;
+          count++
+          pData.checkbox.visible = 4
         } else {
-          pData.checkbox.visible = 0;
+          pData.checkbox.visible = 0
         }
       }
-      return p;
-    });
+      return p
+    })
 
     // Reset the numbers to proper --> Can probably done waaaaay smarter
-    count = 0;
+    count = 0
     newProducts = newProducts.map((p, k) => {
-      let pData = p.node.frontmatter;
+      let pData = p.node.frontmatter
       if (pData.checkbox.visible > 0) {
-        count++;
-        pData.checkbox.visible = count;
+        count++
+        pData.checkbox.visible = count
       }
-      return p;
-    });
+      return p
+    })
 
     // Sort products
     newProducts = stableSort(newProducts, (a, b) => {
       if (a.node.frontmatter.checkbox.visible === 0) {
-        return 1;
+        return 1
       } else if (b.node.frontmatter.checkbox.visible === 0) {
-        return -1;
+        return -1
       } else if (
         a.node.frontmatter.checkbox.visible ===
         b.node.frontmatter.checkbox.visible
       ) {
-        return null;
+        return null
       } else if (true) {
         return a.node.frontmatter.checkbox.visible <
           b.node.frontmatter.checkbox.visible
           ? -1
-          : 1;
+          : 1
       } else if (false) {
         return a.node.frontmatter.checkbox.visible <
           b.node.frontmatter.checkbox.visible
           ? 1
-          : -1;
+          : -1
       }
-    });
+    })
 
     this.setState({
       products: newProducts
-    });
-  };
+    })
+  }
 
   selectedProducts = () => {
     return this.state.products.filter(product => {
-      return product.node.frontmatter.checkbox.visible;
-    });
-  };
+      return product.node.frontmatter.checkbox.visible
+    })
+  }
 
   countSelectedProducts = () => {
     return this.state.products.reduce((acc, p) => {
-      p.node.frontmatter.checkbox.visible > 0 && acc++;
-      return acc;
-    }, 0);
-  };
+      p.node.frontmatter.checkbox.visible > 0 && acc++
+      return acc
+    }, 0)
+  }
 
   interpolatePosition = (start, end, scrollHeight) => {
-    if (typeof window !== "undefined") {
-      let scrollY = window.scrollY;
-      let point = start - (scrollY / scrollHeight) * (start - end);
-      let edge = point > end ? point : end;
-      return `${edge}rem`;
+    if (typeof window !== 'undefined') {
+      let scrollY = window.scrollY
+      let point = start - (scrollY / scrollHeight) * (start - end)
+      let edge = point > end ? point : end
+      return `${edge}rem`
     } else {
-      return undefined;
+      return undefined
     }
-  };
+  }
 
   scrollTriggers = () => {
-    if (typeof window !== "undefined") {
-      let scrollY = window.scrollY;
-      let navbarElem = document.querySelector(".layout__navbar-container");
-      let navbarPos = navbarElem ? navbarElem.offsetTop : 400;
-      let navbarOffset = navbarPos - 130;
+    if (typeof window !== 'undefined') {
+      let scrollY = window.scrollY
+      let navbarElem = document.querySelector('.layout__navbar-container')
+      let navbarPos = navbarElem ? navbarElem.offsetTop : 400
+      let navbarOffset = navbarPos - 130
 
       if (window.innerWidth > 800) {
         return {
-          header: this.state.scroll.position < 400 ? "large" : "small",
+          header: this.state.scroll.position < 400 ? 'large' : 'small',
           nav: scrollY > navbarOffset
-        };
+        }
       } else {
         return {
-          header: this.state.scroll.position < 400 ? "large" : "small",
+          header: this.state.scroll.position < 400 ? 'large' : 'small',
           nav: scrollY > navbarOffset
-        };
+        }
       }
     } else {
       return {
-        header: "large",
+        header: 'large',
         nav: false
-      };
+      }
     }
-  };
+  }
 
   handleScroll = e => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       this.setState({
         scroll: {
           position: window.scrollY
         }
-      });
+      })
     }
-  };
+  }
 
   componentDidMount() {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", this.handleScroll);
-      window.addEventListener("resize", this.handleScroll);
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', this.handleScroll)
+      window.addEventListener('resize', this.handleScroll)
     }
   }
 
   render() {
-    let header = this.props.data.header.edges[0].node.frontmatter;
-    let checkboxes = this.props.data.checkboxes.edges[0].node.frontmatter;
-    let products = this.state.products;
-    let initialProducts = this.state.initialProducts;
-    let form = this.props.data.form.edges[0].node.frontmatter;
-    let social = this.props.data.social.edges[0].node.frontmatter;
-    let credits = this.props.data.credits.edges[0].node.frontmatter;
-
+    let header = this.props.data.header.edges[0].node.frontmatter
+    let checkboxes = this.props.data.checkboxes.edges[0].node.frontmatter
+    let products = this.state.products
+    let initialProducts = this.state.initialProducts
+    let form = this.props.data.form.edges[0].node.frontmatter
+    let social = this.props.data.social.edges[0].node.frontmatter
+    let credits = this.props.data.credits.edges[0].node.frontmatter
+    console.log(products)
     return (
       <div className="layout__page-container">
         <header
@@ -175,7 +175,7 @@ export default class indexPage extends React.Component {
           <div className="layout__header">
             <div className="header__section">
               <h1 className="header__title">
-                {this.scrollTriggers().header == "large"
+                {this.scrollTriggers().header == 'large'
                   ? header.title
                   : header.titleSmall}
               </h1>
@@ -189,7 +189,7 @@ export default class indexPage extends React.Component {
             <img className="header__line-hz" src={lineHz} role="presentation" />
             <div className="header__section">
               <h3 className="header__subtitle">
-                {this.scrollTriggers().header == "large"
+                {this.scrollTriggers().header == 'large'
                   ? header.subTitle
                   : header.subTitleSmall}
               </h3>
@@ -229,10 +229,8 @@ export default class indexPage extends React.Component {
               <div className="checkboxes__container">
                 {initialProducts.map((product, key) => {
                   product = products.find(p => {
-                    return (
-                      product.node.frontmatter.id === p.node.frontmatter.id
-                    );
-                  });
+                    return product.node.frontmatter.id === p.node.frontmatter.id
+                  })
                   return (
                     <Checkbox
                       key={key}
@@ -243,7 +241,7 @@ export default class indexPage extends React.Component {
                         product.node.frontmatter.checkbox.visible < 1
                       }
                     />
-                  );
+                  )
                 })}
               </div>
             </div>
@@ -268,7 +266,7 @@ export default class indexPage extends React.Component {
                       product={product.node.frontmatter}
                       toggleProducts={this.toggleProducts}
                     />
-                  );
+                  )
                 })}
             </div>
           </div>
@@ -279,8 +277,8 @@ export default class indexPage extends React.Component {
             transitionLeaveTimeout={500}
           >
             {this.selectedProducts().map((product, key) => {
-              let frontmatter = product.node.frontmatter;
-              let diapositive = key === 1;
+              let frontmatter = product.node.frontmatter
+              let diapositive = key === 1
               return (
                 <div
                   id={slugify(frontmatter.checkbox.title)}
@@ -312,12 +310,12 @@ export default class indexPage extends React.Component {
                             position={key}
                             diapositive={diapositive}
                           />
-                        );
+                        )
                       })}
                     </div>
                   </div>
                 </div>
-              );
+              )
             })}
           </AnimationGroup>
         </div>
@@ -347,7 +345,7 @@ export default class indexPage extends React.Component {
             </div>
             <div className="btn__container">
               {social.btn.map((btn, key) => {
-                return <Button {...btn} key={key} type="image" />;
+                return <Button {...btn} key={key} type="image" />
               })}
               <div className="social__placeholder" />
             </div>
@@ -370,16 +368,16 @@ export default class indexPage extends React.Component {
                         >
                           {author.name}
                         </a>
-                        {", "}
+                        {', '}
                       </span>
-                    );
+                    )
                   } else {
                     return (
                       <span key={key}>
                         {author.name}
-                        {key === credits.authors.length - 1 ? ", " : ", "}
+                        {key === credits.authors.length - 1 ? ', ' : ', '}
                       </span>
-                    );
+                    )
                   }
                 })}
                 {credits.partnersText}
@@ -394,16 +392,16 @@ export default class indexPage extends React.Component {
                         >
                           {partner.name}
                         </a>
-                        {key === credits.partners.length - 1 ? ". " : ", "}
+                        {key === credits.partners.length - 1 ? '. ' : ', '}
                       </span>
-                    );
+                    )
                   } else {
                     return (
                       <span key={key}>
                         {partner.name}
-                        {key === credits.partners.length - 1 ? ". " : ", "}
+                        {key === credits.partners.length - 1 ? '. ' : ', '}
                       </span>
-                    );
+                    )
                   }
                 })}
               </p>
@@ -411,7 +409,7 @@ export default class indexPage extends React.Component {
           </div>
         </div>
       </div>
-    );
+    )
   }
 }
 
@@ -489,6 +487,7 @@ export const productQuery = graphql`
                   }
                 }
               }
+              align
             }
             layout
           }
@@ -569,4 +568,4 @@ export const productQuery = graphql`
       }
     }
   }
-`;
+`

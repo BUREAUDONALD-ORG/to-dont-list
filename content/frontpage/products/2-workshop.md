@@ -4,15 +4,16 @@ title: Work Don’t Shop
 subTitle: Productivity Workshop for Creative People
 timeToRead: 4
 images:
-  default: ../../../static/img/vertical.jpg
-  diapositive: ../../../static/img/vertical.jpg
+  default: ../../../static/img/horizontal.jpg
+  diapositive: ../../../static/img/horizontal.jpg
+  align: bottom
 buttons:
   - link: 'mailto:donald@todont.co'
     text: Contact Donald
 checkbox:
   text: Workshop
-  title: Work Don’t Shop
   visible: 0
+  title: Work Don’t Shop
 layout: vertical
 ---
 

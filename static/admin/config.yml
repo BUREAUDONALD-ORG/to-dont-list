@@ -8,162 +8,234 @@ public_folder: /img
 publish_mode: editorial_workflow
 
 collections:
-  - name: "site"
-    label: "Site"
+  - name: 'site'
+    label: 'Site'
     delete: false
     editor:
       preview: false
     files:
-      - name: "head"
-        label: "Head Informatie"
-        file: "content/frontpage/site/head.md"
+      - name: 'head'
+        label: 'Head Informatie'
+        file: 'content/frontpage/site/head.md'
         fields:
-          - {label: "Head Title", name: "title", widget: "string"}
-          - label: "SEO Tags"
-            name: "tags"
-            widget: "list"
+          - { label: 'Head Title', name: 'title', widget: 'string' }
+          - label: 'SEO Tags'
+            name: 'tags'
+            widget: 'list'
             fields:
-              - {label: "Tag", name: "tagName", widget: "string"}
-          - {label: "description", name: "description", widget: "text"}
-          - {label: "Open Graph Image", name: "openGraphImage", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
+              - { label: 'Tag', name: 'tagName', widget: 'string' }
+          - { label: 'description', name: 'description', widget: 'text' }
+          - {
+              label: 'Open Graph Image',
+              name: 'openGraphImage',
+              widget: custompathimage,
+              customMediaPath: '../../../static/img/',
+              rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
+            }
 
-      - name: "header"
-        label: "Header"
-        file: "content/frontpage/site/header.md"
+      - name: 'header'
+        label: 'Header'
+        file: 'content/frontpage/site/header.md'
         fields:
-          - {label: "Header Title", name: "title", widget: "text"}
-          - {label: "Sub Title", name: "subTitle", widget: "text"}
-          - {label: "Sub Title Small", name: "subTitleSmall", widget: "text"}
-          - label: "Author"
-            name: "author"
-            widget: "object"
+          - { label: 'Header Title', name: 'title', widget: 'text' }
+          - { label: 'Sub Title', name: 'subTitle', widget: 'text' }
+          - { label: 'Sub Title Small', name: 'subTitleSmall', widget: 'text' }
+          - label: 'Author'
+            name: 'author'
+            widget: 'object'
             fields:
-            - {label: "prefix", name: "prefix", widget: "string"}
-            - {label: "name", name: "name", widget: "string"}
-            - {label: "link", name: "link", widget: "string"}
-          - label: "Contact"
-            name: "contact"
-            widget: "object"
+              - { label: 'prefix', name: 'prefix', widget: 'string' }
+              - { label: 'name', name: 'name', widget: 'string' }
+              - { label: 'link', name: 'link', widget: 'string' }
+          - label: 'Contact'
+            name: 'contact'
+            widget: 'object'
             fields:
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Link", name: "link", widget: "string"}
+              - { label: 'Title', name: 'title', widget: 'string' }
+              - { label: 'Link', name: 'link', widget: 'string' }
 
-      - name: "checkboxes"
-        label: "Checkboxes"
-        file: "content/frontpage/site/checkboxes.md"
+      - name: 'checkboxes'
+        label: 'Checkboxes'
+        file: 'content/frontpage/site/checkboxes.md'
         fields:
-        - {label: "Title", name: "title", widget: "string"}
-        - {label: "Subtitle", name: "subtitle", widget: "string"}
-        - {label: "Pointer button", name: "footer", widget: "string"}
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Subtitle', name: 'subtitle', widget: 'string' }
+          - { label: 'Pointer button', name: 'footer', widget: 'string' }
 
-      - name: "form"
-        label: "Formuliergegevens"
-        file: "content/frontpage/site/form.md"
+      - name: 'form'
+        label: 'Formuliergegevens'
+        file: 'content/frontpage/site/form.md'
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - label: "fields"
-            name: "fields"
-            widget: "list"
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - label: 'fields'
+            name: 'fields'
+            widget: 'list'
             fields:
-              - {label: "Field Text", name: "text", widget: "string"}
-          - {label: "ccField", name: "ccField", widget: "text"}
-          - {label: "Submit", name: "submit", widget: "string"}
-          - {label: "Submit Button After Submit", name: "submitResponse", widget: "string"}
-          - {label: "submitExpandedResponse", name: "submitExpandedResponse", widget: "string"}
-          - {label: "mailTo", name: "mailTo", widget: "string"}
+              - { label: 'Field Text', name: 'text', widget: 'string' }
+          - { label: 'ccField', name: 'ccField', widget: 'text' }
+          - { label: 'Submit', name: 'submit', widget: 'string' }
+          - {
+              label: 'Submit Button After Submit',
+              name: 'submitResponse',
+              widget: 'string',
+            }
+          - {
+              label: 'submitExpandedResponse',
+              name: 'submitExpandedResponse',
+              widget: 'string',
+            }
+          - { label: 'mailTo', name: 'mailTo', widget: 'string' }
 
-      - name: "social"
-        label: "Social Media"
-        file: "content/frontpage/site/social.md"
+      - name: 'social'
+        label: 'Social Media'
+        file: 'content/frontpage/site/social.md'
         fields:
-        - label: "Social Media Text"
-          name: "text"
-          widget: "list"
-          fields:
-            - {label: "Line", name: "line", widget: "string"}
-        - label: "Hashtag Properties"
-          name: "hashtag"
-          widget: "object"
-          fields:
-            - { label: "Hovertext (Alt)", name: "alt", widget: "string" }
-            - { label: "Link", name: "link", widget: "string" }
-            - { label: "Image", name: "image", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
-        - label: "Social Media Buttons"
-          name: "btn"
-          create: false
-          widget: "list"
-          fields:
-            - { label: "Text", name: "text", widget: "string" }
-            - { label: "Link", name: "link", widget: string }
-            - label: "Images"
-              name: "images"
-              widget: "object"
-              fields:
-                - {label: "Default", name: "normal", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
-                - {label: "Diapositive", name: "inverse", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"}
+          - label: 'Social Media Text'
+            name: 'text'
+            widget: 'list'
+            fields:
+              - { label: 'Line', name: 'line', widget: 'string' }
+          - label: 'Hashtag Properties'
+            name: 'hashtag'
+            widget: 'object'
+            fields:
+              - { label: 'Hovertext (Alt)', name: 'alt', widget: 'string' }
+              - { label: 'Link', name: 'link', widget: 'string' }
+              - {
+                  label: 'Image',
+                  name: 'image',
+                  widget: custompathimage,
+                  customMediaPath: '../../../static/img/',
+                  rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
+                }
+          - label: 'Social Media Buttons'
+            name: 'btn'
+            create: false
+            widget: 'list'
+            fields:
+              - { label: 'Text', name: 'text', widget: 'string' }
+              - { label: 'Link', name: 'link', widget: string }
+              - label: 'Images'
+                name: 'images'
+                widget: 'object'
+                fields:
+                  - {
+                      label: 'Default',
+                      name: 'normal',
+                      widget: custompathimage,
+                      customMediaPath: '../../../static/img/',
+                      rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
+                    }
+                  - {
+                      label: 'Diapositive',
+                      name: 'inverse',
+                      widget: custompathimage,
+                      customMediaPath: '../../../static/img/',
+                      rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
+                    }
 
-      - name: "credits"
-        label: "Credits"
-        file: "content/frontpage/site/credits.md"
+      - name: 'credits'
+        label: 'Credits'
+        file: 'content/frontpage/site/credits.md'
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Authors text", name: "authorsText", widget: "string"}
-          - label: "Authors"
-            name: "authors"
-            widget: "list"
+          - { label: 'Title', name: 'title', widget: 'string' }
+          - { label: 'Authors text', name: 'authorsText', widget: 'string' }
+          - label: 'Authors'
+            name: 'authors'
+            widget: 'list'
             fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Link", name: "link", widget: "string"}
-          - {label: "Partners text", name: "partnersText", widget: "string"}
-          - label: "Partners"
-            name: "partners"
-            widget: "list"
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Link', name: 'link', widget: 'string' }
+          - { label: 'Partners text', name: 'partnersText', widget: 'string' }
+          - label: 'Partners'
+            name: 'partners'
+            widget: 'list'
             fields:
-              - {label: "Name", name: "name", widget: "string"}
-              - {label: "Link", name: "link", widget: "string"}
+              - { label: 'Name', name: 'name', widget: 'string' }
+              - { label: 'Link', name: 'link', widget: 'string' }
 
-  - name: "products"
-    label: "Product"
-    folder: "content/frontpage/products"
+  - name: 'products'
+    label: 'Product'
+    folder: 'content/frontpage/products'
     create: true
     editor:
       preview: false
     fields:
-      - {label: "id", name: "id", widget: "number", valueType: "int"}
-      - {label: "Title", name: "title", widget: "string", default: ""}
-      - {label: "Subtitle", name: "subTitle", widget: "string", default: ""}
-      - {label: "timeToRead", name: "timeToRead", widget: "number", valueType: "int", default: 1}
-      - label: "Images"
-        name: "images"
-        widget: "object"
+      - { label: 'id', name: 'id', widget: 'number', valueType: 'int' }
+      - { label: 'Title', name: 'title', widget: 'string', default: '' }
+      - { label: 'Subtitle', name: 'subTitle', widget: 'string', default: '' }
+      - {
+          label: 'timeToRead',
+          name: 'timeToRead',
+          widget: 'number',
+          valueType: 'int',
+          default: 1,
+        }
+      - label: 'Images'
+        name: 'images'
+        widget: 'object'
         fields:
-          - {label: "Default", name: "default", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/", default: "", required: false}
-          - {label: "Diapositive", name: "diapositive", widget: custompathimage, customMediaPath: "../../../static/img/", rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/", default: "", required: false}
-      - label: "Buttons"
-        name: "buttons"
-        widget: "list"
+          - {
+              label: 'Default',
+              name: 'default',
+              widget: custompathimage,
+              customMediaPath: '../../../static/img/',
+              rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
+              default: '',
+              required: false,
+            }
+          - {
+              label: 'Diapositive',
+              name: 'diapositive',
+              widget: custompathimage,
+              customMediaPath: '../../../static/img/',
+              rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
+              default: '',
+              required: false,
+            }
+      - label: 'Buttons'
+        name: 'buttons'
+        widget: 'list'
         fields:
-          - { label: "Text", name: "text", widget: "string", default: "" }
-          - { label: "Link", name: "link", widget: "string", default: "" }
-      - label: "Checkbox"
-        name: "checkbox"
-        widget: "object"
+          - { label: 'Text', name: 'text', widget: 'string', default: '' }
+          - { label: 'Link', name: 'link', widget: 'string', default: '' }
+          - label: 'Image Alignment (top/bottom)'
+            name: 'align'
+            widget: 'select'
+            options:
+              - label: 'Top alignment'
+                value: 'top'
+              - label: 'Bottom alignment'
+                value: 'bottom'
+        default: 'horizontal-right'
+      - label: 'Checkbox'
+        name: 'checkbox'
+        widget: 'object'
         fields:
-          - { label: "Title", name: "title", widget: "string", default: "" }
-          - { label: "Text", name: "text", widget: "string", default: "" }
-          - { label: "Visible?", name: "visible", widget: "number", valueType: "int", default: 0, min: 0, max: 3, required: true}
-      - label: "layout"
-        name: "layout"
-        widget: "select"
+          - { label: 'Title', name: 'title', widget: 'string', default: '' }
+          - { label: 'Text', name: 'text', widget: 'string', default: '' }
+          - {
+              label: 'Visible?',
+              name: 'visible',
+              widget: 'number',
+              valueType: 'int',
+              default: 0,
+              min: 0,
+              max: 3,
+              required: true,
+            }
+      - label: 'layout'
+        name: 'layout'
+        widget: 'select'
         options:
-          - label: "Visual left, content right"
-            value: "horizontal-right"
-          - label: "Visual right, content left"
-            value: "horizontal-left"
-          - label: "Visual top, content bottem"
-            value: "vertical"
-        default: "horizontal-right"
-      - label: "Body Text"
-        name: "body"
-        widget: "markdown"
-        default: ""
+          - label: 'Visual left, content right'
+            value: 'horizontal-right'
+          - label: 'Visual right, content left'
+            value: 'horizontal-left'
+          - label: 'Visual top, content bottem'
+            value: 'vertical'
+        default: 'horizontal-right'
+      - label: 'Body Text'
+        name: 'body'
+        widget: 'markdown'
+        default: ''
