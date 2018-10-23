@@ -6,12 +6,11 @@ timeToRead: 3
 images:
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
-  align: top
 buttons:
   - link: 'https://itunes.apple.com/nl/app/todonttimer/id1218710160?l=en&mt=8'
     text: Donwload for IOS
 checkbox:
-  text: App
+  text: Process Timer for Creative People
   title: ToDon’tTimer
   visible: 0
 layout: horizontal-right
