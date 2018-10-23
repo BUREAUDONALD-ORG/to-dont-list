@@ -6,14 +6,13 @@ timeToRead: 5
 images:
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
-  align: bottom
 buttons:
   - link: 'https://itunes.apple.com/nl/app/todontlist/id1108348991?l=en&mt=8'
     text: Download for iOS
   - link: 'https://play.google.com/store/apps/details?id=com.todontlist'
     text: Download for Android
 checkbox:
-  text: App
+  text: Project Planning for Creative People
   title: ToDon’tList
   visible: 0
 layout: horizontal-left
