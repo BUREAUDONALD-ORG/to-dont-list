@@ -6,14 +6,13 @@ timeToRead: 4
 images:
   default: ../../../static/img/horizontal.jpg
   diapositive: ../../../static/img/horizontal.jpg
-  align: bottom
 buttons:
   - link: 'mailto:donald@todont.co'
     text: Contact Donald
 checkbox:
-  text: Workshop
-  visible: 0
+  text: Productivity Workshop for Creative People
   title: Work Don’t Shop
+  visible: 0
 layout: vertical
 ---
 
