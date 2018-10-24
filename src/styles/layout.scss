@@ -33,7 +33,6 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   @include block-container;
   height: $header-height-full;
 
-  display: flex;
   flex-direction: column;
   align-items: center;
 
@@ -54,8 +53,6 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   height: 100%;
   z-index: 100;
   overflow: hidden;
-
-  justify-content: space-between;
   padding: $unit $side-padding;
 }
 
@@ -99,9 +96,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   @include block-container;
   position: sticky;
   position: -webkit-sticky;
-  top: calc(
-    #{$header-height-small - 1rem} - 1px
-  ); // Rounding optical correction
+  top: calc(#{$header-height-small} - 1px); // Rounding optical correction
   z-index: 95;
   width: 100%;
   background: $complementary;
@@ -111,8 +106,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   @include block;
   position: relative;
   justify-content: flex-start;
-  align-items: flex-end;
-  min-height: 7rem;
+  min-height: 6rem;
   padding: 1.25rem $side-padding;
 }
 
@@ -125,7 +119,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
 
 @media (min-width: 0px) and (max-width: $bp-small) {
   .layout__navbar-container {
-    top: #{$header-height-small-responsive - 1.5rem};
+    top: #{$header-height-small-responsive};
   }
   .layout__navbar {
     padding: $unit;
