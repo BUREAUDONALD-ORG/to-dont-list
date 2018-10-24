@@ -20,7 +20,7 @@ layout: horizontal-left
 
 # To&#8203;Don’t&#8203;List
 
-## Project Planning for Creative People
+## Project Planning<br>for Creative People
 
 Do you need a simple, but effective to-do list app? <br>
 The ToDon’tList helps you make choices about what you will do, <br>
