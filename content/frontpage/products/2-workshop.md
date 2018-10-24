@@ -1,7 +1,5 @@
 ---
 id: 7
-title: Work Don’t Shop
-subTitle: Productivity Workshop for Creative People
 timeToRead: 4
 images:
   default: ../../../static/img/horizontal.jpg

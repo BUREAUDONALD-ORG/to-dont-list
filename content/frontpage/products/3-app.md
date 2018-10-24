@@ -1,7 +1,5 @@
 ---
 id: 2
-title: ToDon’tList
-subTitle: Project Planning for Creative People
 timeToRead: 5
 images:
   default: ../../../static/img/vertical.jpg

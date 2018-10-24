@@ -1,7 +1,5 @@
 ---
 id: 5
-title: ToDon’tList
-subTitle: Project Planning for Creative People
 timeToRead: 1
 images:
   default: ../../../static/img/vertical.jpg
@@ -16,7 +14,7 @@ checkbox:
 layout: horizontal-right
 ---
 
-# ToDon’tList
+# To&#8203;Don’t&#8203;List
 
 ## Project Planning for Creative People
 

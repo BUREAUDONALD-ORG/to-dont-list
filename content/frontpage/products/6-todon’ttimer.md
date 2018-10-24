@@ -1,7 +1,5 @@
 ---
 id: 4
-title: ToDon’tTimer
-subTitle: Process Timer for Creative People
 timeToRead: 3
 images:
   default: ../../../static/img/vertical.jpg
@@ -16,7 +14,7 @@ checkbox:
 layout: horizontal-right
 ---
 
-# ToDon’tTimer
+# To&#8203;Don’t&#8203;Timer
 
 ## Process Timer for Creative People
 

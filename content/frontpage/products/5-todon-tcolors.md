@@ -1,7 +1,5 @@
 ---
 id: 6
-title: ToDon’tColors
-subTitle: Color Picker for Creative People
 timeToRead: 6
 images:
   default: ../../../static/img/vertical.jpg
@@ -16,7 +14,7 @@ checkbox:
 layout: horizontal-right
 ---
 
-# ToDon’tColors
+# To&#8203;Don’t&#8203;Colors
 
 ## Color Picker for Creative People
 
