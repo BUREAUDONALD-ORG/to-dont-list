@@ -3,16 +3,16 @@ id: 6
 title: ToDon’tColors
 timeToRead: 6
 images:
+  align: bottom
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
-  align: "top"
 buttons:
   - link: 'http://instagram.com/todontcolors'
     text: Follow @ToDontColors
 checkbox:
-  title: ToDon’tColors
-  text: Color Picker for Creative People
   smallText: Colors
+  text: Color Picker for Creative People
+  title: ToDon’tColors
   visible: 0
 layout: horizontal-right
 ---
