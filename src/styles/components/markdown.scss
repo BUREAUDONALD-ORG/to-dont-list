@@ -35,6 +35,11 @@
     color: $complementary;
   }
 
+  strong {
+    font-family: nittigrotesk-normal;
+    color: red;
+  }
+
   a:hover {
     border-bottom: $border-width solid $complementary;
   }

@@ -165,7 +165,6 @@ export default class indexPage extends React.Component {
     let form = this.props.data.form.edges[0].node.frontmatter
     let social = this.props.data.social.edges[0].node.frontmatter
     let credits = this.props.data.credits.edges[0].node.frontmatter
-    console.log(products)
     return (
       <div className="layout__page-container">
         <header
