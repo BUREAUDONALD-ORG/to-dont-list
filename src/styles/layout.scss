@@ -107,6 +107,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   @include block;
   position: relative;
   justify-content: flex-start;
+  align-items: flex-end;
   min-height: 7rem;
   padding: 1.25rem $side-padding;
 }
@@ -120,7 +121,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
 
 @media (min-width: 0px) and (max-width: $bp-small) {
   .layout__navbar-container {
-    top: #{$header-height-small-responsive};
+    top: #{$header-height-small-responsive - 1.5rem};
   }
   .layout__navbar {
     padding: $unit;
