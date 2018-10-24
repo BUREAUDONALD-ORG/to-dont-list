@@ -1,5 +1,6 @@
 ---
 id: 6
+title: ToDon’tColors
 timeToRead: 6
 images:
   default: ../../../static/img/vertical.jpg

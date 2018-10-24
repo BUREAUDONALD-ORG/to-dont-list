@@ -1,5 +1,6 @@
 ---
 id: 5
+title: ToDon’tList — Analog App
 timeToRead: 1
 images:
   default: ../../../static/img/vertical.jpg

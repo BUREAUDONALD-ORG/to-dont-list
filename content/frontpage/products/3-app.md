@@ -1,5 +1,6 @@
 ---
 id: 2
+title: ToDon’tList
 timeToRead: 5
 images:
   default: ../../../static/img/vertical.jpg

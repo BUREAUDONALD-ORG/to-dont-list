@@ -163,6 +163,12 @@ collections:
     fields:
       - { label: 'id', name: 'id', widget: 'number', valueType: 'int' }
       - {
+          label: 'Title (not shown outside CMS)',
+          name: 'title',
+          widget: 'string',
+          default: '',
+        }
+      - {
           label: 'timeToRead',
           name: 'timeToRead',
           widget: 'number',
