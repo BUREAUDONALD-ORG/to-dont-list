@@ -7,9 +7,10 @@
   }
 
   h2 {
-    @include t--header-1;
-    padding: $unit 0;
-    padding-bottom: $unit / 5;
+    @include t--header-2;
+    color: $complementary;
+    padding-bottom: $unit;
+    word-wrap: break-word;
   }
 
   h3 {
@@ -27,6 +28,7 @@
   p {
     @include t--body;
     padding-bottom: $unit * 2 / 3;
+    max-width: 30rem;
   }
 
   a {

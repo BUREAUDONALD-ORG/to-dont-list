@@ -16,6 +16,10 @@ checkbox:
 layout: horizontal-right
 ---
 
+# ToDon’tColors
+
+## Color Picker for Creative People
+
 Don’t spend hours on finding the right colors for your project. \
 Find your color palette for today on Instagram! \
 Just use the 3 — random generated — colors of today’s post and see what it will bring you. \

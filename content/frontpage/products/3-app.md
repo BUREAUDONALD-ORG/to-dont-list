@@ -18,6 +18,10 @@ checkbox:
 layout: horizontal-left
 ---
 
+# ToDon’tList
+
+## Project Planning for Creative People
+
 Do you need a simple, but effective to-do list app? <br>
 The ToDon’tList helps you make choices about what you will do, <br>
 but more importantly, also about what you won’t do. <br>

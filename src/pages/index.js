@@ -291,10 +291,6 @@ export default class indexPage extends React.Component {
 
                   <div className="layout__product">
                     <div className="product__content">
-                      <h1 className="product__title">{frontmatter.title}</h1>
-                      <h3 className="product__subtitle">
-                        {frontmatter.subTitle}
-                      </h3>
                       <div
                         className="markdown"
                         dangerouslySetInnerHTML={{
@@ -460,8 +456,6 @@ export const productQuery = graphql`
           html
           frontmatter {
             id
-            title
-            subTitle
             timeToRead
             checkbox {
               title
