@@ -52,7 +52,7 @@
   .product__image {
     // so VWs arent reliable anymore, the grid is different (but fixed)
     // the base is replaced by the max-width and gets the the right margin added
-    min-width: calc((#{$max-width} / 3) + ((100vw - #{$max-width})));
+    min-width: calc((#{$max-width} / 3) + ((100vw - #{$max-width}) / 2));
     // start at the middle + a sixt + a gutter
     // the starting position is determined by the maxwidth too
     left: calc(
