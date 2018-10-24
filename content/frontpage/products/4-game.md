@@ -6,6 +6,10 @@ timeToRead: 4
 images:
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
+<<<<<<< HEAD
+=======
+  align: bottom
+>>>>>>> fix bottom alignment
 buttons:
   - link: 'https://www.bispublishers.com/dont-do-this-game.html'
     text: Order a Copy

@@ -35,13 +35,12 @@
 // Horizontal left -> Default
 .product__image {
   position: absolute;
-  min-height: 100%;
   // think from this one, the opposite has inversed logic
   // image at the top-right side (content left)
   // a third of the gridsize + half of the total space outside the grid
-  min-width: calc((100vw / 3) + #{$unit} * 2 / 3);
+  min-width: calc((100vw / 3) + #{$unit} * 1 / 3);
   // start at the middle + a sixt + a gutter
-  left: calc(100vw * 4 / 6 - #{$unit} * 2 / 3);
+  left: calc(100vw * 4 / 6 - #{$unit} * 1 / 3);
 }
 
 .product__image[data-align='bottom'] {
@@ -65,7 +64,7 @@
 // Horizontal right
 .layout__product-container[data-layout='horizontal-right'] {
   .product__content {
-    margin-left: calc(100% / 3 - #{($unit * 2) / 3});
+    margin-left: calc(100% / 3 - #{$unit} * 2 / 3);
     margin-right: unset;
     padding: $unit * 4 0 $unit * 4 $unit;
   }
@@ -73,7 +72,7 @@
   .product__image {
     // Unset default
     left: unset;
-    right: calc(100vw * 4 / 6 - #{$unit} * 2 / 3);
+    right: calc(100vw * 4 / 6 - #{$unit} * 1 / 3);
   }
 
   @media (min-width: #{$max-width}) and (max-width: 9999px) {
