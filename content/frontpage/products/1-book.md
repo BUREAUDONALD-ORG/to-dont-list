@@ -9,9 +9,8 @@ buttons:
     text: Order a Copy
 checkbox:
   text: Time Management for Creative People
-  title: |-
-    Don’t Read
-    This Book
+  title: Don’t Read This Book
+  smallText: Book
   visible: 0
 layout: horizontal-left
 ---

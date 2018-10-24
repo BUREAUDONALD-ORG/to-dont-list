@@ -12,6 +12,7 @@ buttons:
 checkbox:
   text: Project Planning for Creative People
   title: ToDon’tList
+  smallText: Plan
   visible: 0
 layout: horizontal-left
 ---

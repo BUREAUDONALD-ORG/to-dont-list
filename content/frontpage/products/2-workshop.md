@@ -10,6 +10,7 @@ buttons:
 checkbox:
   text: Productivity Workshop for Creative People
   title: Work Don’t Shop
+  smallText: Work
   visible: 0
 layout: vertical
 ---

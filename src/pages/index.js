@@ -459,6 +459,7 @@ export const productQuery = graphql`
             checkbox {
               title
               text
+              smallText
               visible
             }
             buttons {

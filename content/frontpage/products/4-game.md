@@ -11,6 +11,7 @@ buttons:
 checkbox:
   text: Thought Experiments for Creative People
   title: Don’t/Do This — Game
+  smallText: Game
   visible: 0
 layout: horizontal-right
 ---

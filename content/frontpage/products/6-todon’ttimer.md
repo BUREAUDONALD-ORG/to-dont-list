@@ -10,6 +10,7 @@ buttons:
 checkbox:
   text: Process Timer for Creative People
   title: ToDon’tTimer
+  smallText: Time
   visible: 0
 layout: horizontal-right
 ---

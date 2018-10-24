@@ -162,8 +162,6 @@ collections:
       preview: false
     fields:
       - { label: 'id', name: 'id', widget: 'number', valueType: 'int' }
-      - { label: 'Title', name: 'title', widget: 'string', default: '' }
-      - { label: 'Subtitle', name: 'subTitle', widget: 'string', default: '' }
       - {
           label: 'timeToRead',
           name: 'timeToRead',

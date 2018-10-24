@@ -10,6 +10,7 @@ buttons:
 checkbox:
   text: Project Planning for Creative People
   title: ToDon’tList — Analog App
+  smallText: App
   visible: 0
 layout: horizontal-right
 ---

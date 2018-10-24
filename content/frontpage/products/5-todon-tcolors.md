@@ -8,8 +8,9 @@ buttons:
   - link: 'http://instagram.com/todontcolors'
     text: Follow @ToDontColors
 checkbox:
-  text: Color Picker for Creative People
   title: ToDon’tColors
+  text: Color Picker for Creative People
+  smallText: Colors
   visible: 0
 layout: horizontal-right
 ---
