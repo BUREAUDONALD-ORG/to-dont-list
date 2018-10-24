@@ -9,16 +9,16 @@ buttons:
   - link: 'http://www.bispublishers.com/dont-read-this-book.html'
     text: Order a Copy
 checkbox:
+  smallText: Book
   text: Time Management for Creative People
   title: Don’t Read This Book
-  smallText: Book
   visible: 0
 layout: horizontal-left
 ---
 
 # Don’t Read This Book
 
-## Time <strong>Management</strong> for Creative People
+## Time <strong>Management</strong><br/>for Creative People
 
 As creative people, we have ideas. Bad, good, weird, clever, and even brilliant ideas. But most of them (even the great ideas) never see the light of day. Why? If you ask a <strong>creative person</strong>, the answer will always revolve around time. We simply need time to execute an idea, and do it well — more time than we have.
 
