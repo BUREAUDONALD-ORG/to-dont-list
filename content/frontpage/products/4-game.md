@@ -1,23 +1,22 @@
 ---
 id: 3
 title: Don’t/Do This — Game
+subTitle: Game
 timeToRead: 4
 images:
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
-  align: bottom
 buttons:
   - link: 'https://www.bispublishers.com/dont-do-this-game.html'
     text: Order a Copy
 checkbox:
   text: Thought Experiments for Creative People
   title: Don’t/Do This — Game
-  smallText: Game
   visible: 0
 layout: horizontal-right
 ---
 
-# Don’t/Do This — Game
+# Don’t<strong>/</strong>Do This <strong>—</strong> Game
 
 ## Thought Experiments for Creative People
 
