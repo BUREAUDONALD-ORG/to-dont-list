@@ -1,7 +1,6 @@
 ---
 id: 3
 title: Don’t/Do This — Game
-subTitle: Game
 timeToRead: 4
 images:
   default: ../../../static/img/vertical.jpg
@@ -16,7 +15,7 @@ checkbox:
 layout: horizontal-right
 ---
 
-# Don’t<strong>/</strong>Do This <strong>—</strong> Game
+# Don’t<strong>/</strong>Do This <strong>— Game</strong>
 
 ## Thought Experiments<br>for Creative People
 
