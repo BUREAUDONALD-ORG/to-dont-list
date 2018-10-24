@@ -95,6 +95,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
 .layout__navbar-container {
   @include block-container;
   position: sticky;
+  position: -webkit-sticky;
   top: calc(
     #{$header-height-small} - #{$unit} - 1px
   ); // Rounding optical correction
