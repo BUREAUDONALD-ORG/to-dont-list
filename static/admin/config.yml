@@ -197,12 +197,6 @@ collections:
               default: '',
               required: false,
             }
-      - label: 'Buttons'
-        name: 'buttons'
-        widget: 'list'
-        fields:
-          - { label: 'Text', name: 'text', widget: 'string', default: '' }
-          - { label: 'Link', name: 'link', widget: 'string', default: '' }
           - label: 'Image Alignment (top/bottom)'
             name: 'align'
             widget: 'select'
@@ -211,6 +205,13 @@ collections:
                 value: 'top'
               - label: 'Bottom alignment'
                 value: 'bottom'
+      - label: 'Buttons'
+        name: 'buttons'
+        widget: 'list'
+        fields:
+          - { label: 'Text', name: 'text', widget: 'string', default: '' }
+          - { label: 'Link', name: 'link', widget: 'string', default: '' }
+
         default: 'horizontal-right'
       - label: 'Checkbox'
         name: 'checkbox'

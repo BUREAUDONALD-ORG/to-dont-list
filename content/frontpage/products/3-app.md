@@ -6,6 +6,7 @@ timeToRead: 5
 images:
   default: ../../../static/img/tdc_app_todontlist.png
   diapositive: ../../../static/img/tdc_app_todontlist_diap_2.png
+  align: "top"
 buttons:
   - link: 'https://itunes.apple.com/nl/app/todontlist/id1108348991?l=en&mt=8'
     text: Download for iOS

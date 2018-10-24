@@ -5,6 +5,7 @@ timeToRead: 4
 images:
   default: ../../../static/img/horizontal.jpg
   diapositive: ../../../static/img/horizontal.jpg
+  align: "top"
 buttons:
   - link: 'mailto:donald@todont.co'
     text: Contact Donald
