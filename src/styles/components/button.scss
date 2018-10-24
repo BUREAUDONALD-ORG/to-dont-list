@@ -32,6 +32,15 @@
   padding: $unit;
 }
 
+.btn[data-diapositive='true'] {
+  background: white;
+  cursor: normal;
+
+  .btn__text {
+    color: $night;
+  }
+}
+
 .btn[data-type='point'] {
   background: unset;
   flex-direction: column;
@@ -62,15 +71,6 @@
   .btn[data-type='large'] {
     width: 100%;
     margin-right: 0;
-  }
-}
-
-.btn[data-diapositive='true'] {
-  background: white;
-  cursor: normal;
-
-  .btn__text {
-    color: $night;
   }
 }
 
