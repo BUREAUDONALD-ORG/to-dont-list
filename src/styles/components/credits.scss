@@ -10,7 +10,7 @@
   max-width: 66%;
 }
 
-@media (min-width: 0px) and (max-width: $bp-small) {
+@media (min-width: 0px) and (max-width: $bp-medium) {
   .credits__text p {
     max-width: 100%;
   }
