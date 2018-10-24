@@ -16,9 +16,9 @@ checkbox:
 layout: horizontal-right
 ---
 
-# Don’t<strong>/</strong>Do This <strong>— Game</strong>
+# Don’t<strong>/</strong>Do This <strong>—</strong> Game
 
-## Thought Experiments for Creative People
+## Thought Experiments<br>for Creative People
 
 Whatever kind of creative person you are, this thought experiment game will get you out of your comfort zone. How? It stimulates creativity through limitations. Boundaries push you to think beyond the usual solutions and send you in different directions. That’s exactly how you end up with unexpected and extraordinary ideas.
 
