@@ -1,7 +1,8 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-export default ({ images }) => {
+export default ({ diapositive, images }) => {
+  console.log(diapositive, images)
   return (
     <div className="product__image" data-align={images.align && images.align}>
       {images &&
@@ -9,7 +10,7 @@ export default ({ images }) => {
         images.diapositive && (
           <Img
             sizes={
-              !images.diapositive
+              !diapositive
                 ? images &&
                   images.default &&
                   images.default.childImageSharp.sizes

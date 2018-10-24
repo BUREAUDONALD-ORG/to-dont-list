@@ -286,7 +286,10 @@ export default class indexPage extends React.Component {
                   data-diapositive={diapositive}
                   className="layout__product-container"
                 >
-                  <ProductImage images={frontmatter.images} />
+                  <ProductImage
+                    diapositive={diapositive}
+                    images={frontmatter.images}
+                  />
 
                   <div className="layout__product">
                     <div className="product__content">
