@@ -1,7 +1,8 @@
 .navbar__item {
-  width: calc(100% / 3 - #{($unit * 2) / 3 });
+  width: calc(100% / 3 - #{($unit * 2) / 3});
   height: $fs--t--header-3 + $two;
   padding: $unit;
+  margin-top: $unit;
   margin-right: $unit;
 
   background-color: $day;

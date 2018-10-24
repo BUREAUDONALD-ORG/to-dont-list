@@ -95,8 +95,9 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
 .layout__navbar-container {
   @include block-container;
   position: sticky;
-  position: -webkit-sticky;
-  top: calc(#{$header-height-small} - 1px); // Rounding optical correction
+  top: calc(
+    #{$header-height-small} - #{$unit} - 1px
+  ); // Rounding optical correction
   z-index: 95;
   width: 100%;
   background: $complementary;
@@ -106,7 +107,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   @include block;
   position: relative;
   justify-content: flex-start;
-  min-height: 6rem;
+  min-height: 7rem;
   padding: 1.25rem $side-padding;
 }
 
