@@ -1,5 +1,6 @@
 ---
-title: 'Choose what you would like to see...'
-subtitle: 'Oh, you can only select 3 items.'
+title: Choose your topics...
+subtitle: 'Oh, you can select 3 items only.'
 footer: Now Scroll Down
 ---
+
