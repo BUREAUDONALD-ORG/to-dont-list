@@ -491,7 +491,6 @@ export const productQuery = graphql`
                   }
                 }
               }
-              align
             }
             layout
           }
