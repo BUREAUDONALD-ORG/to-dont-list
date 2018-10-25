@@ -179,43 +179,42 @@ collections:
         name: 'images'
         widget: 'object'
         fields:
-          - label: 'Default',
-            name: 'default',
+          - label: 'Default'
+            name: 'default'
+            widget: custompathimage
+            customMediaPath: '../../../static/img/'
+            rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/'
+            default: ''
+            required: false
+          - label: 'Diapositive'
+            name: 'diapositive'
             widget: custompathimage,
-            customMediaPath: '../../../static/img/',
-            rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
-            default: '',
-            required: false,
-          - label: 'Diapositive',
-            name: 'diapositive',
-            widget: custompathimage,
-            customMediaPath: '../../../static/img/',
-            rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
-            default: '',
-            required: false,
-          - label: 'Mobile (broad) Image (if empty, default)',
-            name: 'mobile',
-            widget: custompathimage,
-            customMediaPath: '../../../static/img/',
-            rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
-            default: '',
-            required: false,
+            customMediaPath: '../../../static/img/'
+            rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/'
+            default: ''
+            required: false
+          - label: 'Mobile (broad) Image (if empty, default)'
+            name: 'mobile'
+            widget: custompathimage
+            customMediaPath: '../../../static/img/'
+            rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/'
+            default: ''
+            required: false
           - label: 'Image Alignment (top/bottom)'
             name: 'align'
             widget: 'select'
+            required: true
             options:
               - label: 'Top alignment'
                 value: 'top'
               - label: 'Bottom alignment'
                 value: 'bottom'
-            required: true,
       - label: 'Buttons'
         name: 'buttons'
         widget: 'list'
         fields:
           - { label: 'Text', name: 'text', widget: 'string', default: '' }
           - { label: 'Link', name: 'link', widget: 'string', default: '' }
-
         default: 'horizontal-right'
       - label: 'Checkbox'
         name: 'checkbox'
@@ -223,18 +222,18 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string', default: '' }
           - { label: 'Text', name: 'text', widget: 'string', default: '' }
-          - label: 'Mobile Nav Text',
-            name: 'smallText',
-            widget: 'string',
-            default: '',
+          - label: 'Mobile Nav Text'
+            name: 'smallText'
+            widget: 'string'
+            default: ''
             required: true
-          - label: 'Visible?',
-            name: 'visible',
-            widget: 'number',
-            valueType: 'int',
-            default: 0,
-            min: 0,
-            max: 3,
+          - label: 'Visible?'
+            name: 'visible'
+            widget: 'number'
+            valueType: 'int'
+            default: 0
+            min: 0
+            max: 3
             required: true,
       - label: 'layout'
         name: 'layout'
