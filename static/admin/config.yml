@@ -223,22 +223,19 @@ collections:
         fields:
           - { label: 'Title', name: 'title', widget: 'string', default: '' }
           - { label: 'Text', name: 'text', widget: 'string', default: '' }
-          - {
-              label: 'Mobile Nav Text',
-              name: 'smallText',
-              widget: 'string',
-              default: '',
-            }
-          - {
-              label: 'Visible?',
-              name: 'visible',
-              widget: 'number',
-              valueType: 'int',
-              default: 0,
-              min: 0,
-              max: 3,
-              required: true,
-            }
+          - label: 'Mobile Nav Text',
+            name: 'smallText',
+            widget: 'string',
+            default: '',
+            required: true
+          - label: 'Visible?',
+            name: 'visible',
+            widget: 'number',
+            valueType: 'int',
+            default: 0,
+            min: 0,
+            max: 3,
+            required: true,
       - label: 'layout'
         name: 'layout'
         widget: 'select'
