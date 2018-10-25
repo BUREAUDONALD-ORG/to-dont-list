@@ -179,24 +179,27 @@ collections:
         name: 'images'
         widget: 'object'
         fields:
-          - {
-              label: 'Default',
-              name: 'default',
-              widget: custompathimage,
-              customMediaPath: '../../../static/img/',
-              rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
-              default: '',
-              required: false,
-            }
-          - {
-              label: 'Diapositive',
-              name: 'diapositive',
-              widget: custompathimage,
-              customMediaPath: '../../../static/img/',
-              rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
-              default: '',
-              required: false,
-            }
+          - label: 'Default',
+            name: 'default',
+            widget: custompathimage,
+            customMediaPath: '../../../static/img/',
+            rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
+            default: '',
+            required: false,
+          - label: 'Diapositive',
+            name: 'diapositive',
+            widget: custompathimage,
+            customMediaPath: '../../../static/img/',
+            rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
+            default: '',
+            required: false,
+          - label: 'Mobile (broad) Image (if empty, default)',
+            name: 'mobile',
+            widget: custompathimage,
+            customMediaPath: '../../../static/img/',
+            rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/',
+            default: '',
+            required: false,
           - label: 'Image Alignment (top/bottom)'
             name: 'align'
             widget: 'select'

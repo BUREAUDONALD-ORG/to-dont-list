@@ -5,6 +5,7 @@ timeToRead: 4
 images:
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
+  mobile: ../../../static/img/book-3-compressed-ultra.png
   align: "top"
 buttons:
   - link: 'http://www.bispublishers.com/dont-read-this-book.html'
