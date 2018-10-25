@@ -4,7 +4,6 @@ import Img from 'gatsby-image'
 import test from '../../static/img/book-3-compressed-ultra.png'
 
 export default ({ diapositive, images }) => {
-  console.log(images.default.childImageSharp.sizes.src)
   return (
     <div className="product__image">
       {window.innerWidth < 800
