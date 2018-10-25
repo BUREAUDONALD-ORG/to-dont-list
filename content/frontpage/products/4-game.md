@@ -4,7 +4,7 @@ title: Don’t/Do This — Game
 timeToRead: 4
 images:
   align: top
-  default: ../../../static/img/vertical.jpg
+  default: ../../../static/img/test_visual_rectangle_h.png
   diapositive: ../../../static/img/vertical.jpg
 buttons:
   - link: 'https://www.bispublishers.com/dont-do-this-game.html'
