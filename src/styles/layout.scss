@@ -54,6 +54,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   z-index: 100;
   overflow: hidden;
   padding: $unit $side-padding;
+  margin-bottom: -1px; // Fix for Chrome layout issue
 }
 
 @media (min-width: 0px) and (max-width: $bp-small) {
