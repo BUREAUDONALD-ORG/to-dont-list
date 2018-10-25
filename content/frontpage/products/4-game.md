@@ -16,7 +16,7 @@ checkbox:
 layout: horizontal-right
 ---
 
-# Don’t<strong>/</strong>Do\This <strong>— Game</strong>
+# Don’t<strong>/</strong>Do<br>This <strong>— Game</strong>
 
 ## Thought Experiments<br>for Creative People
 
