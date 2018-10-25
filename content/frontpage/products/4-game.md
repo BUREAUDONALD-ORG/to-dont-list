@@ -3,9 +3,9 @@ id: 3
 title: Don’t/Do This — Game
 timeToRead: 4
 images:
+  align: top
   default: ../../../static/img/vertical.jpg
   diapositive: ../../../static/img/vertical.jpg
-  align: "top"
 buttons:
   - link: 'https://www.bispublishers.com/dont-do-this-game.html'
     text: Order a Copy
@@ -16,7 +16,7 @@ checkbox:
 layout: horizontal-right
 ---
 
-# Don’t<strong>/</strong>Do This <strong>— Game</strong>
+# Don’t<strong>/</strong>Do\This <strong>— Game</strong>
 
 ## Thought Experiments<br>for Creative People
 
