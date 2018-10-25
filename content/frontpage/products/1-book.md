@@ -3,10 +3,10 @@ id: 1
 title: Don’t Read This Book
 timeToRead: 4
 images:
-  default: ../../../static/img/vertical.jpg
+  align: top
+  default: ../../../static/img/test_visual_square.png
   diapositive: ../../../static/img/vertical.jpg
   mobile: ../../../static/img/book-3-compressed-ultra.png
-  align: "top"
 buttons:
   - link: 'http://www.bispublishers.com/dont-read-this-book.html'
     text: Order a Copy
