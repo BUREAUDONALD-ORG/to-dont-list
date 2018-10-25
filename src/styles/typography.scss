@@ -24,7 +24,7 @@ $flh--t--title-responsive: 5.5rem;
   font-size: $fs--t--title;
   line-height: $flh--t--title;
   vertical-align: baseline;
-  @media (min-width: 0px) and (max-width: $bp-medium) {
+  @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--title-responsive;
     line-height: $flh--t--title-responsive;
   }
@@ -40,7 +40,7 @@ $flh--t--header-0-responsive: 5rem;
   font-size: $fs--t--header-0;
   line-height: $flh--t--header-0;
   vertical-align: baseline;
-  @media (min-width: 0px) and (max-width: $bp-medium) {
+  @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--header-0-responsive;
     line-height: $flh--t--header-0-responsive;
   }
@@ -56,7 +56,7 @@ $flh--t--header-1-responsive: 2.5rem;
   font-size: $fs--t--header-1;
   line-height: $flh--t--header-1;
   vertical-align: baseline;
-  @media (min-width: 0px) and (max-width: $bp-medium) {
+  @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--header-1-responsive;
     line-height: $flh--t--header-1-responsive;
   }
@@ -72,7 +72,7 @@ $flh--t--header-2-responsive: 1.5rem;
   font-size: $fs--t--header-2;
   line-height: $flh--t--header-2;
   vertical-align: baseline;
-  @media (min-width: 0px) and (max-width: $bp-medium) {
+  @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--header-2-responsive;
     line-height: $flh--t--header-2-responsive;
   }
@@ -88,7 +88,7 @@ $flh--t--header-3-responsive: 1.5rem;
   font-size: $fs--t--header-3;
   line-height: $flh--t--header-3;
   vertical-align: baseline;
-  @media (min-width: 0px) and (max-width: $bp-medium) {
+  @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--header-3-responsive;
     line-height: $flh--t--header-3-responsive;
   }
@@ -104,7 +104,7 @@ $flh--t--body-black-responsive: 1rem;
   font-size: $fs--t--body-black;
   line-height: $flh--t--body-black;
   vertical-align: baseline;
-  @media (min-width: 0px) and (max-width: $bp-medium) {
+  @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--body-black-responsive;
     line-height: $flh--t--body-black-responsive;
   }
@@ -120,14 +120,14 @@ $flh--t--body-responsive: 1.5rem;
   font-size: $fs--t--body;
   line-height: $flh--t--body;
   vertical-align: baseline;
-  @media (min-width: 0px) and (max-width: $bp-medium) {
+  @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--body-responsive;
     line-height: $flh--t--body-responsive;
   }
 }
 
 @each $min, $max, $size in (0, 300, 13), (300, 400, 14), (400, 500, 15),
-  (500, 600, 18), (600, 700, 21), (700, 800, 26), (800, 900, 16),
+  (500, 600, 18), (600, 700, 21), (700, 800, 26), (800, 900, 13),
   (900, 1000, 14), (1000, 1100, 15), (1100, 1200, 16), (1200, 1400, 19),
   (1400, 1600, 22), (1600, 9999, 22)
 {
