@@ -77,11 +77,6 @@ export default class indexPage extends React.Component {
           b.node.frontmatter.checkbox.visible
           ? -1
           : 1
-      } else if (false) {
-        return a.node.frontmatter.checkbox.visible <
-          b.node.frontmatter.checkbox.visible
-          ? 1
-          : -1
       }
     })
 
@@ -270,52 +265,52 @@ export default class indexPage extends React.Component {
             </div>
           </div>
 
-          <AnimationGroup
+          {/* <AnimationGroup
             transitionName="slide"
             transitionEnterTimeout={500}
             transitionLeaveTimeout={500}
-          >
-            {this.selectedProducts().map((product, key) => {
-              let frontmatter = product.node.frontmatter
-              let diapositive = key === 1
-              return (
-                <div
-                  id={slugify(frontmatter.checkbox.title)}
-                  key={frontmatter.id}
-                  data-layout={frontmatter.layout}
-                  data-diapositive={diapositive}
-                  className="layout__product-container"
-                >
-                  <ProductImage
-                    diapositive={diapositive}
-                    images={frontmatter.images}
-                  />
+          > */}
+          {this.selectedProducts().map((product, key) => {
+            let frontmatter = product.node.frontmatter
+            let diapositive = key === 1
+            return (
+              <div
+                id={slugify(frontmatter.checkbox.title)}
+                key={frontmatter.id}
+                data-layout={frontmatter.layout}
+                data-diapositive={diapositive}
+                className="layout__product-container"
+              >
+                <ProductImage
+                  diapositive={diapositive}
+                  images={frontmatter.images}
+                />
 
-                  <div className="layout__product">
-                    <div className="product__content">
-                      <div
-                        className="markdown"
-                        dangerouslySetInnerHTML={{
-                          __html: product.node.html
-                        }}
-                      />
-                      {frontmatter.buttons.map((btn, key) => {
-                        return (
-                          <Button
-                            text={btn.text}
-                            link={btn.link}
-                            key={key}
-                            position={key}
-                            diapositive={diapositive}
-                          />
-                        )
-                      })}
-                    </div>
+                <div className="layout__product">
+                  <div className="product__content">
+                    <div
+                      className="markdown"
+                      dangerouslySetInnerHTML={{
+                        __html: product.node.html
+                      }}
+                    />
+                    {frontmatter.buttons.map((btn, key) => {
+                      return (
+                        <Button
+                          text={btn.text}
+                          link={btn.link}
+                          key={key}
+                          position={key}
+                          diapositive={diapositive}
+                        />
+                      )
+                    })}
                   </div>
                 </div>
-              )
-            })}
-          </AnimationGroup>
+              </div>
+            )
+          })}
+          {/* </AnimationGroup> */}
         </div>
 
         {this.selectedProducts() < 1 && (

@@ -161,20 +161,19 @@ collections:
     editor:
       preview: false
     fields:
-      - { label: 'id', name: 'id', widget: 'number', valueType: 'int' }
-      - {
-          label: 'Title (not shown outside CMS)',
-          name: 'title',
-          widget: 'string',
-          default: '',
-        }
-      - {
-          label: 'timeToRead',
-          name: 'timeToRead',
-          widget: 'number',
-          valueType: 'int',
-          default: 1,
-        }
+      - label: 'id'
+        name: 'id'
+        widget: 'number'
+        valueType: 'int'
+      - label: 'Title (not shown outside CMS)'
+        name: 'title'
+        widget: 'string'
+        default: ''
+      - label: 'timeToRead'
+        name: 'timeToRead'
+        widget: 'number'
+        valueType: 'int'
+        default: 1,
       - label: 'Images'
         name: 'images'
         widget: 'object'
@@ -193,7 +192,7 @@ collections:
             rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/'
             default: ''
             required: false
-          - label: 'Mobile (broad) Image (if empty, default)'
+          - label: 'Mobile (broad) Image'
             name: 'mobile'
             widget: custompathimage
             customMediaPath: '../../../static/img/'
@@ -204,15 +203,27 @@ collections:
         name: 'buttons'
         widget: 'list'
         fields:
-          - { label: 'Text', name: 'text', widget: 'string', default: '' }
-          - { label: 'Link', name: 'link', widget: 'string', default: '' }
+          - label: 'Text'
+            name: 'text'
+            widget: 'string'
+            default: ''
+          - label: 'Link'
+            name: 'link'
+            widget: 'string'
+            default: ''
         default: 'horizontal-right'
       - label: 'Checkbox'
         name: 'checkbox'
         widget: 'object'
         fields:
-          - { label: 'Title', name: 'title', widget: 'string', default: '' }
-          - { label: 'Text', name: 'text', widget: 'string', default: '' }
+          - label: 'Title'
+            name: 'title'
+            widget: 'string'
+            default: ''
+          - label: 'Text'
+            name: 'text'
+            widget: 'string'
+            default: ''
           - label: 'Mobile Nav Text'
             name: 'smallText'
             widget: 'string'

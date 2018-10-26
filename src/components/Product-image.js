@@ -4,44 +4,24 @@ import Img from 'gatsby-image'
 import test from '../../static/img/book-3-compressed-ultra.png'
 
 export default ({ diapositive, images }) => {
+  let currImage =
+    images && window.innerWidth < 800
+      ? images.mobile && images.mobile.childImageSharp.sizes
+      : !diapositive
+        ? images.default && images.default.childImageSharp.sizes
+        : images.diapositive && images.diapositive.childImageSharp.sizes
+
+  console.log(currImage)
   return (
     <div className="product__image">
-      {window.innerWidth < 800
-        ? images &&
-          images.mobile && (
-            // <Img
-            //   sizes={images.mobile.childImageSharp.sizes}
-            //   className="product__image-inner"
-            // />
-            <img
-              src={images.mobile.childImageSharp.sizes.src}
-              className="product__image-inner"
-            />
-          )
-        : (!diapositive &&
-            images &&
-            images.default && (
-              // <Img
-              //   sizes={images.default.childImageSharp.sizes}
-              //   className="product__image-inner"
-              // />
-              <img
-                src={images.default.childImageSharp.sizes.src}
-                className="product__image-inner"
-              />
-            )) ||
-          (diapositive &&
-            images &&
-            images.diapositive && (
-              // <Img
-              //   sizes={images.diapositive.childImageSharp.sizes}
-              //   className="product__image-inner"
-              // />
-              <img
-                src={images.diapositive.childImageSharp.sizes.src}
-                className="product__image-inner"
-              />
-            ))}
+      {currImage && (
+        <Img
+          sizes={currImage}
+          className="product__image-inner"
+          outerWrapperClassName="product__image-outer"
+          imgStyle={{ width: 'unset' }}
+        />
+      )}
     </div>
   )
 }
