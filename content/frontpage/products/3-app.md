@@ -3,9 +3,8 @@ id: 2
 title: ToDon’tList
 timeToRead: 5
 images:
-  align: bottom
-  default: ../../../static/img/tdc_app_todontlist_9.png
-  diapositive: ../../../static/img/tdc_app_todontlist_diap_2.png
+  default: ../../../static/img/todontlist.png
+  diapositive: ../../../static/img/todontlist_diap.png
 buttons:
   - link: 'https://itunes.apple.com/nl/app/todontlist/id1108348991?l=en&mt=8'
     text: Download for iOS
