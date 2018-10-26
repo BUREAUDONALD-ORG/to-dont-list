@@ -1,8 +1,6 @@
 import React from 'react'
 import Img from 'gatsby-image'
 
-import test from '../../static/img/book-3-compressed-ultra.png'
-
 export default ({ diapositive, images, layout }) => {
   let currImage =
     images && window.innerWidth < 800

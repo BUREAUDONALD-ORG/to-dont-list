@@ -5,7 +5,7 @@ timeToRead: 4
 images:
   align: top
   default: ../../../static/img/test_visual_rectangle_h.png
-  diapositive: ../../../static/img/vertical.jpg
+  diapositive: ../../../static/img/todontlist_diap.png
 buttons:
   - link: 'https://www.bispublishers.com/dont-do-this-game.html'
     text: Order a Copy

@@ -3,8 +3,8 @@ id: 5
 title: ToDon’tList — Analog App
 timeToRead: 1
 images:
-  default: ../../../static/img/vertical.jpg
-  diapositive: ../../../static/img/vertical.jpg
+  default: ../../../static/img/todontlist_diap.png
+  diapositive: ../../../static/img/todontlist_diap.png
   align: "top"
 buttons:
   - link: 'https://www.bispublishers.com/to-dont-list.html'

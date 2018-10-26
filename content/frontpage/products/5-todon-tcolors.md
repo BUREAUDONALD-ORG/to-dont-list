@@ -4,8 +4,8 @@ title: ToDon’tColors
 timeToRead: 6
 images:
   align: bottom
-  default: ../../../static/img/vertical.jpg
-  diapositive: ../../../static/img/vertical.jpg
+  default: ../../../static/img/todontlist_diap.png
+  diapositive: ../../../static/img/todontlist_diap.png
 buttons:
   - link: 'http://instagram.com/todontcolors'
     text: Follow @ToDontColors

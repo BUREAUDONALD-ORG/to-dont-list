@@ -3,8 +3,8 @@ id: 7
 title: Work Don’t Shop
 timeToRead: 4
 images:
-  default: ../../../static/img/horizontal.jpg
-  diapositive: ../../../static/img/horizontal.jpg
+  default: ../../../static/img/todontlist_diap.png
+  diapositive: ../../../static/img/todontlist_diap.png
   align: "top"
 buttons:
   - link: 'mailto:donald@todont.co'

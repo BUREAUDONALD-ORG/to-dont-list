@@ -3,8 +3,8 @@ id: 4
 title: ToDon’tTimer
 timeToRead: 3
 images:
-  default: ../../../static/img/vertical.jpg
-  diapositive: ../../../static/img/vertical.jpg
+  default: ../../../static/img/todontlist_diap.png
+  diapositive: ../../../static/img/todontlist_diap.png
   align: "top"
 buttons:
   - link: 'https://itunes.apple.com/nl/app/todonttimer/id1218710160?l=en&mt=8'

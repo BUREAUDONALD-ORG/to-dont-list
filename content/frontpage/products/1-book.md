@@ -5,8 +5,8 @@ timeToRead: 4
 images:
   align: top
   default: ../../../static/img/test_visual_square.png
-  diapositive: ../../../static/img/vertical.jpg
-  mobile: ../../../static/img/book-3-compressed-ultra.png
+  diapositive: ../../../static/img/todontlist_diap.png
+  mobile: ../../../static/img/todontlist_diap.png
 buttons:
   - link: 'http://www.bispublishers.com/dont-read-this-book.html'
     text: Order a Copy
