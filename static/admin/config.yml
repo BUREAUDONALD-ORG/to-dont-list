@@ -188,7 +188,7 @@ collections:
             required: false
           - label: 'Diapositive'
             name: 'diapositive'
-            widget: custompathimage,
+            widget: custompathimage
             customMediaPath: '../../../static/img/'
             rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/'
             default: ''
