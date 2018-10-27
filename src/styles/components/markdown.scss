@@ -27,7 +27,7 @@
 
   p {
     @include t--body;
-    padding-bottom: $unit * 2 / 3;
+    padding-bottom: $unit * 2;
     max-width: 30rem;
   }
 
