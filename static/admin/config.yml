@@ -183,21 +183,18 @@ collections:
             widget: custompathimage
             customMediaPath: '../../../static/img/'
             rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/'
-            default: ''
             required: false
           - label: 'Diapositive'
             name: 'diapositive'
             widget: custompathimage
             customMediaPath: '../../../static/img/'
             rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/'
-            default: ''
             required: false
           - label: 'Mobile (broad) Image'
             name: 'mobile'
             widget: custompathimage
             customMediaPath: '../../../static/img/'
             rawMediaPath: 'https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/'
-            default: ''
             required: false
       - label: 'Buttons'
         name: 'buttons'
