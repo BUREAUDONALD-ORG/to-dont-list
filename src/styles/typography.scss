@@ -19,11 +19,14 @@ $flh--t--title: 7.5rem;
 $fs--t--title-responsive: 8rem;
 $flh--t--title-responsive: 5.5rem;
 
+$letter-spacing: -0.1rem;
+
 @mixin t--title {
   font-family: nittigrotesk-black;
   font-size: $fs--t--title;
   line-height: $flh--t--title;
   vertical-align: baseline;
+  letter-spacing: $letter-spacing;
   @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--title-responsive;
     line-height: $flh--t--title-responsive;
@@ -40,6 +43,7 @@ $flh--t--header-0-responsive: 5rem;
   font-size: $fs--t--header-0;
   line-height: $flh--t--header-0;
   vertical-align: baseline;
+  letter-spacing: $letter-spacing;
   @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--header-0-responsive;
     line-height: $flh--t--header-0-responsive;
@@ -56,6 +60,7 @@ $flh--t--header-1-responsive: 2.5rem;
   font-size: $fs--t--header-1;
   line-height: $flh--t--header-1;
   vertical-align: baseline;
+  letter-spacing: $letter-spacing;
   @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--header-1-responsive;
     line-height: $flh--t--header-1-responsive;
@@ -72,6 +77,7 @@ $flh--t--header-2-responsive: 1.5rem;
   font-size: $fs--t--header-2;
   line-height: $flh--t--header-2;
   vertical-align: baseline;
+  letter-spacing: $letter-spacing;
   @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--header-2-responsive;
     line-height: $flh--t--header-2-responsive;
@@ -88,6 +94,7 @@ $flh--t--header-3-responsive: 1.5rem;
   font-size: $fs--t--header-3;
   line-height: $flh--t--header-3;
   vertical-align: baseline;
+  letter-spacing: $letter-spacing;
   @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--header-3-responsive;
     line-height: $flh--t--header-3-responsive;
