@@ -3,7 +3,7 @@ id: 2
 title: ToDon’tList
 timeToRead: 5
 images:
-  default: ../../../static/img/todontlist_2.png
+  default: ../../../static/img/todontlist_3.png
   diapositive: ../../../static/img/todontlist_diap.png
 buttons:
   - link: 'https://itunes.apple.com/nl/app/todontlist/id1108348991?l=en&mt=8'
