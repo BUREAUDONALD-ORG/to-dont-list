@@ -4,7 +4,7 @@ title: Don’t/Do This — Game
 timeToRead: 4
 images:
   default: ../../../static/img/dontdothis.png
-  diapositive: ../../../static/img/dontdothis_diap.png
+  diapositive: ''
 buttons:
   - link: 'https://www.bispublishers.com/dont-do-this-game.html'
     text: Order a Copy
