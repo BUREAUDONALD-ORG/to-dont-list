@@ -3,7 +3,7 @@ id: 3
 title: Don’t/Do This — Game
 timeToRead: 4
 images:
-  default: ''
+  default: ../../../static/img/dontdothis.png
   diapositive: ../../../static/img/dontdothis_diap.png
 buttons:
   - link: 'https://www.bispublishers.com/dont-do-this-game.html'
