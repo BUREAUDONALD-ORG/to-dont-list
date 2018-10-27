@@ -561,3 +561,11 @@ export const productQuery = graphql`
     }
   }
 `
+
+// mobile {
+//   childImageSharp {
+//     sizes(maxWidth: 1920) {
+//       ...GatsbyImageSharpSizes
+//     }
+//   }
+// }
