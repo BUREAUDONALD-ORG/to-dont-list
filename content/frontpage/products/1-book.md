@@ -5,6 +5,7 @@ timeToRead: 4
 images:
   default: ../../../static/img/dontreadthisbook.png
   diapositive: ../../../static/img/dontreadthisbook_diap.png
+  mobile: ''
 buttons:
   - link: 'http://www.bispublishers.com/dont-read-this-book.html'
     text: Order a Copy
@@ -16,11 +17,11 @@ checkbox:
 layout: horizontal-left
 ---
 
-# Don’t Read This Book
+# Don’t&#8203;Read This&#8203;Book
 
-## Time <strong>Management</strong><br/>for Creative People
+## Time Management<br/>for Creative People
 
-As creative people, we have ideas. Bad, good, weird, clever, and even brilliant ideas. But most of them (even the great ideas) never see the light of day. Why? If you ask a <strong>creative person</strong>, the answer will always revolve around time. We simply need time to execute an idea, and do it well — more time than we have.
+As creative people, we have ideas. Bad, good, weird, clever, and even brilliant ideas. But most of them (even the great ideas) never see the light of day. Why? If you ask a creative person, the answer will always revolve around time. We simply need time to execute an idea, and do it well — more time than we have.
 
 Don’t Read This Book focuses on how to make choices about everything you do in your daily creative practice and life. The book follows the ‘To-Don’tList’ method: When you say ‘no’ to one to-do, task, or project, you have more time to execute another one. The more you subtract, the more focus you get.
 
