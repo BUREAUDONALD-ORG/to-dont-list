@@ -3,16 +3,15 @@ id: 5
 title: ToDon’tList — Analog App
 timeToRead: 1
 images:
-  default: ../../../static/img/todontlist_diap.png
-  diapositive: ../../../static/img/todontlist_diap.png
-  align: "top"
+  default: ../../../static/img/todontlist_analog.png
+  diapositive: ../../../static/img/todontlist_analog_diap.png
 buttons:
   - link: 'https://www.bispublishers.com/to-dont-list.html'
     text: Order a Copy
 checkbox:
+  smallText: App
   text: Project Planning for Creative People
   title: ToDon’tList — Analog App
-  smallText: App
   visible: 0
 layout: horizontal-right
 ---
