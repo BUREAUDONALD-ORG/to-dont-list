@@ -15,10 +15,9 @@ checkbox:
   visible: 0
 layout: horizontal-right
 ---
-
 # To&#8203;Don’t&#8203;Timer
 
-## Process Timer for Creative People
+## Process Timer<br/>for Creative People
 
 A process that takes you from idea to final product can take 3 weeks, but could as well take 3 months, 3 days, or 3 years. You could even go through the process in 3 minutes: you sketch a few options, pick one, and ‘finalize’ it as much as you can in the short time you have left. The end result of such a 3-minute round could be a clear sketch or small mock-up, for instance.
 
