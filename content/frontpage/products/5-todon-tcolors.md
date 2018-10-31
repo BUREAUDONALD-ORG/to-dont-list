@@ -3,9 +3,8 @@ id: 6
 title: ToDon’tColors
 timeToRead: 6
 images:
-  align: bottom
-  default: ../../../static/img/todontlist_diap.png
-  diapositive: ../../../static/img/todontlist_diap.png
+  default: ../../../static/img/todontcolors.png
+  diapositive: ../../../static/img/todontcolors_diap.png
 buttons:
   - link: 'http://instagram.com/todontcolors'
     text: Follow @ToDontColors
@@ -14,12 +13,11 @@ checkbox:
   text: Color Picker for Creative People
   title: ToDon’tColors
   visible: 0
-layout: horizontal-right
+layout: horizontal-left
 ---
-
 # To&#8203;Don’t&#8203;Colors
 
-## Color Picker for Creative People
+## Color Picker<br/>for Creative People
 
 Don’t spend hours on finding the right colors for your project. \
 Find your color palette for today on Instagram! \
