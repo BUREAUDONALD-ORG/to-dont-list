@@ -10,7 +10,7 @@ buttons:
     text: Order a Copy
 checkbox:
   smallText: Game
-  text: Thought Experiments for Creative People
+  text: Thought Experiments
   title: Don’t/Do This — Game
   visible: 0
 layout: horizontal-right
