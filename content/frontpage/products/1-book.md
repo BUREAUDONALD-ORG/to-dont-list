@@ -11,7 +11,7 @@ buttons:
     text: Order a Copy
 checkbox:
   smallText: Book
-  text: Time Management for Creative People
+  text: Time Management
   title: Don’t Read This Book
   visible: 0
 layout: horizontal-left
