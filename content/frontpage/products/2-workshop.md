@@ -10,12 +10,12 @@ buttons:
     text: Contact Donald
 checkbox:
   smallText: Workshop
-  text: Productivity Workshop for Creative People
+  text: Productivity Workshop
   title: Work Don’t Shop
   visible: 0
 layout: horizontal-right
 ---
-# Work<br/>Don’t<br/>Shop
+# Work Don’t Shop
 
 ## Productivity Workshop<br/>for Creative People
 
