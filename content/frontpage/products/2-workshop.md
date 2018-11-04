@@ -23,7 +23,7 @@ layout: horizontal-left
 
 The workshop revolves around your work process: how to make it more effective by making choices, how to make those choices (fast and good) and how to manage your time and ideas better. Donald’s motto is ‘Visualize your ideas, then we can talk about it’ and in the workshop, he will bring that into practice.
 
-You’ll write down, talk and sketch according to the To Don’tList method. You will work alone and in teams. The duration of the workshop can be anything from 30 minutes to 3 weeks. Bring your pencils and a bunch of sketch paper.
+You’ll write, talk and sketch according to the To Don’tList method. You will work alone and in teams. The duration of the workshop can be anything from 30 minutes to 3 weeks. Bring your pencils and a bunch of sketch paper.
 
 #### For whom?
 
