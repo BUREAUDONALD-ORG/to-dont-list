@@ -9,6 +9,7 @@ buttons:
   - link: 'https://www.bispublishers.com/dont-do-this-game.html'
     text: Order a Copy
 checkbox:
+  smallText: Game
   text: Thought Experiments for Creative People
   title: Don’t/Do This — Game
   visible: 0
