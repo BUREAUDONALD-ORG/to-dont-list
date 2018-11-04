@@ -10,7 +10,7 @@ buttons:
     text: Donwload for IOS
 checkbox:
   smallText: Timer
-  text: Process Timer for Creative People
+  text: Process Timer
   title: ToDon’tTimer
   visible: 0
 layout: horizontal-right
