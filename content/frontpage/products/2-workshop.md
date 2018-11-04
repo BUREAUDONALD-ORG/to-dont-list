@@ -13,7 +13,7 @@ checkbox:
   text: Productivity Workshop
   title: Work Don’t Shop
   visible: 0
-layout: horizontal-right
+layout: horizontal-left
 ---
 # Work Don’t Shop
 
