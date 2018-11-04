@@ -31,6 +31,6 @@ The workshop can be tailored to different groups, from corporate organizations t
 
 #### Costs
 
-In the interest of saving everyone time: please don’t send an invitation for budgets under €1000, - (excluding travel expenses). Donald is based in Amsterdam, The Netherlands.
+In the interest of saving everyone time: please don’t send an invitation for budgets under €1000,- (excluding travel expenses). Donald is based in Amsterdam, The Netherlands.
 
 Interested in a workshop? Send Donald a <a data-scroll href="#mail">5 sentence email</a>.
