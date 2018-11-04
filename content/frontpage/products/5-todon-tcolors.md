@@ -10,7 +10,7 @@ buttons:
     text: Follow @ToDontColors
 checkbox:
   smallText: Colors
-  text: Color Picker for Creative People
+  text: Color Picker
   title: ToDon’tColors
   visible: 0
 layout: horizontal-left
