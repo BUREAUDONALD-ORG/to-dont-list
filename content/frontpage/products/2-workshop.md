@@ -3,8 +3,8 @@ id: 7
 title: Work Don’t Shop
 timeToRead: 4
 images:
-  default: ../../../static/img/marker.png
-  diapositive: ''
+  default: ../../../static/img/workdontshop.png
+  diapositive: ../../../static/img/workdontshop_diap.png
 buttons:
   - link: 'mailto:donald@todont.co'
     text: Contact Donald
