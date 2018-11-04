@@ -9,7 +9,7 @@ buttons:
   - link: 'https://itunes.apple.com/nl/app/todonttimer/id1218710160?l=en&mt=8'
     text: Donwload for IOS
 checkbox:
-  smallText: Time
+  smallText: Timer
   text: Process Timer for Creative People
   title: ToDon’tTimer
   visible: 0
