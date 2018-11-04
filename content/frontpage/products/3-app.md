@@ -11,6 +11,7 @@ buttons:
   - link: 'https://play.google.com/store/apps/details?id=com.todontlist'
     text: Download for Android
 checkbox:
+  smallText: Planning
   text: Project Planning for Creative People
   title: ToDon’tList
   visible: 0
