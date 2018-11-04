@@ -12,7 +12,7 @@ buttons:
     text: Download for Android
 checkbox:
   smallText: Planning
-  text: Project Planning for Creative People
+  text: Project Planning
   title: ToDon’tList
   visible: 0
 layout: horizontal-left
