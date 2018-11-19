@@ -8,6 +8,8 @@ images:
 buttons:
   - link: 'https://itunes.apple.com/nl/app/todonttimer/id1218710160?l=en&mt=8'
     text: Donwload for IOS
+  - link: 'https://play.google.com/store/apps/details?id=app.com.todonttimer'
+    text: Download for Android
 checkbox:
   smallText: Timer
   text: Process Timer
