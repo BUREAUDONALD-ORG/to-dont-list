@@ -23,9 +23,9 @@ Whatever kind of creative person you are, this thought experiment game will get 
 
 #### How to play
 
-Take 3 Do cards that define a unique imaginary project. You need to come up with a solution for this project. But you also receive three Don’t cards, which provide a set of rules.
+Take 3 Do cards. These define the guidelines to your next unique imaginary project. But you also get 3 Don’t cards, which give you a set of limitations.
 
-The cards make you think differently than you normally would. In the beginning, the rules might feel like a big obstacle. But once you start playing, you will see that limitations also give you possibilities. That’s exactly how you end up with unexpected and extraordinary ideas.
+Once you start playing, you will see that limitations also give you possibilities. That’s exactly how you end up with unexpected and extraordinary ideas.
 
 Play this game alone, together or in groups — for fun, to break the ice in a meeting or to get inspired when you're stuck.
 
