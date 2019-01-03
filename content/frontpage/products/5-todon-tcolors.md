@@ -17,9 +17,9 @@ layout: horizontal-left
 ---
 # To&#8203;Don’t&#8203;Colors
 
-## Color Picker<br/>for Creative People
+## Colour Picker<br/>for Creative People
 
-Don’t spend hours on finding the right colors for your project. \
-Find your color palette for today on Instagram! \
-Just use the 3 — random generated — colors of today’s post and see what it will bring you. \
-Challenge yourself or a friend or tag a friend who is starting a project today.
+Don’t spend hours finding the right colours for your project. \
+Find your palette for today on Instagram! \
+Just use the 3 — randomly generated — colours of today’s post and see what it will bring you. \
+Challenge yourself or tag a friend who is starting a project today.
