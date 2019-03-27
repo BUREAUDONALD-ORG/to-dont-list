@@ -6,7 +6,7 @@ images:
   default: ../../../static/img/workdontshop.png
   diapositive: ../../../static/img/workdontshop_diap.png
 buttons:
-  - link: 'mailto:donald@todont.co'
+  - link: 'mailto:workshop@todont.co'
     text: Contact us
 checkbox:
   smallText: Workshop
