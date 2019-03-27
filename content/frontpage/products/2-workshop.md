@@ -19,7 +19,7 @@ layout: horizontal-left
 
 ## Productivity Workshop<br/>for Creative People
 
-_Work Don’t Shop_ is a great ice-breaker for conferences and events. It can be tailored to different groups, from corporate organizations to art students – whether they are in a ‘creative’ industry or not.  
+Work Don’t Shop is a great ice-breaker for conferences and events. It can be tailored to different groups, from corporate organizations to art students – whether they are in a ‘creative’ industry or not.  
 
 #### Workshop
 
@@ -29,5 +29,6 @@ The second part of the workshop — a game — shows them what they can really d
 
 During the workshop, attendees write, talk and sketch according to the ToDon’tList method. They will work alone as well as in teams. 
 
-**This workshop of about 90 minutes works well for groups up to 50 people. We offer alternative formats for bigger groups.** 
+This workshop of about 90 minutes works well for groups up to 50 people. We offer alternative formats for bigger groups.
+ 
 Interested in a workshop? Send us a <a data-scroll href="#mail">5 sentence email</a>.
