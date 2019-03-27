@@ -1,6 +1,6 @@
 ---
 title: Credits
-authorsText: 'The ToDon’tCo. is a project by '
+authorsText: 'The ToDon’tCo. is a project by  '
 authors:
   - link: 'http://www.bureaudonald.com'
     name: Bureaudonald
