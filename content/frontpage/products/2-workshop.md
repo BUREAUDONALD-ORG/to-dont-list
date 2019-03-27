@@ -19,13 +19,13 @@ layout: horizontal-left
 
 ## Productivity Workshop<br/>for Creative People
 
-**Work Don’t Shop** is a great ice-breaker for conferences and events. It can be tailored to different groups, from corporate organizations to art students – whether they are in a ‘creative’ industry or not.  
+_Work Don’t Shop_ is a great ice-breaker for conferences and events. It can be tailored to different groups, from corporate organizations to art students – whether they are in a ‘creative’ industry or not.  
 
 #### Workshop
 
-We think that complex things are often easier than they seem, and that people can do way more than they think. During Work Don’t Shop, Donald Roos and Anne de Bruijn guide attendees through some difficult questions – by offering simple exercises that reveal who, what and where they really want to be in a matter of minutes.
+We think that complex things are often easier than they seem, and that people can do way more than they think. During Work Don’t Shop, Donald Roos and Anne de Bruijn guide attendees through some difficult questions — by offering simple exercises that reveal who, what and where they really want to be in a matter of minutes.
 
-The second part of the workshop –a game– shows them what they can really do creatively; how they are able to find solutions to seemingly unsolvable problems. Our game forces you out of your comfort zone. The imposed limitations and rules of the game stimulate creativity like you wouldn’t believe.  
+The second part of the workshop — a game — shows them what they can really do creatively; how they are able to find solutions to seemingly unsolvable problems. Our game forces you out of your comfort zone. The imposed limitations and rules of the game stimulate creativity like you wouldn’t believe.  
 
 During the workshop, attendees write, talk and sketch according to the ToDon’tList method. They will work alone as well as in teams. 
 
