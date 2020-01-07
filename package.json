@@ -23,7 +23,7 @@
     "gatsby-transformer-sharp": "^1.6.21",
     "lodash": "^4.17.10",
     "lodash-webpack-plugin": "^0.11.4",
-    "netlify-cms": "^1.7.0",
+    "netlify-cms": "^2.10.2",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-addons-css-transition-group": "^15.6.2",
