@@ -206,8 +206,6 @@ collections:
             name: "link"
             widget: "string"
             default: ""
-        default:
-          - "horizontal-right"
       - label: "Checkbox"
         name: "checkbox"
         widget: "object"
