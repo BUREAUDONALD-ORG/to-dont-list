@@ -15,6 +15,10 @@ checkbox:
   visible: 0
 layout: horizontal-right
 ---
+# Don’t Buy<br/>This Book
+
+## Entrepreneurship<br/>for Creative People
+
 What is more important to you: making a lot of money or doing something that makes you happy? If you want to make a lot of money, don’t buy this book. If you want to do what makes you happy and make a living doing it, then by all means, read this book.
 
 As creative people, we always have at least 1 idea that we’d like to turn into a business. In 3 parts — Sell, Make, and Grow — Don’t Buy This Book covers everything from testing your idea to setting up your business and owning your impact as an entrepreneur.
