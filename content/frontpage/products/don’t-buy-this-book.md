@@ -1,7 +1,7 @@
 ---
 id: 1
 title: Don’t Buy This Book
-timeToRead: '1,'
+timeToRead: 10
 images:
   default: ../../../static/img/dontbuythisbook.png
   diapositive: ../../../static/img/dontbuythisbook_diap.png
@@ -12,6 +12,7 @@ checkbox:
   smallText: Don’t Buy This Book
   text: Entrepreneurship for Creative People
   title: NEW // Don’t Buy This Book
+  visible: 0
 layout: horizontal-right
 ---
 What is more important to you: making a lot of money or doing something that makes you happy? If you want to make a lot of money, don’t buy this book. If you want to do what makes you happy and make a living doing it, then by all means, read this book.
