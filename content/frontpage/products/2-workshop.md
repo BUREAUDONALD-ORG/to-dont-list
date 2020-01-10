@@ -1,6 +1,6 @@
 ---
 id: 7
-title: Work Don’t Shop
+title: 'Work Don’t Shop '
 timeToRead: 4
 images:
   default: ../../../static/img/workdontshop.png
