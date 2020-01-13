@@ -10,7 +10,7 @@ buttons:
     text: Order a Copy
 checkbox:
   smallText: Don’t Buy This Book
-  text: Entrepreneurship for Creative People
+  text: Entrepreneurship
   title: NEW // Don’t Buy This Book
   visible: 0
 layout: horizontal-right
