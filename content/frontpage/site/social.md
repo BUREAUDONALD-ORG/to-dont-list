@@ -1,6 +1,6 @@
 ---
 text:
-  - line: 'Tag, comment, (un)follow, or give us a shout out!'
+  - line: 'Tag, comment, (un)follow, message or give us a shout out!'
   - line: Check @Bureaudonald and @acertainmissbrown on Instagram.
 hashtag:
   alt: '#ToDontList'
