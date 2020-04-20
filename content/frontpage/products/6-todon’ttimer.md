@@ -7,7 +7,7 @@ images:
   diapositive: ../../../static/img/todonttimer_diap.png
 buttons:
   - link: 'https://itunes.apple.com/nl/app/todonttimer/id1218710160?l=en&mt=8'
-    text: Donwload for IOS
+    text: Download for IOS
   - link: 'https://play.google.com/store/apps/details?id=app.com.todonttimer'
     text: Download for Android
 checkbox:
