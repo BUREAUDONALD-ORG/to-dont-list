@@ -1,59 +1,59 @@
-import React from 'react'
-import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
+import React from "react";
+import PropTypes from "prop-types";
+import Helmet from "react-helmet";
 
-import '../styles/app.scss'
+import "../styles/app.scss";
 
 class Layout extends React.Component {
   render() {
-    let head = this.props.data.head.edges[0].node.frontmatter
+    let head = this.props.data.head.edges[0].node.frontmatter;
     return (
       <div className="layout__wrapper">
         <Helmet
           title={head.title}
           meta={[
             {
-              name: 'keywords',
+              name: "keywords",
               content: head.tags
-                .map(tag => {
-                  return tag.tagName
+                .map((tag) => {
+                  return tag.tagName;
                 })
-                .join(', ')
+                .join(", "),
             },
             {
-              name: 'description',
-              content: head.description
+              name: "description",
+              content: head.description,
             },
             {
-              name: 'og:title',
-              content: head.title
+              property: "og:title",
+              content: head.title,
             },
             {
-              name: 'og:image',
-              content: head.openGraphImage.relativePath
+              property: "og:image",
+              content: head.openGraphImage.relativePath,
             },
             {
-              name: 'og:description',
-              content: head.description
-            }
+              property: "og:description",
+              content: head.description,
+            },
           ]}
           link={[
             {
-              rel: 'icon',
-              type: 'image/png',
-              href: 'img/favicon.png'
-            }
+              rel: "icon",
+              type: "image/png",
+              href: "img/favicon.png",
+            },
           ]}
         />
         <div className="layout__app">{this.props.children()}</div>
       </div>
-    )
+    );
   }
 }
 
 Layout.propTypes = {
-  children: PropTypes.func
-}
+  children: PropTypes.func,
+};
 
 export const layoutQuery = graphql`
   query layoutQuery {
@@ -76,6 +76,6 @@ export const layoutQuery = graphql`
       }
     }
   }
-`
+`;
 
-export default Layout
+export default Layout;
