@@ -32,7 +32,7 @@ class Layout extends React.Component {
             {
               name: "image",
               property: "og:image",
-              content: head.openGraphImage.relativePath,
+              content: "https://todont.co/" + head.openGraphImage.relativePath,
             },
             {
               name: "description",
