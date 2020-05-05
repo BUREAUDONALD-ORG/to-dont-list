@@ -25,14 +25,17 @@ class Layout extends React.Component {
               content: head.description,
             },
             {
+              name: "title",
               property: "og:title",
               content: head.title,
             },
             {
+              name="image",
               property: "og:image",
               content: head.openGraphImage.relativePath,
             },
             {
+              name: "description",
               property: "og:description",
               content: head.description,
             },
