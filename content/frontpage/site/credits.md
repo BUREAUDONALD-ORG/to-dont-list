@@ -13,7 +13,7 @@ partners:
   - link: 'http://www.websitevanons.nl'
     name: buro van Ons | Peter Heykamp
   - name: Frank van der Peet
-  - name: Robert-Jan Korteschiel
+  - name: Robert-Jan Korteschil
   - link: 'http://www.RoosBros.com'
     name: Benz Roos
 ---
