@@ -1,55 +1,43 @@
 module.exports = {
   siteMetadata: {
-    title: "To Don't List"
+    title: ``,
+    siteUrl: `https://www.yourdomain.tld`,
   },
   plugins: [
-    'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
+    "gatsby-plugin-netlify-cms",
     {
-      resolve: 'gatsby-source-filesystem',
+      resolve: "gatsby-source-filesystem",
       options: {
-        name: 'content',
-        path: `${__dirname}/content`
-      }
+        name: "content",
+        path: `${__dirname}/content`,
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `static`,
-        path: `${__dirname}/static/`
-      }
+        path: `${__dirname}/static/`,
+      },
     },
-    'gatsby-plugin-sharp',
-    'gatsby-transformer-sharp',
+    "gatsby-plugin-sass",
     {
-      resolve: 'gatsby-transformer-remark',
+      resolve: "gatsby-plugin-google-analytics",
       options: {
-        plugins: [
-          {
-            resolve: `gatsby-remark-images`,
-            options: {
-              maxWidth: 1920
-            }
-          }
-        ]
-      }
+        trackingId: "74747",
+      },
     },
+    "gatsby-plugin-image",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: "gatsby-plugin-manifest",
       options: {
-        trackingId: 'UA-89952488-1',
-        head: false,
-        anonymize: true,
-        respectDNT: true,
-        exclude: ['/admin/**']
-      }
+        icon: "static/img/tdc_favicon.png",
+      },
     },
-    {
-      resolve: 'gatsby-plugin-netlify-cms',
-      options: {
-        modulePath: `${__dirname}/src/cms/cms.js`
-      }
-    },
-    'gatsby-plugin-netlify' // make sure to keep it last in the array
-  ]
+    "gatsby-plugin-sharp",
+    "gatsby-transformer-sharp",
+
+    `gatsby-transformer-remark`,
+  ],
 };

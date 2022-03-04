@@ -1,22 +1,22 @@
-import React from 'react';
+import React from "react";
 
-import Button from './Button.js';
+import Button from "./Button.js";
 
 export default class Form extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      fields: ['', '', '', '', ''],
-      name: ''
+      fields: ["", "", "", "", ""],
+      name: "",
     };
   }
 
   updateField = (field, event) => {
     event.persist();
-    this.setState(prevState => {
+    this.setState((prevState) => {
       const newState = prevState;
       const value = event.target.value;
-      if (field === 'name') {
+      if (field === "name") {
         newState.name = value;
       } else {
         newState.fields[field] = value;
@@ -25,18 +25,16 @@ export default class Form extends React.Component {
     });
   };
 
-  submitEmail = event => {
+  submitEmail = (event) => {
     event.preventDefault();
     if (typeof window !== undefined) {
       const fields = this.state.fields;
       const body = `${fields[0]},\n\n${fields[1]}.\n${fields[2]}.\n${fields[3]}.
         \n${fields[4]}\n${this.state.name}`;
       const bodyURI = encodeURIComponent(body);
-      const mail = `mailto:${this.props.data.mailTo}?subject=ToDontForm%20-%20${
-        fields[1]
-      }&body=${bodyURI}`;
+      const mail = `mailto:${this.props.data.mailTo}?subject=ToDontForm%20-%20${fields[1]}&body=${bodyURI}`;
       window.location.href = mail;
-      this.setState(prevState => {
+      this.setState((prevState) => {
         const newState = prevState;
         newState.isSubmitted = true;
         return newState;
@@ -63,11 +61,11 @@ export default class Form extends React.Component {
                   type="text"
                   value={this.state.fields[key]}
                   placeholder={field.text}
-                  data-placeholder-shown={this.state.fields[key] === ''}
+                  data-placeholder-shown={this.state.fields[key] === ""}
                   onChange={this.updateField.bind(this, key)}
                   autoComplete="off"
                 />
-                <label htmlFor={'field #{key}'} className="form__label">
+                <label htmlFor={"field #{key}"} className="form__label">
                   {field.text}
                 </label>
               </div>

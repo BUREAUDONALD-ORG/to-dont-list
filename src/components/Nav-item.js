@@ -1,11 +1,10 @@
-import React from 'react'
-import { Link } from 'react-scroll'
-const ScrollLink = Link
-import slugify from 'slugify'
+import React from "react";
+import { Link } from "react-scroll";
+import slugify from "slugify";
 
-import arrow from '../../static/img/arrow.png'
+const ScrollLink = Link;
 
-export default ({ product, toggleProducts, sticky }) => {
+const NavItem = ({ product, toggleProducts, sticky }) => {
   return (
     <ScrollLink
       className="navbar__item"
@@ -23,5 +22,7 @@ export default ({ product, toggleProducts, sticky }) => {
         {product.checkbox.smallText}
       </h2>
     </ScrollLink>
-  )
-}
+  );
+};
+
+export default NavItem;

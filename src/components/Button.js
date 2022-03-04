@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link } from 'react-scroll';
-const ScrollLink = Link;
+import React from "react";
+import { Link } from "react-scroll";
+import arrow from "../../static/img/arrow.png";
 
-import arrow from '../../static/img/arrow.png';
+const ScrollLink = Link;
 
 const Button = ({ text, link, images, diapositive, size }) => {
   return (
@@ -46,24 +46,22 @@ const ButtonLarge = ({ text, link, handler }) => {
 const ButtonImage = ({ text, link, images }) => {
   return (
     <a className="btn" data-type="image" href={link}>
-      <img
-        className="btn__img"
-        src={images.normal.relativePath}
-        role="presentation"
-      />
+      <img className="btn__img" src={images.normal.relativePath} alt="" />
       <img
         className="btn__img btn__img--hover"
         src={images.inverse.relativePath}
-        role="presentation"
+        alt=""
       />
       <p className="btn__text">{text}</p>
     </a>
   );
 };
 
-export default props => {
-  if (props.type === 'point') return <ButtonPoint {...props} />;
-  if (props.type === 'image') return <ButtonImage {...props} />;
-  if (props.type === 'large') return <ButtonLarge {...props} />;
+const buttonSelector = (props) => {
+  if (props.type === "point") return <ButtonPoint {...props} />;
+  if (props.type === "image") return <ButtonImage {...props} />;
+  if (props.type === "large") return <ButtonLarge {...props} />;
   return <Button {...props} />;
 };
+
+export default buttonSelector;

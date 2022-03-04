@@ -1,14 +1,14 @@
-import React from 'react';
+import React from "react";
 
 export default class Checkbox extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      tapped: false
+      tapped: false,
     };
   }
 
-  animate = e => {
+  animate = (e) => {
     this.setState({ tapped: true }, () => {
       setTimeout(() => {
         this.setState({ tapped: false });
@@ -23,6 +23,7 @@ export default class Checkbox extends React.Component {
         className="checkbox"
         data-tapped={this.state.tapped}
         onClick={!disabled ? toggleProducts.bind(this, product) : this.animate}
+        role="presentation"
         {...rest}
       >
         <input

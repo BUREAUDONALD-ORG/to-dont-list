@@ -230,7 +230,7 @@ collections:
             default: 0
             min: 0
             max: 3
-            required: true,
+            required: true
       - label: "layout"
         name: "layout"
         widget: "select"

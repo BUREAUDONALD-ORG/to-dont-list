@@ -1,21 +1,54 @@
-# To Don't Company
+<p align="center">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby minimal starter
+</h1>
 
-Site for the [To Don't Company](http://todontlist.net) by [BureauDonald](https://www.bureaudonald.com).
+## 🚀 Quick start
 
-## Technical
+1.  **Create a Gatsby site.**
 
-This site is build using [GatsbyJS](https://www.gatsbyjs.org) v1.9 (version two is still in beta at the time of buiding and gave an error). To build the project [NodeJS](http://www.nodejs.org) is required.
+    Use the Gatsby CLI to create a new site, specifying the minimal starter.
 
-The project dependencies themselves can then be installed with the command:
+    ```shell
+    # create a new Gatsby site using the minimal starter
+    npm init gatsby
+    ```
 
-`npm install`
+2.  **Start developing.**
 
-To run a local development server at localhost:8000
+    Navigate into your new site’s directory and start it up.
 
-`npm run dev`
+    ```shell
+    cd my-gatsby-site/
+    npm run develop
+    ```
 
-The site is moved to Netlify, for better continuous integration, more possibilities and less maintenance.
+3.  **Open the code and start customizing!**
 
-## Content
+    Your site is now running at http://localhost:8000!
 
-Most content is separated into different files, mostly in the pages directory. Editing these files will update the content in the site. The syntax in the file is [Markdown](https://guides.github.com/features/mastering-markdown/) with [YAML](https://en.wikipedia.org/wiki/YAML) frontmatter.
+    Edit `src/pages/index.js` to see your site update in real-time!
+
+4.  **Learn more**
+
+    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+## 🚀 Quick start (Gatsby Cloud)
+
+Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
