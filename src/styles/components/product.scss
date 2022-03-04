@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .product__content {
   background-color: $day;
   position: relative;
@@ -28,7 +30,7 @@
 // explicit: .layout__product-container[data-layout="horizontal-left"]
 .product__content {
   margin-left: unset;
-  margin-right: calc(100% / 3 - #{($unit * 2) / 3});
+  margin-right: calc(100% / 3 - #{math.div($unit * 2, 3)});
   padding: $unit * 4 $unit $unit * 8 0;
 }
 

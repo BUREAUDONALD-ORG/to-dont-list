@@ -1,6 +1,6 @@
 $unit: 1rem;
 $two: $unit * 2;
-$half: $unit / 2;
+$half: $unit * 0.5;
 
 $side-padding: $unit * 3;
 $side-padding-responsive: $unit;
