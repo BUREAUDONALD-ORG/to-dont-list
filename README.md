@@ -1,27 +1,54 @@
-# To Don't List
+<p align="center">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby minimal starter
+</h1>
 
-![](https://travis-ci.org/BUREAUDONALD-ORG/to-dont-list.svg?branch=master)
+## 🚀 Quick start
 
-Site for the To Don't List book by BureauDonald.
+1.  **Create a Gatsby site.**
 
-## Technical
+    Use the Gatsby CLI to create a new site, specifying the minimal starter.
 
-This site is build using GatsbyJS. To build the project [NodeJS](http://www.nodejs.org) is required.
+    ```shell
+    # create a new Gatsby site using the minimal starter
+    npm init gatsby
+    ```
 
-The project dependencies themselves can then be installed with the command:
+2.  **Start developing.**
 
-```npm install```
+    Navigate into your new site’s directory and start it up.
 
-To run a local development server at localhost:8000
+    ```shell
+    cd my-gatsby-site/
+    npm run develop
+    ```
 
-```npm run dev```
+3.  **Open the code and start customizing!**
 
-To deploy (given the right security clearance):
+    Your site is now running at http://localhost:8000!
 
-```npm run deploy```
+    Edit `src/pages/index.js` to see your site update in real-time!
 
-Note that project is also deployed by Travis-CI on commit to the master branch. This will only happen if the build does not generate errors. (This is mostly a good thing, when a breaking mistake is made the build won't be overwritten)
+4.  **Learn more**
 
-## Content
+    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-Most content is separated into different files, mostly in the content directory. Editing these files will update the content in the site. The syntax in the file is either full [YAML](https://en.wikipedia.org/wiki/YAML) or [Markdown](https://guides.github.com/features/mastering-markdown/) with YAML frontmatter. (Frontmatter is usually defined with three starting dashes and three closing ones)
+    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+## 🚀 Quick start (Gatsby Cloud)
+
+Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
