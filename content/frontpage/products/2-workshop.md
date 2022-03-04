@@ -6,7 +6,7 @@ images:
   default: ../../../static/img/workdontshop.png
   diapositive: ../../../static/img/workdontshop_diap.png
 buttons:
-  - link: "mailto:workshop@todont.co"
+  - link: mailto:workshop@todont.co
     text: Contact us
 checkbox:
   smallText: Workshop
@@ -15,7 +15,6 @@ checkbox:
   visible: 0
 layout: horizontal-left
 ---
-
 # Work Don’t Shop
 
 ## Productivity Workshop<br/>for Creative People
@@ -24,12 +23,14 @@ Work Don’t Shop is a great ice-breaker for conferences and events. It can be t
 
 #### Workshop
 
-We think that complex things are often easier than they seem, and that people can do way more than they think. During Work Don’t Shop, Donald Roos and Anne de Bruijn guide attendees through some difficult questions — by offering simple exercises that reveal who, what and where they really want to be in a matter of minutes.
+During the workshop, you will write, talk and sketch according to the **ToDon’tList** method: make choices, do less, but do it better. You will work alone as well as in teams. Take what works for you.
 
-The second part of the workshop — a game — shows them what they can really do creatively; how they are able to find solutions to seemingly unsolvable problems. Our game forces you out of your comfort zone. The imposed limitations and rules of the game stimulate creativity like you wouldn’t believe.
+The first part of the workshop will offer straightforward exercises that reveal who, what and where you want to be in a matter of minutes. By making the right choices, you not only gain focus in your life but also your work and projects. What is important? What do you do and what do you not do? How do you stay away from side paths?
 
-During the workshop, attendees write, talk and sketch according to the ToDon’tList method. They will work alone as well as in teams.
+The second part of the workshop — the game — shows what you can do creatively; how you can find solutions to seemingly unsolvable problems long before the deadline. The game forces you to get out of your comfort zone. The imposed limitations and rules of the game stimulate creativity like you wouldn’t believe. Find the “Loopholes”.
 
-This workshop of about 90 minutes works well for groups up to 50 people. We offer alternative formats for bigger groups.
+This workshop of about 120 minutes works well for groups up to 50 people.\
+We offer alternative formats for specific events. \
+Price starts at € 950,- excl VAT and travel costs. 
 
 Interested in a workshop? Send us a <a data-scroll href="#mail">5 sentence email</a>.
