@@ -17,9 +17,7 @@ tags:
   - tagName: todontcolors
   - tagName: workshop
   - tagName: work don’t shop
-description: >-
-  Make choices about everything you do in your daily creative practice and
-  life. 
-openGraphImage: ../../../static/img/tdc_opengraph2.png
+description: "Make choices about everything you do in your daily creative
+  practice and life. "
+openGraphImage: /static/img/shotgun.png
 ---
-
