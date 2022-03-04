@@ -6,7 +6,7 @@ images:
   default: ../../../static/img/dontbuythisbook.png
   diapositive: ../../../static/img/dontbuythisbook_diap.png
 buttons:
-  - link: 'https://www.bispublishers.com/dont-buy-this-book.html'
+  - link: "https://www.bispublishers.com/dont-buy-this-book.html"
     text: Order a Copy
 checkbox:
   smallText: Don’t Buy This Book
@@ -15,6 +15,7 @@ checkbox:
   visible: 0
 layout: horizontal-right
 ---
+
 # Don’t Buy<br/>This Book
 
 ## Entrepreneurship<br/>for Creative People

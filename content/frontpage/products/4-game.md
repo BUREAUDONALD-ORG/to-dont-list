@@ -6,7 +6,7 @@ images:
   default: ../../../static/img/dontdothis.png
   diapositive: ../../../static/img/dontdothis_diap.png
 buttons:
-  - link: 'https://www.bispublishers.com/dont-do-this-game.html'
+  - link: "https://www.bispublishers.com/dont-do-this-game.html"
     text: Order a Copy
 checkbox:
   smallText: Game
@@ -15,11 +15,12 @@ checkbox:
   visible: 0
 layout: horizontal-right
 ---
+
 # Don’t<strong>/</strong>Do<br>This <strong>Game</strong>
 
 ## Thought Experiments<br>for Creative People
 
-Whatever kind of creative person you are, this thought experiment game will get you out of your comfort zone. How? It stimulates creativity through limitations. 
+Whatever kind of creative person you are, this thought experiment game will get you out of your comfort zone. How? It stimulates creativity through limitations.
 
 #### How to play
 

@@ -1,6 +1,6 @@
 backend:
   name: git-gateway
-  branch: next
+  branch: master
 
 media_folder: static/img
 public_folder: /img
@@ -26,9 +26,8 @@ collections:
           - {
               label: "Open Graph Image",
               name: "openGraphImage",
-              widget: custompathimage,
-              customMediaPath: "../../../static/img/",
-              rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/",
+              widget: image,
+              media_folder: "../../../static/img/",
             }
 
       - name: "header"
@@ -102,9 +101,8 @@ collections:
               - {
                   label: "Image",
                   name: "image",
-                  widget: custompathimage,
-                  customMediaPath: "../../../static/img/",
-                  rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/",
+                  widget: image,
+                  media_folder: "../../../static/img/",
                 }
           - label: "Social Media Buttons"
             name: "btn"
@@ -120,16 +118,14 @@ collections:
                   - {
                       label: "Default",
                       name: "normal",
-                      widget: custompathimage,
-                      customMediaPath: "../../../static/img/",
-                      rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/",
+                      widget: image,
+                      media_folder: "../../../static/img/",
                     }
                   - {
                       label: "Diapositive",
                       name: "inverse",
-                      widget: custompathimage,
-                      customMediaPath: "../../../static/img/",
-                      rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/",
+                      widget: image,
+                      media_folder: "../../../static/img/",
                     }
 
       - name: "credits"
@@ -178,21 +174,18 @@ collections:
         fields:
           - label: "Default"
             name: "default"
-            widget: custompathimage
-            customMediaPath: "../../../static/img/"
-            rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"
+            widget: image
+            media_folder: "../../../static/img/"
             required: false
           - label: "Diapositive"
             name: "diapositive"
-            widget: custompathimage
-            customMediaPath: "../../../static/img/"
-            rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"
+            widget: image
+            media_folder: "../../../static/img/"
             required: false
           - label: "Mobile (broad) Image"
             name: "mobile"
-            widget: custompathimage
-            customMediaPath: "../../../static/img/"
-            rawMediaPath: "https://raw.githubusercontent.com/BUREAUDONALD-ORG/to-dont-list/next/static/img/"
+            widget: image
+            media_folder: "../../../static/img/"
             required: false
       - label: "Buttons"
         name: "buttons"

@@ -16,7 +16,7 @@ module.exports = {
       resolve: `gatsby-source-filesystem`,
       options: {
         name: `static`,
-        path: `${__dirname}/static/`,
+        path: `${__dirname}/static`,
       },
     },
     "gatsby-plugin-sass",

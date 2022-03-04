@@ -57,7 +57,7 @@ const Layout = ({ children }) => {
           {
             name: "image",
             property: "og:image",
-            content: "https://todont.co/" + head.openGraphImage,
+            content: "https://todont.co/" + head.openGraphImage.relativePath,
           },
           {
             name: "description",
