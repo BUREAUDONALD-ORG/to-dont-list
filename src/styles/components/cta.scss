@@ -10,22 +10,25 @@
 
 .layout__cta {
   @include block;
-  flex-direction: column;
-  justify-content: space-between;
-  position: relative;
   padding: 0 $side-padding;
 }
 
-.cta__section {
+.cta__section__left {
   display: flex;
-  padding: $unit * 2;
+  flex-direction: column;
+  padding: $unit;
 }
 
 .cta__title {
-  width: 80%;
+  width: 70%;
+  padding-bottom: $unit;
+}
+
+.cta__section__right {
+  padding: $unit;
 }
 
 .cta__img {
   margin-left: $unit * 2;
-  width: 20%;
+  width: 30%;
 }

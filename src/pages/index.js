@@ -215,16 +215,16 @@ export default class indexPage extends React.Component {
 
           <section className="layout__cta-container">
             <div className="layout__cta">
-              <div className="cta__section">
+              <div className="cta__section__left">
                 <img className="cta__title" src={ctaTitle} />
-                <img className="cta__img" src={ctaImg} />
-              </div>
-              <div className="cta__section">
                 <Button
                   type="large"
                   text="Go to book website"
                   link="https://bureaudonald.brandbook.io/ifyoudont/"
                 />
+              </div>
+              <div className="cta__section__right">
+                <img className="cta__img" src={ctaImg} />
               </div>
             </div>
           </section>
