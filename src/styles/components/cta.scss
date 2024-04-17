@@ -36,3 +36,25 @@
   max-height: 15rem;
   width: 100%;
 }
+
+@media (min-width: 0px) and (max-width: $bp-small) {
+  .layout__cta {
+    flex-direction: column;
+  }
+
+  .cta__section__left {
+    width: 100%;
+  }
+
+  .cta__section__right {
+    display: flex;
+    justify-content: unset;
+    padding: 0;
+    width: 100%;
+  }
+
+  .cta__img {
+    max-height: unset;
+    width: 100%;
+  }
+}
