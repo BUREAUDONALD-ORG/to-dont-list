@@ -1,4 +1,4 @@
-.layout__header-container {
+.layout__cta-container {
   @include block-container;
   height: 10rem;
 
@@ -8,9 +8,18 @@
   background: $day;
 }
 
-.layout__header {
+.layout__cta {
   @include block;
   justify-content: space-between;
   position: relative;
   padding: $unit $side-padding;
+}
+
+.cta__section {
+}
+
+.cta__title {
+}
+
+.cta__img {
 }

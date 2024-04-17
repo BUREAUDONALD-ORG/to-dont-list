@@ -16,6 +16,9 @@ import line from "../../static/img/line.png";
 import lineHz from "../../static/img/line-hz.png";
 import lineShort from "../../static/img/line-short.png";
 
+import ctaTitle from "../../static/img/IYD_Title.svg";
+import ctaImg from "../../static/img/Free_Book_Mockup_no_shadow.png";
+
 const ScrollLink = Link;
 export default class indexPage extends React.Component {
   constructor(props) {
@@ -210,11 +213,16 @@ export default class indexPage extends React.Component {
             </div>
           </header>
 
-          <section
-            data-size={this.scrollTriggers().header}
-            className="layout__cta-container"
-          >
-            <div className="layout__cta"></div>
+          <section className="layout__cta-container">
+            <div className="layout__cta">
+              <div className="cta__section">
+                <img className="cta__title" src={ctaTitle} />
+                <img className="cta__img" src={ctaImg} />
+              </div>
+              <div className="cta__section">
+                <Button type="large" text="Go to book website" link="" />
+              </div>
+            </div>
           </section>
 
           <div className="layout__products-container">
