@@ -16,7 +16,7 @@
 .cta__section__left {
   display: flex;
   flex-direction: column;
-  width: 70%;
+  width: 80%;
   padding: $unit 0;
 }
 
@@ -29,9 +29,10 @@
   display: flex;
   justify-content: flex-end;
   padding: $unit 0 $unit $unit;
-  width: 30%;
+  width: 20%;
 }
 
 .cta__img {
-  height: 15rem;
+  max-height: 15rem;
+  width: 100%;
 }
