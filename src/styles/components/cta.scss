@@ -16,19 +16,20 @@
 .cta__section__left {
   display: flex;
   flex-direction: column;
-  padding: $unit;
+  width: 70%;
+  padding: $unit 0;
 }
 
 .cta__title {
-  width: 70%;
   padding-bottom: $unit;
+  width: 100%;
 }
 
 .cta__section__right {
   padding: $unit;
+  width: 30%;
 }
 
 .cta__img {
   margin-left: $unit * 2;
-  width: 30%;
 }
