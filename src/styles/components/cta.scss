@@ -1,0 +1,16 @@
+.layout__header-container {
+  @include block-container;
+  height: 10rem;
+
+  flex-direction: column;
+  align-items: center;
+
+  background: $day;
+}
+
+.layout__header {
+  @include block;
+  justify-content: space-between;
+  position: relative;
+  padding: $unit $side-padding;
+}

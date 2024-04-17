@@ -210,6 +210,13 @@ export default class indexPage extends React.Component {
             </div>
           </header>
 
+          <section
+            data-size={this.scrollTriggers().header}
+            className="layout__cta-container"
+          >
+            <div className="layout__cta"></div>
+          </section>
+
           <div className="layout__products-container">
             <div className="layout__checkboxes-container">
               <div className="layout__checkboxes">
