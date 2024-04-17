@@ -10,16 +10,21 @@
 
 .layout__cta {
   @include block;
+  flex-direction: column;
   justify-content: space-between;
   position: relative;
-  padding: $unit $side-padding;
+  padding: $unit * 2 $side-padding;
 }
 
 .cta__section {
+  display: flex;
 }
 
 .cta__title {
+  width: 80%;
 }
 
 .cta__img {
+  margin-left: $unit * 2;
+  height: 100%;
 }

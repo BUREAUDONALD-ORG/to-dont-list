@@ -220,7 +220,11 @@ export default class indexPage extends React.Component {
                 <img className="cta__img" src={ctaImg} />
               </div>
               <div className="cta__section">
-                <Button type="large" text="Go to book website" link="" />
+                <Button
+                  type="large"
+                  text="Go to book website"
+                  link="https://bureaudonald.brandbook.io/ifyoudont/"
+                />
               </div>
             </div>
           </section>
