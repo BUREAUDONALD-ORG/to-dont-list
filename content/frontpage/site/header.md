@@ -7,7 +7,6 @@ titleSmall: |-
   ToDon’tCo.
 subTitle: |-
   Productivity
-  Tools
   for Creative
   People
 subTitleSmall: |-
