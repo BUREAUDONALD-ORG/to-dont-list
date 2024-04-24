@@ -11,13 +11,13 @@ subTitle: |-
   for Creative
   People
 subTitleSmall: |-
-  Productivity Tools
+  Productivity
   for Creative People
 author:
-  link: 'http://www.bureaudonald.com'
+  link: "http://www.bureaudonald.com"
   name: Donald Roos
-  prefix: 'By '
+  prefix: "By "
 contact:
-  link: 'mail'
+  link: "mail"
   title: Contact
 ---
