@@ -3,8 +3,8 @@ id: 10
 title: If You Don't
 timeToRead: 10
 images:
-  default: ../../../static/img/dontbuythisbook.png
-  diapositive: ../../../static/img/dontbuythisbook_diap.png
+  default: ../../../static/img/Free_Book_Mockup_no_shadow_transparent.png
+  diapositive: ../../../static/img/Free_Book_Mockup_no_shadow_transparent.png
 buttons:
   - link: https://bureaudonald.brandbook.io/ifyoudont/
     text: Order a Copy
