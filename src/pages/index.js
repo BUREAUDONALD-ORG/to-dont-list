@@ -220,7 +220,7 @@ export default class indexPage extends React.Component {
                 <Button
                   type="large"
                   text="Go to book website"
-                  link="https://bureaudonald.brandbook.io/ifyoudont/"
+                  link="https://www.bispublishers.com/if-you-dont.html"
                 />
               </div>
               <div className="cta__section__right">

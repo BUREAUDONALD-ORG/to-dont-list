@@ -6,7 +6,7 @@ images:
   default: ../../../static/img/Free_Book_Mockup_no_shadow_transparent.png
   diapositive: ../../../static/img/Free_Book_Mockup_no_shadow_transparent.png
 buttons:
-  - link: https://bureaudonald.brandbook.io/ifyoudont/
+  - link: https://www.bispublishers.com/if-you-dont.html
     text: Order a Copy
 checkbox:
   smallText: Book
