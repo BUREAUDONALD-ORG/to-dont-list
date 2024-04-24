@@ -9,7 +9,7 @@ buttons:
   - link: https://www.bispublishers.com/dont-buy-this-book.html
     text: Order a Copy
 checkbox:
-  smallText: Don’t Buy This Book
+  smallText: Book
   text: Entrepreneurship
   title: Don’t Buy This Book
   visible: 0

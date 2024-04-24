@@ -1,6 +1,6 @@
 ---
 id: 10
-title: If You Don't
+title: If You Don’t
 timeToRead: 10
 images:
   default: ../../../static/img/Free_Book_Mockup_no_shadow_transparent.png
@@ -11,12 +11,12 @@ buttons:
 checkbox:
   smallText: Book
   text: Save The World
-  title: If You Don't
+  title: If You Don’t
   visible: 0
 layout: horizontal-right
 ---
 
-# If You Don't
+# If You Don’t
 
 ## Economics for Creative People
 
