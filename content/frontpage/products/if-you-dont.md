@@ -16,9 +16,9 @@ checkbox:
 layout: horizontal-right
 ---
 
-# Don’t Buy<br/>This Book
+# If You Don't
 
-## Entrepreneurship<br/>for Creative People
+## Economics<br/>for Creative People
 
 A little book about the big and overwhelming issues humanity is dealing with. Taking economics as a surprising stepping stone, it connects the dots between essential developments in science, history, sociology, technology, design and culture. This book is not about scary numbers — it is about key stories from our past and present and how they affect our future. How do we as creatives help create the world we want?
 
