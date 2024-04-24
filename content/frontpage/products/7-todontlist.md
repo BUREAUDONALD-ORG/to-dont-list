@@ -1,6 +1,6 @@
 ---
 id: 6
-title: "ToDon’tList "
+title: "ToDon’tList"
 timeToRead: 1
 images:
   default: ../../../static/img/todontlist_analog.png

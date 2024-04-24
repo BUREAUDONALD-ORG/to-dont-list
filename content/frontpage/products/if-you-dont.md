@@ -9,7 +9,7 @@ buttons:
   - link: https://bureaudonald.brandbook.io/ifyoudont/
     text: Order a Copy
 checkbox:
-  smallText: If You Don't
+  smallText: Book
   text: Save The World
   title: If You Don't
   visible: 0
