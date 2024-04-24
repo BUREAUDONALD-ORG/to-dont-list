@@ -10,7 +10,7 @@ buttons:
     text: Order a Copy
 checkbox:
   smallText: Book
-  text: Save The World
+  text: Economics
   title: If You Don’t
   visible: 0
 layout: horizontal-right
