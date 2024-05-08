@@ -413,6 +413,10 @@ export default class indexPage extends React.Component {
             </div>
           </div>
         </div>
+        <script
+          type="text/javascript"
+          src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+        ></script>
       </Layout>
     );
   }
