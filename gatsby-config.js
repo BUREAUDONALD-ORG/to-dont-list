@@ -4,7 +4,6 @@ module.exports = {
     siteUrl: `https://todont.co`,
   },
   plugins: [
-    // "gatsby-plugin-netlify-cms",
     "gatsby-plugin-decap-cms",
     {
       resolve: "gatsby-source-filesystem",
