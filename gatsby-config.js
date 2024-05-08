@@ -4,7 +4,8 @@ module.exports = {
     siteUrl: `https://todont.co`,
   },
   plugins: [
-    "gatsby-plugin-netlify-cms",
+    // "gatsby-plugin-netlify-cms",
+    "gatsby-plugin-decap-cms",
     {
       resolve: "gatsby-source-filesystem",
       options: {
@@ -37,7 +38,6 @@ module.exports = {
     },
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
-
     `gatsby-transformer-remark`,
   ],
 };
