@@ -298,6 +298,7 @@ export default class indexPage extends React.Component {
                   data-layout={frontmatter.layout}
                   data-diapositive={diapositive}
                   className="layout__product-container"
+                  style={{ "--accent-color": frontmatter.accentColor }}
                 >
                   <ProductImage
                     diapositive={diapositive}
@@ -308,7 +309,6 @@ export default class indexPage extends React.Component {
                   <div className="layout__product">
                     <div className="product__content">
                       <div
-                        style={{ "--accent-color": frontmatter.accentColor }}
                         className="markdown"
                         dangerouslySetInnerHTML={{
                           __html: product.node.html,
@@ -319,6 +319,7 @@ export default class indexPage extends React.Component {
                           <Button
                             text={btn.text}
                             link={btn.link}
+                            accentColor={frontmatter.accentColor}
                             key={key}
                             position={key}
                             diapositive={diapositive}
