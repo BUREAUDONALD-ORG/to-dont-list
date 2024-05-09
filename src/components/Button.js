@@ -46,7 +46,7 @@ const ButtonLarge = ({ text, link, handler }) => {
 const ButtonImage = ({ text, link, images }) => {
   return (
     <a className="btn" data-type="image" href={link}>
-      <img className="btn__img" src={images.normal.relativePath} alt="" />
+      <img className="btn__img" src={`/${images.normal.relativePath}`} alt="" />
       <img
         className="btn__img btn__img--hover"
         src={images.inverse.relativePath}
