@@ -16,7 +16,7 @@ checkbox:
   title: ToDon’tList
   visible: 0
 layout: horizontal-left
-accentColor: pink
+accentColor: #e00763
 ---
 
 # To&#8203;Don’t&#8203;List

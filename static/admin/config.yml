@@ -244,7 +244,7 @@ collections:
         widget: "select"
         options:
           - label: "Yellow"
-            value: "yellow"
+            value: "#ffcc00"
           - label: "Pink"
-            value: "pink"
+            value: "#e00763"
         default: "horizontal-right"
