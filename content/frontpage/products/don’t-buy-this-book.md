@@ -14,6 +14,7 @@ checkbox:
   title: Don’t Buy This Book
   visible: 0
 layout: horizontal-right
+accentColor: pink
 ---
 
 # Don’t Buy<br/>This Book

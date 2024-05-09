@@ -14,6 +14,7 @@ checkbox:
   title: Don’t/Do This — Game
   visible: 0
 layout: horizontal-right
+accentColor: pink
 ---
 
 # Don’t<strong>/</strong>Do<br>This <strong>Game</strong>

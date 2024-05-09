@@ -14,6 +14,7 @@ checkbox:
   title: If You Don’t
   visible: 0
 layout: horizontal-right
+accentColor: yellow
 ---
 
 # If You Don’t

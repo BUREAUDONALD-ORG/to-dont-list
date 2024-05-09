@@ -16,6 +16,7 @@ checkbox:
   title: ToDon’tList
   visible: 0
 layout: horizontal-left
+accentColor: pink
 ---
 
 # To&#8203;Don’t&#8203;List

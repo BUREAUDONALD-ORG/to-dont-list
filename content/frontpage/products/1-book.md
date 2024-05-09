@@ -15,6 +15,7 @@ checkbox:
   title: Don’t Read This Book
   visible: 0
 layout: horizontal-left
+accentColor: pink
 ---
 
 # Don’t Read<br/>This Book

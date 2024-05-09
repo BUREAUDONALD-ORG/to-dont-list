@@ -14,6 +14,7 @@ checkbox:
   title: ToDon’tTimer
   visible: 0
 layout: horizontal-right
+accentColor: pink
 ---
 
 # To&#8203;Don’t&#8203;Timer
