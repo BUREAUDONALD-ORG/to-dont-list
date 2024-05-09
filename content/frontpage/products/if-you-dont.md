@@ -14,7 +14,7 @@ checkbox:
   title: If You Don’t
   visible: 0
 layout: horizontal-right
-accentColor: #ffcc00
+accentColor: "#ffcc00"
 ---
 
 # If You Don’t

@@ -14,7 +14,7 @@ checkbox:
   title: Don’t/Do This — Game
   visible: 0
 layout: horizontal-right
-accentColor: #e00763
+accentColor: "#e00763"
 ---
 
 # Don’t<strong>/</strong>Do<br>This <strong>Game</strong>

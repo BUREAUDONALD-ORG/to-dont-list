@@ -14,7 +14,7 @@ checkbox:
   title: Don’t Buy This Book
   visible: 0
 layout: horizontal-right
-accentColor: #e00763
+accentColor: "#e00763"
 ---
 
 # Don’t Buy<br/>This Book

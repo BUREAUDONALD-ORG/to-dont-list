@@ -14,7 +14,7 @@ checkbox:
   title: Work Don’t Shop
   visible: 0
 layout: horizontal-left
-accentColor: #e00763
+accentColor: "#e00763"
 ---
 
 # Work Don’t Shop

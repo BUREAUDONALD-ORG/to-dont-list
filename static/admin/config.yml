@@ -247,4 +247,4 @@ collections:
             value: "#ffcc00"
           - label: "Pink"
             value: "#e00763"
-        default: "horizontal-right"
+        default: "#e00763"

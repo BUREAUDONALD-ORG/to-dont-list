@@ -11,6 +11,7 @@
   h2 {
     @include t--header-2;
     color: $complementary;
+    color: var(--accent-color);
     padding-bottom: $unit;
     word-wrap: break-word;
   }

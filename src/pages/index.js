@@ -301,6 +301,7 @@ export default class indexPage extends React.Component {
                   <div className="layout__product">
                     <div className="product__content">
                       <div
+                        style={{ "--accent-color": frontmatter.accentColor }}
                         className="markdown"
                         dangerouslySetInnerHTML={{
                           __html: product.node.html,
@@ -327,6 +328,7 @@ export default class indexPage extends React.Component {
           {this.selectedProducts() < 1 && (
             <div className="layout__line-container" />
           )}
+
           <Form data={form} />
 
           <div className="layout__social-container">
@@ -505,6 +507,7 @@ export const query = graphql`
               }
             }
             layout
+            accentColor
           }
         }
       }
