@@ -2,6 +2,13 @@
 
 .markdown {
   padding-bottom: $unit;
+
+  ::selection {
+    background: $complementary;
+    background: var(--accent-color);
+    color: $night;
+  }
+
   h1 {
     @include t--header-0;
     padding: $unit 0;
