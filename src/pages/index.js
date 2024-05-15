@@ -4,7 +4,6 @@ import { graphql } from "gatsby";
 
 import slugify from "slugify";
 import stableSort from "stable";
-import { Link } from "react-scroll";
 
 import NavItem from "../components/Nav-item.js";
 import Checkbox from "../components/Checkbox.js";
@@ -12,14 +11,9 @@ import Button from "../components/Button.js";
 import Form from "../components/Form.js";
 import ProductImage from "../components/Product-image.js";
 
-import line from "../../static/img/line.png";
-import lineHz from "../../static/img/line-hz.png";
-import lineShort from "../../static/img/line-short.png";
+import Header from "../components/Header/Header.js";
+import ToDontNav from "../components/ToDontNav/ToDontNav.js";
 
-import ctaTitle from "../../static/img/IYD_Title.svg";
-import ctaImg from "../../static/img/Free_Book_Mockup_no_shadow.png";
-
-const ScrollLink = Link;
 export default class indexPage extends React.Component {
   constructor(props) {
     super(props);
@@ -99,43 +93,22 @@ export default class indexPage extends React.Component {
     }, 0);
   };
 
-  interpolatePosition = (start, end, scrollHeight) => {
-    if (typeof window !== "undefined") {
-      let scrollY = window.scrollY;
-      let point = start - (scrollY / scrollHeight) * (start - end);
-      let edge = point > end ? point : end;
-      return `${edge}rem`;
-    } else {
-      return undefined;
-    }
-  };
-
+  // this function is used to determine the size of the header
   scrollTriggers = () => {
-    if (typeof window !== "undefined") {
-      let scrollY = window.scrollY;
-      let navbarElem = document.querySelector(".layout__navbar-container");
-      let navbarPos = navbarElem ? navbarElem.offsetTop : 400;
-      let navbarOffset = navbarPos - 130;
+    let scrollY = window.scrollY;
+    let navbarElem = document.querySelector(".layout__navbar-container");
+    let navbarPos = navbarElem ? navbarElem.offsetTop : 400;
+    let navbarOffset = navbarPos - 130;
 
-      if (window.innerWidth > 800) {
-        return {
-          header: this.state.scroll.position < 400 ? "large" : "small",
-          nav: scrollY > navbarOffset,
-        };
-      } else {
-        return {
-          header: this.state.scroll.position < 400 ? "large" : "small",
-          nav: scrollY > navbarOffset,
-        };
-      }
-    } else {
+    if (typeof window !== "undefined") {
       return {
-        header: "large",
-        nav: false,
+        header: "small",
+        nav: scrollY > navbarOffset,
       };
     }
   };
 
+  // so this code is very much required to make the sticky nav work
   handleScroll = (e) => {
     if (typeof window !== "undefined") {
       this.setState({
@@ -154,7 +127,6 @@ export default class indexPage extends React.Component {
   }
 
   render() {
-    let header = this.props.data.header.edges[0].node.frontmatter;
     let checkboxes = this.props.data.checkboxes.edges[0].node.frontmatter;
     let products = this.state.products;
     let initialProducts = this.state.initialProducts;
@@ -163,7 +135,11 @@ export default class indexPage extends React.Component {
     let credits = this.props.data.credits.edges[0].node.frontmatter;
     return (
       <Layout>
+        <Header />
+        <ToDontNav />
+
         <div className="layout__page-container">
+<<<<<<< HEAD
           <header
             data-size={this.scrollTriggers().header}
             className="layout__header-container"
@@ -236,6 +212,8 @@ export default class indexPage extends React.Component {
             </div>
           </section>
 
+=======
+>>>>>>> d020b44 (seperate out header and todontnav)
           <div className="layout__products-container">
             <div className="layout__checkboxes-container">
               <div className="layout__checkboxes">
@@ -434,31 +412,6 @@ export default class indexPage extends React.Component {
 
 export const query = graphql`
   query productQuery {
-    header: allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "//content/frontpage/site/header.md/" }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            titleSmall
-            subTitle
-            subTitleSmall
-            author {
-              link
-              name
-              prefix
-            }
-            contact {
-              title
-              link
-            }
-          }
-        }
-      }
-    }
     checkboxes: allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "//content/frontpage/site/checkboxes.md/" }

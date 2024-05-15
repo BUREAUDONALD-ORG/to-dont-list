@@ -1,4 +1,4 @@
-.layout__cta-container {
+.layout__tdn-container {
   @include block-container;
   height: 20rem;
 
@@ -8,32 +8,32 @@
   background: #ffcc00;
 }
 
-.layout__cta {
+.layout__tdn {
   @include block;
   padding: 0 $side-padding;
 }
 
-.cta__section__left {
+.tdn__section__left {
   display: flex;
   flex-direction: column;
   width: 80%;
   padding: $unit 0;
 }
 
-.cta__title {
+.tdn__title {
   padding-bottom: $unit;
   padding-right: $unit;
   width: 100%;
 }
 
-.cta__section__right {
+.tdn__section__right {
   display: flex;
   justify-content: flex-end;
   padding: $unit 0 $unit $unit;
   width: 20%;
 }
 
-.cta__img {
+.tdn__img {
   max-height: 15rem;
   width: 100%;
   box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.5);
@@ -45,25 +45,25 @@
 }
 
 @media (min-width: 0px) and (max-width: $bp-small) {
-  .layout__cta-container {
+  .layout__tdn-container {
     height: auto;
   }
 
-  .layout__cta {
+  .layout__tdn {
     flex-direction: column;
   }
 
-  .cta__section__left {
+  .tdn__section__left {
     width: 100%;
   }
 
-  .cta__section__right {
+  .tdn__section__right {
     justify-content: unset;
     padding: 0;
     width: 100%;
   }
 
-  .cta__img {
+  .tdn__img {
     max-height: unset;
   }
 
