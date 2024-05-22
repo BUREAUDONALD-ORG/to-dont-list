@@ -1,17 +1,16 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
-import { Link } from "react-scroll";
+import { Link as ScrollLink } from "react-scroll";
+import { Link } from "gatsby";
 
 import line from "./line.png";
 import lineHz from "./line-hz.png";
 import lineShort from "./line-short.png";
 
-const ScrollLink = Link;
-
 // simple wrapper to allow for gatsby graphql hook usage, without refactoring the class component
-export default function Header() {
+export default function Header({ size, fixed }) {
   const data = useStaticQuery(headerQuery);
-  return <HeaderClass data={data} />;
+  return <HeaderClass data={data} size={size} fixed={fixed} />;
 }
 
 class HeaderClass extends React.Component {
@@ -61,29 +60,29 @@ class HeaderClass extends React.Component {
   render() {
     let header = this.props.data.header.edges[0].node.frontmatter;
     let scrollState = this.scrollTriggers();
+    let headerSize = this.props.size || scrollState.header;
 
     return (
       <header
-        data-size={scrollState.header}
+        data-size={headerSize}
+        data-size-fixed={this.props.fixed ? "true" : "false"}
         className="layout__header-container"
         style={{ "--accent-color": header.accentColor }}
       >
         <div className="layout__header">
           <div className="header__section">
-            <h1 className="header__title">
-              {scrollState.header === "large"
-                ? header.title
-                : header.titleSmall}
-            </h1>
+            <Link to="/">
+              <h1 className="header__title">
+                {headerSize === "large" ? header.title : header.titleSmall}
+              </h1>
+            </Link>
           </div>
           <img className="header__line" src={line} alt="" />
           <img className="header__line-short" src={lineShort} alt="" />
           <img className="header__line-hz" src={lineHz} alt="" />
           <div className="header__section">
             <h3 className="header__subtitle">
-              {scrollState.header === "large"
-                ? header.subTitle
-                : header.subTitleSmall}
+              {headerSize === "large" ? header.subTitle : header.subTitleSmall}
             </h3>
             <div className="header__meta-container">
               <h4 className="header__author">

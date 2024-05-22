@@ -1,3 +1,60 @@
+// Welcome to the world of typography dependent positioning.
+$header-height-full: $flh--t--title * 3 + $unit * 6;
+$header-height-small: $flh--t--header-1 + $unit * 2;
+$header-height-full-responsive: $flh--t--title-responsive * 3 +
+  $flh--t--header-1-responsive * 5 + $unit * 8;
+$header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
+
+.layout__header-container {
+  @include block-container;
+  height: $header-height-full;
+
+  flex-direction: column;
+  align-items: center;
+
+  background: $night;
+}
+
+.layout__header-container[data-size="small"] {
+  position: sticky;
+  top: ($header-height-full - $header-height-small) * -1;
+  z-index: 100;
+}
+
+.layout__header-container[data-size="small"][data-size-fixed="true"] {
+  height: $header-height-small;
+  top: 0;
+}
+
+.layout__header {
+  @include block;
+  justify-content: space-between;
+  position: relative;
+  height: 100%;
+  z-index: 100;
+  overflow: hidden;
+  padding: $unit $side-padding;
+  margin-bottom: -1px; // Fix for Chrome layout issue
+}
+
+@media (min-width: 0px) and (max-width: $bp-small) {
+  .layout__header-container {
+    height: $header-height-full-responsive;
+  }
+
+  .layout__header {
+    flex-direction: column;
+    padding: $unit $side-padding-responsive;
+  }
+
+  .layout__header-container[data-size="small"] {
+    top: ($header-height-full-responsive - $header-height-small-responsive) * -1;
+    .layout__header {
+      flex-direction: row;
+    }
+  }
+}
+
 .header__section {
   display: flex;
   flex-direction: column;

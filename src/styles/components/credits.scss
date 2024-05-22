@@ -1,12 +1,24 @@
+.layout__credits-container {
+  @include block-container;
+  padding-bottom: $unit * 5;
+  background: $night;
+}
+
+.layout__credits {
+  @include block;
+  flex-direction: column;
+}
+
 .credits__title {
   @include t--header-2;
   padding-bottom: $unit;
   color: $day;
+  color: var(--accent-color);
 }
 
 .credits__text p {
   @include t--body-black;
-  color: $complementary;
+  color: $white;
   max-width: 66%;
 }
 

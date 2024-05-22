@@ -1,5 +1,23 @@
 @use "sass:math";
 
+.layout__products-container {
+  background: $day;
+}
+
+.layout__product-container {
+  @include block-container;
+  position: relative;
+  background: $day;
+  overflow: hidden;
+}
+
+.layout__product {
+  @include block;
+  background: $day;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .product__content {
   background-color: $day;
   position: relative;
@@ -167,4 +185,11 @@
       color: $day;
     }
   }
+}
+
+.layout__line-container {
+  display: block;
+  border-top: $border-width dashed $day;
+  padding-bottom: $unit * 6;
+  width: 100%;
 }

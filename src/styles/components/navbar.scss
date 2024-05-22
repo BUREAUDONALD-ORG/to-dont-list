@@ -1,5 +1,35 @@
 @use "sass:math";
 
+.layout__navbar-container {
+  @include block-container;
+  position: sticky;
+  position: -webkit-sticky;
+  top: calc(
+    #{$header-height-small} - #{$unit} - 1px
+  ); // Rounding optical correction
+  z-index: 95;
+  width: 100%;
+  background: $complementary;
+}
+
+.layout__navbar {
+  @include block;
+  position: relative;
+  justify-content: flex-start;
+  align-items: flex-end;
+  min-height: 7rem;
+  padding: 1.25rem $side-padding;
+}
+
+@media (min-width: 0px) and (max-width: $bp-small) {
+  .layout__navbar-container {
+    top: #{$header-height-small-responsive - 1.5rem};
+  }
+  .layout__navbar {
+    padding: $unit;
+  }
+}
+
 .navbar__item {
   width: calc(100% / 3 - #{math.div($unit * 2, 3)});
   height: $fs--t--header-3 + $two;
@@ -20,14 +50,14 @@
   margin-right: 0;
 }
 
-.layout__navbar > .btn[data-type='point'] {
+.layout__navbar > .btn[data-type="point"] {
   // Real oddness here, don't understand why correcting with sidepadding is not enough
   width: calc((100% - #{$side-padding * 2}) / 3 - #{math.div($unit * 2, 3)});
   position: absolute;
 }
 
 @media (min-width: 0px) and (max-width: $bp-small) {
-  .layout__navbar > .btn[data-type='point'] {
+  .layout__navbar > .btn[data-type="point"] {
     width: calc((100% - #{$unit * 2}));
   }
 }

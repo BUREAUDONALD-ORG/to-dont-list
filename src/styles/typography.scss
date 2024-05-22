@@ -14,21 +14,9 @@
   font-style: normal;
 }
 
-@import url("https://p.typekit.net/p.css?s=1&k=lju0pjr&ht=tk&f=41082&a=811332&app=typekit&e=css");
-
-@font-face {
-  font-family: "roc-grotesk-compressed";
-  src: url("https://use.typekit.net/af/404af9/00000000000000007735b7d5/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
-      format("woff2"),
-    url("https://use.typekit.net/af/404af9/00000000000000007735b7d5/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
-      format("woff"),
-    url("https://use.typekit.net/af/404af9/00000000000000007735b7d5/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n7&v=3")
-      format("opentype");
-  font-display: auto;
-  font-style: normal;
-  font-weight: 700;
-  font-stretch: normal;
-}
+// roc-grotesk-compressed font-face declaration
+// this font is controlled by typekit so we don't need to import it
+@import url("https://use.typekit.net/lju0pjr.css");
 
 $fs--t--title: 12rem;
 $flh--t--title: 7.5rem;
@@ -175,6 +163,7 @@ $ls--t--roc-title: -0.3rem;
   font-size: $fs--t--roc-title;
   line-height: $flh--t--roc-title;
   vertical-align: baseline;
+  font-weight: 600;
   @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--roc-title-responsive;
     line-height: $flh--t--roc-title-responsive;

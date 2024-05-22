@@ -1,3 +1,13 @@
+.layout__social-container {
+  @include block-container;
+  background: $complementary;
+}
+
+.layout__social {
+  @include block;
+  flex-direction: column;
+}
+
 .social {
   width: 100%;
   max-width: 1200px;

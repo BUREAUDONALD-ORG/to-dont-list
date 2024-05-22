@@ -12,10 +12,14 @@ import Product from "../../components/Products/Product.js";
 
 export default function ifYouDontAbout({ data }) {
   const product = data.products.edges[0];
+  const about = data.about.edges[0].node;
   return (
     <Layout>
-      <div className="layout__page-container">
-        <Header />
+      <div
+        className="layout__page-container"
+        style={{ "--accent-color": about.frontmatter.accentColor }}
+      >
+        <Header size="small" fixed={true} />
         <ToDontNav />
         <Product product={product} diapositive={false} />
         <About />
@@ -29,6 +33,18 @@ export default function ifYouDontAbout({ data }) {
 
 export const query = graphql`
   query aboutQuery {
+    about: allMarkdownRemark(
+      filter: { fileAbsolutePath: { regex: "//content/ifyoudont/about.md/" } }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            accentColor
+          }
+        }
+      }
+    }
     products: allMarkdownRemark(
       filter: {
         fileAbsolutePath: {

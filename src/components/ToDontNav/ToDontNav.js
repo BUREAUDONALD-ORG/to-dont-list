@@ -14,15 +14,15 @@ export default function ToDontNav() {
             src={ctaTitle}
             alt="title of book: If you don't"
           />
-          <Button
-            type="large"
-            text="Go to book website"
-            link="https://www.bispublishers.com/if-you-dont.html"
-          />
         </div>
         <div className="tdn__section__right">
           <img className="tdn__img" src={ctaImg} alt="book" />
         </div>
+      </div>
+      <div className="tdn__nav">
+        <Button type="large" text="THE BOOK" link="/ifyoudont/about" />
+        <Button type="large" text="THE SOURCES" link="/ifyoudont/sources" />
+        <Button type="large" text="THE ADDITIONS" link="/ifyoudont/additions" />
       </div>
     </section>
   );

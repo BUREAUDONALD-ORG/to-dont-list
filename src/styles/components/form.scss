@@ -1,3 +1,15 @@
+.layout__form-container {
+  @include block-container;
+  background: $complementary;
+  position: relative; // For animation overlapping
+  z-index: 20; // for animation overlapping
+}
+
+.layout__form {
+  @include block;
+  flex-direction: column;
+}
+
 .form__fields-container {
   padding: $half 0;
 }
@@ -10,7 +22,7 @@
 }
 
 .form__fields-container
-  .form__field[data-placeholder-shown='true']
+  .form__field[data-placeholder-shown="true"]
   + .form__label {
   margin: 0 0 -2.5rem;
 }

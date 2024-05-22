@@ -44,7 +44,9 @@ export default function ifYouDontSources({
 export const query = graphql`
   query sourcesQuery {
     sources: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//content/ifyoudont/sources.md/" } }
+      filter: {
+        fileAbsolutePath: { regex: "//content/ifyoudont/additions.md/" }
+      }
     ) {
       edges {
         node {
