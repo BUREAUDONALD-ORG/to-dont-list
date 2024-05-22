@@ -3,7 +3,7 @@ import { GatsbyImage } from "gatsby-plugin-image";
 
 const ProductImage = ({ diapositive, images, layout }) => {
   let currImage =
-    images && window.innerWidth < 800
+    images && typeof window !== "undefined" && window.innerWidth < 800
       ? images.mobile?.childImageSharp.gatsbyImageData
       : !diapositive
       ? images.default?.childImageSharp.gatsbyImageData
