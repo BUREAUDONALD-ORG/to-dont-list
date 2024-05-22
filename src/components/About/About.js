@@ -2,10 +2,10 @@ import React from "react";
 
 function About() {
   return (
-    <div className="layout__credits-container">
-      <div className="layout__credits">
-        <h1 className="credits__title">Donald Roos</h1>
-        <div className="credits__text">
+    <div className="layout__about-container">
+      <div className="layout__about">
+        <h1 className="about__title">Donald Roos</h1>
+        <div className="about__text">
           <p>
             Donald Roos is a creative entrepreneur based in Amsterdam (the
             Netherlands). Trained as a (typo)graphic designer, he sets up and
@@ -16,8 +16,8 @@ function About() {
             published Don’t Read This Book and Don’t Buy This Book.
           </p>
         </div>
-        <h1 className="credits__title">Talks and workshops</h1>
-        <div className="credits__text">
+        <h1 className="about__title">Talks and workshops</h1>
+        <div className="about__text">
           <p>
             Donald Roos is a creative entrepreneur based in Amsterdam (the
             Netherlands). Trained as a (typo)graphic designer, he sets up and

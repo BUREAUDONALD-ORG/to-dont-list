@@ -13,15 +13,19 @@ export default function ifYouDontSources({
   },
 }) {
   let html = edges[0].node.html;
-  let title = edges[0].node.frontmatter.title;
+  let frontmatter = edges[0].node.frontmatter;
+
   return (
     <Layout>
-      <div className="layout__page-container">
+      <div
+        className="layout__page-container"
+        style={{ "--accent-color": frontmatter.accentColor }}
+      >
         <Header />
         <ToDontNav />
-        <div className="layout__credits-container">
-          <div className="layout__credits">
-            <h1 className="credits__title">{title}</h1>
+        <div className="layout__sources-container">
+          <div className="layout__sources">
+            <h1 className="sources__title">{frontmatter.title}</h1>
             <div
               className="markdown"
               dangerouslySetInnerHTML={{
@@ -47,6 +51,7 @@ export const query = graphql`
           html
           frontmatter {
             title
+            accentColor
           }
         }
       }

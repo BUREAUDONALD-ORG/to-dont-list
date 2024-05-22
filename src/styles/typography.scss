@@ -164,6 +164,19 @@ $flh--t--body-responsive: 1.5rem;
   }
 }
 
-.tk-roc-grotesk-compressed {
-  font-family: "roc-grotesk-compressed", sans-serif;
+$fs--t--roc-title: 12rem;
+$flh--t--roc-title: 12rem;
+$fs--t--roc-title-responsive: 8rem;
+$flh--t--roc-title-responsive: 8rem;
+$ls--t--roc-title: -0.3rem;
+
+@mixin t--roc-title {
+  font-family: roc-grotesk-compressed;
+  font-size: $fs--t--roc-title;
+  line-height: $flh--t--roc-title;
+  vertical-align: baseline;
+  @media (min-width: 0px) and (max-width: $bp-small) {
+    font-size: $fs--t--roc-title-responsive;
+    line-height: $flh--t--roc-title-responsive;
+  }
 }

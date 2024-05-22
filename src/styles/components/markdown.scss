@@ -11,6 +11,8 @@
 
   h1 {
     @include t--header-0;
+    color: $complementary;
+    color: var(--accent-color);
     padding: $unit 0;
     padding-bottom: $unit;
   }
@@ -42,14 +44,27 @@
   }
 
   a {
+    @include t--body;
     color: $complementary;
+    color: var(--accent-color);
+  }
+
+  ul {
+    padding-bottom: $unit;
+  }
+
+  li {
+    @include t--body;
+    color: $black;
   }
 
   strong {
-    font-family: nittigrotesk-normal;
+    @include t--body-black;
+    color: $black;
   }
 
   a:hover {
     border-bottom: $border-width solid $complementary;
+    border-bottom: $border-width solid var(--accent-color);
   }
 }

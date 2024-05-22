@@ -50,6 +50,15 @@ collections:
             fields:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Link", name: "link", widget: "string" }
+          - label: "Accent Color"
+            name: "accentColor"
+            widget: "select"
+            options:
+              - label: "Yellow"
+                value: "#ffcc00"
+              - label: "Pink"
+                value: "#e00763"
+            default: "#e00763"
 
       - name: "checkboxes"
         label: "Checkboxes"

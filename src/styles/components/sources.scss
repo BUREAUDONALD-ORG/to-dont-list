@@ -1,0 +1,33 @@
+.layout__sources-container {
+  @include block-container;
+
+  flex-direction: column;
+  align-items: center;
+
+  background: $white;
+}
+
+.layout__sources {
+  @include block;
+  flex-direction: column;
+  padding: $unit * 2 $side-padding;
+}
+
+.sources__title {
+  @include t--roc-title;
+  padding-bottom: $unit;
+  padding-right: $unit;
+  width: 100%;
+}
+
+.sources__text p {
+  @include t--body-black;
+  color: $complementary;
+  max-width: 66%;
+}
+
+.layout__sources .markdown {
+  a {
+    color: $black;
+  }
+}

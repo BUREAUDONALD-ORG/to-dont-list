@@ -66,6 +66,7 @@ class HeaderClass extends React.Component {
       <header
         data-size={scrollState.header}
         className="layout__header-container"
+        style={{ "--accent-color": header.accentColor }}
       >
         <div className="layout__header">
           <div className="header__section">
@@ -138,6 +139,7 @@ const headerQuery = graphql`
               title
               link
             }
+            accentColor
           }
         }
       }

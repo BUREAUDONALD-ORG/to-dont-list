@@ -22,6 +22,14 @@
   background: $complementary;
 }
 
+.layout__page-container {
+  ::selection {
+    background: $complementary;
+    background: var(--accent-color);
+    color: $night;
+  }
+}
+
 // Welcome to the world of typography dependent positioning.
 $header-height-full: $flh--t--title * 3 + $unit * 6;
 $header-height-small: $flh--t--header-1 + $unit * 2;
@@ -39,7 +47,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
   background: $night;
 }
 
-.layout__header-container[data-size='small'] {
+.layout__header-container[data-size="small"] {
   position: sticky;
   position: -webkit-sticky;
   top: ($header-height-full - $header-height-small) * -1;
@@ -67,7 +75,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
     padding: $unit $side-padding-responsive;
   }
 
-  .layout__header-container[data-size='small'] {
+  .layout__header-container[data-size="small"] {
     top: ($header-height-full-responsive - $header-height-small-responsive) * -1;
     .layout__header {
       flex-direction: row;

@@ -24,7 +24,11 @@ const ProductImage = ({ diapositive, images, layout }) => {
           image={currImage}
           className="product__image-inner"
           // outerWrapperClassName="product__image-outer"
-          imgStyle={window.innerWidth > 800 ? imageStyle : {}}
+          imgStyle={
+            (typeof window !== "undefined" && window.innerWidth) > 800
+              ? imageStyle
+              : {}
+          }
           alt=""
         />
       )}

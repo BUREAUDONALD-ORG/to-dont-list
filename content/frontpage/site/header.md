@@ -19,4 +19,5 @@ author:
 contact:
   link: "mail"
   title: Contact
+accentColor: "#e00763"
 ---

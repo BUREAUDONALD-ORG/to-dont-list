@@ -1,0 +1,26 @@
+.layout__about-container {
+  @include block-container;
+  height: 20rem;
+
+  flex-direction: column;
+  align-items: center;
+
+  background: #ffcc00;
+}
+
+.layout__about {
+  @include block;
+  padding: 0 $side-padding;
+}
+
+.about__title {
+  padding-bottom: $unit;
+  padding-right: $unit;
+  width: 100%;
+}
+
+.about__text p {
+  @include t--body-black;
+  color: $complementary;
+  max-width: 66%;
+}
