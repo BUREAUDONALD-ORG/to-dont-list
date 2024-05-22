@@ -1,148 +1,20 @@
 import React from "react";
 import Layout from "../components/Layout";
-import { graphql } from "gatsby";
-
-import slugify from "slugify";
-import stableSort from "stable";
-
-import NavItem from "../components/Nav-item.js";
-import Checkbox from "../components/Checkbox.js";
-import Button from "../components/Button.js";
-import Form from "../components/Form.js";
-import ProductImage from "../components/Product-image.js";
 
 import Header from "../components/Header/Header.js";
 import ToDontNav from "../components/ToDontNav/ToDontNav.js";
-import Credits from "../components/Credits/Credits.js";
+import Form from "../components/Form.js";
 import Social from "../components/Social/Social.js";
+import Credits from "../components/Credits/Credits.js";
+import Products from "../components/Products/Products.js";
 
-export default class indexPage extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      products: this.props.data.products.edges,
-      initialProducts: JSON.parse(
-        JSON.stringify(this.props.data.products.edges)
-      ).sort((a, b) => {
-        return a.node.frontmatter.id > b.node.frontmatter.id;
-      }),
-      scroll: { resizeHeader: false, position: 0 },
-    };
-  }
-
-  toggleProducts = (product, sticky, e) => {
-    let count = this.countSelectedProducts();
-
-    // do simple
-    let newProducts = this.state.products.map((p, k) => {
-      let pData = p.node.frontmatter;
-      if (pData.id === product.id) {
-        if (!pData.checkbox.visible && count < 3) {
-          count++;
-          pData.checkbox.visible = 4;
-        } else {
-          pData.checkbox.visible = 0;
-        }
-      }
-      return p;
-    });
-
-    // Reset the numbers to proper --> Can probably done waaaaay smarter
-    count = 0;
-    newProducts = newProducts.map((p, k) => {
-      let pData = p.node.frontmatter;
-      if (pData.checkbox.visible > 0) {
-        count++;
-        pData.checkbox.visible = count;
-      }
-      return p;
-    });
-
-    // Sort products
-    newProducts = stableSort(newProducts, (a, b) => {
-      if (a.node.frontmatter.checkbox.visible === 0) {
-        return 1;
-      } else if (b.node.frontmatter.checkbox.visible === 0) {
-        return -1;
-      } else if (
-        a.node.frontmatter.checkbox.visible ===
-        b.node.frontmatter.checkbox.visible
-      ) {
-        return null;
-      } else if (true) {
-        return a.node.frontmatter.checkbox.visible <
-          b.node.frontmatter.checkbox.visible
-          ? -1
-          : 1;
-      }
-    });
-
-    this.setState({
-      products: newProducts,
-    });
-  };
-
-  selectedProducts = () => {
-    return this.state.products.filter((product) => {
-      return product.node.frontmatter.checkbox.visible;
-    });
-  };
-
-  countSelectedProducts = () => {
-    return this.state.products.reduce((acc, p) => {
-      p.node.frontmatter.checkbox.visible > 0 && acc++;
-      return acc;
-    }, 0);
-  };
-
-  // this function is used to determine the size of the header
-  scrollTriggers = () => {
-    if (typeof window !== "undefined") {
-      let scrollY = window.scrollY;
-      let navbarElem = document.querySelector(".layout__navbar-container");
-      let navbarPos = navbarElem ? navbarElem.offsetTop : 400;
-      let navbarOffset = navbarPos - 130;
-
-      return {
-        header: this.state.scroll.position < 400 ? "large" : "small",
-        nav: scrollY > navbarOffset,
-      };
-    } else {
-      return {
-        header: "large",
-        nav: false,
-      };
-    }
-  };
-
-  // so this code is very much required to make the sticky nav work
-  handleScroll = (e) => {
-    if (typeof window !== "undefined") {
-      this.setState({
-        scroll: {
-          position: window.scrollY,
-        },
-      });
-    }
-  };
-
-  componentDidMount() {
-    if (typeof window !== "undefined") {
-      window.addEventListener("scroll", this.handleScroll);
-      window.addEventListener("resize", this.handleScroll);
-    }
-  }
-
-  render() {
-    let checkboxes = this.props.data.checkboxes.edges[0].node.frontmatter;
-    let products = this.state.products;
-    let initialProducts = this.state.initialProducts;
-    let form = this.props.data.form.edges[0].node.frontmatter;
-
-    return (
-      <Layout>
+export default function indexPage() {
+  return (
+    <Layout>
+      <div className="layout__page-container">
         <Header />
         <ToDontNav />
+<<<<<<< HEAD
 
         <div className="layout__page-container">
 <<<<<<< HEAD
@@ -332,91 +204,13 @@ export default class indexPage extends React.Component {
       </Layout>
     );
   }
+=======
+        <Products />
+        <Form />
+        <Social />
+        <Credits />
+      </div>
+    </Layout>
+  );
+>>>>>>> e346f75 (seperate form and producs out)
 }
-
-export const query = graphql`
-  query productQuery {
-    checkboxes: allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "//content/frontpage/site/checkboxes.md/" }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            subtitle
-            footer
-          }
-        }
-      }
-    }
-    products: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//content/frontpage/products/" } }
-      sort: { order: ASC, fields: [frontmatter___id] }
-    ) {
-      edges {
-        node {
-          html
-          frontmatter {
-            id
-            timeToRead
-            checkbox {
-              title
-              text
-              smallText
-              visible
-            }
-            buttons {
-              text
-              link
-            }
-            images {
-              default {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 1920
-                    placeholder: TRACED_SVG
-                    formats: [AUTO, WEBP]
-                  )
-                }
-              }
-              diapositive {
-                childImageSharp {
-                  gatsbyImageData(
-                    width: 1920
-                    placeholder: TRACED_SVG
-                    formats: [AUTO, WEBP]
-                  )
-                }
-              }
-            }
-            layout
-            accentColor
-          }
-        }
-      }
-    }
-    form: allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "//content/frontpage/site/form.md/" }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            title
-            fields {
-              text
-            }
-            ccField
-            submit
-            submitResponse
-            submitExpandedResponse
-            mailTo
-          }
-        }
-      }
-    }
-  }
-`;

@@ -1,8 +1,40 @@
 import React from "react";
+import { useStaticQuery, graphql } from "gatsby";
 
 import Button from "./Button.js";
 
-export default class Form extends React.Component {
+export default function Form() {
+  const form = useStaticQuery(formQuery).form.edges[0].node.frontmatter;
+  return <FormInner data={form} />;
+}
+
+const formQuery = graphql`
+  query formQuery {
+    form: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: { regex: "//content/frontpage/site/form.md/" }
+      }
+    ) {
+      edges {
+        node {
+          frontmatter {
+            title
+            fields {
+              text
+            }
+            ccField
+            submit
+            submitResponse
+            submitExpandedResponse
+            mailTo
+          }
+        }
+      }
+    }
+  }
+`;
+
+class FormInner extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
