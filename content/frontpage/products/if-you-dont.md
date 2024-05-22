@@ -13,7 +13,7 @@ checkbox:
   text: Economics
   title: If You Don’t
   visible: 0
-layout: horizontal-right
+layout: horizontal-left
 accentColor: "#ffcc00"
 ---
 

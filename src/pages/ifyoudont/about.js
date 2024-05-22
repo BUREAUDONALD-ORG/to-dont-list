@@ -1,0 +1,83 @@
+import React from "react";
+import Layout from "../../components/Layout.js";
+import { graphql } from "gatsby";
+
+import Header from "../../components/Header/Header.js";
+import ToDontNav from "../../components/ToDontNav/ToDontNav.js";
+import Social from "../../components/Social/Social.js";
+import Credits from "../../components/Credits/Credits.js";
+import Form from "../../components/Form.js";
+import About from "../../components/About/About.js";
+import Product from "../../components/Products/Product.js";
+
+export default function ifYouDontAbout({ data }) {
+  const product = data.products.edges[0];
+  return (
+    <Layout>
+      <div className="layout__page-container">
+        <Header />
+        <ToDontNav />
+        <Product product={product} diapositive={false} />
+        <About />
+        <Social />
+        <Form />
+        <Credits />
+      </div>
+    </Layout>
+  );
+}
+
+export const query = graphql`
+  query aboutQuery {
+    products: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: {
+          regex: "//content/frontpage/products/if-you-dont.md/"
+        }
+      }
+      sort: { order: ASC, fields: [frontmatter___id] }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            id
+            timeToRead
+            checkbox {
+              title
+              text
+              smallText
+              visible
+            }
+            buttons {
+              text
+              link
+            }
+            images {
+              default {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 1920
+                    placeholder: TRACED_SVG
+                    formats: [AUTO, WEBP]
+                  )
+                }
+              }
+              diapositive {
+                childImageSharp {
+                  gatsbyImageData(
+                    width: 1920
+                    placeholder: TRACED_SVG
+                    formats: [AUTO, WEBP]
+                  )
+                }
+              }
+            }
+            layout
+            accentColor
+          }
+        }
+      }
+    }
+  }
+`;

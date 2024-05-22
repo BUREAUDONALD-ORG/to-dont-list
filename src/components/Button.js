@@ -49,7 +49,7 @@ const ButtonImage = ({ text, link, images }) => {
       <img className="btn__img" src={`/${images.normal.relativePath}`} alt="" />
       <img
         className="btn__img btn__img--hover"
-        src={images.inverse.relativePath}
+        src={`/${images.inverse.relativePath}`}
         alt=""
       />
       <p className="btn__text">{text}</p>

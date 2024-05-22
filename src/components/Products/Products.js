@@ -1,21 +1,20 @@
 import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 
-import slugify from "slugify";
 import stableSort from "stable";
 
 import NavItem from "../Nav-item.js";
 import Checkbox from "../Checkbox.js";
 import Button from "../Button.js";
-import ProductImage from "../Product-image.js";
+import Product from "./Product.js";
 
 export default function Products() {
-  const data = useStaticQuery(productQuery);
+  const data = useStaticQuery(productsQuery);
   return <ProductsInner data={data} />;
 }
 
-const productQuery = graphql`
-  query productQuery {
+const productsQuery = graphql`
+  query productsQuery {
     checkboxes: allMarkdownRemark(
       filter: {
         fileAbsolutePath: { regex: "//content/frontpage/site/checkboxes.md/" }
@@ -257,47 +256,7 @@ class ProductsInner extends React.Component {
           </div>
 
           {this.selectedProducts().map((product, key) => {
-            let frontmatter = product.node.frontmatter;
-            let diapositive = key === 1;
-            return (
-              <div
-                id={slugify(frontmatter.checkbox.title)}
-                key={frontmatter.id}
-                data-layout={frontmatter.layout}
-                data-diapositive={diapositive}
-                className="layout__product-container"
-                style={{ "--accent-color": frontmatter.accentColor }}
-              >
-                <ProductImage
-                  diapositive={diapositive}
-                  images={frontmatter.images}
-                  layout={frontmatter.layout}
-                />
-
-                <div className="layout__product">
-                  <div className="product__content">
-                    <div
-                      className="markdown"
-                      dangerouslySetInnerHTML={{
-                        __html: product.node.html,
-                      }}
-                    />
-                    {frontmatter.buttons.map((btn, key) => {
-                      return (
-                        <Button
-                          text={btn.text}
-                          link={btn.link}
-                          accentColor={frontmatter.accentColor}
-                          key={key}
-                          position={key}
-                          diapositive={diapositive}
-                        />
-                      );
-                    })}
-                  </div>
-                </div>
-              </div>
-            );
+            return <Product product={product} diapositive={key === 1} />;
           })}
         </div>
 
