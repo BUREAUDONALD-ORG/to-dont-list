@@ -14,6 +14,7 @@ import ProductImage from "../components/Product-image.js";
 import Header from "../components/Header/Header.js";
 import ToDontNav from "../components/ToDontNav/ToDontNav.js";
 import Credits from "../components/Credits/Credits.js";
+import Social from "../components/Social/Social.js";
 
 export default class indexPage extends React.Component {
   constructor(props) {
@@ -137,7 +138,6 @@ export default class indexPage extends React.Component {
     let products = this.state.products;
     let initialProducts = this.state.initialProducts;
     let form = this.props.data.form.edges[0].node.frontmatter;
-    let social = this.props.data.social.edges[0].node.frontmatter;
 
     return (
       <Layout>
@@ -322,34 +322,7 @@ export default class indexPage extends React.Component {
           )}
 
           <Form data={form} />
-
-          <div className="layout__social-container">
-            <div className="layout__social">
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href={social.hashtag.link}
-                className="social__hashtag"
-              >
-                <img
-                  src={social.hashtag.image.relativePath}
-                  alt="#ToDontList"
-                  className="social__hashtag"
-                />
-              </a>
-              <div className="social__text-container">
-                <p className="social__text">{social.text[0].line}</p>
-                <p className="social__text">{social.text[1].line}</p>
-              </div>
-              <div className="btn__container">
-                {social.btn.map((btn, key) => {
-                  return <Button {...btn} key={key} type="image" />;
-                })}
-                <div className="social__placeholder" />
-              </div>
-            </div>
-          </div>
-
+          <Social />
           <Credits />
         </div>
         <script
@@ -441,40 +414,6 @@ export const query = graphql`
             submitResponse
             submitExpandedResponse
             mailTo
-          }
-        }
-      }
-    }
-    social: allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "//content/frontpage/site/social.md/" }
-      }
-    ) {
-      edges {
-        node {
-          frontmatter {
-            text {
-              line
-            }
-            btn {
-              text
-              link
-              images {
-                normal {
-                  relativePath
-                }
-                inverse {
-                  relativePath
-                }
-              }
-            }
-            hashtag {
-              link
-              alt
-              image {
-                relativePath
-              }
-            }
           }
         }
       }

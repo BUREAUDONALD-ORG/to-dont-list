@@ -5,6 +5,7 @@ function Credits() {
   const credits =
     useStaticQuery(creditsQuery).credits.edges[0].node.frontmatter;
 
+  console.log(credits);
   return (
     <div className="layout__credits-container">
       <div className="layout__credits">

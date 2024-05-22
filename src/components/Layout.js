@@ -74,6 +74,10 @@ const Layout = ({ children }) => {
         ]}
       />
       <div className="layout__app">{children}</div>
+      <script
+        type="text/javascript"
+        src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+      ></script>
     </div>
   );
 };
