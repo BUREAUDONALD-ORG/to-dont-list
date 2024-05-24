@@ -39,6 +39,10 @@
   opacity: 1;
 }
 
+.cta__button-group {
+  display: flex;
+}
+
 @media (min-width: 0px) and (max-width: $bp-small) {
   .layout__cta-container {
     height: auto;
@@ -60,5 +64,12 @@
 
   .cta__img {
     max-height: unset;
+  }
+
+  .cta__button-group {
+    flex-direction: column;
+    .btn {
+      margin-bottom: $unit;
+    }
   }
 }
