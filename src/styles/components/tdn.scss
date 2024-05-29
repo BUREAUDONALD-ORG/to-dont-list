@@ -17,7 +17,7 @@
 .layout__tdn {
   @include block;
   justify-content: space-between;
-  padding: 1.5rem * 2 $side-padding 0;
+  padding: 2rem $side-padding 0;
 }
 
 .tdn__section__left {
@@ -36,14 +36,15 @@
 
 .tdn__img {
   // this height value is in balance with the t--roc-title font-size
-  height: 10.3rem;
+  height: 9.9rem;
   box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.5);
   opacity: 1;
 }
 
 .tdn__nav {
   @include block;
-  padding-top: 0.5rem;
+  margin-top: -1rem;
+  padding-top: 0rem;
 }
 
 .tdn__nav__item {

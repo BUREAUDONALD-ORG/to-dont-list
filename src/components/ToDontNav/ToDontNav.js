@@ -8,7 +8,7 @@ export default function ToDontNav() {
     <section className="layout__tdn-container">
       <div className="layout__tdn">
         <div className="tdn__section__left">
-          <h1 className="tdn__title">IF YOU DON'T</h1>
+          <h1 className="tdn__title">IF YOU DON’T</h1>
         </div>
         <div className="tdn__section__right">
           <img className="tdn__img" src={ctaImg} alt="book" />
