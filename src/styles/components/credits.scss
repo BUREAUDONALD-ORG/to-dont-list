@@ -37,3 +37,16 @@
   color: $day;
   border-bottom: $underline-width solid $day;
 }
+
+// only used on 404 page
+.credits__link {
+  @include t--header-2;
+  padding-bottom: $unit;
+  color: $day;
+  padding-bottom: 0;
+}
+
+.credits__link:hover {
+  border-bottom: $border-width solid $complementary;
+  border-bottom: $border-width solid var(--accent-color);
+}
