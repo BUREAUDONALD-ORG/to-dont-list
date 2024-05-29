@@ -27,11 +27,12 @@ export default class Checkbox extends React.Component {
         role="presentation"
         {...rest}
       >
-        <label
-          className="checkbox__label"
-          disabled={disabled}
-          htmlFor={`checkbox-${product.id}`}
-        >
+        <input
+          className="checkbox__input"
+          type="checkbox"
+          value={product.checkbox.visible ? product.checkbox.visible : 0}
+        />
+        <label className="checkbox__label" disabled={disabled}>
           <div className="checkbox__icon-container">
             <p className="checkbox__number">
               {product.checkbox.visible > 0 && product.checkbox.visible}
@@ -42,13 +43,6 @@ export default class Checkbox extends React.Component {
             <h3 className="checkbox__text">{product.checkbox.text}</h3>
           </div>
         </label>
-
-        <input
-          id={`checkbox-${product.id}`}
-          className="checkbox__input"
-          type="checkbox"
-          value={product.checkbox.visible ? product.checkbox.visible : 0}
-        />
       </div>
     );
   }

@@ -10,6 +10,7 @@ const Product = ({
   },
   diapositive,
 }) => {
+  console.log("product", frontmatter.id);
   return (
     <div
       id={slugify(frontmatter.checkbox.title)}
