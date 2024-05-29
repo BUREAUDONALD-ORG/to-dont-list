@@ -32,7 +32,6 @@ const productsQuery = graphql`
     }
     products: allMarkdownRemark(
       filter: { fileAbsolutePath: { regex: "//content/frontpage/products/" } }
-      sort: { order: ASC, fields: [frontmatter___id] }
     ) {
       edges {
         node {

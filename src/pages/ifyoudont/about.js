@@ -51,7 +51,6 @@ export const query = graphql`
           regex: "//content/frontpage/products/if-you-dont.md/"
         }
       }
-      sort: { order: ASC, fields: [frontmatter___id] }
     ) {
       edges {
         node {
