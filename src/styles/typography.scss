@@ -152,11 +152,12 @@ $flh--t--body-responsive: 1.5rem;
   }
 }
 
-$fs--t--roc-title: 12rem;
-$flh--t--roc-title: 12rem;
+// Typography for roc-grotesk-compressed added with "if you don't" updated
+// these height value are in balance with if-you-dont image
+$fs--t--roc-title: 15rem;
+$flh--t--roc-title: 12.4rem;
 $fs--t--roc-title-responsive: 8rem;
-$flh--t--roc-title-responsive: 8rem;
-$ls--t--roc-title: -0.3rem;
+$flh--t--roc-title-responsive: 5.5rem;
 
 @mixin t--roc-title {
   font-family: roc-grotesk-compressed;
@@ -167,5 +168,40 @@ $ls--t--roc-title: -0.3rem;
   @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--roc-title-responsive;
     line-height: $flh--t--roc-title-responsive;
+  }
+}
+
+$fs--t--roc-header-1: 12rem;
+$flh--t--roc-header-1: 12rem;
+$fs--t--roc-header-1-responsive: 8rem;
+$flh--t--roc-header-1-responsive: 8rem;
+
+@mixin t--roc-header-1 {
+  font-family: roc-grotesk-compressed;
+  font-size: $fs--t--roc-header-1;
+  line-height: $flh--t--roc-header-1;
+  vertical-align: baseline;
+  font-weight: 600;
+  @media (min-width: 0px) and (max-width: $bp-small) {
+    font-size: $fs--t--roc-header-1-responsive;
+    line-height: $flh--t--roc-header-1-responsive;
+  }
+}
+
+$fs--t--roc-btn: 3rem;
+$flh--t--roc-btn: 3rem;
+$fs--t--roc-btn-responsive: 3rem;
+$flh--t--roc-btn-responsive: 3rem;
+
+@mixin t--roc-btn {
+  font-family: roc-grotesk-compressed;
+  font-size: $fs--t--roc-btn;
+  line-height: $flh--t--roc-btn;
+  vertical-align: baseline;
+  baseline-shift: 0.5rem;
+  font-weight: 600;
+  @media (min-width: 0px) and (max-width: $bp-small) {
+    font-size: $fs--t--roc-btn-responsive;
+    line-height: $flh--t--roc-btn-responsive;
   }
 }

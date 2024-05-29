@@ -1,0 +1,30 @@
+.layout__notfound-container {
+  @include block-container;
+  padding-bottom: $unit * 5;
+  background: $white;
+}
+
+.layout__notfound {
+  @include block;
+  flex-direction: column;
+  padding-top: 4rem;
+}
+
+.notfound__title {
+  @include t--header-2;
+  padding-bottom: $unit;
+  color: $night;
+}
+
+// only used on 404 page
+.notfound__link {
+  @include t--header-2;
+  padding-bottom: $unit;
+  color: $purple;
+  padding-bottom: 0;
+}
+
+.notfound__link:hover {
+  border-bottom: $border-width solid $complementary;
+  border-bottom: $border-width solid var(--accent-color);
+}

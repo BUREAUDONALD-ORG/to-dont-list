@@ -253,6 +253,7 @@ class ProductsInner extends React.Component {
                 })}
             </div>
           </div>
+
           <div>
             {this.selectedProducts().map((product, key) => {
               return (

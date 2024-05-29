@@ -4,7 +4,7 @@ import arrow from "../../static/img/arrow.png";
 
 const ScrollLink = Link;
 
-const Button = ({ text, link, images, diapositive, size }) => {
+const Button = ({ text, link, diapositive, size }) => {
   return (
     <a
       className="btn"
@@ -35,9 +35,15 @@ const ButtonPoint = ({ text, link }) => {
   );
 };
 
-const ButtonLarge = ({ text, link, handler }) => {
+const ButtonLarge = ({ text, link, handler, diapositive }) => {
   return (
-    <a className="btn" data-type="large" href={link} onClick={handler}>
+    <a
+      className="btn"
+      data-type="large"
+      href={link}
+      onClick={handler}
+      data-diapositive={diapositive}
+    >
       <p className="btn__text">{text}</p>
     </a>
   );

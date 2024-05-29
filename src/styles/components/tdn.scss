@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .layout__tdn-container {
   @include block-container;
 
@@ -7,37 +9,67 @@
   background: #ffcc00;
 }
 
+.layout__tdn-container ::selection {
+  background: $white;
+  color: $black;
+}
+
 .layout__tdn {
   @include block;
-  padding: $unit * 2 $side-padding;
+  justify-content: space-between;
+  padding: 1.5rem * 2 $side-padding 0;
 }
 
 .tdn__section__left {
-  display: flex;
-  flex-direction: column;
-  width: 80%;
 }
 
 .tdn__title {
-  padding-right: $unit;
+  @include t--roc-title;
+  padding-right: 1rem;
   width: 100%;
 }
 
 .tdn__section__right {
   display: flex;
   justify-content: flex-end;
-  width: 20%;
 }
 
 .tdn__img {
-  max-height: 10rem;
-  width: 100%;
+  // this height value is in balance with the t--roc-title font-size
+  height: 10.3rem;
   box-shadow: -10px 20px 40px rgba(0, 0, 0, 0.5);
   opacity: 1;
 }
 
 .tdn__nav {
   @include block;
+  padding-top: 0.5rem;
+}
+
+.tdn__nav__item {
+  display: flex;
+  flex-direction: row;
+  justify-content: left;
+  align-items: center;
+  width: calc(50% - #{$half});
+  margin-right: 1rem * 2;
+  margin-left: -0.9rem;
+  cursor: pointer;
+
+  &:last-child {
+    margin-right: 0;
+  }
+}
+
+.tdn__nav__item-active {
+  background: $day;
+  color: $day;
+}
+
+.tdn__nav__item-text {
+  @include t--roc-btn;
+  padding: 0.5rem 0.9rem 0;
+  color: $night;
 }
 
 @media (min-width: 0px) and (max-width: $bp-small) {
@@ -66,7 +98,7 @@
   .cta__button-group {
     flex-direction: column;
     .btn {
-      margin-bottom: $unit;
+      margin-bottom: 1rem;
     }
   }
 }
