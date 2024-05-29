@@ -16,7 +16,6 @@ export default function ifYouDontAbout({ data }) {
   const about = data.about.edges[0].node;
   const diapositive = false;
 
-  console.log(product);
   return (
     <Layout>
       <div

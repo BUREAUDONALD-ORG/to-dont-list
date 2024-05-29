@@ -11,10 +11,14 @@
 
   h1 {
     @include t--header-0;
-    color: $complementary;
-    color: var(--accent-color);
+    color: $black;
     padding: $unit 0;
     padding-bottom: $unit;
+
+    .light {
+      font-family: nittigrotesk-normal;
+      color: $black;
+    }
   }
 
   h2 {

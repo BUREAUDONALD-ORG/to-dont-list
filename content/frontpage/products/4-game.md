@@ -17,7 +17,7 @@ layout: horizontal-right
 accentColor: "#e00763"
 ---
 
-# Don’t<strong>/</strong>Do<br>This <strong>Game</strong>
+# Don’t<span class="light">/</span>Do<br>This <span class="light">Game</span>
 
 ## Thought Experiments<br>for Creative People
 
