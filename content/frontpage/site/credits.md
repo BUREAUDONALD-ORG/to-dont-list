@@ -16,4 +16,5 @@ partners:
   - name: Robert-Jan Korteschiel
   - link: http://www.RoosBros.com
     name: Benz Roos
+accentColor: "#e00763"
 ---

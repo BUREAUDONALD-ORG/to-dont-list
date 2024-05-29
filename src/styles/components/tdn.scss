@@ -52,6 +52,8 @@
   flex-direction: row;
   justify-content: left;
   align-items: center;
+  background-color: $black;
+  color: $white;
   width: calc(50% - #{$half});
   margin-right: 1rem * 2;
   margin-left: -0.9rem;
@@ -65,13 +67,12 @@
 .tdn__nav__item:hover,
 .tdn__nav__item-active {
   background: $day;
-  color: $day;
+  color: $night;
 }
 
 .tdn__nav__item-text {
   @include t--roc-btn;
   padding: 0.5rem 0.9rem 0;
-  color: $night;
 }
 
 @media (min-width: 0px) and (max-width: $bp-small) {
@@ -106,6 +107,6 @@
 
   .tdn__nav__item {
     width: 100%;
-    margin: 0;
+    margin: 0 0 0.5rem;
   }
 }

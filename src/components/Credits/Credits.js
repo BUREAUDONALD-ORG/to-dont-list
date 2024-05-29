@@ -6,7 +6,10 @@ function Credits() {
     useStaticQuery(creditsQuery).credits.edges[0].node.frontmatter;
 
   return (
-    <div className="layout__credits-container">
+    <div
+      className="layout__credits-container"
+      style={{ "--accent-color": credits.accentColor }}
+    >
       <div className="layout__credits">
         <h1 className="credits__title">{credits.title}</h1>
         <div className="credits__text">
@@ -87,6 +90,7 @@ const creditsQuery = graphql`
               name
               link
             }
+            accentColor
           }
           html
         }
