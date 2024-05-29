@@ -36,13 +36,8 @@
   opacity: 1;
 }
 
-<<<<<<< HEAD
-.cta__button-group {
-  display: flex;
-=======
 .tdn__nav {
   @include block;
->>>>>>> ad2a52f (a lot of updates, but the basic building blocks are there)
 }
 
 @media (min-width: 0px) and (max-width: $bp-small) {
