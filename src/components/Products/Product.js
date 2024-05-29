@@ -10,11 +10,9 @@ const Product = ({
   },
   diapositive,
 }) => {
-  console.log("product", frontmatter.id);
   return (
     <div
       id={slugify(frontmatter.checkbox.title)}
-      key={frontmatter.id}
       data-layout={frontmatter.layout}
       data-diapositive={diapositive}
       className="layout__product-container"
@@ -34,6 +32,7 @@ const Product = ({
               __html: html,
             }}
           />
+
           {frontmatter.buttons.map((btn, key) => {
             return (
               <Button

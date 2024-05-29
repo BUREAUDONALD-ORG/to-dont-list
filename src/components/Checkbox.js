@@ -18,7 +18,6 @@ export default class Checkbox extends React.Component {
 
   render() {
     let { product, toggleProducts, disabled, ...rest } = this.props;
-    console.log(product.id);
     return (
       <div
         className="checkbox"
