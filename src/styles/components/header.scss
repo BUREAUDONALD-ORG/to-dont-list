@@ -83,7 +83,7 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
 }
 
 .header__line-short {
-  opacity: 0;
+  display: none;
 }
 
 .header__line-hz {
@@ -153,7 +153,6 @@ $header-height-small-responsive: $flh--t--header-1-responsive + $unit * 2;
 
   .header__line-short {
     display: block;
-    opacity: 1;
     height: ($header-height-small - 2rem);
     align-self: flex-end;
   }

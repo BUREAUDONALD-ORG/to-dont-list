@@ -61,6 +61,7 @@
   }
 }
 
+.tdn__nav__item:hover,
 .tdn__nav__item-active {
   background: $day;
   color: $day;
@@ -82,6 +83,7 @@
   }
 
   .tdn__section__left {
+    display: none;
     width: 100%;
   }
 
@@ -92,13 +94,17 @@
   }
 
   .tdn__img {
-    max-height: unset;
+    height: unset;
+    width: 100%;
   }
 
-  .cta__button-group {
+  .tdn__nav {
     flex-direction: column;
-    .btn {
-      margin-bottom: 1rem;
-    }
+    padding-top: 0;
+  }
+
+  .tdn__nav__item {
+    width: 100%;
+    margin: 0;
   }
 }
