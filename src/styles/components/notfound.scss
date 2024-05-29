@@ -25,6 +25,6 @@
 }
 
 .notfound__link:hover {
-  border-bottom: $border-width solid $complementary;
-  border-bottom: $border-width solid var(--accent-color);
+  border-bottom: 0.5rem solid $complementary;
+  border-bottom: 0.5rem solid var(--accent-color);
 }
