@@ -1,5 +1,17 @@
 @use "sass:math";
 
+.markdown[data-font-family="roc-grotesk-compressed"] {
+  h1 {
+    @include t--roc-header-1;
+  }
+  h2 {
+    @include t--roc-header-2;
+  }
+  h3 {
+    @include t--roc-header-3;
+  }
+}
+
 .markdown {
   padding-bottom: $unit;
 
@@ -11,13 +23,11 @@
 
   h1 {
     @include t--header-0;
-    color: $black;
     padding: $unit 0;
     padding-bottom: $unit;
 
     .light {
       font-family: nittigrotesk-normal;
-      color: $black;
     }
   }
 

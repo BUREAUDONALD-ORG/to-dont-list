@@ -188,6 +188,40 @@ $flh--t--roc-header-1-responsive: 8rem;
   }
 }
 
+$fs--t--roc-header-2: 12rem;
+$flh--t--roc-header-2: 12rem;
+$fs--t--roc-header-2-responsive: 8rem;
+$flh--t--roc-header-2-responsive: 8rem;
+
+@mixin t--roc-header-2 {
+  font-family: roc-grotesk-compressed;
+  font-size: $fs--t--roc-header-2;
+  line-height: $flh--t--roc-header-2;
+  vertical-align: baseline;
+  font-weight: 600;
+  @media (min-width: 0px) and (max-width: $bp-small) {
+    font-size: $fs--t--roc-header-2-responsive;
+    line-height: $flh--t--roc-header-2-responsive;
+  }
+}
+
+$fs--t--roc-header-3: 12rem;
+$flh--t--roc-header-3: 12rem;
+$fs--t--roc-header-3-responsive: 8rem;
+$flh--t--roc-header-3-responsive: 8rem;
+
+@mixin t--roc-header-3 {
+  font-family: roc-grotesk-compressed;
+  font-size: $fs--t--roc-header-3;
+  line-height: $flh--t--roc-header-3;
+  vertical-align: baseline;
+  font-weight: 600;
+  @media (min-width: 0px) and (max-width: $bp-small) {
+    font-size: $fs--t--roc-header-3-responsive;
+    line-height: $flh--t--roc-header-3-responsive;
+  }
+}
+
 $fs--t--roc-btn: 3rem;
 $flh--t--roc-btn: 3rem;
 $fs--t--roc-btn-responsive: 3rem;

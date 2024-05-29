@@ -156,6 +156,15 @@ collections:
             fields:
               - { label: "Name", name: "name", widget: "string" }
               - { label: "Link", name: "link", widget: "string" }
+          - label: "Accent Color"
+            name: "accentColor"
+            widget: "select"
+            options:
+              - label: "Yellow"
+                value: "#ffcc00"
+              - label: "Pink"
+                value: "#e00763"
+            default: "#e00763"
 
   - name: "products"
     label: "Product"
@@ -257,3 +266,12 @@ collections:
           - label: "Pink"
             value: "#e00763"
         default: "#e00763"
+      - label: "Font Family"
+        name: "fontFamily"
+        widget: "select"
+        options:
+          - label: "Nitti"
+            value: "nittigrotesk-black"
+          - label: "Roc"
+            value: "roc-grotesk-compressed"
+        default: "nittigrotesk-black"

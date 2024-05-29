@@ -15,6 +15,7 @@ checkbox:
   visible: 0
 layout: horizontal-left
 accentColor: "#ffcc00"
+fontFamily: roc-grotesk-compressed
 ---
 
 # If You Don’t

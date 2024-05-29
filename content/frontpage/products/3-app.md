@@ -17,6 +17,7 @@ checkbox:
   visible: 0
 layout: horizontal-left
 accentColor: "#e00763"
+fontFamily: nittigrotesk-black
 ---
 
 # To&#8203;Don’t&#8203;List

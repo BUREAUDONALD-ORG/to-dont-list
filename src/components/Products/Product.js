@@ -16,7 +16,9 @@ const Product = ({
       data-layout={frontmatter.layout}
       data-diapositive={diapositive}
       className="layout__product-container"
-      style={{ "--accent-color": frontmatter.accentColor }}
+      style={{
+        "--accent-color": frontmatter.accentColor,
+      }}
     >
       <ProductImage
         diapositive={diapositive}
@@ -28,6 +30,7 @@ const Product = ({
         <div className="product__content">
           <div
             className="markdown"
+            data-font-family={frontmatter.fontFamily}
             dangerouslySetInnerHTML={{
               __html: html,
             }}

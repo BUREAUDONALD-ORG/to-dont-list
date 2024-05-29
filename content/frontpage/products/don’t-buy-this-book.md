@@ -15,6 +15,7 @@ checkbox:
   visible: 0
 layout: horizontal-right
 accentColor: "#e00763"
+fontFamily: nittigrotesk-black
 ---
 
 # Don’t Buy<br/>This Book

@@ -15,6 +15,7 @@ checkbox:
   visible: 0
 layout: horizontal-left
 accentColor: "#e00763"
+fontFamily: nittigrotesk-black
 ---
 
 # Work Don’t Shop

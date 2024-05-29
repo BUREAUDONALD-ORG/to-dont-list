@@ -71,6 +71,7 @@ const productsQuery = graphql`
             }
             layout
             accentColor
+            fontFamily
           }
         }
       }
