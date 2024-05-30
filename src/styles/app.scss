@@ -1,11 +1,15 @@
 @import "colors";
 @import "units";
 @import "base";
-@import "typography";
 @import "mixins";
 @import "layout";
 @import "animations";
 @import "shame";
+
+@import "typography/typography";
+@import "typography/nitti-grotesk";
+@import "typography/roc-grotesk";
+
 @import "components/header";
 @import "components/navbar";
 @import "components/checkbox";

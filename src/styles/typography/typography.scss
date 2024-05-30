@@ -1,0 +1,13 @@
+// Responsive font declarations, to make the text size with the viewport size
+
+@each $min, $max, $size in (0, 300, 13), (300, 400, 14), (400, 500, 15),
+  (500, 600, 18), (600, 700, 21), (700, 800, 26), (800, 900, 13),
+  (900, 1000, 14), (1000, 1100, 15), (1100, 1200, 16), (1200, 1400, 19),
+  (1400, 1600, 20), (1600, 9999, 20)
+{
+  @media (min-width: $min + px) and (max-width: $max + px) {
+    html {
+      font-size: $size + px;
+    }
+  }
+}

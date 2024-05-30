@@ -1,3 +1,4 @@
+// local version of the nitti font set, normal and black
 @font-face {
   font-family: "nittigrotesk-normal";
   src: url("../../static/fonts/nittigrotesk-normal-v20.eot");
@@ -13,10 +14,6 @@
   font-weight: bold;
   font-style: normal;
 }
-
-// roc-grotesk-compressed font-face declaration
-// this font is controlled by typekit so we don't need to import it
-@import url("https://use.typekit.net/lju0pjr.css");
 
 $fs--t--title: 11rem;
 $flh--t--title: 7.5rem;
@@ -37,7 +34,7 @@ $ls--t--title: -0.3rem;
 }
 
 $fs--t--header-0: 6rem;
-$flh--t--header-0: 5rem;
+$flh--t--header-0: 6rem;
 $fs--t--header-0-responsive: 6rem;
 $flh--t--header-0-responsive: 5rem;
 $ls--t--header-0: -0.1rem;
@@ -137,76 +134,5 @@ $flh--t--body-responsive: 1.5rem;
   @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: $fs--t--body-responsive;
     line-height: $flh--t--body-responsive;
-  }
-}
-
-@each $min, $max, $size in (0, 300, 13), (300, 400, 14), (400, 500, 15),
-  (500, 600, 18), (600, 700, 21), (700, 800, 26), (800, 900, 13),
-  (900, 1000, 14), (1000, 1100, 15), (1100, 1200, 16), (1200, 1400, 19),
-  (1400, 1600, 20), (1600, 9999, 20)
-{
-  @media (min-width: $min + px) and (max-width: $max + px) {
-    html {
-      font-size: $size + px;
-    }
-  }
-}
-
-// Typography for roc-grotesk-compressed added with "if you don't" updated
-// these height value are in balance with if-you-dont image
-
-@mixin t--roc-title {
-  font-family: roc-grotesk-compressed;
-  font-size: 15rem;
-  line-height: 12.3rem;
-  font-weight: 600;
-  @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: 8rem;
-    line-height: 5.5rem;
-  }
-}
-
-@mixin t--roc-header-1 {
-  font-family: roc-grotesk-compressed;
-  font-size: 4rem;
-  line-height: 4rem;
-  font-weight: 600;
-  @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: 2.5rem;
-    line-height: 2.5rem;
-  }
-}
-
-@mixin t--roc-header-2 {
-  font-family: roc-grotesk-compressed;
-  font-size: 3rem;
-  line-height: 3rem;
-  font-weight: 600;
-  @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-  }
-}
-
-@mixin t--roc-header-3 {
-  font-family: roc-grotesk-compressed;
-  font-size: 1.5rem;
-  line-height: 1.5rem;
-  font-weight: 600;
-  @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
-  }
-}
-
-@mixin t--roc-btn {
-  font-family: roc-grotesk-compressed;
-  font-size: 3rem;
-  line-height: 3rem;
-  baseline-shift: 0.5rem;
-  font-weight: 600;
-  @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: 3rem;
-    line-height: 3rem;
   }
 }
