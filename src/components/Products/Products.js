@@ -17,7 +17,9 @@ const productsQuery = graphql`
   query productsQuery {
     checkboxes: allMarkdownRemark(
       filter: {
-        fileAbsolutePath: { regex: "//content/frontpage/site/checkboxes.md/" }
+        fileAbsolutePath: {
+          regex: "//content/subsites/landing-page/checkboxes.md/"
+        }
       }
     ) {
       edges {
@@ -31,7 +33,7 @@ const productsQuery = graphql`
       }
     }
     products: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//content/frontpage/products/" } }
+      filter: { fileAbsolutePath: { regex: "//content/products/" } }
     ) {
       edges {
         node {

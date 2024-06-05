@@ -3,8 +3,8 @@ id: 6
 title: "ToDon’tList"
 timeToRead: 1
 images:
-  default: ../../../static/img/todontlist_analog.png
-  diapositive: ../../../static/img/todontlist_analog_diap.png
+  default: ../../static/img/todontlist_analog.png
+  diapositive: ../../static/img/todontlist_analog_diap.png
 buttons:
   - link: "https://www.bispublishers.com/to-dont-list.html"
     text: Order a Copy

@@ -1,20 +1,21 @@
 backend:
   name: git-gateway
-  branch: master
+  branch: next
 
 media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: "site"
-    label: "Site"
+  - name: "general"
+    label: "General"
     delete: false
+    create: false
     editor:
       preview: false
     files:
       - name: "head"
         label: "Head Informatie"
-        file: "content/frontpage/site/head.md"
+        file: "content/general/head.md"
         fields:
           - { label: "Head Title", name: "title", widget: "string" }
           - label: "SEO Tags"
@@ -32,7 +33,7 @@ collections:
 
       - name: "header"
         label: "Header"
-        file: "content/frontpage/site/header.md"
+        file: "content/general/header.md"
         fields:
           - { label: "Header Title", name: "title", widget: "text" }
           - { label: "Sub Title", name: "subTitle", widget: "text" }
@@ -60,17 +61,9 @@ collections:
                 value: "#e00763"
             default: "#e00763"
 
-      - name: "checkboxes"
-        label: "Checkboxes"
-        file: "content/frontpage/site/checkboxes.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-          - { label: "Subtitle", name: "subtitle", widget: "string" }
-          - { label: "Pointer button", name: "footer", widget: "string" }
-
       - name: "form"
         label: "Formuliergegevens"
-        file: "content/frontpage/site/form.md"
+        file: "content/general/form.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - label: "fields"
@@ -92,9 +85,53 @@ collections:
             }
           - { label: "mailTo", name: "mailTo", widget: "string" }
 
+      - name: "credits"
+        label: "Credits"
+        file: "content/general/credits.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Authors text", name: "authorsText", widget: "string" }
+          - label: "Authors"
+            name: "authors"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+          - { label: "Partners text", name: "partnersText", widget: "string" }
+          - label: "Partners"
+            name: "partners"
+            widget: "list"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Link", name: "link", widget: "string" }
+          - label: "Accent Color"
+            name: "accentColor"
+            widget: "select"
+            options:
+              - label: "Yellow"
+                value: "#ffcc00"
+              - label: "Pink"
+                value: "#e00763"
+            default: "#e00763"
+
+  - name: "landing-page"
+    label: "subsite/landing-page"
+    delete: false
+    create: false
+    editor:
+      preview: false
+    files:
+      - name: "checkboxes"
+        label: "Checkboxes Block"
+        file: "content/subsites/landing-page/checkboxes.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - { label: "Pointer button", name: "footer", widget: "string" }
+
       - name: "social"
-        label: "Social Media"
-        file: "content/frontpage/site/social.md"
+        label: "Social Media Block"
+        file: "content/subsites/landing-page/social.md"
         fields:
           - label: "Social Media Text"
             name: "text"
@@ -137,37 +174,66 @@ collections:
                       media_folder: "../../../static/img/",
                     }
 
-      - name: "credits"
-        label: "Credits"
-        file: "content/frontpage/site/credits.md"
+  - name: "if-you-dont"
+    label: "subsite/if-you-dont"
+    delete: false
+    create: false
+    editor:
+      preview: false
+    files:
+      - name: "about"
+        label: "About Block"
+        file: "content/subsites/if-you-dont/about.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
-          - { label: "Authors text", name: "authorsText", widget: "string" }
-          - label: "Authors"
-            name: "authors"
+
+      - name: "social"
+        label: "Social Media Block"
+        file: "content/frontpage/site/social.md"
+        fields:
+          - label: "Social Media Text"
+            name: "text"
             widget: "list"
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Link", name: "link", widget: "string" }
-          - { label: "Partners text", name: "partnersText", widget: "string" }
-          - label: "Partners"
-            name: "partners"
+              - { label: "Line", name: "line", widget: "string" }
+          - label: "Social Media Buttons"
+            name: "btn"
+            create: false
             widget: "list"
             fields:
-              - { label: "Name", name: "name", widget: "string" }
-              - { label: "Link", name: "link", widget: "string" }
-          - label: "Accent Color"
-            name: "accentColor"
-            widget: "select"
-            options:
-              - label: "Yellow"
-                value: "#ffcc00"
-              - label: "Pink"
-                value: "#e00763"
-            default: "#e00763"
+              - { label: "Text", name: "text", widget: "string" }
+              - { label: "Link", name: "link", widget: string }
+              - label: "Images"
+                name: "images"
+                widget: "object"
+                fields:
+                  - {
+                      label: "Default",
+                      name: "normal",
+                      widget: image,
+                      media_folder: "../../../static/img/",
+                    }
+                  - {
+                      label: "Diapositive",
+                      name: "inverse",
+                      widget: image,
+                      media_folder: "../../../static/img/",
+                    }
+
+      - name: "additions"
+        label: "Additions Block"
+        file: "content/subsites/if-you-dont/additions.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+
+      - name: "sources"
+        label: "Sources Block"
+        file: "content/subsites/if-you-dont/sources.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
 
   - name: "products"
-    label: "Product"
+    label: "Products"
     folder: "content/frontpage/products"
     create: true
     editor:

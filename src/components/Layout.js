@@ -8,9 +8,7 @@ const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query layoutQuery {
       head: allMarkdownRemark(
-        filter: {
-          fileAbsolutePath: { regex: "//content/frontpage/site/head.md/" }
-        }
+        filter: { fileAbsolutePath: { regex: "//content/general/head.md/" } }
       ) {
         edges {
           node {

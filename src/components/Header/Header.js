@@ -118,9 +118,7 @@ class HeaderClass extends React.Component {
 const headerQuery = graphql`
   query headerQuery {
     header: allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "//content/frontpage/site/header.md/" }
-      }
+      filter: { fileAbsolutePath: { regex: "//content/general/header.md/" } }
     ) {
       edges {
         node {

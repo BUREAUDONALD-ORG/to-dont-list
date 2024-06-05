@@ -11,9 +11,7 @@ export default function Form() {
 const formQuery = graphql`
   query formQuery {
     form: allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "//content/frontpage/site/form.md/" }
-      }
+      filter: { fileAbsolutePath: { regex: "//content/general/form.md/" } }
     ) {
       edges {
         node {

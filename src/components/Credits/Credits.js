@@ -72,9 +72,7 @@ function Credits() {
 const creditsQuery = graphql`
   query creditsQuery {
     credits: allMarkdownRemark(
-      filter: {
-        fileAbsolutePath: { regex: "//content/frontpage/site/credits.md/" }
-      }
+      filter: { fileAbsolutePath: { regex: "//content/general/credits.md/" } }
     ) {
       edges {
         node {

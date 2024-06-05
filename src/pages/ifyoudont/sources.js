@@ -7,13 +7,9 @@ import ToDontNav from "../../components/ToDontNav/ToDontNav.js";
 import Social from "../../components/Social/Social.js";
 import Credits from "../../components/Credits/Credits.js";
 
-export default function ifYouDontSources({
-  data: {
-    sources: { edges },
-  },
-}) {
-  let html = edges[0].node.html;
-  let frontmatter = edges[0].node.frontmatter;
+export default function ifYouDontSources({ data }) {
+  let html = data.sources.edges[0].node.html;
+  let frontmatter = data.sources.edges[0].node.frontmatter;
 
   return (
     <Layout>
@@ -44,7 +40,11 @@ export default function ifYouDontSources({
 export const query = graphql`
   query sourcesQuery {
     sources: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//content/ifyoudont/sources.md/" } }
+      filter: {
+        fileAbsolutePath: {
+          regex: "//content/subsites/if-you-dont/sources.md/"
+        }
+      }
     ) {
       edges {
         node {

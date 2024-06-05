@@ -11,7 +11,10 @@ import Products from "../components/Products/Products.js";
 export default function indexPage() {
   return (
     <Layout>
-      <div className="layout__page-container">
+      <div
+        className="layout__page-container"
+        style={{ "--accent-color": "#fafafa" }}
+      >
         <Header />
         <ToDontNav />
         <Products />
@@ -22,3 +25,25 @@ export default function indexPage() {
     </Layout>
   );
 }
+
+export const query = graphql`
+  query sourcesQuery {
+    sources: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: {
+          regex: "//content/subsites/landing-page/landing-page.md/"
+        }
+      }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
+            accentColor
+          }
+        }
+      }
+    }
+  }
+`;

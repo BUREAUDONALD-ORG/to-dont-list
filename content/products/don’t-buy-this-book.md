@@ -3,8 +3,8 @@ id: 1
 title: Don’t Buy This Book
 timeToRead: 10
 images:
-  default: ../../../static/img/dontbuythisbook.png
-  diapositive: ../../../static/img/dontbuythisbook_diap.png
+  default: ../../static/img/dontbuythisbook.png
+  diapositive: ../../static/img/dontbuythisbook_diap.png
 buttons:
   - link: https://www.bispublishers.com/dont-buy-this-book.html
     text: Order a Copy

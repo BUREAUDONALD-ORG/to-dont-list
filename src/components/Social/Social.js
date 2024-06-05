@@ -42,7 +42,9 @@ const socialQuery = graphql`
   query socialQuery {
     social: allMarkdownRemark(
       filter: {
-        fileAbsolutePath: { regex: "//content/frontpage/site/social.md/" }
+        fileAbsolutePath: {
+          regex: "//content/subsites/landing-page/social.md/"
+        }
       }
     ) {
       edges {

@@ -13,7 +13,6 @@ import Product from "../../components/Products/Product.js";
 export default function ifYouDontAbout({ data }) {
   const product = data.products.edges[0];
   const about = data.about.edges[0].node;
-  console.log(product);
   return (
     <Layout>
       <div
@@ -35,7 +34,9 @@ export default function ifYouDontAbout({ data }) {
 export const query = graphql`
   query aboutQuery {
     about: allMarkdownRemark(
-      filter: { fileAbsolutePath: { regex: "//content/ifyoudont/about.md/" } }
+      filter: {
+        fileAbsolutePath: { regex: "//content/subsites/if-you-dont/about.md/" }
+      }
     ) {
       edges {
         node {
@@ -48,9 +49,7 @@ export const query = graphql`
     }
     products: allMarkdownRemark(
       filter: {
-        fileAbsolutePath: {
-          regex: "//content/frontpage/products/if-you-dont.md/"
-        }
+        fileAbsolutePath: { regex: "//content/products/if-you-dont.md/" }
       }
     ) {
       edges {
