@@ -24,7 +24,6 @@
 
 .layout__page-container {
   ::selection {
-    background: $complementary;
     background: var(--accent-color);
     color: $night;
   }

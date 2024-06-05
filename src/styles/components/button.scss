@@ -21,12 +21,6 @@
   width: calc(100% / 3 - #{math.div($unit * 2, 3)});
   margin-right: $unit;
   cursor: pointer;
-
-  ::selection {
-    background: $complementary;
-    background: var(--accent-color);
-    color: $night;
-  }
 }
 
 @media (min-width: 0px) and (max-width: $bp-small) {

@@ -9,11 +9,6 @@
   background: #ffcc00;
 }
 
-.layout__tdn-container ::selection {
-  background: $white;
-  color: $black;
-}
-
 .layout__tdn {
   @include block;
   justify-content: space-between;
