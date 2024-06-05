@@ -121,9 +121,9 @@ collections:
     editor:
       preview: false
     files:
-      - name: "landing-page"
+      - name: "landing-page-settings"
         label: "Landing Page Settings"
-        file: "content/subsites/landing-page/landing-page.md"
+        file: "content/subsites/landing-page/landing-page-settings.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - label: "Accent Color"
@@ -136,17 +136,17 @@ collections:
                 value: "#e00763"
             default: "#e00763"
 
-      - name: "checkboxes"
+      - name: "checkboxes-blcok"
         label: "Checkboxes Block"
-        file: "content/subsites/landing-page/checkboxes.md"
+        file: "content/subsites/landing-page/checkboxes-block.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "Subtitle", name: "subtitle", widget: "string" }
           - { label: "Pointer button", name: "footer", widget: "string" }
 
-      - name: "social"
+      - name: "social-block"
         label: "Social Media Block"
-        file: "content/subsites/landing-page/social.md"
+        file: "content/subsites/landing-page/social-block.md"
         fields:
           - label: "Social Media Text"
             name: "text"
@@ -196,15 +196,87 @@ collections:
     editor:
       preview: false
     files:
-      - name: "about"
+      - name: "about-settings"
+        label: "About Settings"
+        file: "content/subsites/if-you-dont/about/about-settings.md"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Accent Color"
+            name: "accentColor"
+            widget: "select"
+            options:
+              - label: "Yellow"
+                value: "#ffcc00"
+              - label: "Pink"
+                value: "#e00763"
+            default: "#e00763"
+
+      - name: "about-block"
         label: "About Block"
-        file: "content/subsites/if-you-dont/about.md"
+        file: "content/subsites/if-you-dont/about/about-block.md"
+        fields:
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            default: ""
+
+      - name: "additions-settings"
+        label: "Additions Settings"
+        file: "content/subsites/if-you-dont/additions/additions-settings.md"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Accent Color"
+            name: "accentColor"
+            widget: "select"
+            options:
+              - label: "Yellow"
+                value: "#ffcc00"
+              - label: "Pink"
+                value: "#e00763"
+            default: "#e00763"
+
+      - name: "additions-block"
+        label: "Additions Block"
+        file: "content/subsites/if-you-dont/additions/additions-block.md"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            default: ""
+
+      - name: "sources-settings"
+        label: "Sources Settings"
+        file: "content/subsites/if-you-dont/sources/sources-settings.md"
+        fields:
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Accent Color"
+            name: "accentColor"
+            widget: "select"
+            options:
+              - label: "Yellow"
+                value: "#ffcc00"
+              - label: "Pink"
+                value: "#e00763"
+            default: "#e00763"
+
+      - name: "sources-block"
+        label: "Sources Block"
+        file: "content/subsites/if-you-dont/sources.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
 
-      - name: "social"
+      - name: "social-block"
         label: "Social Media Block"
-        file: "content/subsites/if-you-dont/social.md"
+        file: "content/subsites/if-you-dont/social-block.md"
         fields:
           - label: "Social Media Text"
             name: "text"
@@ -234,18 +306,6 @@ collections:
                       widget: image,
                       media_folder: "../../../static/img/",
                     }
-
-      - name: "additions"
-        label: "Additions Block"
-        file: "content/subsites/if-you-dont/additions.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
-
-      - name: "sources"
-        label: "Sources Block"
-        file: "content/subsites/if-you-dont/sources.md"
-        fields:
-          - { label: "Title", name: "title", widget: "string" }
 
   - name: "products"
     label: "Products"

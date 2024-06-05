@@ -1,7 +1,8 @@
 import React from "react";
-import Layout from "../../components/Layout.js";
+import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
+import Layout from "../../components/Layout.js";
 import Header from "../../components/Header/Header.js";
 import ToDontNav from "../../components/ToDontNav/ToDontNav.js";
 import Social from "../../components/Social/Social.js";
@@ -13,8 +14,10 @@ import Product from "../../components/Products/Product.js";
 export default function ifYouDontAbout({ data }) {
   const product = data.products.edges[0];
   const about = data.about.edges[0].node;
+
   return (
     <Layout>
+      <Helmet title={about.frontmatter.title} />
       <div
         className="layout__page-container"
         style={{ "--accent-color": about.frontmatter.accentColor }}
@@ -35,13 +38,16 @@ export const query = graphql`
   query aboutQuery {
     about: allMarkdownRemark(
       filter: {
-        fileAbsolutePath: { regex: "//content/subsites/if-you-dont/about.md/" }
+        fileAbsolutePath: {
+          regex: "//content/subsites/if-you-dont/about/about-settings.md/"
+        }
       }
     ) {
       edges {
         node {
           html
           frontmatter {
+            title
             accentColor
           }
         }

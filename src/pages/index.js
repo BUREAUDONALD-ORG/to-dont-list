@@ -36,7 +36,7 @@ export const query = graphql`
     landingPage: allMarkdownRemark(
       filter: {
         fileAbsolutePath: {
-          regex: "//content/subsites/landing-page/landing-page.md/"
+          regex: "//content/subsites/landing-page/landing-page-settings.md/"
         }
       }
     ) {

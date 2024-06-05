@@ -43,7 +43,7 @@ const socialQuery = graphql`
     social: allMarkdownRemark(
       filter: {
         fileAbsolutePath: {
-          regex: "//content/subsites/landing-page/social.md/"
+          regex: "//content/subsites/landing-page/social-block.md/"
         }
       }
     ) {

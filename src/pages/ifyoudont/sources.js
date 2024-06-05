@@ -1,31 +1,33 @@
 import React from "react";
-import Layout from "../../components/Layout.js";
 import { graphql } from "gatsby";
+import Helmet from "react-helmet";
 
+import Layout from "../../components/Layout.js";
 import Header from "../../components/Header/Header.js";
 import ToDontNav from "../../components/ToDontNav/ToDontNav.js";
 import Social from "../../components/Social/Social.js";
 import Credits from "../../components/Credits/Credits.js";
 
 export default function ifYouDontSources({ data }) {
-  let html = data.sources.edges[0].node.html;
-  let frontmatter = data.sources.edges[0].node.frontmatter;
+  let settings = data.sourcesSettings.edges[0].node;
+  let block = data.sourcesBlock.edges[0].node;
 
   return (
     <Layout>
+      <Helmet title={settings.frontmatter.title} />
       <div
         className="layout__page-container"
-        style={{ "--accent-color": frontmatter.accentColor }}
+        style={{ "--accent-color": settings.frontmatter.accentColor }}
       >
         <Header size="small" fixed={true} />
         <ToDontNav />
         <div className="layout__sources-container">
           <div className="layout__sources">
-            <h1 className="sources__title">{frontmatter.title}</h1>
+            <h1 className="sources__title">{block.frontmatter.title}</h1>
             <div
               className="markdown"
               dangerouslySetInnerHTML={{
-                __html: html,
+                __html: block.html,
               }}
             />
           </div>
@@ -39,10 +41,10 @@ export default function ifYouDontSources({ data }) {
 
 export const query = graphql`
   query sourcesQuery {
-    sources: allMarkdownRemark(
+    sourcesSettings: allMarkdownRemark(
       filter: {
         fileAbsolutePath: {
-          regex: "//content/subsites/if-you-dont/sources.md/"
+          regex: "//content/subsites/if-you-dont/sources/sources-settings.md/"
         }
       }
     ) {
@@ -52,6 +54,22 @@ export const query = graphql`
           frontmatter {
             title
             accentColor
+          }
+        }
+      }
+    }
+    sourcesBlock: allMarkdownRemark(
+      filter: {
+        fileAbsolutePath: {
+          regex: "//content/subsites/if-you-dont/sources/sources-block.md/"
+        }
+      }
+    ) {
+      edges {
+        node {
+          html
+          frontmatter {
+            title
           }
         }
       }

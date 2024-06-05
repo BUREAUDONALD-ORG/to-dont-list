@@ -1,6 +1,5 @@
 ---
 title: THE ADDITIONS
-accentColor: "#ffcc00"
 ---
 
 # Nobody is Perfect

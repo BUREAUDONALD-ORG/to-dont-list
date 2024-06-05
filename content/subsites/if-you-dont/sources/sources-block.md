@@ -1,6 +1,4 @@
 ---
-title: THE SOURCES
-accentColor: "#ffcc00"
 ---
 
 # Ideas Are Stacked Knowledge

@@ -18,7 +18,7 @@ const productsQuery = graphql`
     checkboxes: allMarkdownRemark(
       filter: {
         fileAbsolutePath: {
-          regex: "//content/subsites/landing-page/checkboxes.md/"
+          regex: "//content/subsites/landing-page/checkboxes-block.md/"
         }
       }
     ) {
