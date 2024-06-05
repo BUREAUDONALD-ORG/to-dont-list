@@ -77,7 +77,11 @@ class FormInner extends React.Component {
   render() {
     let form = this.props.data;
     return (
-      <div id="mail" className="layout__form-container">
+      <div
+        id="mail"
+        className="layout__form-container"
+        style={{ "--accent-color": "#fafafa" }}
+      >
         <form className="layout__form">
           <Button
             className="btn"
@@ -89,6 +93,7 @@ class FormInner extends React.Component {
             {form.fields.map((field, key) => (
               <div key={key} className="form__field-container">
                 <input
+                  style={{ "--accent-color": "#e00763" }}
                   className="form__field"
                   type="text"
                   value={this.state.fields[key]}

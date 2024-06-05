@@ -5,7 +5,10 @@ import { Link } from "gatsby";
 
 export default function ToDontNav() {
   return (
-    <section className="layout__tdn-container">
+    <section
+      className="layout__tdn-container"
+      style={{ "--accent-color": "#fafafa" }}
+    >
       <div className="layout__tdn">
         <div className="tdn__section__left">
           <h1 className="tdn__title">IF YOU DON’T</h1>

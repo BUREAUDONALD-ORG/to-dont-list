@@ -6,7 +6,10 @@ function Social() {
   let social = useStaticQuery(socialQuery).social.edges[0].node.frontmatter;
 
   return (
-    <div className="layout__social-container">
+    <div
+      className="layout__social-container"
+      style={{ "--accent-color": "#fafafa" }}
+    >
       <div className="layout__social">
         <a
           target="_blank"

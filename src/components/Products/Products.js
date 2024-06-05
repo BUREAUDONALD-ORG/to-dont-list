@@ -4,7 +4,7 @@ import { useStaticQuery, graphql } from "gatsby";
 import stableSort from "stable";
 
 import NavItem from "../Nav-item.js";
-import Checkbox from "../Checkbox.js";
+import Checkbox from "./Checkbox.js";
 import Button from "../Button.js";
 import Product from "./Product.js";
 
@@ -206,9 +206,23 @@ class ProductsInner extends React.Component {
         <div className="layout__products-container">
           <div className="layout__checkboxes-container">
             <div className="layout__checkboxes">
-              <h1 className="checkboxes__title">{checkboxes.title}</h1>
-              <h3 className="checkboxes__subtitle">{checkboxes.subtitle}</h3>
-              <div className="checkboxes__container">
+              <h1
+                className="checkboxes__title"
+                style={{ "--accent-color": "#fafafa" }}
+              >
+                {checkboxes.title}
+              </h1>
+              <h3
+                className="checkboxes__subtitle"
+                style={{ "--accent-color": "#fafafa" }}
+              >
+                {checkboxes.subtitle}
+              </h3>
+              <div
+                className="checkboxes__container"
+                style={{ "--accent-color": "#e00763" }}
+                s
+              >
                 {initialProducts.map((product, key) => {
                   product = products.find((p) => {
                     return (
@@ -232,7 +246,10 @@ class ProductsInner extends React.Component {
           </div>
 
           <div className="layout__navbar-container">
-            <div className="layout__navbar">
+            <div
+              className="layout__navbar"
+              style={{ "--accent-color": "#e00763" }}
+            >
               {!this.scrollTriggers().nav &&
                 this.countSelectedProducts() > 0 && (
                   <Button
