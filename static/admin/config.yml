@@ -270,9 +270,15 @@ collections:
 
       - name: "sources-block"
         label: "Sources Block"
-        file: "content/subsites/if-you-dont/sources.md"
+        file: "content/subsites/if-you-dont/sources/sources-block.md"
         fields:
-          - { label: "Title", name: "title", widget: "string" }
+          - label: "Title"
+            name: "title"
+            widget: "string"
+          - label: "Content"
+            name: "body"
+            widget: "markdown"
+            default: ""
 
       - name: "social-block"
         label: "Social Media Block"
