@@ -4,7 +4,7 @@ function About() {
   return (
     <div className="layout__about-container">
       <div className="layout__about">
-        <h1 className="about__title">Donald Roos</h1>
+        <h1 className="about__title">DONALD ROOS</h1>
         <div className="about__text">
           <p>
             Donald Roos is a creative entrepreneur based in Amsterdam (the
@@ -16,7 +16,7 @@ function About() {
             published Don’t Read This Book and Don’t Buy This Book.
           </p>
         </div>
-        <h1 className="about__title">Talks and workshops</h1>
+        <h1 className="about__title">TALKS AND WORKSHOPS</h1>
         <div className="about__text">
           <p>
             Donald Roos is a creative entrepreneur based in Amsterdam (the

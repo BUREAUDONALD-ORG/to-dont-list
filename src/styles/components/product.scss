@@ -32,7 +32,7 @@
 }
 
 .product__title {
-  @include t--header-0;
+  @include t--header-1;
   padding-bottom: $unit;
   word-wrap: break-word;
 }

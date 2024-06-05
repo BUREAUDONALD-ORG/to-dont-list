@@ -1,4 +1,4 @@
-// local version of the nitti font set, normal and black
+// Font files are located in the static/fonts folder
 @font-face {
   font-family: "nittigrotesk-normal";
   src: url("../../static/fonts/nittigrotesk-normal-v20.eot");
@@ -15,124 +15,92 @@
   font-style: normal;
 }
 
-$fs--t--title: 11rem;
+// Title typography mixins
+
 $flh--t--title: 7.5rem;
-$fs--t--title-responsive: 8rem;
 $flh--t--title-responsive: 5.5rem;
-$ls--t--title: -0.3rem;
 
 @mixin t--title {
   font-family: nittigrotesk-black;
-  font-size: $fs--t--title;
+  font-size: 11rem;
   line-height: $flh--t--title;
   vertical-align: baseline;
-  // letter-spacing: $ls--t--title;
   @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: $fs--t--title-responsive;
+    font-size: 8rem;
     line-height: $flh--t--title-responsive;
   }
 }
 
-$fs--t--header-0: 6rem;
-$flh--t--header-0: 6rem;
-$fs--t--header-0-responsive: 6rem;
-$flh--t--header-0-responsive: 5rem;
-$ls--t--header-0: -0.1rem;
+$flh--t--subtitle: 4rem;
+$flh--t--subtitle-responsive: 2.5rem;
 
-@mixin t--header-0 {
+@mixin t--subtitle {
   font-family: nittigrotesk-black;
-  font-size: $fs--t--header-0;
-  line-height: $flh--t--header-0;
+  font-size: 4rem;
+  line-height: $flh--t--subtitle;
   vertical-align: baseline;
-  letter-spacing: $ls--t--header-0;
   @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: $fs--t--header-0-responsive;
-    line-height: $flh--t--header-0-responsive;
+    font-size: 2.5rem;
+    line-height: $flh--t--subtitle-responsive;
   }
 }
 
-$fs--t--header-1: 4rem;
-$flh--t--header-1: 4rem;
-$fs--t--header-1-responsive: 2.5rem;
-$flh--t--header-1-responsive: 2.5rem;
-$ls--t--header-1: -0.1rem;
+// Main typography mixins
 
 @mixin t--header-1 {
   font-family: nittigrotesk-black;
-  font-size: $fs--t--header-1;
-  line-height: $flh--t--header-1;
+  font-size: 6rem;
+  line-height: 6rem;
   vertical-align: baseline;
-  // letter-spacing: $ls--t--header-1;
+  letter-spacing: -0.1rem;
   @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: $fs--t--header-1-responsive;
-    line-height: $flh--t--header-1-responsive;
+    font-size: 6rem;
+    line-height: 5rem;
   }
 }
-
-$fs--t--header-2: 3rem;
-$flh--t--header-2: 3rem;
-$fs--t--header-2-responsive: 1.5rem;
-$flh--t--header-2-responsive: 1.5rem;
-$ls--t--header-2: -0.1rem;
 
 @mixin t--header-2 {
   font-family: nittigrotesk-black;
-  font-size: $fs--t--header-2;
-  line-height: $flh--t--header-2;
+  font-size: 3rem;
+  line-height: 3rem;
   vertical-align: baseline;
-  // letter-spacing: $ls--t--header-2;
   @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: $fs--t--header-2-responsive;
-    line-height: $flh--t--header-2-responsive;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 }
 
-$fs--t--header-3: 1.5rem;
 $flh--t--header-3: 1.5rem;
-$fs--t--header-3-responsive: 1.5rem;
-$flh--t--header-3-responsive: 1.5rem;
-$ls--t--header-3: -0.03rem;
 
 @mixin t--header-3 {
   font-family: nittigrotesk-black;
-  font-size: $fs--t--header-3;
+  font-size: 1.5rem;
   line-height: $flh--t--header-3;
   vertical-align: baseline;
-  // letter-spacing: $ls--t--header-3;
   @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: $fs--t--header-3-responsive;
-    line-height: $flh--t--header-3-responsive;
+    font-size: 1.5rem;
+    line-height: 1.5rem;
   }
 }
-
-$fs--t--body-black: 1rem;
-$flh--t--body-black: 1rem;
-$fs--t--body-black-responsive: 1rem;
-$flh--t--body-black-responsive: 1rem;
 
 @mixin t--body-black {
   font-family: nittigrotesk-black;
-  font-size: $fs--t--body-black;
-  line-height: $flh--t--body-black;
+  font-size: 1rem;
+  line-height: 1rem;
   vertical-align: baseline;
   @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: $fs--t--body-black-responsive;
-    line-height: $flh--t--body-black-responsive;
+    font-size: 1rem;
+    line-height: 1rem;
   }
 }
 
-$fs--t--body: 1.2rem;
-$flh--t--body: 1.5rem;
-$fs--t--body-responsive: 1rem;
-$flh--t--body-responsive: 1.5rem;
-
 @mixin t--body {
   font-family: nittigrotesk-normal;
-  font-size: $fs--t--body;
-  line-height: $flh--t--body;
+  font-size: 1.2rem;
+  line-height: 1.5rem;
   vertical-align: baseline;
   @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: $fs--t--body-responsive;
-    line-height: $flh--t--body-responsive;
+    font-size: 1rem;
+    line-height: 1.5rem;
   }
 }

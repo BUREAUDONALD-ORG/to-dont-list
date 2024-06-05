@@ -17,10 +17,25 @@
   }
 }
 
+@mixin t--roc-btn {
+  font-family: roc-grotesk-compressed;
+  font-size: 3rem;
+  line-height: 3rem;
+  baseline-shift: 0.5rem;
+  font-weight: 600;
+
+  @media (min-width: 0px) and (max-width: $bp-small) {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+
+// Main typography mixins
+
 @mixin t--roc-header-1 {
   font-family: roc-grotesk-compressed;
-  font-size: 4rem;
-  line-height: 4rem;
+  font-size: 6rem;
+  line-height: 6rem;
   font-weight: 600;
 
   @media (min-width: 0px) and (max-width: $bp-small) {
@@ -50,18 +65,5 @@
   @media (min-width: 0px) and (max-width: $bp-small) {
     font-size: 1.5rem;
     line-height: 1.5rem;
-  }
-}
-
-@mixin t--roc-btn {
-  font-family: roc-grotesk-compressed;
-  font-size: 3rem;
-  line-height: 3rem;
-  baseline-shift: 0.5rem;
-  font-weight: 600;
-
-  @media (min-width: 0px) and (max-width: $bp-small) {
-    font-size: 3rem;
-    line-height: 3rem;
   }
 }
