@@ -210,19 +210,19 @@ class ProductsInner extends React.Component {
             <div className="layout__checkboxes">
               <h1
                 className="checkboxes__title"
-                style={{ "--accent-color": "#fafafa" }}
+                style={{ "--selection-color": "var(--white)" }}
               >
                 {checkboxes.title}
               </h1>
               <h3
                 className="checkboxes__subtitle"
-                style={{ "--accent-color": "#fafafa" }}
+                style={{ "--selection-color": "var(--white)" }}
               >
                 {checkboxes.subtitle}
               </h3>
               <div
                 className="checkboxes__container"
-                style={{ "--accent-color": "#e00763" }}
+                style={{ "--selection-color": "var(--purple)" }}
                 s
               >
                 {initialProducts.map((product, key) => {
@@ -250,7 +250,7 @@ class ProductsInner extends React.Component {
           <div className="layout__navbar-container">
             <div
               className="layout__navbar"
-              style={{ "--accent-color": "#e00763" }}
+              style={{ "--selection-color": "var(--white)" }}
             >
               {!this.scrollTriggers().nav &&
                 this.countSelectedProducts() > 0 && (

@@ -8,7 +8,7 @@ function Social() {
   return (
     <div
       className="layout__social-container"
-      style={{ "--accent-color": "#fafafa" }}
+      style={{ "--selection-color": "var(--white)" }}
     >
       <div className="layout__social">
         <a

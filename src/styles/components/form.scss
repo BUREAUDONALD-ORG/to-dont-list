@@ -1,6 +1,6 @@
 .layout__form-container {
   @include block-container;
-  background: $complementary;
+  background: var(--accent-color);
   position: relative; // For animation overlapping
   z-index: 20; // for animation overlapping
 }
@@ -54,7 +54,7 @@
 }
 
 .form__field::placeholder {
-  color: $complementary;
+  color: var(--accent-color);
 }
 
 .form__field:focus::placeholder {

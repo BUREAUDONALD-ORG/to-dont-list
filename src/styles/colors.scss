@@ -1,10 +1,25 @@
-// List of possible colors:
+// List of possible colors
 $purple: #e00763;
 $black: #000;
 $white: #fafafa;
 $yellow: #ffcc00;
 
-// Definitions used troughout the stylesheets:
+// Definitions used troughout the stylesheets
 $complementary: $purple;
 $day: $white;
 $night: $black;
+
+// CSS variables
+html {
+  --purple: #{$purple};
+  --black: #{$black};
+  --white: #{$white};
+  --yellow: #{$yellow};
+
+  --complementary: #{$complementary};
+  --day: #{$day};
+  --night: #{$night};
+
+  --accent-color: #{$complementary};
+  --selection-color: #{$white};
+}

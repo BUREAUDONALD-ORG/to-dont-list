@@ -18,6 +18,7 @@ const Product = ({
       className="layout__product-container"
       style={{
         "--accent-color": frontmatter.accentColor,
+        "--selection-color": frontmatter.accentColor,
       }}
     >
       <ProductImage

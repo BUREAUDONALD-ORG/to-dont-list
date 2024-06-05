@@ -12,7 +12,10 @@ const NotFoundPage = () => {
     <Layout>
       <div
         className="layout__page-container"
-        style={{ "--accent-color": "#e00763" }}
+        style={{
+          "--accent-color": "var(--purple)",
+          "--selection-color": "var(--purple)",
+        }}
       >
         <Header />
         <NotFound />

@@ -1,6 +1,6 @@
 .layout__social-container {
   @include block-container;
-  background: $complementary;
+  background: var(--accent-color);
 }
 
 .layout__social {

@@ -17,7 +17,10 @@ export default function ifYouDontSources({ data }) {
       <Helmet title={settings.frontmatter.title} />
       <div
         className="layout__page-container"
-        style={{ "--accent-color": settings.frontmatter.accentColor }}
+        style={{
+          "--accent-color": "var(--yellow)",
+          "--selection-color": "var(--yellow)",
+        }}
       >
         <Header size="small" fixed={true} />
         <ToDontNav />

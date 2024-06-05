@@ -20,7 +20,10 @@ export default function ifYouDontAbout({ data }) {
       <Helmet title={about.frontmatter.title} />
       <div
         className="layout__page-container"
-        style={{ "--accent-color": about.frontmatter.accentColor }}
+        style={{
+          "--accent-color": "var(--yellow)",
+          "--selection-color": "var(--yellow)",
+        }}
       >
         <Header size="small" fixed={true} />
         <ToDontNav />

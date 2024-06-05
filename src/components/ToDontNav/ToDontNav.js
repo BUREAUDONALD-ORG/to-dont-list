@@ -7,7 +7,7 @@ export default function ToDontNav() {
   return (
     <section
       className="layout__tdn-container"
-      style={{ "--accent-color": "#fafafa" }}
+      style={{ "--selection-color": "var(--white)" }}
     >
       <div className="layout__tdn">
         <div className="tdn__section__left">

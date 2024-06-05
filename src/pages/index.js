@@ -12,13 +12,15 @@ import Products from "../components/Products/Products.js";
 
 export default function indexPage({ data }) {
   let landingPage = data.landingPage.edges[0].node;
-
   return (
     <Layout>
       <Helmet title={landingPage.frontmatter.title} />
       <div
         className="layout__page-container"
-        style={{ "--accent-color": landingPage.frontmatter.accentColor }}
+        style={{
+          "--accent-color": "var(--purple)",
+          "--selection-color": "var(--purple)",
+        }}
       >
         <Header />
         <ToDontNav />
@@ -45,7 +47,6 @@ export const query = graphql`
           html
           frontmatter {
             title
-            accentColor
           }
         }
       }

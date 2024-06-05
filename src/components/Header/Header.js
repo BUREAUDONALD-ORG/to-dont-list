@@ -67,7 +67,7 @@ class HeaderClass extends React.Component {
         data-size={headerSize}
         data-size-fixed={this.props.fixed ? "true" : "false"}
         className="layout__header-container"
-        style={{ "--accent-color": header.accentColor }}
+        style={{ "--selection-color": "var(--purple)" }}
       >
         <div className="layout__header">
           <div className="header__section">
@@ -136,7 +136,6 @@ const headerQuery = graphql`
               title
               link
             }
-            accentColor
           }
         }
       }

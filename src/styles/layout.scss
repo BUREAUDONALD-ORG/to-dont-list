@@ -22,9 +22,7 @@
   background: $complementary;
 }
 
-.layout__page-container {
-  ::selection {
-    background: var(--accent-color);
-    color: $night;
-  }
+.layout__page-container ::selection {
+  background: var(--selection-color);
+  color: $night;
 }
