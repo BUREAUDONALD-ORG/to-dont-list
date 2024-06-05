@@ -1,6 +1,8 @@
 import React from "react";
-import Layout from "../components/Layout";
+import { graphql } from "gatsby";
+import Helmet from "react-helmet";
 
+import Layout from "../components/Layout";
 import Header from "../components/Header/Header.js";
 import ToDontNav from "../components/ToDontNav/ToDontNav.js";
 import Form from "../components/Form.js";
@@ -8,12 +10,15 @@ import Social from "../components/Social/Social.js";
 import Credits from "../components/Credits/Credits.js";
 import Products from "../components/Products/Products.js";
 
-export default function indexPage() {
+export default function indexPage({ data }) {
+  let landingPage = data.landingPage.edges[0].node;
+
   return (
     <Layout>
+      <Helmet title={landingPage.frontmatter.title} />
       <div
         className="layout__page-container"
-        style={{ "--accent-color": "#fafafa" }}
+        style={{ "--accent-color": landingPage.frontmatter.accentColor }}
       >
         <Header />
         <ToDontNav />
@@ -27,8 +32,8 @@ export default function indexPage() {
 }
 
 export const query = graphql`
-  query sourcesQuery {
-    sources: allMarkdownRemark(
+  query landingPageQuery {
+    landingPage: allMarkdownRemark(
       filter: {
         fileAbsolutePath: {
           regex: "//content/subsites/landing-page/landing-page.md/"

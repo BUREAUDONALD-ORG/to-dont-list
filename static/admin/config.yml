@@ -14,7 +14,7 @@ collections:
       preview: false
     files:
       - name: "head"
-        label: "Head Informatie"
+        label: "Head Settings"
         file: "content/general/head.md"
         fields:
           - { label: "Head Title", name: "title", widget: "string" }
@@ -28,11 +28,11 @@ collections:
               label: "Open Graph Image",
               name: "openGraphImage",
               widget: image,
-              media_folder: "../../../static/img/",
+              media_folder: "../../static/img/",
             }
 
       - name: "header"
-        label: "Header"
+        label: "Header Block"
         file: "content/general/header.md"
         fields:
           - { label: "Header Title", name: "title", widget: "text" }
@@ -62,7 +62,7 @@ collections:
             default: "#e00763"
 
       - name: "form"
-        label: "Formuliergegevens"
+        label: "Form Block"
         file: "content/general/form.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
@@ -86,7 +86,7 @@ collections:
           - { label: "mailTo", name: "mailTo", widget: "string" }
 
       - name: "credits"
-        label: "Credits"
+        label: "Credits Block"
         file: "content/general/credits.md"
         fields:
           - { label: "Title", name: "title", widget: "string" }
@@ -115,12 +115,27 @@ collections:
             default: "#e00763"
 
   - name: "landing-page"
-    label: "subsite/landing-page"
+    label: "Subsite / Landing Page"
     delete: false
     create: false
     editor:
       preview: false
     files:
+      - name: "landing-page"
+        label: "Landing Page Settings"
+        file: "content/subsites/landing-page/landing-page.md"
+        fields:
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Accent Color"
+            name: "accentColor"
+            widget: "select"
+            options:
+              - label: "Yellow"
+                value: "#ffcc00"
+              - label: "Pink"
+                value: "#e00763"
+            default: "#e00763"
+
       - name: "checkboxes"
         label: "Checkboxes Block"
         file: "content/subsites/landing-page/checkboxes.md"
@@ -175,7 +190,7 @@ collections:
                     }
 
   - name: "if-you-dont"
-    label: "subsite/if-you-dont"
+    label: "Subsite / If You Don't"
     delete: false
     create: false
     editor:
@@ -189,7 +204,7 @@ collections:
 
       - name: "social"
         label: "Social Media Block"
-        file: "content/frontpage/site/social.md"
+        file: "content/subsites/if-you-dont/social.md"
         fields:
           - label: "Social Media Text"
             name: "text"
@@ -234,7 +249,7 @@ collections:
 
   - name: "products"
     label: "Products"
-    folder: "content/frontpage/products"
+    folder: "content/products"
     create: true
     editor:
       preview: false
@@ -259,17 +274,17 @@ collections:
           - label: "Default"
             name: "default"
             widget: image
-            media_folder: "../../../static/img/"
+            media_folder: "../../static/img/"
             required: false
           - label: "Diapositive"
             name: "diapositive"
             widget: image
-            media_folder: "../../../static/img/"
+            media_folder: "../../static/img/"
             required: false
           - label: "Mobile (broad) Image"
             name: "mobile"
             widget: image
-            media_folder: "../../../static/img/"
+            media_folder: "../../static/img/"
             required: false
       - label: "Buttons"
         name: "buttons"
