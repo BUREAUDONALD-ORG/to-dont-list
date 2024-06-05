@@ -28,6 +28,7 @@ const ButtonPoint = ({ text, link }) => {
       duration={500}
       className="btn"
       data-type="point"
+      style={{ "--accent-color": "#fafafa" }}
     >
       <p className="btn__text">{text}</p>
       <img className="btn__arrow" src={arrow} alt="arrow" />
