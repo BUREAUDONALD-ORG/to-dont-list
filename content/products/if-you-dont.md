@@ -1,7 +1,6 @@
 ---
 id: 10
 title: If You Don’t
-timeToRead: 10
 images:
   default: ../../static/img/Free_Book_Mockup_no_shadow_transparent.png
   diapositive: ../../static/img/Free_Book_Mockup_no_shadow_transparent.png

@@ -40,7 +40,6 @@ const productsQuery = graphql`
           html
           frontmatter {
             id
-            timeToRead
             checkbox {
               title
               text

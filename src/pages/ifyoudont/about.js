@@ -66,7 +66,6 @@ export const query = graphql`
           html
           frontmatter {
             id
-            timeToRead
             checkbox {
               title
               text

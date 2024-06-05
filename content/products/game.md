@@ -1,7 +1,6 @@
 ---
 id: 5
 title: Don’t/Do This — Game
-timeToRead: 4
 images:
   default: ../../static/img/dontdothis.png
   diapositive: ../../static/img/dontdothis_diap.png

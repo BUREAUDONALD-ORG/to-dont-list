@@ -1,7 +1,6 @@
 ---
 id: 6
 title: "ToDon’tList"
-timeToRead: 1
 images:
   default: ../../static/img/todontlist_analog.png
   diapositive: ../../static/img/todontlist_analog_diap.png

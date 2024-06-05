@@ -1,7 +1,6 @@
 ---
 id: 3
 title: ToDon’tTimer
-timeToRead: 3
 images:
   default: ../../static/img/todonttimer.png
   diapositive: ../../static/img/todonttimer_diap.png

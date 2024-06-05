@@ -1,7 +1,6 @@
 ---
 id: 8
 title: "Work Don’t Shop "
-timeToRead: 4
 images:
   default: ../../static/img/workdontshop.png
   diapositive: ../../static/img/workdontshop_diap.png

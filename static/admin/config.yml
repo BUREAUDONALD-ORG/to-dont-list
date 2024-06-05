@@ -283,11 +283,6 @@ collections:
         name: "title"
         widget: "string"
         default: ""
-      - label: "timeToRead"
-        name: "timeToRead"
-        widget: "number"
-        valueType: "int"
-        default: 1,
       - label: "Images"
         name: "images"
         widget: "object"
