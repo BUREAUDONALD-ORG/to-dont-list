@@ -2,7 +2,7 @@
 title: THE SOURCES
 ---
 
-# Ideas Are Stacked Knowledge
+## Ideas Are Stacked Knowledge
 
 On this page, you will find the list of all the sources I used for the book **IF YOU DON’T**.
 
@@ -10,7 +10,7 @@ Some resources are used more directly and others are indirect. Some resources he
 
 I hope this book inspires you and others to build on it.
 
-# Books
+## Books
 
 An overview of the book references and sources per section.
 
@@ -30,11 +30,11 @@ An overview of the book references and sources per section.
 - **Het Recht van de Snelste** — Thalia Verkade, Marco Te Brömmelstroet | 9789083000718
 - **The Future is Degrowth** — Matthias Schmelzer, Andrea Vetter, Aarom Vansintjan | 9781839765841
 
-# Online
+## Online
 
 An overview of online references and sources per section.
 
-## From the Past
+### From the Past
 
 - **NRC** — [Onderzoekers komen dichter bij de oorsprong van het leven op aarde ↗](https://www.nrc.nl/nieuws/2022/10/11/onderzoekers-lezen-de-stamboom-van-het-vroege-leven-op-Aarde-a4144808)
 - **NewScientist** — [Sponzen maakten de weg vrij voor complexe dieren ↗](https://www.newscientist.nl/nieuws/sponzen-maken-de-weg-vrij-voor-complexe-dieren/)
@@ -58,7 +58,7 @@ An overview of online references and sources per section.
 - **Wikipedia** — [The Landlord’s Game ↗](https://en.wikipedia.org/wiki/The_Landlord%27s_Game)
 - **YouTube** — [Mindf\*ck, Steeds dominanter en hebberiger tijdens een spelletje ↗](http://www.youtube.com/watch?v=54wTjZv-WnI)
 
-## To the Present
+### To the Present
 
 - **The MIT Press Reader** — [A Brief History of Consumer Culture ↗](https://thereader.mitpress.mit.edu/a-brief-history-of-consumer-culture/)
 - **Khan Academy** — [1920s consumption ↗](https://www.khanacademy.org/humanities/us-history/rise-to-world-power/1920s-america/a/1920s-consumption)
@@ -127,7 +127,7 @@ An overview of online references and sources per section.
 - **NRC** — [Bouwen aan een betere banaan, want met de bestaande gaat het beroerd ↗](https://www.nrc.nl/nieuws/2022/08/19/in-wageningen-wordt-gewerkt-aan-een-betere-banaan-en-dat-is-nodig-a4139337)
 - **Alex Murrell** — [The Age of Average ↗](https://www.alexmurrell.co.uk/articles/the-age-of-average)
 
-## Into the Future
+### Into the Future
 
 - **Stanford Encyclopedia of Philosophy** — [Bounded Rationality ↗](https://plato.stanford.edu/entries/bounded-rationality/)
 - **Vox** — [Burning Man’s climate protesters have a point ↗](https://www.vox.com/technology/2023/8/30/23852215/burning-man-climate-protest-block-road)

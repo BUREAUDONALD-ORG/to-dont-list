@@ -14,7 +14,7 @@
 }
 
 .sources__title {
-  @include t--roc-title;
+  @include t--roc-header-1;
   padding-bottom: $unit;
   padding-right: $unit;
   width: 100%;

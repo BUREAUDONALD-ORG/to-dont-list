@@ -29,6 +29,7 @@ export default function ifYouDontSources({ data }) {
             <h1 className="sources__title">{block.frontmatter.title}</h1>
             <div
               className="markdown"
+              data-font-family="roc-grotesk-compressed"
               dangerouslySetInnerHTML={{
                 __html: block.html,
               }}
