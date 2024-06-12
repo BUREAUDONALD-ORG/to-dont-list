@@ -30,6 +30,7 @@ export default function ifYouDontAbout({ data }) {
         <Product product={product} diapositive={false} />
         <About />
         <IYDSocial />
+        <div className="layout__iyd-line-container" />
         <Form />
         <Credits />
       </div>

@@ -35,7 +35,6 @@ function IYDSocial() {
           </div>
         </div>
       </div>
-      <div className="layout__line-container" />
     </>
   );
 }
