@@ -5,6 +5,7 @@
 
 .layout__IYDsocial {
   @include block;
+  padding: 3rem $side-padding 5rem;
 }
 
 .IYDsocial-left {

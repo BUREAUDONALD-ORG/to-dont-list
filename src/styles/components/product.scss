@@ -190,6 +190,7 @@
 .layout__line-container {
   display: block;
   border-top: $border-width dashed $day;
-  padding-bottom: $unit * 6;
+  padding-bottom: 5rem;
   width: 100%;
+  background-color: var(--accent-color);
 }
