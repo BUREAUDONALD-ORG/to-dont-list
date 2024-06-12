@@ -4,7 +4,7 @@ import Helmet from "react-helmet";
 
 import Layout from "../components/Layout";
 import Header from "../components/Header/Header.js";
-import ToDontNav from "../components/ToDontNav/ToDontNav.js";
+import IYDNav from "../components/ToDontNav/ToDontNav.js";
 import Form from "../components/Form.js";
 import Social from "../components/Social/Social.js";
 import Credits from "../components/Credits/Credits.js";
@@ -23,7 +23,7 @@ export default function indexPage({ data }) {
         }}
       >
         <Header />
-        <ToDontNav />
+        <IYDNav />
         <Products />
         <Form />
         <Social />

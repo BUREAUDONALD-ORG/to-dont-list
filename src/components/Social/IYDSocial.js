@@ -2,10 +2,8 @@ import React from "react";
 import { useStaticQuery, graphql } from "gatsby";
 import Button from "../Button";
 
-function Social() {
-  let data = useStaticQuery(socialQuery);
-  console.log(data);
-  let social = data.social.edges[0].node.frontmatter;
+function IYDSocial() {
+  let social = useStaticQuery(IYDSocialQuery).social.edges[0].node.frontmatter;
 
   return (
     <div
@@ -13,18 +11,6 @@ function Social() {
       style={{ "--selection-color": "var(--white)" }}
     >
       <div className="layout__social">
-        <a
-          target="_blank"
-          rel="noopener noreferrer"
-          href={social.hashtag.link}
-          className="social__hashtag"
-        >
-          <img
-            src={`/${social.hashtag.image.relativePath}`}
-            alt="#ToDontList"
-            className="social__hashtag"
-          />
-        </a>
         <div className="social__text-container">
           <p className="social__text">{social.text[0].line}</p>
           <p className="social__text">{social.text[1].line}</p>
@@ -40,12 +26,12 @@ function Social() {
   );
 }
 
-const socialQuery = graphql`
-  query socialQuery {
+const IYDSocialQuery = graphql`
+  query IYDSocialQuery {
     social: allMarkdownRemark(
       filter: {
         fileAbsolutePath: {
-          regex: "//content/subsites/landing-page/social-block.md/"
+          regex: "//content/subsites/if-you-dont/social-block.md/"
         }
       }
     ) {
@@ -67,13 +53,6 @@ const socialQuery = graphql`
                 }
               }
             }
-            hashtag {
-              link
-              alt
-              image {
-                relativePath
-              }
-            }
           }
         }
       }
@@ -81,4 +60,4 @@ const socialQuery = graphql`
   }
 `;
 
-export default Social;
+export default IYDSocial;

@@ -222,7 +222,6 @@ class ProductsInner extends React.Component {
               <div
                 className="checkboxes__container"
                 style={{ "--selection-color": "var(--purple)" }}
-                s
               >
                 {initialProducts.map((product, key) => {
                   product = products.find((p) => {
