@@ -1,7 +1,7 @@
 ---
-text:
-  - line: "Tag, comment, (un)follow, message or give us a shout out!"
-  - line: Check @Bureaudonald and @acertainmissbrown on Instagram.
+headers:
+  - CONTACT
+  - FOLLOW
 btn:
   - images:
       inverse: ../../../static/img/instagram-pink.svg
@@ -14,3 +14,10 @@ btn:
     link: "https://www.instagram.com/acertainmissbrown"
     text: Anne de Bruijn
 ---
+
+### BIS Publishers
+
+Borneostraat 80-A 1094 CP<br>
+Amsterdam, the Netherlands<br>
+bis@bispublishers.com<br>
+bispublishers.com

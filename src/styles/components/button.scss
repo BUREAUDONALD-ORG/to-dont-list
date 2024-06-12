@@ -94,6 +94,9 @@
 }
 
 .btn[data-type="image"] {
+  width: 16rem;
+  margin-bottom: 1rem;
+
   .btn__img {
     height: $two;
     width: $two;

@@ -35,8 +35,7 @@
 
   h3 {
     @include t--header-2;
-    padding: $unit 0;
-    padding-bottom: $unit * 0.2;
+    padding: 0 0 0.2rem;
   }
 
   h4 {
@@ -53,8 +52,6 @@
 
   a {
     @include t--body;
-    color: $complementary;
-    color: var(--accent-color);
   }
 
   ul {

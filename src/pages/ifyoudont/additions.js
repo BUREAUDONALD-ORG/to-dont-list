@@ -5,8 +5,8 @@ import { graphql } from "gatsby";
 import Layout from "../../components/Layout.js";
 import Header from "../../components/Header/Header.js";
 import ToDontNav from "../../components/ToDontNav/ToDontNav.js";
-import Social from "../../components/Social/Social.js";
 import Credits from "../../components/Credits/Credits.js";
+import IYDSocial from "../../components/Social/IYDSocial.js";
 
 export default function ifYouDontAdditions({ data }) {
   let settings = data.additionsSettings.edges[0].node;
@@ -36,7 +36,7 @@ export default function ifYouDontAdditions({ data }) {
             />
           </div>
         </div>
-        <Social />
+        <IYDSocial />
         <Credits />
       </div>
     </Layout>

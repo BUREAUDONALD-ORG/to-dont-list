@@ -1,0 +1,28 @@
+.layout__IYDsocial-container {
+  @include block-container;
+  background: var(--accent-color);
+}
+
+.layout__IYDsocial {
+  @include block;
+}
+
+.IYDsocial-left {
+  width: 50%;
+}
+
+.IYDsocial-right {
+  width: 50%;
+}
+
+.IYDsocial__title {
+  @include t--roc-header-2;
+  margin-bottom: 1rem;
+  color: $white;
+}
+
+@media (min-width: 0px) and (max-width: $bp-small) {
+  .layout__IYDsocial {
+    flex-direction: column;
+  }
+}

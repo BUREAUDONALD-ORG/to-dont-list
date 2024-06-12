@@ -5,11 +5,11 @@ import { graphql } from "gatsby";
 import Layout from "../../components/Layout.js";
 import Header from "../../components/Header/Header.js";
 import ToDontNav from "../../components/ToDontNav/ToDontNav.js";
-import Social from "../../components/Social/Social.js";
 import Credits from "../../components/Credits/Credits.js";
 import Form from "../../components/Form.js";
 import About from "../../components/About/About.js";
 import Product from "../../components/Products/Product.js";
+import IYDSocial from "../../components/Social/IYDSocial.js";
 
 export default function ifYouDontAbout({ data }) {
   const product = data.products.edges[0];
@@ -29,7 +29,7 @@ export default function ifYouDontAbout({ data }) {
         <ToDontNav />
         <Product product={product} diapositive={false} />
         <About />
-        <Social />
+        <IYDSocial />
         <Form />
         <Credits />
       </div>

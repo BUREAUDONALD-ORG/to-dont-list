@@ -3,23 +3,30 @@ import { useStaticQuery, graphql } from "gatsby";
 import Button from "../Button";
 
 function IYDSocial() {
-  let social = useStaticQuery(IYDSocialQuery).social.edges[0].node.frontmatter;
+  let social = useStaticQuery(IYDSocialQuery).social.edges[0].node;
 
   return (
     <div
-      className="layout__social-container"
+      className="layout__IYDsocial-container"
       style={{ "--selection-color": "var(--white)" }}
     >
-      <div className="layout__social">
-        <div className="social__text-container">
-          <p className="social__text">{social.text[0].line}</p>
-          <p className="social__text">{social.text[1].line}</p>
+      <div className="layout__IYDsocial">
+        <div className="IYDsocial-left">
+          <h1 className="IYDsocial__title">{social.frontmatter.headers[0]}</h1>
+          <div
+            className="markdown"
+            data-font-family="roc-grotesk-compressed"
+            dangerouslySetInnerHTML={{
+              __html: social.html,
+            }}
+          />
         </div>
-        <div className="btn__container">
-          {social.btn.map((btn, key) => {
+
+        <div className="IYDsocial-right">
+          <h1 className="IYDsocial__title">{social.frontmatter.headers[1]}</h1>
+          {social.frontmatter.btn.map((btn, key) => {
             return <Button {...btn} key={key} type="image" />;
           })}
-          <div className="social__placeholder" />
         </div>
       </div>
     </div>
@@ -37,10 +44,9 @@ const IYDSocialQuery = graphql`
     ) {
       edges {
         node {
+          html
           frontmatter {
-            text {
-              line
-            }
+            headers
             btn {
               text
               link
