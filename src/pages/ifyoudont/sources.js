@@ -11,6 +11,9 @@ import Credits from "../../components/Credits/Credits.js";
 export default function ifYouDontSources({ data }) {
   let settings = data.sourcesSettings.edges[0].node;
   let block = data.sourcesBlock.edges[0].node;
+  let headings = block.headings
+    .filter((heading) => heading.depth === 2)
+    .slice(1);
 
   return (
     <Layout>
@@ -27,13 +30,26 @@ export default function ifYouDontSources({ data }) {
         <div className="layout__sources-container">
           <div className="layout__sources">
             <h1 className="sources__title">{block.frontmatter.title}</h1>
-            <div
-              className="markdown"
-              data-font-family="roc-grotesk-compressed"
-              dangerouslySetInnerHTML={{
-                __html: block.html,
-              }}
-            />
+            <section className="sources__split-section">
+              <nav className="sources__side-nav">
+                {headings.map((heading, index) => {
+                  return (
+                    <div className="sources__side-nav-item" key={index}>
+                      <a href={`#${heading.value}`}>{heading.value}</a>
+                    </div>
+                  );
+                })}
+              </nav>
+              <main className="sources__main">
+                <div
+                  className="markdown"
+                  data-font-family="roc-grotesk-compressed"
+                  dangerouslySetInnerHTML={{
+                    __html: block.html,
+                  }}
+                />
+              </main>
+            </section>
           </div>
         </div>
         <IYDSocial />
@@ -71,6 +87,10 @@ export const query = graphql`
     ) {
       edges {
         node {
+          headings {
+            value
+            depth
+          }
           html
           frontmatter {
             title

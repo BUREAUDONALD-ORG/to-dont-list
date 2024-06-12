@@ -60,12 +60,10 @@
 
   li {
     @include t--body;
-    color: $black;
   }
 
   strong {
     @include t--body-black;
-    color: $black;
   }
 
   a:hover {

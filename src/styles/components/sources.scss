@@ -31,3 +31,31 @@
     color: $black;
   }
 }
+
+.sources__split-section {
+  display: flex;
+  flex-direction: row;
+}
+
+.sources__side-nav {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+}
+
+.sources__side-nav-item {
+  margin-bottom: 0.5rem;
+
+  a {
+    display: inline-block;
+    @include t--roc-header-3;
+    border-bottom: $border-width solid transparent;
+  }
+
+  a:hover {
+    border-bottom: $border-width solid var(--accent-color);
+  }
+}
+
+.sources__main {
+}

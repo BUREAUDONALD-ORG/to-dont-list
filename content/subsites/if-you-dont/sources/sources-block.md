@@ -10,7 +10,7 @@ Some resources are used more directly and others are indirect. Some resources he
 
 I hope this book inspires you and others to build on it.
 
-## Books
+## BOOKS
 
 An overview of the book references and sources per section.
 
@@ -30,7 +30,7 @@ An overview of the book references and sources per section.
 - **Het Recht van de Snelste** — Thalia Verkade, Marco Te Brömmelstroet | 9789083000718
 - **The Future is Degrowth** — Matthias Schmelzer, Andrea Vetter, Aarom Vansintjan | 9781839765841
 
-## Online
+## ONLINE
 
 An overview of online references and sources per section.
 
@@ -39,7 +39,7 @@ An overview of online references and sources per section.
 - **NRC** — [Onderzoekers komen dichter bij de oorsprong van het leven op aarde ↗](https://www.nrc.nl/nieuws/2022/10/11/onderzoekers-lezen-de-stamboom-van-het-vroege-leven-op-Aarde-a4144808)
 - **NewScientist** — [Sponzen maakten de weg vrij voor complexe dieren ↗](https://www.newscientist.nl/nieuws/sponzen-maken-de-weg-vrij-voor-complexe-dieren/)
 - **Scientific American** — [The Origin of Oxygen in Earth’s Atmosphere ↗](http://www.scientificamerican.com/article/origin-of-oxygen-in-atmosphere/)
-- **EBN** [Wat is CO2 (Koolstofdioxide)? ↗](https://www.ebn.nl/co2-opslag/wat-is-co2-koolstofdioxide/)
+- **EBN** — [Wat is CO2 (Koolstofdioxide)? ↗](https://www.ebn.nl/co2-opslag/wat-is-co2-koolstofdioxide/)
 - **Wikipedia** — [Nitrogen ↗](https://en.wikipedia.org/wiki/Nitrogen)
 - **Wikipedia** — [Petroleum ↗](https://en.wikipedia.org/wiki/Petroleum)
 - **NemoKennislink** — Aardolie zou al 3.2 miljard jaar geleden uit organismen zijn ontstaan
@@ -49,7 +49,7 @@ An overview of online references and sources per section.
 - **NRC** — [Wilde natuur bestaat al 12000 jaar niet meer ↗](http://www.nrc.nl/nieuws/2021/10/01/wilde-natuur-bestaat-al-12000-jaar-niet-meer-a4060359)
 - **NRC** — [Neanderthaler drukte zijn stempel op het landschap ↗](http://www.nrc.nl/nieuws/2021/12/16/neanderthaler-drukte-zijn-stempel-op-het-landschap-a4069247)
 - **NRC** — [De landbouwrevolutie is een mythe ↗](http://www.nrc.nl/nieuws/2022/04/29/de-mensheid-volgt-geen-schema-a4118945)
-- **Our World In Data ** — [Population Growth ↗](https://ourworldindata.org/population-growth)
+- **Our World In Data** — [Population Growth ↗](https://ourworldindata.org/population-growth)
 - **The New York Times** — [The World’s Population May Peak in Your Lifetime. What Happens Next? ↗](http://www.nytimes.com/interactive/2023/09/18/opinion/human-population-global-growth.html)
 - **Foodlog** — [Frans de Waal: ‘Waarom zou je jezelf niet als dier zien?’ ↗](http://www.foodlog.nl/artikel/interview-frans-de-waal/)
 - **Wikipedia** — [Haiti Independence Debt ↗](https://en.wikipedia.org/wiki/Haiti_Independence_Debt)
@@ -173,7 +173,7 @@ An overview of online references and sources per section.
 - **VPRO Tegenlicht** — [Welkom in het Symbioceen ↗](https://www.vpro.nl/programmas/tegenlicht/kijk/afleveringen/2022-2023/welkom-in-het-symbioceen.html)
 - **Generation Symbiocene** — [Generationsymbiocene.gr ↗](https://www.generationsymbiocene.gr/#about)
 
-## Extras
+## EXTRAS
 
 - **Local & Subnational Advocacy for Nature** — [Quotes ↗](https://subnationaladvocacyfornature.org/advocacy/quotes/)
 - **Terra Movement** — [Quotes ↗](https://www.terramovement.com/30-inspiring-sustainable-design-quotes/)
