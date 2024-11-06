@@ -12,6 +12,4 @@ partners:
     link: https://acertainmissbrown.com
   - name: buro van Ons.
     link: https://websitevanons.nl
-  - name: Benz Roos, Frank van der Peet, Robert-Jan Korteschiel
-    link: " "
 ---
