@@ -6,5 +6,9 @@ authors:
     name: IOIP BV
 partnersText: inspired and supported by Anne de Bruijn, BIS Publishers. buro van
   Ons, Benz Roos, Frank van der Peet, Robert-Jan Korteschiel
-partners: []
+partners:
+  - name: BIS Publishers
+    link: https://bispublishers.com
+  - name: Anne de Bruijn | A Certain Miss Brown
+    link: https://acertainmissbrown.com
 ---
