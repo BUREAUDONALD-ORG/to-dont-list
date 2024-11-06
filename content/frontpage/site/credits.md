@@ -4,7 +4,7 @@ authorsText: "The ToDon’tCo. is a project by  "
 authors:
   - link: http://www.bureaudonald.com
     name: IOIP BV
-partnersText: "inspired and supported by "
+partnersText: "supported by "
 partners:
   - name: BIS Publishers
     link: https://bispublishers.com
