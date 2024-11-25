@@ -8,9 +8,7 @@ images:
   mobile: ""
 buttons:
   - link: http://www.bispublishers.com/dont-read-this-book.html
-    text: Order a Copy
-  - text: Go to book website
-    link: https://bureaudonald.brandbook.io/ifyoudont
+    text: Order a copy
 checkbox:
   smallText: Book
   text: Time Management
