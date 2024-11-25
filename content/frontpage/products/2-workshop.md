@@ -16,7 +16,6 @@ checkbox:
 layout: horizontal-left
 accentColor: "#e00763"
 ---
-
 # Work Don’t Shop
 
 ## Productivity Workshop<br/>for Creative People
@@ -31,7 +30,6 @@ The first part of the workshop will offer straightforward exercises that reveal 
 
 The second part of the workshop — the game — shows what you can do creatively; how you can find solutions to seemingly unsolvable problems long before the deadline. The game forces you to get out of your comfort zone. The imposed limitations and rules of the game stimulate creativity like you wouldn’t believe. Find the “Loopholes”.
 
-This workshop of about 120 minutes works well for groups up to 50 people. We offer alternative formats for specific events. \
-Price starts at € 950,- excl VAT and travel costs.
+This workshop of about 120 minutes works well for groups up to 50 people. We offer alternative formats for specific events. Special discount prices for Art Schools.
 
 Interested in a workshop? Send us a <a data-scroll href="#mail">5 sentence email</a>.
