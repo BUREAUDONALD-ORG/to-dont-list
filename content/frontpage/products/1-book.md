@@ -1,5 +1,5 @@
 ---
-id: 2
+id: 3
 title: "Don’t Read This Book "
 timeToRead: 4
 images:
@@ -7,7 +7,7 @@ images:
   diapositive: ../../../static/img/dontreadthisbook_diap.png
   mobile: ""
 buttons:
-  - link: "http://www.bispublishers.com/dont-read-this-book.html"
+  - link: http://www.bispublishers.com/dont-read-this-book.html
     text: Order a Copy
 checkbox:
   smallText: Book
